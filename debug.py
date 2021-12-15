@@ -8,10 +8,10 @@ def main(argv):
     pa_src_path = "example/src/meetingcapturedemo"
     output_path = "example"
     config_file = "config.yaml"
-
+    #
     print(os.getcwd())
     print(os.listdir())
-    
+
     if not os.path.isfile(config_file):
         print(f"The config file: {config_file} is not valid.")
         print("Refere to the help with -h or --help")
