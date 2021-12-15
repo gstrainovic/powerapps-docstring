@@ -17,7 +17,6 @@ steps:
   displayName: 'Install prerequisites'
 
 - script: |
-    pushd '$(projectRoot)'
     python main.py --source example\src\meetingcapturedemo\ --output example\
   condition: succeededOrFailed()
   displayName: 'Create markdown down'
@@ -25,5 +24,4 @@ steps:
 - task: PublishTestResults@2
   condition: succeededOrFailed()
   inputs:
-    testResultsFiles: "**/TEST-*.xml"
     testRunTitle: 'Python $(PYTHON_VERSION)'
