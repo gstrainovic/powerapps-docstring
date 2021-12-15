@@ -17,7 +17,7 @@ steps:
   displayName: 'Install prerequisites'
 
 - script: |
-    python main.py --source example\src\meetingcapturedemo\ --output example\
+    python main.py --source example/src/meetingcapturedemo --output example/
   condition: succeededOrFailed()
   displayName: 'Create markdown down'
 
