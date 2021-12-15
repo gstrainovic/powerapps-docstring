@@ -1,0 +1,2306 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Meeting Capture Demo-doc.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="power-app-documentation">Power App Documentation</h1>
+<h1 id="contents">Contents</h1>
+<ul>
+<li><a href="#meeting-capture-demo">Meeting Capture Demo</a>
+<ul>
+<li><a href="#onstart">OnStart</a></li>
+</ul>
+</li>
+<li><a href="#connections">Connections</a></li>
+<li><a href="#screens">Screens</a>
+<ul>
+<li><a href="#2201_2">2201_2</a></li>
+<li><a href="#welcomescreen">WelcomeScreen</a></li>
+<li><a href="#homescreen">HomeScreen</a></li>
+<li><a href="#sketch-screen">Sketch Screen</a></li>
+<li><a href="#camerascreen">CameraScreen</a></li>
+<li><a href="#emailscreen">EmailScreen</a></li>
+<li><a href="#attachmentsscreen">AttachmentsScreen</a></li>
+<li><a href="#confirmscreen">ConfirmScreen</a></li>
+<li><a href="#exportscreen">ExportScreen</a></li>
+<li><a href="#followupscreen">FollowUpScreen</a></li>
+<li><a href="#followuptimesscreen">FollowUpTimesScreen</a></li>
+<li><a href="#homepopupsscreen">HomePopUpsScreen</a></li>
+<li><a href="#exportpopupsscreen">ExportPopUpsScreen</a></li>
+<li><a href="#collectionsandvariables">CollectionsAndVariables</a></li>
+<li><a href="#testemptyscreen">TestEmptyScreen</a></li>
+</ul>
+</li>
+<li><a href="#global-variables">Global Variables</a>
+<ul>
+<li><a href="#vfilter">vFilter</a></li>
+<li><a href="#vguid221">vGUID221</a></li>
+<li><a href="#userselectedfromtasks">UserSelectedFromTasks</a></li>
+<li><a href="#varduplicatepopup">varDuplicatePopup</a></li>
+<li><a href="#varreviewteam">varReviewTeam</a></li>
+<li><a href="#selectednotebook">SelectedNoteBook</a></li>
+<li><a href="#isloading">IsLoading</a></li>
+<li><a href="#selectedmeetingduration">SelectedMeetingDuration</a></li>
+<li><a href="#showimagesaved">ShowImageSaved</a></li>
+<li><a href="#multirecipients">MultiRecipients</a></li>
+<li><a href="#varguid216">varGUID216</a></li>
+<li><a href="#taskselected">TaskSelected</a></li>
+<li><a href="#varselectedpl">varSelectedPL</a></li>
+<li><a href="#selecteduser">SelectedUser</a></li>
+<li><a href="#loading">Loading</a></li>
+<li><a href="#followupstart">FollowUpStart</a></li>
+<li><a href="#followupend">FollowUpEnd</a></li>
+<li><a href="#selectedsection">SelectedSection</a></li>
+<li><a href="#selectedusertasks">SelectedUserTasks</a></li>
+<li><a href="#showoverlay">ShowOverlay</a></li>
+<li><a href="#varshowsort">varShowSort</a></li>
+<li><a href="#showonenote">ShowOneNote</a></li>
+<li><a href="#myedit">myedit</a></li>
+<li><a href="#varguid211">varGUID211</a></li>
+<li><a href="#selectedtask">SelectedTask</a></li>
+<li><a href="#showtakenimage">ShowTakenImage</a></li>
+<li><a href="#showsketchsaved">ShowSketchSaved</a></li>
+<li><a href="#varloadingpopup">varLoadingPopup</a></li>
+<li><a href="#photonumber">PhotoNumber</a></li>
+<li><a href="#vshowfilter">vShowFilter</a></li>
+<li><a href="#varaddgoal">varAddGoal</a></li>
+<li><a href="#emailconfirmed">EmailConfirmed</a></li>
+<li><a href="#attachmentdeleteconfirm">AttachmentDeleteConfirm</a></li>
+<li><a href="#visedit">vIsEdit</a></li>
+<li><a href="#vaddlevel_2">vAddLevel_2</a></li>
+<li><a href="#sketchnumber">SketchNumber</a></li>
+<li><a href="#v_showconfirm">V_ShowConfirm</a></li>
+<li><a href="#vaddlevel_1">vAddLevel_1</a></li>
+<li><a href="#exportconfirmed">ExportConfirmed</a></li>
+<li><a href="#showdatalosswarning">ShowDataLossWarning</a></li>
+<li><a href="#secondsremain">SecondsRemain</a></li>
+<li><a href="#selectedmeeting">SelectedMeeting</a></li>
+<li><a href="#varguid208">varGUID208</a></li>
+<li><a href="#showplanner">ShowPlanner</a></li>
+<li><a href="#varaddmemo">varAddMemo</a></li>
+<li><a href="#selectedplan">SelectedPlan</a></li>
+<li><a href="#progressbarposition">ProgressBarPosition</a></li>
+<li><a href="#autoselectmeeting">AutoSelectMeeting</a></li>
+<li><a href="#selectedimage">SelectedImage</a></li>
+<li><a href="#selectedbucket">SelectedBucket</a></li>
+<li><a href="#showmeetingtimes">ShowMeetingTimes</a></li>
+<li><a href="#vcontinue">vContinue</a></li>
+<li><a href="#vaddlevel_3">vAddLevel_3</a></li>
+<li><a href="#-varloadingpopup"> varLoadingPopup</a></li>
+<li><a href="#vguid208">vGUID208</a></li>
+<li><a href="#followupconfirmed">FollowUpConfirmed</a></li>
+<li><a href="#userselected">UserSelected</a></li>
+</ul>
+</li>
+<li><a href="#global-collects">Global Collects</a>
+<ul>
+<li><a href="#photos">Photos</a></li>
+<li><a href="#tempview_plan">TempView_Plan</a></li>
+<li><a href="#plannerplans">PlannerPlans</a></li>
+<li><a href="#updatetable2201augoals">updateTable2201auGoals</a></li>
+<li><a href="#coladassignment">colAdAssignment</a></li>
+<li><a href="#coladrolle">colAdRolle</a></li>
+<li><a href="#coladtraeger">colAdTraeger</a></li>
+<li><a href="#colflowresponse">colFlowResponse</a></li>
+<li><a href="#colallocation">colAllocation</a></li>
+<li><a href="#tempau_level_3">TempAu_Level_3</a></li>
+<li><a href="#colpldistribution">colPlDistribution</a></li>
+<li><a href="#plannerbuckets">PlannerBuckets</a></li>
+<li><a href="#hourslist">HoursList</a></li>
+<li><a href="#colmodelrow">colModelRow</a></li>
+<li><a href="#emailrecipients">EmailRecipients</a></li>
+<li><a href="#emailattachments">EmailAttachments</a></li>
+<li><a href="#templates">Templates</a></li>
+<li><a href="#temppl_goals">TempPl_Goals</a></li>
+<li><a href="#colquestionsadd">colQuestionsAdd</a></li>
+<li><a href="#templatedata">TemplateData</a></li>
+<li><a href="#onenotebooks">OneNoteBooks</a></li>
+<li><a href="#followupmeetingattendees">FollowUpMeetingAttendees</a></li>
+<li><a href="#colpldistributioncurrent">colPlDistributionCurrent</a></li>
+<li><a href="#sketches">Sketches</a></li>
+<li><a href="#patchtable2011ridetail">patchTable2011riDetail</a></li>
+<li><a href="#onenotesections">OneNoteSections</a></li>
+<li><a href="#tasks">Tasks</a></li>
+<li><a href="#temprisk">TempRisk</a></li>
+<li><a href="#meetingattendeestemp">MeetingAttendeesTemp</a></li>
+<li><a href="#indexes">Indexes</a></li>
+<li><a href="#meetingattendees">MeetingAttendees</a></li>
+<li><a href="#tempau_level_4">TempAu_Level_4</a></li>
+<li><a href="#meetingattendeeemails">MeetingAttendeeEmails</a></li>
+<li><a href="#meetingtimes">MeetingTimes</a></li>
+<li><a href="#tempri_question">TempRi_Question</a></li>
+<li><a href="#temppl_allocation">TempPl_Allocation</a></li>
+<li><a href="#colanswerrow">colAnswerRow</a></li>
+<li><a href="#meetingdurations">MeetingDurations</a></li>
+<li><a href="#coladtraegercurrent">colAdTraegerCurrent</a></li>
+<li><a href="#colquestionrow">colQuestionRow</a></li>
+<li><a href="#colplassignment">colPlAssignment</a></li>
+<li><a href="#coldetailrow">colDetailRow</a></li>
+</ul>
+</li>
+<li><a href="#global-flows">Global Flows</a>
+<ul>
+<li><a href="#wedit_sql_runoperations">weDit_SQL_runOperations</a></li>
+<li><a href="#wedit_sql_modriskassessment">weDit_SQL_modRiskAssessment</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="meeting-capture-demo">Meeting Capture Demo</h1>
+<p>An all-in-one meeting capture tool.</p>
+<p>This tool helps you to keep everythin in one place during your meetings.</p>
+<p>Key
+features are:</p>
+<ul>
+<li>View meeting details</li>
+<li>capture notes and pictures of whiteboards</li>
+<li>assign tasks</li>
+<li>send meeting notes to
+all attendees in one click</li>
+</ul>
+<h2 id="onstart">OnStart</h2>
+<pre class="hljs"><code><div>Collect(CalendarLocalizedLabel,      {Value:&quot;Calendar&quot;},{Value:&quot;Kalender&quot;},
+{Value:&quot;Təqvim&quot;},{Value:&quot;Kalendar&quot;},{Value:&quot;Calendari&quot;},{Value:&quot;Kalendář&quot;},{Value:&quot;Calendr&quot;},{Value:&quot;Calendario&quot;},
+{Value:&quot;Egutegia&quot;},{Value:&quot;Kalendaryo&quot;},{Value:&quot;Calendrier&quot;},{Value:&quot;Féilire&quot;},{Value:&quot;Am mìosachan&quot;},{Value:&quot;Kalanda&quot;},
+{Value:&quot;Dagbók&quot;},{Value:&quot;Kalenda&quot;},{Value:&quot;Kalendārs&quot;},{Value:&quot;Kalenner&quot;},{Value:&quot;Kalendorius&quot;},{Value:&quot;Naptár&quot;},
+{Value:&quot;Kalendarju&quot;},{Value:&quot;Agenda&quot;},{Value:&quot;Taqvim&quot;},{Value:&quot;Kalendarz&quot;},{Value:&quot;Calendário&quot;},{Value:&quot;Intiwatana&quot;},
+{Value:&quot;Kalendari&quot;},{Value:&quot;Kalendár&quot;},{Value:&quot;Koledar&quot;},{Value:&quot;Kalenteri&quot;},{Value:&quot;Maramataka&quot;},{Value:&quot;Lịch&quot;},
+{Value:&quot;Takvim&quot;},{Value:&quot;Senenama&quot;},{Value:&quot;Ημερολόγιο&quot;},{Value:&quot;კალენდარი&quot;},{Value:&quot;לוח שנה&quot;},{Value:&quot;کیلنڈر&quot;},
+{Value:&quot;التقويم&quot;},{Value:&quot;कैलेंडर&quot;},{Value:&quot;दिनदर्शिका&quot;},{Value:&quot;ক্যালেন্ডার&quot;},{Value:&quot;કૅલેન્ડર&quot;},{Value:&quot;予定表&quot;},
+{Value:&quot;行事曆&quot;},{Value:&quot;日历&quot;},{Value:&quot;క్యాలెండర్&quot;});
+
+Concurrent(Set(MyCalendarID,LookUp(Office365Outlook.CalendarGetTables().value,DisplayName=LookUp(CalendarLocalizedLabel,Value=DisplayName).Value).Name);ClearCollect(AllFutureEvents,Office365Outlook.GetEventsCalendarView(MyCalendarID,Text(Today(),UTC),Text(DateAdd(Today(),2,Days),UTC)).Values),Set(MyUserProfile,Office365Users.MyProfile().Id),
+    /*used to determine if meeting attendees are in app user's org*/
+Set(MyDomain,Last(Split(User().Email,&quot;@&quot;)).Result),
+    /*used to determine countdown to end of selected meeting*/
+Set(HomeTimerStart,Now()));
+/*Meetings are defined to be calendar events less than 6 hours in length*/
+ClearCollect(MeetingsOnly,Filter(AddColumns(AllFutureEvents,&quot;isCurrent&quot;,DateDiff(Start,Now(),Seconds)&gt;0&amp;&amp;DateDiff(Now(),End,Seconds)&gt;0),DateDiff(Start,End,Hours)&lt;6));Set(NumberOfCurrentMeetings,CountRows(Filter(MeetingsOnly,isCurrent)));
+/*If a single meeting is happening now, autoselect it*/
+If(NumberOfCurrentMeetings=1,Set(AutoSelectMeeting, true );Set(SelectedMeeting,LookUp(MeetingsOnly,isCurrent)))
+</div></code></pre>
+<h1 id="connections">Connections</h1>
+<p><strong>OneNote (Business) (Standard)</strong></p>
+<p>sku: Enterprise</p>
+<p>With following datasources:</p>
+<ul>
+<li>OneNote(Business)</li>
+</ul>
+<p><strong>Planner (Standard)</strong></p>
+<p>sku: Enterprise</p>
+<p>With following datasources:</p>
+<ul>
+<li>Planner</li>
+</ul>
+<p><strong>Office 365-Benutzer (Standard)</strong></p>
+<p>sku: Enterprise</p>
+<p>With following datasources:</p>
+<ul>
+<li>Office365Users</li>
+</ul>
+<p><strong>Office 365 Outlook (Standard)</strong></p>
+<p>sku: Enterprise</p>
+<p>With following datasources:</p>
+<ul>
+<li>Office365Outlook</li>
+</ul>
+<h1 id="screens">Screens</h1>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+WelcomeScreen(WelcomeScreen) --> HomePopUpsScreen(HomePopUpsScreen)  
+HomeScreen(HomeScreen) --> SketchScreen(Sketch Screen)  
+HomeScreen(HomeScreen) --> CameraScreen(CameraScreen)  
+HomeScreen(HomeScreen) --> EmailScreen(EmailScreen)  
+HomeScreen(HomeScreen) --> AttachmentsScreen(AttachmentsScreen)  
+HomeScreen(HomeScreen) --> ExportScreen(ExportScreen)  
+HomeScreen(HomeScreen) --> HomePopUpsScreen(HomePopUpsScreen)  
+SketchScreen(Sketch Screen) --> HomeScreen(HomeScreen)  
+SketchScreen(Sketch Screen) --> CameraScreen(CameraScreen)  
+CameraScreen(CameraScreen) --> HomeScreen(HomeScreen)  
+CameraScreen(CameraScreen) --> SketchScreen(Sketch Screen)  
+EmailScreen(EmailScreen) --> ConfirmScreen(ConfirmScreen)  
+ConfirmScreen(ConfirmScreen) --> HomeScreen(HomeScreen)  
+ConfirmScreen(ConfirmScreen) --> FollowUpScreen(FollowUpScreen)  
+ConfirmScreen(ConfirmScreen) --> WelcomeScreen(WelcomeScreen)  
+ExportScreen(ExportScreen) --> HomeScreen(HomeScreen)  
+ExportScreen(ExportScreen) --> ExportPopUpsScreen(ExportPopUpsScreen)  
+FollowUpScreen(FollowUpScreen) --> FollowUpTimesScreen(FollowUpTimesScreen)  
+FollowUpTimesScreen(FollowUpTimesScreen) --> ConfirmScreen(ConfirmScreen)  
+HomePopUpsScreen(HomePopUpsScreen) --> HomeScreen(HomeScreen)  
+ExportPopUpsScreen(ExportPopUpsScreen) --> ExportScreen(ExportScreen)  
+ExportPopUpsScreen(ExportPopUpsScreen) --> ConfirmScreen(ConfirmScreen)  
+</div></code></pre>
+<h2 id="22012">2201_2</h2>
+<hr>
+<h3 id="variables">Variables</h3>
+<p>Following variables have been created / or updated on this screen</p>
+<ul>
+<li><a href="#vfilter">vFilter</a></li>
+<li><a href="#varduplicatepopup">varDuplicatePopup</a></li>
+<li><a href="#varreviewteam">varReviewTeam</a></li>
+<li><a href="#isloading">IsLoading</a></li>
+<li><a href="#varguid216">varGUID216</a></li>
+<li><a href="#vaddlevel_3">vAddLevel_3</a></li>
+<li><a href="#varselectedpl">varSelectedPL</a></li>
+<li><a href="#varshowsort">varShowSort</a></li>
+<li><a href="#myedit">myedit</a></li>
+<li><a href="#varguid211">varGUID211</a></li>
+<li><a href="#varloadingpopup">varLoadingPopup</a></li>
+<li><a href="#vshowfilter">vShowFilter</a></li>
+<li><a href="#varaddgoal">varAddGoal</a></li>
+<li><a href="#visedit">vIsEdit</a></li>
+<li><a href="#vaddlevel_2">vAddLevel_2</a></li>
+<li><a href="#v_showconfirm">V_ShowConfirm</a></li>
+<li><a href="#vaddlevel_1">vAddLevel_1</a></li>
+<li><a href="#varguid208">varGUID208</a></li>
+<li><a href="#varaddmemo">varAddMemo</a></li>
+<li><a href="#vcontinue">vContinue</a></li>
+<li><a href="#vguid221">vGUID221</a></li>
+<li><a href="#varloadingpopup">varLoadingPopup</a></li>
+<li><a href="#vguid208">vGUID208</a></li>
+</ul>
+<h3 id="collects">Collects</h3>
+<p>Following collects have been created, updated or cleared on this screen</p>
+<ul>
+<li><a href="#colflowresponse">colFlowResponse</a></li>
+<li><a href="#updatetable2201augoals">updateTable2201auGoals</a></li>
+<li><a href="#coladassignment">colAdAssignment</a></li>
+<li><a href="#coladrolle">colAdRolle</a></li>
+<li><a href="#coladtraeger">colAdTraeger</a></li>
+<li><a href="#colflowresponse">colFlowResponse</a></li>
+<li><a href="#colallocation">colAllocation</a></li>
+<li><a href="#tempau_level_3">TempAu_Level_3</a></li>
+<li><a href="#colpldistribution">colPlDistribution</a></li>
+<li><a href="#tempview_plan">TempView_Plan</a></li>
+<li><a href="#colmodelrow">colModelRow</a></li>
+<li><a href="#temppl_allocation">TempPl_Allocation</a></li>
+<li><a href="#colquestionsadd">colQuestionsAdd</a></li>
+<li><a href="#temppl_goals">TempPl_Goals</a></li>
+<li><a href="#temppl_goals">TempPl_Goals</a></li>
+<li><a href="#colpldistributioncurrent">colPlDistributionCurrent</a></li>
+<li><a href="#patchtable2011ridetail">patchTable2011riDetail</a></li>
+<li><a href="#tempri_question">TempRi_Question</a></li>
+<li><a href="#temprisk">TempRisk</a></li>
+<li><a href="#tempau_level_4">TempAu_Level_4</a></li>
+<li><a href="#patchtable2011ridetail">patchTable2011riDetail</a></li>
+<li><a href="#temppl_allocation">TempPl_Allocation</a></li>
+<li><a href="#colanswerrow">colAnswerRow</a></li>
+<li><a href="#coladtraegercurrent">colAdTraegerCurrent</a></li>
+<li><a href="#colquestionrow">colQuestionRow</a></li>
+<li><a href="#colplassignment">colPlAssignment</a></li>
+<li><a href="#coldetailrow">colDetailRow</a></li>
+</ul>
+<h3 id="flows">Flows</h3>
+<p>Following flows have used on this screen</p>
+<ul>
+<li><a href="#wedit_sql_runoperations">weDit_SQL_runOperations</a></li>
+<li><a href="#wedit_sql_modriskassessment">weDit_SQL_modRiskAssessment</a></li>
+</ul>
+<h3 id="22012-as-screen">'2201_2' As screen</h3>
+<h4 id="onvisible">OnVisible</h4>
+<pre class="hljs"><code><div>=//Warum kein Loading Spinner
+//Concurrent prüfen
+
+    Set(vContinue,false);
+    Set(V_ShowConfirm,false);
+    Set(vFilter,&quot;Risk&quot;);
+
+    //Collection prüfen
+    Set(vAddLevel_1,false);
+    Set(vAddLevel_2,false);
+    Set(vAddLevel_3,false);
+
+    Set(varAddGoal,false);
+
+    //Dopplung der Collections prüfen
+    ClearCollect(TempAu_Level_3, 'au.level_3');
+    ClearCollect(TempAu_Level_4, 'au.level_4');
+
+    Set(vGUID208,GUID());
+    Set(vGUID221,GUID());
+    ClearCollect(
+        TempPl_Goals,
+        AddColumns(
+            Filter('pl.goals', fkey221 = varSelectedPL.ID221),
+            &quot;Edit&quot;,&quot;&quot;
+        )
+    );
+    ClearCollect(
+        TempRisk,
+        Filter('ri.detail', fkey208 = varSelectedPL.ID208)
+    );
+    ClearCollect(
+        TempRi_Question,
+        'ri.question'
+    );
+    ClearCollect(
+        TempPl_Allocation,
+        AddColumns(
+            Filter('pl.allocation', fkey221 = varSelectedPL.ID221),
+            &quot;Edit&quot;,&quot;&quot;,
+            &quot;Surname&quot;, LookUp('ad.contact', ID281 = fkey281, Surname)
+        )
+    );
+    Set(vShowFilter,false);
+    UpdateContext(
+        {
+            locSortColumn: &quot;pl_c_goals&quot;,
+            locSortAscending: locSortColumn&lt;&gt;&quot;pl_c_goals&quot; Or !locSortAscending
+        }
+    )
+
+//End concurrent
+
+// Übernahme von ehemaligem Navigationsbutton 
+Set(varAddMemo,false);
+Clear(patchTable2011riDetail);
+Set(varGUID211,LookUp('ri.version',And(fkey206 = varSelectedPL.fkey206,active=true),ID211));
+Set(varGUID216,LookUp('ri.vDetail',And(active = true,fkey211 = varGUID211),fkey216));
+If(IsBlankOrError(LookUp('ri.vDetail',And(fkey208 = varSelectedPL.fkey208,fkey211 = varGUID211,fkey216 =varGUID216),ID213)),
+ClearCollect(colModelRow,Filter('ri.vModel',ID216 = varGUID216));
+ClearCollect(colQuestionsAdd,Distinct(colModelRow,ID218));
+ForAll(colQuestionsAdd,
+Collect(patchTable2011riDetail,
+Table({
+ID213 : GUID(),
+fkey208: varSelectedPL.fkey208,
+fkey211: varGUID211,
+fkey216: varGUID216,
+fkey218: colQuestionsAdd[@Result],
+fkey219: LookUp(colModelRow,ID218 = colQuestionsAdd[@Result],ID219),
+ri_base: 0,
+active: 1,
+tableName: &quot;[ri].[detail]&quot;,
+fkey217: LookUp('ri.weight',And(fkey216 = varGUID216,fkey218 = colQuestionsAdd[@Result]),ID217),
+type: &quot;POST&quot;,
+    UPN: User().Email})));
+ClearCollect(colFlowResponse,weDit_SQL_runOperations.Run(JSON(patchTable2011riDetail, JSONFormat.IndentFour)));
+Refresh('ri.vDetail');
+Set(vFilter,&quot;Risk&quot;);
+ClearCollect(colDetailRow,Filter('ri.vDetail',And(fkey208 = varSelectedPL.fkey208,active = true)));
+ClearCollect(colModelRow,Filter('ri.vModel',ID216 in colDetailRow.fkey216));
+ClearCollect(colQuestionRow,AddColumns(Filter('ri.question',ID218 in colModelRow.ID218),&quot;Edit&quot;,&quot;&quot;));
+ClearCollect(colAnswerRow,Filter('ri.answer',ID219 in colModelRow.ID219)),
+Set(vFilter,&quot;Risk&quot;);
+Refresh('ri.vDetail');
+ClearCollect(colDetailRow,Filter('ri.vDetail',And(fkey208 = varSelectedPL.fkey208,active = true)));
+ClearCollect(colModelRow,Filter('ri.vModel',ID216 in colDetailRow.fkey216));
+ClearCollect(colQuestionRow,AddColumns(Filter('ri.question',ID218 in colModelRow.ID218),&quot;Edit&quot;,&quot;&quot;));
+ClearCollect(colAnswerRow,Filter('ri.answer',ID219 in colModelRow.ID219)))
+
+</div></code></pre>
+<h3 id="2201memo-182-as-text">'2201_Memo-18_2' As text</h3>
+<h3 id="2201risc-042-as-galleryvariabletemplateheightgallery">'2201_Risc-04_2' As gallery.variableTemplateHeightGallery</h3>
+<h4 id="items">Items</h4>
+<pre class="hljs"><code><div>=Sort(colQuestionRow,rq_count)
+</div></code></pre>
+<h2 id="welcomescreen">WelcomeScreen</h2>
+<hr>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+WelcomeScreen(WelcomeScreen) --> HomePopUpsScreen(HomePopUpsScreen)  
+ConfirmScreen(ConfirmScreen) --> WelcomeScreen(WelcomeScreen)  
+</div></code></pre>
+<h3 id="variables">Variables</h3>
+<p>Following variables have been created / or updated on this screen</p>
+<ul>
+<li><a href="#emailconfirmed">EmailConfirmed</a></li>
+<li><a href="#autoselectmeeting">AutoSelectMeeting</a></li>
+<li><a href="#exportconfirmed">ExportConfirmed</a></li>
+<li><a href="#showdatalosswarning">ShowDataLossWarning</a></li>
+<li><a href="#selectedmeeting">SelectedMeeting</a></li>
+<li><a href="#followupconfirmed">FollowUpConfirmed</a></li>
+</ul>
+<h3 id="collects">Collects</h3>
+<p>Following collects have been created, updated or cleared on this screen</p>
+<ul>
+<li><a href="#templates">Templates</a></li>
+</ul>
+<h3 id="flows">Flows</h3>
+<p>Following flows have used on this screen</p>
+<h3 id="welcomescreen-as-screen">WelcomeScreen As screen</h3>
+<p>if any additional meeting is captured in the same session, guarantees all collections are empty</p>
+<h4 id="onvisible">OnVisible</h4>
+<pre class="hljs"><code><div>Clear(MeetingAttendees);
+Clear(MeetingTimes);
+Clear(EmailRecipients);
+Clear(FollowUpMeetingAttendees);
+Clear(Tasks);
+Clear(Photos);
+Clear(Sketches);
+Clear(EmailAttachments);
+Reset(NotesInput);
+Reset(AssnTaskSearchUser_1);
+Set(FollowUpConfirmed, false);
+Set(EmailConfirmed, false);
+Set(ExportConfirmed, false);
+
+/*Email and OneNote templates with {placeholder} values for dynamic information*/
+
+ClearCollect(Templates,
+{Template: &quot;Email&quot;, Value: &quot;&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;&quot; &amp; &quot;{MeetingName}&quot; &amp; &quot;&lt;/title&gt;&lt;style&gt;div{box-sizing:border-box}table{table-layout:fixed;background-color:#eaedef;width:829px;font-family:'Open Sans',sans-serif;color:#2c3034}table.with-border td{border:2px solid #e3e3e3;background-color:#fff;vertical-align:top}td.caption{height:65px;background:#ed2955;color:#fff;text-align:center;vertical-align:middle}.details{font-size:14px;color:#2c3034;padding-top:10px}.header{font-size:16px;font-weight:600}.mark{font-weight:400;color:#617281}.name{font-size:12px;font-weight:600;color:#ed2955}table.no-border td.user-name{font-size:14px;font-weight:600;color:#2c3034;vertical-align:middle;height:20px;}.due-time{text-align:right;font-size:10px;vertical-align:middle;color:#617281;font-weight:400}.assign-to{font-size:12px;color:#617281}.job-title{font-size:12px;color:#4a4a4a;height:20px}table.no-border{width:100%}table.no-border td{border:0}table.no-border td.task{padding:10px 0;border-top:1px solid #f1f1f1}.user-img img{width:17px;height:19px;border:0;}.name a.link-name,.name a.link-name:visited{color:#ed2955;text-decoration:none;}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;table border='0' cellpadding='0' cellspacing='0'&gt;&lt;tr&gt;&lt;td class='caption'&gt;[ Meeting Capture ]&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style='border: 0;background-color: #eaedef;padding:30px 0 0 0;text-align: center;color: #2c3034;font-size: 20px;font-weight: 600;'&gt;&quot; &amp; &quot;{MeetingName}&quot; &amp; &quot;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style='border: 0;background-color: #eaedef;padding: 9px 0 10px 0;text-align: center;color: #2c3034;font-size: 14px;'&gt;&quot; &amp; &quot;{MeetingStartDate}&quot; &amp;&quot; | &quot; &amp; &quot;{MeetingStartTime}&quot; &amp; &quot; - &quot;&amp; &quot;{MeetingEndTime}&quot; &amp; &quot; (&quot; &amp; &quot;{MeetingMinutes}&quot; &amp; &quot; Minutes)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;table class='with-border' border='0' cellpadding='20' cellspacing='20'&gt;&lt;tr&gt;
+&lt;td colspan='2' style='padding-bottom:10px;'&gt;&lt;table border='0' cellpadding='0' cellspacing='0' class='no-border' style='table-layout:auto;'&gt;&lt;tr&gt;&lt;td colspan='3' class='header'&gt;Attendees &lt;span class='mark'&gt;(&quot; &amp; &quot;{MeetingAttendeeNum}&quot; &amp; &quot;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan='3' style='height:10px;'&gt;&lt;/td&gt;&lt;/tr&gt;&quot; &amp; &quot;{1}&quot; &amp; &quot;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan='2'&gt;&lt;table border='0' cellpadding='0' cellspacing='0' class='no-border'&gt;&lt;tr&gt;&lt;td class='header'&gt;Meeting details&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class='details'&gt;&quot; &amp; &quot;{MeetingDetails}&quot; &amp; &quot;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width='50%'&gt;&lt;table border='0' cellpadding='0' cellspacing='0' class='no-border'&gt;&lt;tr&gt;&lt;td class='header'&gt;Meeting Notes&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class='details'&gt;&quot; &amp; &quot;{MeetingNotes}&quot; &amp; &quot;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;td width='50%'&gt;&lt;table border='0' cellpadding='0' cellspacing='0' class='no-border'&gt;&lt;tr&gt;&lt;td class='header' style='padding-bottom:10px;'&gt;Tasks&lt;/td&gt;&lt;/tr&gt;&quot; &amp; &quot;{2}&quot; &amp; &quot;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style='border:0;background-color:#eaedef;padding:0;height:10px;'&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;&quot;},
+{Template: &quot;OneNote&quot;, Value: &quot;&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;&quot; &amp; &quot;{MeetingName}&quot; &amp; &quot;&lt;/title&gt;&lt;meta http-equiv='Content-Type' content='text/html; charset=utf-8'/&gt;&lt;/head&gt;&lt;body data-absolute-enabled='true' style='font-family:Calibri;font-size:11pt'&gt;&lt;div data-id='_default' style='position:absolute;left:48px;top:120px;width:829px;'&gt;&lt;table border='0' cellpadding='0' cellspacing='0' width='829'&gt;&lt;tr&gt;&lt;td style='background-color:#ed2955;font-size:10pt;'&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style='background-color:#ed2955;border:0px;text-align:center;font-weight:600;'&gt;&lt;span style='color:white'&gt;[ Meeting Capture ]&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style='background-color:#ed2955;font-size:8pt;'&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style='background-color:#eaedef;font-size:14pt;'&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style='background-color:#eaedef;border:0px;text-align:center;'&gt;&lt;span style='font-size:15pt;color:#2c3034;font-weight:bold'&gt;&quot; &amp; &quot;{MeetingName}&quot; &amp; &quot;&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style='background-color:#eaedef;border:0px;text-align:center;'&gt;&lt;span style='font-size:10.5pt;color:#2c3034'&gt;&quot; &amp; &quot;{MeetingStartDate}&quot; &amp;&quot; | &quot; &amp; &quot;{MeetingStartTime}&quot;&amp;&quot; - &quot;&amp; &quot;{MeetingEndTime}&quot; &amp; &quot; (&quot; &amp; &quot;{MeetingMinutes}&quot; &amp; &quot; Minutes)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style='background-color:#eaedef;font-size:14pt;'&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style='background-color:white;'&gt;&lt;table border='0' cellpadding='0' cellspacing='0' width='829'&gt;&lt;colgroup&gt;&lt;col style='width: 210px;'&gt;&lt;col style='width: 210px;'&gt;&lt;col style='width: 210px;'&gt;&lt;col style='width: 210px;'&gt;&lt;/colgroup&gt;&lt;tr&gt;&lt;td colspan='4' style='font-size:14pt;'&gt;&lt;span style='font-weight:600;color:#2c3034'&gt;Attendees&lt;/span&gt;&amp;nbsp;&lt;span style='color:#617281'&gt;(&quot; &amp; &quot;{MeetingAttendeeNum}&quot; &amp; &quot;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&quot; &amp; &quot;{1}&quot; &amp; &quot;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style='background-color:#ffffff;font-size:8pt;'&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style='background-color:#ffffff;font-size:8pt;'&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style='background-color:white;'&gt;&lt;table border='0' cellpadding='0' cellspacing='0' width='829'&gt;&lt;tr&gt;&lt;td width='420' style='font-size:14pt;font-weight:600;color:#2c3034'&gt;Meeting Notes&lt;/td&gt;&lt;td width='420' style='font-size:14pt;font-weight:600;color:#2c3034;border:10px solid red;'&gt;Tasks&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style='font-size:12pt;color:#2c3034'&gt;&quot; &amp; &quot;{MeetingNotes}&quot; &amp; &quot;&lt;/td&gt;&lt;td style='font-size:14pt;font-weight:600;color:#2c3034'&gt;&lt;table border='0' cellpadding='0' cellspacing='0' width='420'&gt;&quot; &amp; &quot;{2}&quot; &amp; &quot;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style='background-color:#ffffff;font-size:8pt;'&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style='background-color:white;'&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style='background-color:#eaedef;font-size:26.5pt;'&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;&quot;})
+</div></code></pre>
+<h3 id="meetingsgallerybkg-as-button">MeetingsGalleryBkg As button</h3>
+<h4 id="onselect">OnSelect</h4>
+<pre class="hljs"><code><div>=Select(Parent)
+</div></code></pre>
+<h4 id="text">Text</h4>
+<pre class="hljs"><code><div>=&quot;&quot;
+</div></code></pre>
+<h3 id="btnchangeauto-as-button">BtnChangeAuto As button</h3>
+<h4 id="onselect">OnSelect</h4>
+<pre class="hljs"><code><div>=Set(AutoSelectMeeting, false)
+</div></code></pre>
+<h4 id="text">Text</h4>
+<pre class="hljs"><code><div>=&quot;Change&quot;
+</div></code></pre>
+<h2 id="homescreen">HomeScreen</h2>
+<hr>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+HomeScreen(HomeScreen) --> SketchScreen(Sketch Screen)  
+HomeScreen(HomeScreen) --> CameraScreen(CameraScreen)  
+HomeScreen(HomeScreen) --> EmailScreen(EmailScreen)  
+HomeScreen(HomeScreen) --> AttachmentsScreen(AttachmentsScreen)  
+HomeScreen(HomeScreen) --> ExportScreen(ExportScreen)  
+HomeScreen(HomeScreen) --> HomePopUpsScreen(HomePopUpsScreen)  
+SketchScreen(Sketch Screen) --> HomeScreen(HomeScreen)  
+CameraScreen(CameraScreen) --> HomeScreen(HomeScreen)  
+ConfirmScreen(ConfirmScreen) --> HomeScreen(HomeScreen)  
+ExportScreen(ExportScreen) --> HomeScreen(HomeScreen)  
+HomePopUpsScreen(HomePopUpsScreen) --> HomeScreen(HomeScreen)  
+</div></code></pre>
+<h3 id="variables">Variables</h3>
+<p>Following variables have been created / or updated on this screen</p>
+<ul>
+<li><a href="#userselectedfromtasks">UserSelectedFromTasks</a></li>
+<li><a href="#emailconfirmed">EmailConfirmed</a></li>
+<li><a href="#progressbarposition">ProgressBarPosition</a></li>
+<li><a href="#selectedusertasks">SelectedUserTasks</a></li>
+<li><a href="#showoverlay">ShowOverlay</a></li>
+<li><a href="#multirecipients">MultiRecipients</a></li>
+<li><a href="#exportconfirmed">ExportConfirmed</a></li>
+<li><a href="#secondsremain">SecondsRemain</a></li>
+<li><a href="#taskselected">TaskSelected</a></li>
+<li><a href="#selectedtask">SelectedTask</a></li>
+<li><a href="#followupconfirmed">FollowUpConfirmed</a></li>
+<li><a href="#userselected">UserSelected</a></li>
+</ul>
+<h3 id="collects">Collects</h3>
+<p>Following collects have been created, updated or cleared on this screen</p>
+<ul>
+<li><a href="#emailrecipients">EmailRecipients</a></li>
+</ul>
+<h3 id="flows">Flows</h3>
+<p>Following flows have used on this screen</p>
+<h3 id="homescreen-as-screen">HomeScreen As screen</h3>
+<p>The main screen for meeting captures during a meeting.</p>
+<ul>
+<li>create meeting notes</li>
+<li>create tasks</li>
+<li>see meeting details</li>
+</ul>
+<h4 id="onvisible">OnVisible</h4>
+<pre class="hljs"><code><div>Set(FollowUpConfirmed, false);
+Set(EmailConfirmed, false);
+Set(ExportConfirmed, false)
+</div></code></pre>
+<h3 id="applogo1-as-image">AppLogo1 As image</h3>
+<h4 id="image">Image</h4>
+<pre class="hljs"><code><div>='nav-logo'
+</div></code></pre>
+<h3 id="navhome1-as-image">NavHome1 As image</h3>
+<h4 id="image">Image</h4>
+<pre class="hljs"><code><div>='nav-notes'
+</div></code></pre>
+<h3 id="navsketch1-as-image">NavSketch1 As image</h3>
+<h4 id="image">Image</h4>
+<pre class="hljs"><code><div>='nav-sketch'
+</div></code></pre>
+<h4 id="onselect">OnSelect</h4>
+<pre class="hljs"><code><div>=Navigate('Sketch Screen', None)
+</div></code></pre>
+<h3 id="navphotos1-as-image">NavPhotos1 As image</h3>
+<h4 id="image">Image</h4>
+<pre class="hljs"><code><div>='nav-camera'
+</div></code></pre>
+<h4 id="onselect">OnSelect</h4>
+<pre class="hljs"><code><div>=Navigate(CameraScreen, None)
+</div></code></pre>
+<h3 id="attendeesbannerimage-as-image">AttendeesBannerImage As image</h3>
+<h4 id="image">Image</h4>
+<pre class="hljs"><code><div>=attendees
+</div></code></pre>
+<h3 id="attendeegallery1-as-gallerygalleryvertical">AttendeeGallery1 As gallery.galleryVertical</h3>
+<h4 id="items">Items</h4>
+<pre class="hljs"><code><div>=MeetingAttendees
+</div></code></pre>
+<h3 id="mailallbutton-as-button">MailAllButton As button</h3>
+<h4 id="onselect">OnSelect</h4>
+<pre class="hljs"><code><div>=Navigate(EmailScreen, None);
+Set(MultiRecipients, true);
+ClearCollect(EmailRecipients, AttendeeGallery1.AllItems)
+</div></code></pre>
+<h4 id="text">Text</h4>
+<pre class="hljs"><code><div>=&quot;Email&quot;
+</div></code></pre>
+<h3 id="notesicon-as-image">NotesIcon As image</h3>
+<h4 id="image">Image</h4>
+<pre class="hljs"><code><div>=notes
+</div></code></pre>
+<h3 id="notesinput-as-text">NotesInput As text</h3>
+<h3 id="finishsavebutton-as-button">Finish_SaveButton As button</h3>
+<h4 id="onselect">OnSelect</h4>
+<pre class="hljs"><code><div>=Navigate(ExportScreen, None)
+</div></code></pre>
+<h4 id="text">Text</h4>
+<pre class="hljs"><code><div>=&quot;Finish &amp; Save&quot;
+</div></code></pre>
+<h3 id="finishsaveicon-as-image">Finish_SaveIcon As image</h3>
+<h4 id="image">Image</h4>
+<pre class="hljs"><code><div>=export
+</div></code></pre>
+<h4 id="onselect">OnSelect</h4>
+<pre class="hljs"><code><div>=Select(Finish_SaveButton)
+</div></code></pre>
+<h3 id="tasksicon-as-image">TasksIcon As image</h3>
+<h4 id="image">Image</h4>
+<pre class="hljs"><code><div>=tasks
+</div></code></pre>
+<h3 id="taskgallery-as-gallerygalleryvertical">TaskGallery As gallery.galleryVertical</h3>
+<h4 id="items">Items</h4>
+<pre class="hljs"><code><div>=Tasks
+</div></code></pre>
+<h4 id="onselect">OnSelect</h4>
+<pre class="hljs"><code><div>=If(CountRows(Tasks) &gt; 0, 
+Set(SelectedTask, ThisItem);
+Set(TaskSelected, true);
+Set(UserSelected, true);
+Set(UserSelectedFromTasks, true);
+Set(SelectedUserTasks, ThisItem.AssignToUser);
+Set(ShowOverlay, true)
+)
+</div></code></pre>
+<h3 id="tasktitle-as-text">TaskTitle As text</h3>
+<h2 id="sketch-screen">Sketch Screen</h2>
+<hr>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+HomeScreen(HomeScreen) --> SketchScreen(Sketch Screen)  
+SketchScreen(Sketch Screen) --> HomeScreen(HomeScreen)  
+SketchScreen(Sketch Screen) --> CameraScreen(CameraScreen)  
+CameraScreen(CameraScreen) --> SketchScreen(Sketch Screen)  
+</div></code></pre>
+<h3 id="variables">Variables</h3>
+<p>Following variables have been created / or updated on this screen</p>
+<ul>
+<li><a href="#showsketchsaved">ShowSketchSaved</a></li>
+<li><a href="#sketchnumber">SketchNumber</a></li>
+</ul>
+<h3 id="collects">Collects</h3>
+<p>Following collects have been created, updated or cleared on this screen</p>
+<ul>
+<li><a href="#sketches">Sketches</a></li>
+</ul>
+<h3 id="flows">Flows</h3>
+<p>Following flows have used on this screen</p>
+<h3 id="sketch-screen-as-screen">'Sketch Screen' As screen</h3>
+<p>Create a sketch during a meeting.</p>
+<p>The screen name &quot;Sketch Screen&quot; (notice the blank) akt's as a test for screen names
+with blank</p>
+<h4 id="onvisible">OnVisible</h4>
+<pre class="hljs"><code><div>Set(ShowSketchSaved, false)
+</div></code></pre>
+<h3 id="applogo2-as-image">AppLogo2 As image</h3>
+<h4 id="image">Image</h4>
+<pre class="hljs"><code><div>='nav-logo'
+</div></code></pre>
+<h3 id="navhome2-as-image">NavHome2 As image</h3>
+<h4 id="image">Image</h4>
+<pre class="hljs"><code><div>='nav-notes'
+</div></code></pre>
+<h4 id="onselect">OnSelect</h4>
+<pre class="hljs"><code><div>=Navigate(HomeScreen, None)
+</div></code></pre>
+<h3 id="navsketch2-as-image">NavSketch2 As image</h3>
+<h4 id="image">Image</h4>
+<pre class="hljs"><code><div>='nav-sketch'
+</div></code></pre>
+<h3 id="navphotos2-as-image">NavPhotos2 As image</h3>
+<h4 id="image">Image</h4>
+<pre class="hljs"><code><div>='nav-camera'
+</div></code></pre>
+<h4 id="onselect">OnSelect</h4>
+<pre class="hljs"><code><div>=Navigate(CameraScreen, None)
+</div></code></pre>
+<h3 id="savesketch-as-button">SaveSketch As button</h3>
+<h4 id="onselect">OnSelect</h4>
+<pre class="hljs"><code><div>=/*store sketches in sketch collection*/
+Set(SketchNumber, SketchNumber + 1);
+Collect(Sketches, {Image:SketchCanvas.Image, Name: &quot;Sketch&quot; &amp; SketchNumber &amp; &quot;.jpg&quot;});
+Reset(SketchCanvas);
+Set(ShowSketchSaved, true)
+</div></code></pre>
+<h4 id="text">Text</h4>
+<pre class="hljs"><code><div>=&quot;Save sketch&quot;
+</div></code></pre>
+<h2 id="camerascreen">CameraScreen</h2>
+<hr>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+HomeScreen(HomeScreen) --> CameraScreen(CameraScreen)  
+SketchScreen(Sketch Screen) --> CameraScreen(CameraScreen)  
+CameraScreen(CameraScreen) --> HomeScreen(HomeScreen)  
+CameraScreen(CameraScreen) --> SketchScreen(Sketch Screen)  
+</div></code></pre>
+<h3 id="variables">Variables</h3>
+<p>Following variables have been created / or updated on this screen</p>
+<ul>
+<li><a href="#showimagesaved">ShowImageSaved</a></li>
+<li><a href="#photonumber">PhotoNumber</a></li>
+<li><a href="#showtakenimage">ShowTakenImage</a></li>
+</ul>
+<h3 id="collects">Collects</h3>
+<p>Following collects have been created, updated or cleared on this screen</p>
+<ul>
+<li><a href="#photos">Photos</a></li>
+</ul>
+<h3 id="flows">Flows</h3>
+<p>Following flows have used on this screen</p>
+<h3 id="camerascreen-as-screen">CameraScreen As screen</h3>
+<p>Take picture during a meeting</p>
+<h4 id="onvisible">OnVisible</h4>
+<pre class="hljs"><code><div>Set(ShowImageSaved, false);
+Set(ShowTakenImage, false)
+</div></code></pre>
+<h3 id="applogo3-as-image">AppLogo3 As image</h3>
+<h4 id="image">Image</h4>
+<pre class="hljs"><code><div>='nav-logo'
+</div></code></pre>
+<h3 id="navhome3-as-image">NavHome3 As image</h3>
+<h4 id="image">Image</h4>
+<pre class="hljs"><code><div>='nav-notes'
+</div></code></pre>
+<h4 id="onselect">OnSelect</h4>
+<pre class="hljs"><code><div>=Navigate(HomeScreen, None)
+</div></code></pre>
+<h3 id="navsketch3-as-image">NavSketch3 As image</h3>
+<h4 id="image">Image</h4>
+<pre class="hljs"><code><div>='nav-sketch'
+</div></code></pre>
+<h4 id="onselect">OnSelect</h4>
+<pre class="hljs"><code><div>=Navigate('Sketch Screen', None)
+</div></code></pre>
+<h3 id="navphotos3-as-image">NavPhotos3 As image</h3>
+<h4 id="image">Image</h4>
+<pre class="hljs"><code><div>='nav-camera'
+</div></code></pre>
+<h2 id="emailscreen">EmailScreen</h2>
+<hr>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+HomeScreen(HomeScreen) --> EmailScreen(EmailScreen)  
+EmailScreen(EmailScreen) --> ConfirmScreen(ConfirmScreen)  
+</div></code></pre>
+<h3 id="variables">Variables</h3>
+<p>Following variables have been created / or updated on this screen</p>
+<ul>
+<li><a href="#emailconfirmed">EmailConfirmed</a></li>
+</ul>
+<h3 id="collects">Collects</h3>
+<p>Following collects have been created, updated or cleared on this screen</p>
+<h3 id="flows">Flows</h3>
+<p>Following flows have used on this screen</p>
+<h3 id="emailscreen-as-screen">EmailScreen As screen</h3>
+<p>Email meeting notes to attendees</p>
+<h3 id="applogo4-as-image">AppLogo4 As image</h3>
+<h4 id="image">Image</h4>
+<pre class="hljs"><code><div>='nav-logo'
+</div></code></pre>
+<h3 id="sendemail-as-button">SendEmail As button</h3>
+<h4 id="onselect">OnSelect</h4>
+<pre class="hljs"><code><div>=Office365Outlook.SendEmail(Concat(EmailRecipients, UserPrincipalName &amp; &quot;;&quot;), EmailSubject.Text, EmailMessage.Text, {Importance: &quot;Normal&quot;});
+/*Sets text to display email confirmation info*/
+Set(EmailConfirmed, true);
+Navigate(ConfirmScreen, None)
+</div></code></pre>
+<h4 id="text">Text</h4>
+<pre class="hljs"><code><div>=&quot;Send&quot;
+</div></code></pre>
+<h3 id="gallerybkg-as-button">GalleryBkg As button</h3>
+<h4 id="text">Text</h4>
+<pre class="hljs"><code><div>=&quot;&quot;
+</div></code></pre>
+<h3 id="emailrecipientgallery-as-gallerygalleryhorizontal">EmailRecipientGallery As gallery.galleryHorizontal</h3>
+<h4 id="items">Items</h4>
+<pre class="hljs"><code><div>=EmailRecipients
+</div></code></pre>
+<h3 id="emailsubject-as-text">EmailSubject As text</h3>
+<h3 id="emailmessage-as-text">EmailMessage As text</h3>
+<h2 id="attachmentsscreen">AttachmentsScreen</h2>
+<hr>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+HomeScreen(HomeScreen) --> AttachmentsScreen(AttachmentsScreen)  
+</div></code></pre>
+<h3 id="variables">Variables</h3>
+<p>Following variables have been created / or updated on this screen</p>
+<ul>
+<li><a href="#attachmentdeleteconfirm">AttachmentDeleteConfirm</a></li>
+<li><a href="#showoverlay">ShowOverlay</a></li>
+<li><a href="#selectedimage">SelectedImage</a></li>
+</ul>
+<h3 id="collects">Collects</h3>
+<p>Following collects have been created, updated or cleared on this screen</p>
+<h3 id="flows">Flows</h3>
+<p>Following flows have used on this screen</p>
+<h3 id="attachmentsscreen-as-screen">AttachmentsScreen As screen</h3>
+<p>See attachments created during meeting</p>
+<h3 id="applogo5-as-image">AppLogo5 As image</h3>
+<h4 id="image">Image</h4>
+<pre class="hljs"><code><div>='nav-logo'
+</div></code></pre>
+<h3 id="photosicon-as-image">PhotosIcon As image</h3>
+<h4 id="image">Image</h4>
+<pre class="hljs"><code><div>='attachments-camera'
+</div></code></pre>
+<h3 id="photosgallery-as-gallerygalleryhorizontal">PhotosGallery As gallery.galleryHorizontal</h3>
+<h4 id="items">Items</h4>
+<pre class="hljs"><code><div>=Photos
+</div></code></pre>
+<h4 id="onselect">OnSelect</h4>
+<pre class="hljs"><code><div>=Set(ShowOverlay, true);
+Set(SelectedImage, ThisItem)
+</div></code></pre>
+<h3 id="sketchesicon-as-image">SketchesIcon As image</h3>
+<h4 id="image">Image</h4>
+<pre class="hljs"><code><div>='attachments-sketch'
+</div></code></pre>
+<h3 id="sketchesgallery-as-gallerygalleryhorizontal">SketchesGallery As gallery.galleryHorizontal</h3>
+<h4 id="items">Items</h4>
+<pre class="hljs"><code><div>=Sketches
+</div></code></pre>
+<h4 id="onselect">OnSelect</h4>
+<pre class="hljs"><code><div>=Set(ShowOverlay, true);
+Set(SelectedImage, ThisItem)
+</div></code></pre>
+<h3 id="attachmenttodelete-as-image">AttachmentToDelete As image</h3>
+<h4 id="image">Image</h4>
+<pre class="hljs"><code><div>=SelectedImage.Image
+</div></code></pre>
+<h3 id="canceldeleteattach-as-button">CancelDeleteAttach As button</h3>
+<h4 id="onselect">OnSelect</h4>
+<pre class="hljs"><code><div>=Set(AttachmentDeleteConfirm, false);
+Set(ShowOverlay, false)
+</div></code></pre>
+<h4 id="text">Text</h4>
+<pre class="hljs"><code><div>=If(TaskSelected, &quot;Delete&quot;, &quot;Cancel&quot;)
+</div></code></pre>
+<h3 id="confirmdeleteattach-as-button">ConfirmDeleteAttach As button</h3>
+<h4 id="onselect">OnSelect</h4>
+<pre class="hljs"><code><div>=Set(ShowOverlay, false);
+Set(AttachmentDeleteConfirm, false);
+RemoveIf(Sketches, SelectedImage.Name = Name);
+RemoveIf(Photos, SelectedImage.Name = Name)
+
+</div></code></pre>
+<h4 id="text">Text</h4>
+<pre class="hljs"><code><div>=&quot;Yes, delete&quot;
+</div></code></pre>
+<h2 id="confirmscreen">ConfirmScreen</h2>
+<hr>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+EmailScreen(EmailScreen) --> ConfirmScreen(ConfirmScreen)  
+ConfirmScreen(ConfirmScreen) --> HomeScreen(HomeScreen)  
+ConfirmScreen(ConfirmScreen) --> FollowUpScreen(FollowUpScreen)  
+ConfirmScreen(ConfirmScreen) --> WelcomeScreen(WelcomeScreen)  
+FollowUpTimesScreen(FollowUpTimesScreen) --> ConfirmScreen(ConfirmScreen)  
+ExportPopUpsScreen(ExportPopUpsScreen) --> ConfirmScreen(ConfirmScreen)  
+</div></code></pre>
+<h3 id="variables">Variables</h3>
+<p>Following variables have been created / or updated on this screen</p>
+<ul>
+<li><a href="#loading">Loading</a></li>
+</ul>
+<h3 id="collects">Collects</h3>
+<p>Following collects have been created, updated or cleared on this screen</p>
+<ul>
+<li><a href="#indexes">Indexes</a></li>
+<li><a href="#emailattachments">EmailAttachments</a></li>
+<li><a href="#templatedata">TemplateData</a></li>
+</ul>
+<h3 id="flows">Flows</h3>
+<p>Following flows have used on this screen</p>
+<h3 id="confirmscreen-as-screen">ConfirmScreen As screen</h3>
+<p>Export confirmation screen
+Once the export is completed another meeting can be scheduled with the attendees.</p>
+<h4 id="onvisible">OnVisible</h4>
+<pre class="hljs"><code><div>If(ExportConfirmed,
+    Set(Loading, true);
+
+    /*Collects the dynamic data which will be substituted into the Email/OneNote templates and associates it to the {placeholder} values in the templates
+       At {Field: &quot;{1}&quot; at &lt;tr&gt;&lt;td colspan='3'&gt; changed &lt;td colspan='3' style='height:10px;'&gt; to &lt;td colspan='3'&gt; because OneNote stopped displaying the export content with the inline style content present 
+    */
+        If(CheckEmail.Value || CheckOneNote.Value, 
+             ClearCollect(TemplateData, {Field:&quot;{MeetingName}&quot;, Data:SelectedMeeting.Subject}, {Field: &quot;{MeetingStartDate}&quot;, Data: Text(SelectedMeeting.Start, &quot;[$-en-US]mmm. dd, yyyy&quot;)}, 
+            {Field: &quot;{MeetingStartTime}&quot;, Data: Lower(Text(SelectedMeeting.Start, &quot;[$-en-US]hh:mm am/pm&quot;))}, {Field: &quot;{MeetingEndTime}&quot;, Data: Lower(Text(SelectedMeeting.End, &quot;[$-en-US]hh:mm am/pm&quot;))},
+            {Field: &quot;{MeetingMinutes}&quot;, Data: Text(SelectedMeetingDuration/60)}, {Field: &quot;{MeetingAttendeeNum}&quot;, Data: Text(CountRows(MeetingAttendees))},
+            {Field: &quot;{1}&quot;, 
+            Data: Concat(
+                GroupBy(
+                    ForAll(MeetingAttendees,
+                        Collect(Indexes, {Index:Last(Indexes).Index + 1});
+                        {Page:RoundDown(Last(Indexes).Index / 3,0),
+                        Id:Id, 
+                        DisplayName:DisplayName, 
+                        JobTitle:JobTitle}
+                    ),
+            &quot;Page&quot;,&quot;Attendees&quot;),&quot;&lt;tr&gt;&quot; &amp; Concat(Attendees,&quot;&lt;td class='user-name' width='221'&gt;&quot; &amp; DisplayName &amp; &quot;&lt;/td&gt;&quot;) &amp; If(CountRows(Attendees)=2,&quot;&lt;td class='user-name' width='221'&gt;&lt;/td&gt;&quot;,CountRows(Attendees)=1,
+            &quot;&lt;td class='user-name' width='221'&gt;&lt;/td&gt;&lt;td class='user-name' width='221'&gt;&lt;/td&gt;&quot;) &amp; &quot;&lt;/tr&gt;&lt;tr&gt;&quot; &amp; Concat(Attendees,&quot;&lt;td class='job-title'&gt;&quot; &amp; JobTitle &amp; &quot;&lt;/td&gt;&quot;) &amp; If(CountRows(Attendees)=2,
+            &quot;&lt;td class='job-title'&gt;&lt;/td&gt;&quot;,CountRows(Attendees)=1,&quot;&lt;td class='job-title'&gt;&lt;/td&gt;&lt;td class='job-title'&gt;&lt;/td&gt;&quot;) &amp; &quot;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan='3'&gt;&lt;/td&gt;&lt;/tr&gt;&quot;)},
+            {Field: &quot;{MeetingDetails}&quot;, Data:MeetingBody.HtmlText}, {Field: &quot;{MeetingNotes}&quot;, Data: Substitute(NotesInput.Text, Char(10), &quot;&lt;br/&gt;&quot;)},
+            {Field: &quot;{2}&quot;, Data: Concat(Tasks,&quot;&lt;tr&gt;&lt;td class='task'&gt;&lt;table border='0' cellpadding='0' cellspacing='0' class='no-border' style='table-layout:auto'&gt;&lt;tr&gt;&lt;td class='name'&gt;&lt;a class='link-name' href='https://tasks.office.com' target='_blank'&gt;&quot; &amp; Name &amp; &quot;&lt;/a&gt;&lt;/td&gt;&lt;td class='due-time'&gt;&quot; &amp; If(IsBlank(DueDate),&quot;&quot;,&quot;Due &quot; &amp; If(IsToday(DueDate),&quot;Today&quot;,Text(DueDate,&quot;[$-en-US]mmm d&quot;))) &amp; &quot;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan='2' class='assign-to'&gt;&quot; &amp; AssignToUser.DisplayName &amp; &quot;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&quot;)})
+        );
+
+        /*Creates planner tasks based on the Tasks collection*/
+        If(CheckPlanner.Value,ForAll(Tasks,Planner.CreateTask(SelectedPlan.'data-ADB4D7A662F548B49FAC2B986E348A1Bid',Name,{bucketId:SelectedBucket.'data-ADB4D7A662F548B49FAC2B986E348A1Bid',dueDateTime:AssnTaskDueDate_1,assignments:AssignToUser.Id})));
+        /*combines photos and sketches into a single email attachments collection*/
+        If(CheckEmail.Value,
+            ForAll(Photos, Collect(EmailAttachments, {ContentBytes: Image, Image: Image, Name: Name}));
+            ForAll(Sketches, Collect(EmailAttachments, {ContentBytes: Image, Image: Image, Name: Name}));
+        /*replaces {placeholder} values for Email template with dynamic data collected from user's input as they progress through app*/   
+            ForAll(TemplateData, Patch(Templates, LookUp(Templates, Template=&quot;Email&quot;), {Value: Substitute(LookUp(Templates, Template=&quot;Email&quot;).Value, Field, Data)}));
+            Office365Outlook.SendEmail(Concat(EmailRecipients, UserPrincipalName &amp; &quot;;&quot;), SelectedMeeting.Subject, LookUp(Templates, Template=&quot;Email&quot;).Value, {Attachments: EmailAttachments, Importance: &quot;Normal&quot;, IsHtml: true}
+            )    
+        );
+        If(CheckOneNote.Value,
+        /*replaces {placeholder} values for OneNote template with dynamic data collected from user's input as they progress through app*/    
+            ForAll(TemplateData, Patch(Templates, LookUp(Templates, Template=&quot;OneNote&quot;), {Value: Substitute(LookUp(Templates, Template=&quot;OneNote&quot;).Value, Field, Data)}));
+            'OneNote(Business)'.CreatePageInSection(SelectedNoteBook.'data-ADB4D7A662F548B49FAC2B986E348A1BKey', SelectedSection.'data-ADB4D7A662F548B49FAC2B986E348A1BpagesUrl', LookUp(Templates, Template=&quot;OneNote&quot;).Value)
+        );
+
+    Set(Loading, false)
+)
+</div></code></pre>
+<h2 id="exportscreen">ExportScreen</h2>
+<hr>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+HomeScreen(HomeScreen) --> ExportScreen(ExportScreen)  
+ExportScreen(ExportScreen) --> HomeScreen(HomeScreen)  
+ExportScreen(ExportScreen) --> ExportPopUpsScreen(ExportPopUpsScreen)  
+ExportPopUpsScreen(ExportPopUpsScreen) --> ExportScreen(ExportScreen)  
+</div></code></pre>
+<h3 id="variables">Variables</h3>
+<p>Following variables have been created / or updated on this screen</p>
+<ul>
+<li><a href="#selectednotebook">SelectedNoteBook</a></li>
+<li><a href="#selectedplan">SelectedPlan</a></li>
+<li><a href="#selectedsection">SelectedSection</a></li>
+<li><a href="#showoverlay">ShowOverlay</a></li>
+<li><a href="#selectedbucket">SelectedBucket</a></li>
+<li><a href="#showonenote">ShowOneNote</a></li>
+<li><a href="#showplanner">ShowPlanner</a></li>
+</ul>
+<h3 id="collects">Collects</h3>
+<p>Following collects have been created, updated or cleared on this screen</p>
+<ul>
+<li><a href="#emailrecipients">EmailRecipients</a></li>
+<li><a href="#onenotesections">OneNoteSections</a></li>
+<li><a href="#plannerplans">PlannerPlans</a></li>
+<li><a href="#plannerbuckets">PlannerBuckets</a></li>
+<li><a href="#onenotebooks">OneNoteBooks</a></li>
+</ul>
+<h3 id="flows">Flows</h3>
+<p>Following flows have used on this screen</p>
+<h3 id="exportscreen-as-screen">ExportScreen As screen</h3>
+<p>Export creation screen
+Select where to export to.
+Possible exports:</p>
+<ul>
+<li>OneNote</li>
+<li>Office Planner</li>
+<li>Email</li>
+</ul>
+<h4 id="onvisible">OnVisible</h4>
+<pre class="hljs"><code><div>If(IsEmpty(EmailRecipients), 
+    ClearCollect(EmailRecipients, AttendeeGallery1.AllItems)
+);
+If(IsEmpty(OneNoteBooks), ClearCollect(OneNoteBooks,'OneNote(Business)'.GetNotebooks()));
+If(!IsEmpty(OneNoteBooks),ClearCollect(OneNoteSections,'OneNote(Business)'.GetSectionsInNotebook(OneNoteBookSelect_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BKey').value));
+If(IsEmpty(PlannerPlans), ClearCollect(PlannerPlans, Planner.ListMyPlans().value));
+If(!IsEmpty(PlannerPlans),ClearCollect(PlannerBuckets,Planner.ListBuckets(PlannerPlanSelect_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bid').value))
+</div></code></pre>
+<h3 id="applogo7-as-image">AppLogo7 As image</h3>
+<h4 id="image">Image</h4>
+<pre class="hljs"><code><div>='nav-logo'
+</div></code></pre>
+<h3 id="exportbutton-as-button">ExportButton As button</h3>
+<h4 id="onselect">OnSelect</h4>
+<pre class="hljs"><code><div>=Set(ShowOverlay, true);
+Navigate(ExportPopUpsScreen, None)
+</div></code></pre>
+<h4 id="text">Text</h4>
+<pre class="hljs"><code><div>=&quot;Export&quot;
+</div></code></pre>
+<h3 id="exporticon-as-image">ExportIcon As image</h3>
+<h4 id="image">Image</h4>
+<pre class="hljs"><code><div>=export
+</div></code></pre>
+<h4 id="onselect">OnSelect</h4>
+<pre class="hljs"><code><div>=Select(ExportButton)
+</div></code></pre>
+<h3 id="onenoteicon-as-image">OneNoteIcon As image</h3>
+<h4 id="image">Image</h4>
+<pre class="hljs"><code><div>='one-note'
+</div></code></pre>
+<h3 id="showonenoteselection-as-button">ShowOneNoteSelection As button</h3>
+<h4 id="onselect">OnSelect</h4>
+<pre class="hljs"><code><div>=Set(ShowOneNote, true);
+Navigate(ExportPopUpsScreen, None);
+/*retrieves OneNote sections of (pre)selected OneNote book (if user hasn't selected one yet)*/
+ClearCollect(OneNoteSections, 'OneNote(Business)'.GetSectionsInNotebook(OneNoteBookSelect_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BKey').value)
+</div></code></pre>
+<h4 id="text">Text</h4>
+<pre class="hljs"><code><div>=If(ExportToOneNote.Height &gt; 0, &quot;Select new location&quot;, &quot;Select Location&quot;)
+</div></code></pre>
+<h3 id="emailicon-as-image">EmailIcon As image</h3>
+<h4 id="image">Image</h4>
+<pre class="hljs"><code><div>=outlook
+</div></code></pre>
+<h3 id="recipientgallerybkg-as-button">RecipientGalleryBkg As button</h3>
+<h4 id="text">Text</h4>
+<pre class="hljs"><code><div>=&quot;&quot;
+</div></code></pre>
+<h3 id="emailrecipientsgallery-as-gallerygalleryvertical">EmailRecipientsGallery As gallery.galleryVertical</h3>
+<h4 id="items">Items</h4>
+<pre class="hljs"><code><div>=EmailRecipients
+</div></code></pre>
+<h3 id="assntasksearchuser1-as-text">AssnTaskSearchUser_1 As text</h3>
+<h3 id="usersearchresults-as-gallerygalleryvertical">UserSearchResults As gallery.galleryVertical</h3>
+<h4 id="items">Items</h4>
+<pre class="hljs"><code><div>=If(!IsBlank(AssnTaskSearchUser_1.Text), Office365Users.SearchUser({searchTerm:Trim(AssnTaskSearchUser_1.Text), top:15}))
+</div></code></pre>
+<h4 id="onselect">OnSelect</h4>
+<pre class="hljs"><code><div>=If(Not(ThisItem.Id in EmailRecipients.Id), Collect(EmailRecipients, ThisItem))
+</div></code></pre>
+<h3 id="plannericon-as-image">PlannerIcon As image</h3>
+<h4 id="image">Image</h4>
+<pre class="hljs"><code><div>=planner
+</div></code></pre>
+<h3 id="showplannerselection-as-button">ShowPlannerSelection As button</h3>
+<h4 id="onselect">OnSelect</h4>
+<pre class="hljs"><code><div>=Set(ShowPlanner, true);
+Navigate(ExportPopUpsScreen, None)
+</div></code></pre>
+<h4 id="text">Text</h4>
+<pre class="hljs"><code><div>=If(PlannerExportTo.Height &gt; 0, &quot;Select new location&quot;, &quot;Select Location&quot;)
+</div></code></pre>
+<h2 id="followupscreen">FollowUpScreen</h2>
+<hr>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+ConfirmScreen(ConfirmScreen) --> FollowUpScreen(FollowUpScreen)  
+FollowUpScreen(FollowUpScreen) --> FollowUpTimesScreen(FollowUpTimesScreen)  
+</div></code></pre>
+<h3 id="variables">Variables</h3>
+<p>Following variables have been created / or updated on this screen</p>
+<ul>
+<li><a href="#exportconfirmed">ExportConfirmed</a></li>
+</ul>
+<h3 id="collects">Collects</h3>
+<p>Following collects have been created, updated or cleared on this screen</p>
+<ul>
+<li><a href="#followupmeetingattendees">FollowUpMeetingAttendees</a></li>
+</ul>
+<h3 id="flows">Flows</h3>
+<p>Following flows have used on this screen</p>
+<h3 id="followupscreen-as-screen">FollowUpScreen As screen</h3>
+<p>Schedule follow up for this meeting</p>
+<h4 id="onvisible">OnVisible</h4>
+<pre class="hljs"><code><div>Set(ExportConfirmed, false);
+ClearCollect(FollowUpMeetingAttendees, MeetingAttendees)
+</div></code></pre>
+<h3 id="appicon7-as-image">AppIcon7 As image</h3>
+<h4 id="image">Image</h4>
+<pre class="hljs"><code><div>='nav-logo'
+</div></code></pre>
+<h3 id="findavailabletimesbutton-as-button">FindAvailableTimesButton As button</h3>
+<h4 id="onselect">OnSelect</h4>
+<pre class="hljs"><code><div>=Navigate(FollowUpTimesScreen, None)
+</div></code></pre>
+<h4 id="text">Text</h4>
+<pre class="hljs"><code><div>=&quot;Find Available Times&quot;
+</div></code></pre>
+<h3 id="followupgallbkg-as-button">FollowUpGallBkg As button</h3>
+<h4 id="text">Text</h4>
+<pre class="hljs"><code><div>=&quot;&quot;
+</div></code></pre>
+<h3 id="followupattendeesgall-as-gallerygalleryvertical">FollowUpAttendeesGall As gallery.galleryVertical</h3>
+<h4 id="items">Items</h4>
+<pre class="hljs"><code><div>=FollowUpMeetingAttendees
+</div></code></pre>
+<h3 id="followupsearchtext-as-text">FollowUpSearchText As text</h3>
+<h3 id="followupsearchuserresults-as-gallerygalleryvertical">FollowUpSearchUserResults As gallery.galleryVertical</h3>
+<h4 id="items">Items</h4>
+<pre class="hljs"><code><div>=If(!IsBlank(FollowUpSearchText.Text), Office365Users.SearchUser({searchTerm:Trim(FollowUpSearchText.Text), top:15}))
+</div></code></pre>
+<h4 id="onselect">OnSelect</h4>
+<pre class="hljs"><code><div>=If(Not(ThisItem.Id in FollowUpMeetingAttendees.Id), Collect(FollowUpMeetingAttendees, ThisItem))
+</div></code></pre>
+<h3 id="followupsubject-as-text">FollowUpSubject As text</h3>
+<h3 id="followupmessage-as-text">FollowUpMessage As text</h3>
+<h2 id="followuptimesscreen">FollowUpTimesScreen</h2>
+<hr>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+FollowUpScreen(FollowUpScreen) --> FollowUpTimesScreen(FollowUpTimesScreen)  
+FollowUpTimesScreen(FollowUpTimesScreen) --> ConfirmScreen(ConfirmScreen)  
+</div></code></pre>
+<h3 id="variables">Variables</h3>
+<p>Following variables have been created / or updated on this screen</p>
+<ul>
+<li><a href="#followupstart">FollowUpStart</a></li>
+<li><a href="#loading">Loading</a></li>
+<li><a href="#followupend">FollowUpEnd</a></li>
+<li><a href="#showmeetingtimes">ShowMeetingTimes</a></li>
+<li><a href="#followupconfirmed">FollowUpConfirmed</a></li>
+</ul>
+<h3 id="collects">Collects</h3>
+<p>Following collects have been created, updated or cleared on this screen</p>
+<ul>
+<li><a href="#meetingtimes">MeetingTimes</a></li>
+<li><a href="#meetingdurations">MeetingDurations</a></li>
+<li><a href="#hourslist">HoursList</a></li>
+</ul>
+<h3 id="flows">Flows</h3>
+<p>Following flows have used on this screen</p>
+<h3 id="followuptimesscreen-as-screen">FollowUpTimesScreen As screen</h3>
+<p>Collections used in galleries and drop downs on this screen</p>
+<ul>
+<li>MeetingDurations</li>
+<li>HoursList</li>
+</ul>
+<h4 id="onvisible">OnVisible</h4>
+<pre class="hljs"><code><div>ClearCollect(MeetingDurations,
+{Name:&quot;30 minutes&quot;, Minutes:30},{Name:&quot;1 hour&quot;, Minutes:60},{Name:&quot;90 minutes&quot;, Minutes:90},{Name:&quot;2 hours&quot;, Minutes:120},
+{Name:&quot;2.5 hours&quot;, Minutes:150},{Name:&quot;3 hours&quot;, Minutes:180},{Name:&quot;3.5 hours&quot;, Minutes:210},{Name:&quot;4 hours&quot;, Minutes:240});
+
+ClearCollect(HoursList, {Name:&quot;12:00 am&quot;,Minutes:0}, {Name:&quot;12:30 am&quot;,Minutes:30}, {Name:&quot;01:00 am&quot;,Minutes:60}, {Name:&quot;01:30 am&quot;,Minutes:90}, {Name:&quot;02:00 am&quot;,Minutes:120}, {Name:&quot;02:30 am&quot;,Minutes:150}, {Name:&quot;03:00 am&quot;,Minutes:180}, {Name:&quot;03:30 am&quot;,Minutes:210}, {Name:&quot;04:00 am&quot;,Minutes:240, Short: &quot;4 am&quot;}, {Name:&quot;04:30 am&quot;,Minutes:270}, {Name:&quot;05:00 am&quot;,Minutes:300}, {Name:&quot;05:30 am&quot;,Minutes:330}, {Name:&quot;06:00 am&quot;,Minutes:360}, {Name:&quot;06:30 am&quot;,Minutes:390}, {Name:&quot;07:00 am&quot;,Minutes:420}, {Name:&quot;07:30 am&quot;,Minutes:450}, {Name:&quot;08:00 am&quot;,Minutes:480, Short: &quot;8 am&quot;}, {Name:&quot;08:30 am&quot;,Minutes:510}, {Name:&quot;09:00 am&quot;,Minutes:540}, {Name:&quot;09:30 am&quot;,Minutes:570}, {Name:&quot;10:00 am&quot;,Minutes:600}, {Name:&quot;10:30 am&quot;,Minutes:630}, {Name:&quot;11:00 am&quot;,Minutes:660}, {Name:&quot;11:30 am&quot;,Minutes:690}, {Name:&quot;12:00 pm&quot;,Minutes:720, Short: &quot;12 pm&quot;
+}, {Name:&quot;12:30 pm&quot;,Minutes:750}, {Name:&quot;01:00 pm&quot;,Minutes:780}, {Name:&quot;01:30 pm&quot;,Minutes:810}, {Name:&quot;02:00 pm&quot;,Minutes:840}, {Name:&quot;02:30 pm&quot;,Minutes:870}, {Name:&quot;03:00 pm&quot;,Minutes:900}, {Name:&quot;03:30 pm&quot;,Minutes:930}, {Name:&quot;04:00 pm&quot;,Minutes:960, Short: &quot;4 pm&quot;}, {Name:&quot;04:30 pm&quot;,Minutes:990}, {Name:&quot;05:00 pm&quot;,Minutes:1020}, {Name:&quot;05:30 pm&quot;,Minutes:1050}, {Name:&quot;06:00 pm&quot;,Minutes:1080}, {Name:&quot;06:30 pm&quot;,Minutes:1110}, {Name:&quot;07:00 pm&quot;,Minutes:1140}, {Name:&quot;07:30 pm&quot;,Minutes:1170}, {Name:&quot;08:00 pm&quot;,Minutes:1200, Short: &quot;8 pm&quot;}, {Name:&quot;08:30 pm&quot;,Minutes:1230}, {Name:&quot;09:00 pm&quot;,Minutes:1260}, {Name:&quot;09:30 pm&quot;,Minutes:1290}, {Name:&quot;10:00 pm&quot;,Minutes:1320}, {Name:&quot;10:30 pm&quot;,Minutes:1350}, {Name:&quot;11:00 pm&quot;,Minutes:1380}, {Name:&quot;11:30 pm&quot;,Minutes:1410})
+</div></code></pre>
+<h3 id="appicon8-as-image">AppIcon8 As image</h3>
+<h4 id="image">Image</h4>
+<pre class="hljs"><code><div>='nav-logo'
+</div></code></pre>
+<h3 id="sendinvite-as-button">SendInvite As button</h3>
+<h4 id="onselect">OnSelect</h4>
+<pre class="hljs"><code><div>=/*creates calendar event for meeting*/
+UpdateContext({requiredAttendees:Concat(FollowUpMeetingAttendees, UserPrincipalName &amp; &quot;;&quot;)});
+UpdateContext({requiredAttendees:Left(requiredAttendees, Len(requiredAttendees)-1)});
+Office365Outlook.V4CalendarPostItem(MyCalendarID, FollowUpSubject.Text, FollowUpStart, FollowUpEnd, &quot;UTC&quot;,{importance:&quot;Normal&quot;, body:FollowUpMessage.Text, showAs:&quot;busy&quot;, requiredAttendees:requiredAttendees});
+Set(FollowUpConfirmed, true);
+Navigate(ConfirmScreen,None)
+</div></code></pre>
+<h4 id="text">Text</h4>
+<pre class="hljs"><code><div>=&quot;Send Invite&quot;
+</div></code></pre>
+<h3 id="loadavailabletimes-as-button">LoadAvailableTimes As button</h3>
+<h4 id="onselect">OnSelect</h4>
+<pre class="hljs"><code><div>=Set(Loading, true);
+/*
+Collects available meeting times for attendees based on user determined data from this page. Adds 'StartTime' and 'EndTime' columns to the collection as a means of simplifying the MeetingTimeSlot column
+*/
+ClearCollect(MeetingTimes,AddColumns(Office365Outlook.FindMeetingTimes({MaxCandidates:15,MinimumAttendeePercentage: 1, MeetingDuration: MeetingDurationSelection.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes',Start:Text(DateAdd(DatePicker1.SelectedDate,MeetingStartRange.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes', Minutes), UTC),End:Text(DateAdd(DatePicker1.SelectedDate, MeetingEndRange.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes', Minutes), UTC),RequiredAttendees:Concat(FollowUpMeetingAttendees,UserPrincipalName &amp; &quot;;&quot;)}).MeetingTimeSuggestions,&quot;StartTime&quot;,MeetingTimeSlot.Start.DateTime,
+&quot;EndTime&quot;,MeetingTimeSlot.End.DateTime));
+Set(ShowMeetingTimes, true);
+Set(Loading, false)
+</div></code></pre>
+<h4 id="text">Text</h4>
+<pre class="hljs"><code><div>=&quot;Find Available Times&quot;
+</div></code></pre>
+<h3 id="timeline-as-gallerygalleryhorizontal">TimeLine As gallery.galleryHorizontal</h3>
+<h4 id="items">Items</h4>
+<pre class="hljs"><code><div>=HoursList
+</div></code></pre>
+<h3 id="availabletimesgall-as-gallerygalleryvertical">AvailableTimesGall As gallery.galleryVertical</h3>
+<h4 id="items">Items</h4>
+<pre class="hljs"><code><div>=SortByColumns(MeetingTimes,&quot;Confidence&quot;,Descending,&quot;StartTime&quot;,Ascending)
+</div></code></pre>
+<h2 id="homepopupsscreen">HomePopUpsScreen</h2>
+<hr>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+WelcomeScreen(WelcomeScreen) --> HomePopUpsScreen(HomePopUpsScreen)  
+HomeScreen(HomeScreen) --> HomePopUpsScreen(HomePopUpsScreen)  
+HomePopUpsScreen(HomePopUpsScreen) --> HomeScreen(HomeScreen)  
+</div></code></pre>
+<h3 id="variables">Variables</h3>
+<p>Following variables have been created / or updated on this screen</p>
+<ul>
+<li><a href="#userselectedfromtasks">UserSelectedFromTasks</a></li>
+<li><a href="#selecteduser">SelectedUser</a></li>
+<li><a href="#loading">Loading</a></li>
+<li><a href="#selectedmeetingduration">SelectedMeetingDuration</a></li>
+<li><a href="#showoverlay">ShowOverlay</a></li>
+<li><a href="#showdatalosswarning">ShowDataLossWarning</a></li>
+<li><a href="#taskselected">TaskSelected</a></li>
+<li><a href="#userselected">UserSelected</a></li>
+</ul>
+<h3 id="collects">Collects</h3>
+<p>Following collects have been created, updated or cleared on this screen</p>
+<ul>
+<li><a href="#meetingattendeestemp">MeetingAttendeesTemp</a></li>
+<li><a href="#meetingattendeeemails">MeetingAttendeeEmails</a></li>
+<li><a href="#meetingattendees">MeetingAttendees</a></li>
+<li><a href="#tasks">Tasks</a></li>
+</ul>
+<h3 id="flows">Flows</h3>
+<p>Following flows have used on this screen</p>
+<h3 id="homepopupsscreen-as-screen">HomePopUpsScreen As screen</h3>
+<p>Gathers and stores the Office 365 profiles of the meeting attendees if they are within the app user's org</p>
+<h4 id="onvisible">OnVisible</h4>
+<pre class="hljs"><code><div>If(IsEmpty(MeetingAttendees),
+    Set(Loading, true);
+    ClearCollect(MeetingAttendeeEmails, Filter(Split(Concatenate(SelectedMeeting.RequiredAttendees,
+     SelectedMeeting.OptionalAttendees), &quot;;&quot;), Result &lt;&gt; &quot;&quot;));
+    ClearCollect(MeetingAttendeesTemp, ForAll(MeetingAttendeeEmails, If(Lower(MyDomain) = Lower(Last(Split(Result, &quot;@&quot;)).Result), Office365Users.UserProfileV2(Result), {displayName: Result, id: &quot;&quot;, image: Blank(), jobTitle: &quot;&quot;, userPrincipalName: Result})));
+    ClearCollect(MeetingAttendees, RenameColumns(MeetingAttendeesTemp, &quot;id&quot;, &quot;Id&quot;, &quot;jobTitle&quot;, &quot;JobTitle&quot;, &quot;displayName&quot;, &quot;DisplayName&quot;, &quot;userPrincipalName&quot;, &quot;UserPrincipalName&quot;));
+    Set(SelectedMeetingDuration, DateDiff(SelectedMeeting.Start, SelectedMeeting.End, Seconds));
+    Set(Loading, false)
+)
+</div></code></pre>
+<h3 id="assntaskdescription1-as-text">AssnTaskDescription_1 As text</h3>
+<h3 id="assntaskgallery2-as-gallerygalleryvertical">AssnTaskGallery_2 As gallery.galleryVertical</h3>
+<h4 id="items">Items</h4>
+<pre class="hljs"><code><div>=/*
+In-org attendee gallery for task assignment
+If the attendee DisplayName is an actual name and not an email address, then they are in the app user's org, so we can assign them a task.
+Tasks are stored in an 0365 tenant, so cannot be assigned to external users
+*/
+Filter(AttendeeGallery1.AllItems, Not(&quot;.com&quot; in DisplayName))
+</div></code></pre>
+<h4 id="onselect">OnSelect</h4>
+<pre class="hljs"><code><div>=If(AssnTaskGallery_2.Visible,
+    Set(UserSelected, true);
+    Set(SelectedUser, {DisplayName:AssnTaskGallery_2.Selected.DisplayName, Id:AssnTaskGallery_2.Selected.Id, Image: AssnTaskGallery_2.Selected.AssnTaskUserImg_3.Image, JobTitle:AssnTaskGallery_2.Selected.JobTitle})
+)
+</div></code></pre>
+<h3 id="assntasksearchuser2-as-text">AssnTaskSearchUser_2 As text</h3>
+<h3 id="cancelassntask1-as-button">CancelAssnTask_1 As button</h3>
+<h4 id="onselect">OnSelect</h4>
+<pre class="hljs"><code><div>=Navigate(HomeScreen, None);
+Set(ShowOverlay, !ShowOverlay);
+If(TaskSelected, RemoveIf(Tasks, Id = SelectedTask.Id));
+Set(UserSelected, false);
+Set(UserSelectedFromTasks, false);
+Set(TaskSelected, false);
+Reset(AssnTaskSearchUser_2);
+Reset(AssnTaskDueDate_1);
+Reset(AssnTaskDescription_1);
+Reset(TaskTitle)
+</div></code></pre>
+<h4 id="text">Text</h4>
+<pre class="hljs"><code><div>=If(TaskSelected, &quot;Delete&quot;, &quot;Cancel&quot;)
+</div></code></pre>
+<h3 id="saveassntask1-as-button">SaveAssnTask_1 As button</h3>
+<h4 id="onselect">OnSelect</h4>
+<pre class="hljs"><code><div>=Navigate(HomeScreen, None);
+Set(ShowOverlay, !ShowOverlay);
+/*If user is making a new task, collect the information from form, otherwise, revise the task the user is editing*/
+If(!TaskSelected,
+    Collect(Tasks, {Id: CountRows(Tasks)+1, Name:AssnTaskDescription_1.Text, DueDate: AssnTaskDueDate_1.SelectedDate, 
+AssignToUser: SelectedUser}),
+    Patch(Tasks, LookUp(Tasks, Id=SelectedTask.Id), {Name:AssnTaskDescription_1.Text, DueDate: AssnTaskDueDate_1.SelectedDate, AssignToUser: SelectedUser}));
+Set(UserSelected, false);
+Set(UserSelectedFromTasks, false);
+Set(TaskSelected, false);
+Reset(AssnTaskSearchUser_2);
+Reset(AssnTaskDueDate_1);
+Reset(AssnTaskDescription_1);
+Reset(TaskTitle)
+</div></code></pre>
+<h4 id="text">Text</h4>
+<pre class="hljs"><code><div>=&quot;Save task&quot;
+</div></code></pre>
+<h3 id="assntaskgallery3-as-gallerygalleryvertical">AssnTaskGallery_3 As gallery.galleryVertical</h3>
+<h4 id="items">Items</h4>
+<pre class="hljs"><code><div>=/*User search gallery*/
+If(!IsBlank(AssnTaskSearchUser_2.Text), Office365Users.SearchUser({searchTerm:Trim(AssnTaskSearchUser_2.Text), top:15}))
+</div></code></pre>
+<h4 id="onselect">OnSelect</h4>
+<pre class="hljs"><code><div>=Set(SelectedUser, {DisplayName:AssnTaskGallery_3.Selected.DisplayName, Id:AssnTaskGallery_3.Selected.Id, Image: AssnTaskGallery_3.Selected.AssnTaskUserImg_4.Image, JobTitle:AssnTaskGallery_3.Selected.JobTitle});
+Set(UserSelected, true)
+</div></code></pre>
+<h3 id="assntaskuserimg5-as-image">AssnTaskUserImg_5 As image</h3>
+<h4 id="image">Image</h4>
+<pre class="hljs"><code><div>=If(UserSelectedFromTasks,SelectedUserTasks.Image,SelectedUser.Image)
+</div></code></pre>
+<h4 id="onselect">OnSelect</h4>
+<pre class="hljs"><code><div>=
+</div></code></pre>
+<h3 id="datawarningaccept1-as-button">DataWarningAccept_1 As button</h3>
+<h4 id="onselect">OnSelect</h4>
+<pre class="hljs"><code><div>=Set(ShowDataLossWarning, false);
+Navigate(HomeScreen, None)
+</div></code></pre>
+<h4 id="text">Text</h4>
+<pre class="hljs"><code><div>=&quot;Got it!&quot;
+</div></code></pre>
+<h2 id="exportpopupsscreen">ExportPopUpsScreen</h2>
+<hr>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+ExportScreen(ExportScreen) --> ExportPopUpsScreen(ExportPopUpsScreen)  
+ExportPopUpsScreen(ExportPopUpsScreen) --> ExportScreen(ExportScreen)  
+ExportPopUpsScreen(ExportPopUpsScreen) --> ConfirmScreen(ConfirmScreen)  
+</div></code></pre>
+<h3 id="variables">Variables</h3>
+<p>Following variables have been created / or updated on this screen</p>
+<ul>
+<li><a href="#selectednotebook">SelectedNoteBook</a></li>
+<li><a href="#selectedplan">SelectedPlan</a></li>
+<li><a href="#selectedsection">SelectedSection</a></li>
+<li><a href="#showoverlay">ShowOverlay</a></li>
+<li><a href="#selectedbucket">SelectedBucket</a></li>
+<li><a href="#showonenote">ShowOneNote</a></li>
+<li><a href="#exportconfirmed">ExportConfirmed</a></li>
+<li><a href="#showplanner">ShowPlanner</a></li>
+</ul>
+<h3 id="collects">Collects</h3>
+<p>Following collects have been created, updated or cleared on this screen</p>
+<ul>
+<li><a href="#onenotesections">OneNoteSections</a></li>
+<li><a href="#plannerbuckets">PlannerBuckets</a></li>
+</ul>
+<h3 id="flows">Flows</h3>
+<p>Following flows have used on this screen</p>
+<h3 id="exportpopupsscreen-as-screen">ExportPopUpsScreen As screen</h3>
+<h3 id="exportcancel1-as-button">ExportCancel_1 As button</h3>
+<h4 id="onselect">OnSelect</h4>
+<pre class="hljs"><code><div>=Set(ShowOneNote, false);
+Set(ShowPlanner, false);
+Set(ShowOverlay, false);
+Navigate(ExportScreen, None)
+</div></code></pre>
+<h4 id="text">Text</h4>
+<pre class="hljs"><code><div>=If(TaskSelected, &quot;Delete&quot;, &quot;Cancel&quot;)
+</div></code></pre>
+<h3 id="exportconfirm1-as-button">ExportConfirm_1 As button</h3>
+<h4 id="onselect">OnSelect</h4>
+<pre class="hljs"><code><div>=If(ShowOneNote,
+    Set(ShowOneNote, false);
+    Set(SelectedNoteBook, OneNoteBookSelect_1.SelectedText);
+    Set(SelectedSection, SectionsSelect_1.SelectedText);
+    Navigate(ExportScreen, None),
+   ShowPlanner,
+    Set(ShowPlanner, false);
+    Set(SelectedPlan, PlannerPlanSelect_1.SelectedText);
+    Set(SelectedBucket, PlannerBucketSelect_1.SelectedText);
+    Navigate(ExportScreen, None),
+   ShowOverlay,
+    Set(ShowOverlay, false);
+    Set(ExportConfirmed, true);
+    Navigate(ConfirmScreen, None)
+)
+
+</div></code></pre>
+<h4 id="text">Text</h4>
+<pre class="hljs"><code><div>=If(ShowOverlay, &quot;Yes, continue&quot;, &quot;OK&quot;)
+</div></code></pre>
+<h2 id="collectionsandvariables">CollectionsAndVariables</h2>
+<hr>
+<h3 id="variables">Variables</h3>
+<p>Following variables have been created / or updated on this screen</p>
+<h3 id="collects">Collects</h3>
+<p>Following collects have been created, updated or cleared on this screen</p>
+<h3 id="flows">Flows</h3>
+<p>Following flows have used on this screen</p>
+<h3 id="collectionsandvariables-as-screen">CollectionsAndVariables As screen</h3>
+<p>This screen lists all collections and variables used inside the app</p>
+<h2 id="testemptyscreen">TestEmptyScreen</h2>
+<hr>
+<h3 id="variables">Variables</h3>
+<p>Following variables have been created / or updated on this screen</p>
+<h3 id="collects">Collects</h3>
+<p>Following collects have been created, updated or cleared on this screen</p>
+<h3 id="flows">Flows</h3>
+<p>Following flows have used on this screen</p>
+<h3 id="testemptyscreen-as-screen">TestEmptyScreen As screen</h3>
+<h1 id="global-variables">Global Variables</h1>
+<p>Usage of global variables is shown based on the screen(s) where this variable is set and the screen(s) where it is used.</p>
+<h2 id="vfilter">vFilter</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+Set2201_2(2201_2)-- set -->vFilter[/vFilter/]  
+vFilter[/vFilter/]-. use .->Use2201_2(2201_2)  
+</div></code></pre>
+<h2 id="vguid221">vGUID221</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+Set2201_2(2201_2)-- set -->vGUID221[/vGUID221/]  
+</div></code></pre>
+<h2 id="userselectedfromtasks">UserSelectedFromTasks</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+SetHomeScreen(HomeScreen)-- set -->UserSelectedFromTasks[/UserSelectedFromTasks/]  
+SetHomePopUpsScreen(HomePopUpsScreen)-- set -->UserSelectedFromTasks[/UserSelectedFromTasks/]  
+UserSelectedFromTasks[/UserSelectedFromTasks/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
+UserSelectedFromTasks[/UserSelectedFromTasks/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+</div></code></pre>
+<h2 id="varduplicatepopup">varDuplicatePopup</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+Set2201_2(2201_2)-- set -->varDuplicatePopup[/varDuplicatePopup/]  
+varDuplicatePopup[/varDuplicatePopup/]-. use .->Use2201_2(2201_2)  
+</div></code></pre>
+<h2 id="varreviewteam">varReviewTeam</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+Set2201_2(2201_2)-- set -->varReviewTeam[/varReviewTeam/]  
+varReviewTeam[/varReviewTeam/]-. use .->Use2201_2(2201_2)  
+</div></code></pre>
+<h2 id="selectednotebook">SelectedNoteBook</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+SetExportScreen(ExportScreen)-- set -->SelectedNoteBook[/SelectedNoteBook/]  
+SetExportPopUpsScreen(ExportPopUpsScreen)-- set -->SelectedNoteBook[/SelectedNoteBook/]  
+SelectedNoteBook[/SelectedNoteBook/]-. use .->UseConfirmScreen(ConfirmScreen)  
+SelectedNoteBook[/SelectedNoteBook/]-. use .->UseExportScreen(ExportScreen)  
+SelectedNoteBook[/SelectedNoteBook/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+</div></code></pre>
+<h2 id="isloading">IsLoading</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+Set2201_2(2201_2)-- set -->IsLoading[/IsLoading/]  
+</div></code></pre>
+<h2 id="selectedmeetingduration">SelectedMeetingDuration</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+SetHomePopUpsScreen(HomePopUpsScreen)-- set -->SelectedMeetingDuration[/SelectedMeetingDuration/]  
+SelectedMeetingDuration[/SelectedMeetingDuration/]-. use .->UseHomeScreen(HomeScreen)  
+SelectedMeetingDuration[/SelectedMeetingDuration/]-. use .->UseConfirmScreen(ConfirmScreen)  
+SelectedMeetingDuration[/SelectedMeetingDuration/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+</div></code></pre>
+<h2 id="showimagesaved">ShowImageSaved</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+SetCameraScreen(CameraScreen)-- set -->ShowImageSaved[/ShowImageSaved/]  
+ShowImageSaved[/ShowImageSaved/]-. use .->UseCameraScreen(CameraScreen)  
+ShowImageSaved[/ShowImageSaved/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+</div></code></pre>
+<h2 id="multirecipients">MultiRecipients</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+SetHomeScreen(HomeScreen)-- set -->MultiRecipients[/MultiRecipients/]  
+MultiRecipients[/MultiRecipients/]-. use .->UseEmailScreen(EmailScreen)  
+MultiRecipients[/MultiRecipients/]-. use .->UseExportScreen(ExportScreen)  
+MultiRecipients[/MultiRecipients/]-. use .->UseFollowUpScreen(FollowUpScreen)  
+MultiRecipients[/MultiRecipients/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+</div></code></pre>
+<h2 id="varguid216">varGUID216</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+Set2201_2(2201_2)-- set -->varGUID216[/varGUID216/]  
+varGUID216[/varGUID216/]-. use .->Use2201_2(2201_2)  
+</div></code></pre>
+<h2 id="taskselected">TaskSelected</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+SetHomeScreen(HomeScreen)-- set -->TaskSelected[/TaskSelected/]  
+SetHomePopUpsScreen(HomePopUpsScreen)-- set -->TaskSelected[/TaskSelected/]  
+TaskSelected[/TaskSelected/]-. use .->UseAttachmentsScreen(AttachmentsScreen)  
+TaskSelected[/TaskSelected/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
+TaskSelected[/TaskSelected/]-. use .->UseExportPopUpsScreen(ExportPopUpsScreen)  
+</div></code></pre>
+<h2 id="varselectedpl">varSelectedPL</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+Set2201_2(2201_2)-- set -->varSelectedPL[/varSelectedPL/]  
+varSelectedPL[/varSelectedPL/]-. use .->Use2201_2(2201_2)  
+</div></code></pre>
+<h2 id="selecteduser">SelectedUser</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+SetHomePopUpsScreen(HomePopUpsScreen)-- set -->SelectedUser[/SelectedUser/]  
+SelectedUser[/SelectedUser/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
+SelectedUser[/SelectedUser/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+</div></code></pre>
+<h2 id="loading">Loading</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+SetConfirmScreen(ConfirmScreen)-- set -->Loading[/Loading/]  
+SetFollowUpTimesScreen(FollowUpTimesScreen)-- set -->Loading[/Loading/]  
+SetHomePopUpsScreen(HomePopUpsScreen)-- set -->Loading[/Loading/]  
+Loading[/Loading/]-. use .->Use2201_2(2201_2)  
+Loading[/Loading/]-. use .->UseWelcomeScreen(WelcomeScreen)  
+Loading[/Loading/]-. use .->UseHomeScreen(HomeScreen)  
+Loading[/Loading/]-. use .->UseEmailScreen(EmailScreen)  
+Loading[/Loading/]-. use .->UseAttachmentsScreen(AttachmentsScreen)  
+Loading[/Loading/]-. use .->UseConfirmScreen(ConfirmScreen)  
+Loading[/Loading/]-. use .->UseExportScreen(ExportScreen)  
+Loading[/Loading/]-. use .->UseFollowUpScreen(FollowUpScreen)  
+Loading[/Loading/]-. use .->UseFollowUpTimesScreen(FollowUpTimesScreen)  
+Loading[/Loading/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
+Loading[/Loading/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+</div></code></pre>
+<h2 id="followupstart">FollowUpStart</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+SetFollowUpTimesScreen(FollowUpTimesScreen)-- set -->FollowUpStart[/FollowUpStart/]  
+FollowUpStart[/FollowUpStart/]-. use .->UseFollowUpTimesScreen(FollowUpTimesScreen)  
+FollowUpStart[/FollowUpStart/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+</div></code></pre>
+<h2 id="followupend">FollowUpEnd</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+SetFollowUpTimesScreen(FollowUpTimesScreen)-- set -->FollowUpEnd[/FollowUpEnd/]  
+FollowUpEnd[/FollowUpEnd/]-. use .->UseFollowUpTimesScreen(FollowUpTimesScreen)  
+FollowUpEnd[/FollowUpEnd/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+</div></code></pre>
+<h2 id="selectedsection">SelectedSection</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+SetExportScreen(ExportScreen)-- set -->SelectedSection[/SelectedSection/]  
+SetExportPopUpsScreen(ExportPopUpsScreen)-- set -->SelectedSection[/SelectedSection/]  
+SelectedSection[/SelectedSection/]-. use .->UseConfirmScreen(ConfirmScreen)  
+SelectedSection[/SelectedSection/]-. use .->UseExportScreen(ExportScreen)  
+SelectedSection[/SelectedSection/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+</div></code></pre>
+<h2 id="selectedusertasks">SelectedUserTasks</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+SetHomeScreen(HomeScreen)-- set -->SelectedUserTasks[/SelectedUserTasks/]  
+SelectedUserTasks[/SelectedUserTasks/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
+SelectedUserTasks[/SelectedUserTasks/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+</div></code></pre>
+<h2 id="showoverlay">ShowOverlay</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+SetHomeScreen(HomeScreen)-- set -->ShowOverlay[/ShowOverlay/]  
+SetAttachmentsScreen(AttachmentsScreen)-- set -->ShowOverlay[/ShowOverlay/]  
+SetExportScreen(ExportScreen)-- set -->ShowOverlay[/ShowOverlay/]  
+SetHomePopUpsScreen(HomePopUpsScreen)-- set -->ShowOverlay[/ShowOverlay/]  
+SetExportPopUpsScreen(ExportPopUpsScreen)-- set -->ShowOverlay[/ShowOverlay/]  
+ShowOverlay[/ShowOverlay/]-. use .->UseAttachmentsScreen(AttachmentsScreen)  
+ShowOverlay[/ShowOverlay/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
+ShowOverlay[/ShowOverlay/]-. use .->UseExportPopUpsScreen(ExportPopUpsScreen)  
+ShowOverlay[/ShowOverlay/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+</div></code></pre>
+<h2 id="varshowsort">varShowSort</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+Set2201_2(2201_2)-- set -->varShowSort[/varShowSort/]  
+</div></code></pre>
+<h2 id="showonenote">ShowOneNote</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+SetExportScreen(ExportScreen)-- set -->ShowOneNote[/ShowOneNote/]  
+SetExportPopUpsScreen(ExportPopUpsScreen)-- set -->ShowOneNote[/ShowOneNote/]  
+ShowOneNote[/ShowOneNote/]-. use .->UseExportScreen(ExportScreen)  
+ShowOneNote[/ShowOneNote/]-. use .->UseExportPopUpsScreen(ExportPopUpsScreen)  
+ShowOneNote[/ShowOneNote/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+</div></code></pre>
+<h2 id="myedit">myedit</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+Set2201_2(2201_2)-- set -->myedit[/myedit/]  
+</div></code></pre>
+<h2 id="varguid211">varGUID211</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+Set2201_2(2201_2)-- set -->varGUID211[/varGUID211/]  
+varGUID211[/varGUID211/]-. use .->Use2201_2(2201_2)  
+</div></code></pre>
+<h2 id="selectedtask">SelectedTask</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+SetHomeScreen(HomeScreen)-- set -->SelectedTask[/SelectedTask/]  
+SelectedTask[/SelectedTask/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
+SelectedTask[/SelectedTask/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+</div></code></pre>
+<h2 id="showtakenimage">ShowTakenImage</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+SetCameraScreen(CameraScreen)-- set -->ShowTakenImage[/ShowTakenImage/]  
+ShowTakenImage[/ShowTakenImage/]-. use .->UseCameraScreen(CameraScreen)  
+ShowTakenImage[/ShowTakenImage/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+</div></code></pre>
+<h2 id="showsketchsaved">ShowSketchSaved</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+SetSketchScreen(Sketch Screen)-- set -->ShowSketchSaved[/ShowSketchSaved/]  
+ShowSketchSaved[/ShowSketchSaved/]-. use .->UseSketchScreen(Sketch Screen)  
+ShowSketchSaved[/ShowSketchSaved/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+</div></code></pre>
+<h2 id="varloadingpopup">varLoadingPopup</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+Set2201_2(2201_2)-- set -->varLoadingPopup[/varLoadingPopup/]  
+varLoadingPopup[/varLoadingPopup/]-. use .->Use2201_2(2201_2)  
+</div></code></pre>
+<h2 id="photonumber">PhotoNumber</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+SetCameraScreen(CameraScreen)-- set -->PhotoNumber[/PhotoNumber/]  
+PhotoNumber[/PhotoNumber/]-. use .->UseCameraScreen(CameraScreen)  
+PhotoNumber[/PhotoNumber/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+</div></code></pre>
+<h2 id="vshowfilter">vShowFilter</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+Set2201_2(2201_2)-- set -->vShowFilter[/vShowFilter/]  
+</div></code></pre>
+<h2 id="varaddgoal">varAddGoal</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+Set2201_2(2201_2)-- set -->varAddGoal[/varAddGoal/]  
+</div></code></pre>
+<h2 id="emailconfirmed">EmailConfirmed</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+SetWelcomeScreen(WelcomeScreen)-- set -->EmailConfirmed[/EmailConfirmed/]  
+SetHomeScreen(HomeScreen)-- set -->EmailConfirmed[/EmailConfirmed/]  
+SetEmailScreen(EmailScreen)-- set -->EmailConfirmed[/EmailConfirmed/]  
+EmailConfirmed[/EmailConfirmed/]-. use .->UseConfirmScreen(ConfirmScreen)  
+EmailConfirmed[/EmailConfirmed/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+</div></code></pre>
+<h2 id="attachmentdeleteconfirm">AttachmentDeleteConfirm</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+SetAttachmentsScreen(AttachmentsScreen)-- set -->AttachmentDeleteConfirm[/AttachmentDeleteConfirm/]  
+AttachmentDeleteConfirm[/AttachmentDeleteConfirm/]-. use .->UseAttachmentsScreen(AttachmentsScreen)  
+AttachmentDeleteConfirm[/AttachmentDeleteConfirm/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+</div></code></pre>
+<h2 id="visedit">vIsEdit</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+Set2201_2(2201_2)-- set -->vIsEdit[/vIsEdit/]  
+vIsEdit[/vIsEdit/]-. use .->Use2201_2(2201_2)  
+</div></code></pre>
+<h2 id="vaddlevel2">vAddLevel_2</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+Set2201_2(2201_2)-- set -->vAddLevel_2[/vAddLevel_2/]  
+</div></code></pre>
+<h2 id="sketchnumber">SketchNumber</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+SetSketchScreen(Sketch Screen)-- set -->SketchNumber[/SketchNumber/]  
+SketchNumber[/SketchNumber/]-. use .->UseSketchScreen(Sketch Screen)  
+SketchNumber[/SketchNumber/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+</div></code></pre>
+<h2 id="vshowconfirm">V_ShowConfirm</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+Set2201_2(2201_2)-- set -->V_ShowConfirm[/V_ShowConfirm/]  
+</div></code></pre>
+<h2 id="vaddlevel1">vAddLevel_1</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+Set2201_2(2201_2)-- set -->vAddLevel_1[/vAddLevel_1/]  
+</div></code></pre>
+<h2 id="exportconfirmed">ExportConfirmed</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+SetWelcomeScreen(WelcomeScreen)-- set -->ExportConfirmed[/ExportConfirmed/]  
+SetHomeScreen(HomeScreen)-- set -->ExportConfirmed[/ExportConfirmed/]  
+SetFollowUpScreen(FollowUpScreen)-- set -->ExportConfirmed[/ExportConfirmed/]  
+SetExportPopUpsScreen(ExportPopUpsScreen)-- set -->ExportConfirmed[/ExportConfirmed/]  
+ExportConfirmed[/ExportConfirmed/]-. use .->UseConfirmScreen(ConfirmScreen)  
+ExportConfirmed[/ExportConfirmed/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+</div></code></pre>
+<h2 id="showdatalosswarning">ShowDataLossWarning</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+SetWelcomeScreen(WelcomeScreen)-- set -->ShowDataLossWarning[/ShowDataLossWarning/]  
+SetHomePopUpsScreen(HomePopUpsScreen)-- set -->ShowDataLossWarning[/ShowDataLossWarning/]  
+ShowDataLossWarning[/ShowDataLossWarning/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
+ShowDataLossWarning[/ShowDataLossWarning/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+</div></code></pre>
+<h2 id="secondsremain">SecondsRemain</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+SetHomeScreen(HomeScreen)-- set -->SecondsRemain[/SecondsRemain/]  
+SecondsRemain[/SecondsRemain/]-. use .->UseHomeScreen(HomeScreen)  
+SecondsRemain[/SecondsRemain/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+</div></code></pre>
+<h2 id="selectedmeeting">SelectedMeeting</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+SetWelcomeScreen(WelcomeScreen)-- set -->SelectedMeeting[/SelectedMeeting/]  
+SelectedMeeting[/SelectedMeeting/]-. use .->UseWelcomeScreen(WelcomeScreen)  
+SelectedMeeting[/SelectedMeeting/]-. use .->UseHomeScreen(HomeScreen)  
+SelectedMeeting[/SelectedMeeting/]-. use .->UseEmailScreen(EmailScreen)  
+SelectedMeeting[/SelectedMeeting/]-. use .->UseConfirmScreen(ConfirmScreen)  
+SelectedMeeting[/SelectedMeeting/]-. use .->UseExportScreen(ExportScreen)  
+SelectedMeeting[/SelectedMeeting/]-. use .->UseFollowUpScreen(FollowUpScreen)  
+SelectedMeeting[/SelectedMeeting/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
+SelectedMeeting[/SelectedMeeting/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+</div></code></pre>
+<h2 id="varguid208">varGUID208</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+Set2201_2(2201_2)-- set -->varGUID208[/varGUID208/]  
+</div></code></pre>
+<h2 id="showplanner">ShowPlanner</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+SetExportScreen(ExportScreen)-- set -->ShowPlanner[/ShowPlanner/]  
+SetExportPopUpsScreen(ExportPopUpsScreen)-- set -->ShowPlanner[/ShowPlanner/]  
+ShowPlanner[/ShowPlanner/]-. use .->UseExportScreen(ExportScreen)  
+ShowPlanner[/ShowPlanner/]-. use .->UseExportPopUpsScreen(ExportPopUpsScreen)  
+ShowPlanner[/ShowPlanner/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+</div></code></pre>
+<h2 id="varaddmemo">varAddMemo</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+Set2201_2(2201_2)-- set -->varAddMemo[/varAddMemo/]  
+varAddMemo[/varAddMemo/]-. use .->Use2201_2(2201_2)  
+</div></code></pre>
+<h2 id="selectedplan">SelectedPlan</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+SetExportScreen(ExportScreen)-- set -->SelectedPlan[/SelectedPlan/]  
+SetExportPopUpsScreen(ExportPopUpsScreen)-- set -->SelectedPlan[/SelectedPlan/]  
+SelectedPlan[/SelectedPlan/]-. use .->UseConfirmScreen(ConfirmScreen)  
+SelectedPlan[/SelectedPlan/]-. use .->UseExportScreen(ExportScreen)  
+SelectedPlan[/SelectedPlan/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+</div></code></pre>
+<h2 id="progressbarposition">ProgressBarPosition</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+SetHomeScreen(HomeScreen)-- set -->ProgressBarPosition[/ProgressBarPosition/]  
+ProgressBarPosition[/ProgressBarPosition/]-. use .->UseHomeScreen(HomeScreen)  
+ProgressBarPosition[/ProgressBarPosition/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+</div></code></pre>
+<h2 id="autoselectmeeting">AutoSelectMeeting</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+SetWelcomeScreen(WelcomeScreen)-- set -->AutoSelectMeeting[/AutoSelectMeeting/]  
+AutoSelectMeeting[/AutoSelectMeeting/]-. use .->UseWelcomeScreen(WelcomeScreen)  
+AutoSelectMeeting[/AutoSelectMeeting/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+</div></code></pre>
+<h2 id="selectedimage">SelectedImage</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+SetAttachmentsScreen(AttachmentsScreen)-- set -->SelectedImage[/SelectedImage/]  
+SelectedImage[/SelectedImage/]-. use .->UseAttachmentsScreen(AttachmentsScreen)  
+SelectedImage[/SelectedImage/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+</div></code></pre>
+<h2 id="selectedbucket">SelectedBucket</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+SetExportScreen(ExportScreen)-- set -->SelectedBucket[/SelectedBucket/]  
+SetExportPopUpsScreen(ExportPopUpsScreen)-- set -->SelectedBucket[/SelectedBucket/]  
+SelectedBucket[/SelectedBucket/]-. use .->UseConfirmScreen(ConfirmScreen)  
+SelectedBucket[/SelectedBucket/]-. use .->UseExportScreen(ExportScreen)  
+SelectedBucket[/SelectedBucket/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+</div></code></pre>
+<h2 id="showmeetingtimes">ShowMeetingTimes</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+SetFollowUpTimesScreen(FollowUpTimesScreen)-- set -->ShowMeetingTimes[/ShowMeetingTimes/]  
+ShowMeetingTimes[/ShowMeetingTimes/]-. use .->UseFollowUpTimesScreen(FollowUpTimesScreen)  
+ShowMeetingTimes[/ShowMeetingTimes/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+</div></code></pre>
+<h2 id="vcontinue">vContinue</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+Set2201_2(2201_2)-- set -->vContinue[/vContinue/]  
+vContinue[/vContinue/]-. use .->Use2201_2(2201_2)  
+</div></code></pre>
+<h2 id="vaddlevel3">vAddLevel_3</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+Set2201_2(2201_2)-- set -->vAddLevel_3[/vAddLevel_3/]  
+</div></code></pre>
+<h2 id="varloadingpopup">varLoadingPopup</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+Set2201_2(2201_2)-- set -->varLoadingPopup[/ varLoadingPopup/]  
+</div></code></pre>
+<h2 id="vguid208">vGUID208</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+Set2201_2(2201_2)-- set -->vGUID208[/vGUID208/]  
+</div></code></pre>
+<h2 id="followupconfirmed">FollowUpConfirmed</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+SetWelcomeScreen(WelcomeScreen)-- set -->FollowUpConfirmed[/FollowUpConfirmed/]  
+SetHomeScreen(HomeScreen)-- set -->FollowUpConfirmed[/FollowUpConfirmed/]  
+SetFollowUpTimesScreen(FollowUpTimesScreen)-- set -->FollowUpConfirmed[/FollowUpConfirmed/]  
+FollowUpConfirmed[/FollowUpConfirmed/]-. use .->UseConfirmScreen(ConfirmScreen)  
+FollowUpConfirmed[/FollowUpConfirmed/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+</div></code></pre>
+<h2 id="userselected">UserSelected</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+SetHomeScreen(HomeScreen)-- set -->UserSelected[/UserSelected/]  
+SetHomePopUpsScreen(HomePopUpsScreen)-- set -->UserSelected[/UserSelected/]  
+UserSelected[/UserSelected/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
+UserSelected[/UserSelected/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+</div></code></pre>
+<h1 id="global-collects">Global Collects</h1>
+<p>Usage of global collects is shown based on the screen(s) where this collect is set, used or cleared</p>
+<h2 id="photos">Photos</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+CollectCameraScreen(CameraScreen)-- collect -->Photos[/Photos/]  
+Photos[/Photos/]-. use .->UseWelcomeScreen(WelcomeScreen)  
+Photos[/Photos/]-. use .->UseHomeScreen(HomeScreen)  
+Photos[/Photos/]-. use .->UseSketchScreen(Sketch Screen)  
+Photos[/Photos/]-. use .->UseCameraScreen(CameraScreen)  
+Photos[/Photos/]-. use .->UseAttachmentsScreen(AttachmentsScreen)  
+Photos[/Photos/]-. use .->UseConfirmScreen(ConfirmScreen)  
+Photos[/Photos/]-. use .->UseExportScreen(ExportScreen)  
+Photos[/Photos/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+</div></code></pre>
+<h2 id="tempviewplan">TempView_Plan</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+TempView_Plan[/TempView_Plan/]-. use .->Use2201_2(2201_2)  
+TempView_Plan[/TempView_Plan/]-. clear .->Clear2201_2(2201_2)  
+</div></code></pre>
+<h2 id="plannerplans">PlannerPlans</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+PlannerPlans[/PlannerPlans/]-. use .->UseExportScreen(ExportScreen)  
+PlannerPlans[/PlannerPlans/]-. use .->UseExportPopUpsScreen(ExportPopUpsScreen)  
+PlannerPlans[/PlannerPlans/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+PlannerPlans[/PlannerPlans/]-. clear .->ClearExportScreen(ExportScreen)  
+</div></code></pre>
+<h2 id="updatetable2201augoals">updateTable2201auGoals</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+updateTable2201auGoals[/updateTable2201auGoals/]-. use .->Use2201_2(2201_2)  
+updateTable2201auGoals[/updateTable2201auGoals/]-. clear .->Clear2201_2(2201_2)  
+</div></code></pre>
+<h2 id="coladassignment">colAdAssignment</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+colAdAssignment[/colAdAssignment/]-. clear .->Clear2201_2(2201_2)  
+</div></code></pre>
+<h2 id="coladrolle">colAdRolle</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+colAdRolle[/colAdRolle/]-. clear .->Clear2201_2(2201_2)  
+</div></code></pre>
+<h2 id="coladtraeger">colAdTraeger</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+colAdTraeger[/colAdTraeger/]-. use .->Use2201_2(2201_2)  
+colAdTraeger[/colAdTraeger/]-. clear .->Clear2201_2(2201_2)  
+</div></code></pre>
+<h2 id="colflowresponse">colFlowResponse</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+colFlowResponse[/colFlowResponse/]-. use .->Use2201_2(2201_2)  
+colFlowResponse[/colFlowResponse/]-. clear .->Clear2201_2(2201_2)  
+</div></code></pre>
+<h2 id="colallocation">colAllocation</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+colAllocation[/colAllocation/]-. clear .->Clear2201_2(2201_2)  
+</div></code></pre>
+<h2 id="tempaulevel3">TempAu_Level_3</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+TempAu_Level_3[/TempAu_Level_3/]-. clear .->Clear2201_2(2201_2)  
+</div></code></pre>
+<h2 id="colpldistribution">colPlDistribution</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+colPlDistribution[/colPlDistribution/]-. clear .->Clear2201_2(2201_2)  
+</div></code></pre>
+<h2 id="plannerbuckets">PlannerBuckets</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+PlannerBuckets[/PlannerBuckets/]-. use .->UseExportPopUpsScreen(ExportPopUpsScreen)  
+PlannerBuckets[/PlannerBuckets/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+PlannerBuckets[/PlannerBuckets/]-. clear .->ClearExportScreen(ExportScreen)  
+PlannerBuckets[/PlannerBuckets/]-. clear .->ClearExportPopUpsScreen(ExportPopUpsScreen)  
+</div></code></pre>
+<h2 id="hourslist">HoursList</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+HoursList[/HoursList/]-. use .->UseFollowUpTimesScreen(FollowUpTimesScreen)  
+HoursList[/HoursList/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+HoursList[/HoursList/]-. clear .->ClearFollowUpTimesScreen(FollowUpTimesScreen)  
+</div></code></pre>
+<h2 id="colmodelrow">colModelRow</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+colModelRow[/colModelRow/]-. use .->Use2201_2(2201_2)  
+colModelRow[/colModelRow/]-. clear .->Clear2201_2(2201_2)  
+</div></code></pre>
+<h2 id="emailrecipients">EmailRecipients</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+CollectExportScreen(ExportScreen)-- collect -->EmailRecipients[/EmailRecipients/]  
+EmailRecipients[/EmailRecipients/]-. use .->UseWelcomeScreen(WelcomeScreen)  
+EmailRecipients[/EmailRecipients/]-. use .->UseEmailScreen(EmailScreen)  
+EmailRecipients[/EmailRecipients/]-. use .->UseConfirmScreen(ConfirmScreen)  
+EmailRecipients[/EmailRecipients/]-. use .->UseExportScreen(ExportScreen)  
+EmailRecipients[/EmailRecipients/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+EmailRecipients[/EmailRecipients/]-. clear .->ClearHomeScreen(HomeScreen)  
+EmailRecipients[/EmailRecipients/]-. clear .->ClearExportScreen(ExportScreen)  
+</div></code></pre>
+<h2 id="emailattachments">EmailAttachments</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+CollectConfirmScreen(ConfirmScreen)-- collect -->EmailAttachments[/EmailAttachments/]  
+EmailAttachments[/EmailAttachments/]-. use .->UseWelcomeScreen(WelcomeScreen)  
+EmailAttachments[/EmailAttachments/]-. use .->UseConfirmScreen(ConfirmScreen)  
+EmailAttachments[/EmailAttachments/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+</div></code></pre>
+<h2 id="templates">Templates</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+Templates[/Templates/]-. use .->UseConfirmScreen(ConfirmScreen)  
+Templates[/Templates/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+Templates[/Templates/]-. clear .->ClearWelcomeScreen(WelcomeScreen)  
+</div></code></pre>
+<h2 id="tempplgoals">TempPl_Goals</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+TempPl_Goals[/TempPl_Goals/]-. use .->Use2201_2(2201_2)  
+TempPl_Goals[/TempPl_Goals/]-. clear .->Clear2201_2(2201_2)  
+</div></code></pre>
+<h2 id="colquestionsadd">colQuestionsAdd</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+colQuestionsAdd[/colQuestionsAdd/]-. use .->Use2201_2(2201_2)  
+colQuestionsAdd[/colQuestionsAdd/]-. clear .->Clear2201_2(2201_2)  
+</div></code></pre>
+<h2 id="templatedata">TemplateData</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+TemplateData[/TemplateData/]-. use .->UseConfirmScreen(ConfirmScreen)  
+TemplateData[/TemplateData/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+TemplateData[/TemplateData/]-. clear .->ClearConfirmScreen(ConfirmScreen)  
+</div></code></pre>
+<h2 id="onenotebooks">OneNoteBooks</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+OneNoteBooks[/OneNoteBooks/]-. use .->UseExportScreen(ExportScreen)  
+OneNoteBooks[/OneNoteBooks/]-. use .->UseExportPopUpsScreen(ExportPopUpsScreen)  
+OneNoteBooks[/OneNoteBooks/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+OneNoteBooks[/OneNoteBooks/]-. clear .->ClearExportScreen(ExportScreen)  
+</div></code></pre>
+<h2 id="followupmeetingattendees">FollowUpMeetingAttendees</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+CollectFollowUpScreen(FollowUpScreen)-- collect -->FollowUpMeetingAttendees[/FollowUpMeetingAttendees/]  
+FollowUpMeetingAttendees[/FollowUpMeetingAttendees/]-. use .->UseWelcomeScreen(WelcomeScreen)  
+FollowUpMeetingAttendees[/FollowUpMeetingAttendees/]-. use .->UseFollowUpScreen(FollowUpScreen)  
+FollowUpMeetingAttendees[/FollowUpMeetingAttendees/]-. use .->UseFollowUpTimesScreen(FollowUpTimesScreen)  
+FollowUpMeetingAttendees[/FollowUpMeetingAttendees/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+FollowUpMeetingAttendees[/FollowUpMeetingAttendees/]-. clear .->ClearFollowUpScreen(FollowUpScreen)  
+</div></code></pre>
+<h2 id="colpldistributioncurrent">colPlDistributionCurrent</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+colPlDistributionCurrent[/colPlDistributionCurrent/]-. clear .->Clear2201_2(2201_2)  
+</div></code></pre>
+<h2 id="sketches">Sketches</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+CollectSketchScreen(Sketch Screen)-- collect -->Sketches[/Sketches/]  
+Sketches[/Sketches/]-. use .->UseWelcomeScreen(WelcomeScreen)  
+Sketches[/Sketches/]-. use .->UseHomeScreen(HomeScreen)  
+Sketches[/Sketches/]-. use .->UseAttachmentsScreen(AttachmentsScreen)  
+Sketches[/Sketches/]-. use .->UseConfirmScreen(ConfirmScreen)  
+Sketches[/Sketches/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+</div></code></pre>
+<h2 id="patchtable2011ridetail">patchTable2011riDetail</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+Collect2201_2(2201_2)-- collect -->patchTable2011riDetail[/patchTable2011riDetail/]  
+patchTable2011riDetail[/patchTable2011riDetail/]-. use .->Use2201_2(2201_2)  
+</div></code></pre>
+<h2 id="onenotesections">OneNoteSections</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+OneNoteSections[/OneNoteSections/]-. use .->UseExportPopUpsScreen(ExportPopUpsScreen)  
+OneNoteSections[/OneNoteSections/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+OneNoteSections[/OneNoteSections/]-. clear .->ClearExportScreen(ExportScreen)  
+OneNoteSections[/OneNoteSections/]-. clear .->ClearExportPopUpsScreen(ExportPopUpsScreen)  
+</div></code></pre>
+<h2 id="tasks">Tasks</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+CollectHomePopUpsScreen(HomePopUpsScreen)-- collect -->Tasks[/Tasks/]  
+Tasks[/Tasks/]-. use .->Use2201_2(2201_2)  
+Tasks[/Tasks/]-. use .->UseWelcomeScreen(WelcomeScreen)  
+Tasks[/Tasks/]-. use .->UseHomeScreen(HomeScreen)  
+Tasks[/Tasks/]-. use .->UseConfirmScreen(ConfirmScreen)  
+Tasks[/Tasks/]-. use .->UseExportScreen(ExportScreen)  
+Tasks[/Tasks/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
+Tasks[/Tasks/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+</div></code></pre>
+<h2 id="temprisk">TempRisk</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+TempRisk[/TempRisk/]-. use .->Use2201_2(2201_2)  
+TempRisk[/TempRisk/]-. clear .->Clear2201_2(2201_2)  
+</div></code></pre>
+<h2 id="meetingattendeestemp">MeetingAttendeesTemp</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+MeetingAttendeesTemp[/MeetingAttendeesTemp/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
+MeetingAttendeesTemp[/MeetingAttendeesTemp/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+MeetingAttendeesTemp[/MeetingAttendeesTemp/]-. clear .->ClearHomePopUpsScreen(HomePopUpsScreen)  
+</div></code></pre>
+<h2 id="indexes">Indexes</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+CollectConfirmScreen(ConfirmScreen)-- collect -->Indexes[/Indexes/]  
+Indexes[/Indexes/]-. use .->UseConfirmScreen(ConfirmScreen)  
+Indexes[/Indexes/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+</div></code></pre>
+<h2 id="meetingattendees">MeetingAttendees</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+MeetingAttendees[/MeetingAttendees/]-. use .->UseWelcomeScreen(WelcomeScreen)  
+MeetingAttendees[/MeetingAttendees/]-. use .->UseHomeScreen(HomeScreen)  
+MeetingAttendees[/MeetingAttendees/]-. use .->UseConfirmScreen(ConfirmScreen)  
+MeetingAttendees[/MeetingAttendees/]-. use .->UseFollowUpScreen(FollowUpScreen)  
+MeetingAttendees[/MeetingAttendees/]-. use .->UseFollowUpTimesScreen(FollowUpTimesScreen)  
+MeetingAttendees[/MeetingAttendees/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
+MeetingAttendees[/MeetingAttendees/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+MeetingAttendees[/MeetingAttendees/]-. clear .->ClearHomePopUpsScreen(HomePopUpsScreen)  
+</div></code></pre>
+<h2 id="tempaulevel4">TempAu_Level_4</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+TempAu_Level_4[/TempAu_Level_4/]-. clear .->Clear2201_2(2201_2)  
+</div></code></pre>
+<h2 id="meetingattendeeemails">MeetingAttendeeEmails</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+MeetingAttendeeEmails[/MeetingAttendeeEmails/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
+MeetingAttendeeEmails[/MeetingAttendeeEmails/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+MeetingAttendeeEmails[/MeetingAttendeeEmails/]-. clear .->ClearHomePopUpsScreen(HomePopUpsScreen)  
+</div></code></pre>
+<h2 id="meetingtimes">MeetingTimes</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+MeetingTimes[/MeetingTimes/]-. use .->UseWelcomeScreen(WelcomeScreen)  
+MeetingTimes[/MeetingTimes/]-. use .->UseFollowUpTimesScreen(FollowUpTimesScreen)  
+MeetingTimes[/MeetingTimes/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+MeetingTimes[/MeetingTimes/]-. clear .->ClearFollowUpTimesScreen(FollowUpTimesScreen)  
+</div></code></pre>
+<h2 id="tempriquestion">TempRi_Question</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+TempRi_Question[/TempRi_Question/]-. use .->Use2201_2(2201_2)  
+TempRi_Question[/TempRi_Question/]-. clear .->Clear2201_2(2201_2)  
+</div></code></pre>
+<h2 id="tempplallocation">TempPl_Allocation</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+TempPl_Allocation[/TempPl_Allocation/]-. use .->Use2201_2(2201_2)  
+TempPl_Allocation[/TempPl_Allocation/]-. clear .->Clear2201_2(2201_2)  
+</div></code></pre>
+<h2 id="colanswerrow">colAnswerRow</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+colAnswerRow[/colAnswerRow/]-. clear .->Clear2201_2(2201_2)  
+</div></code></pre>
+<h2 id="meetingdurations">MeetingDurations</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+MeetingDurations[/MeetingDurations/]-. use .->UseFollowUpTimesScreen(FollowUpTimesScreen)  
+MeetingDurations[/MeetingDurations/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+MeetingDurations[/MeetingDurations/]-. clear .->ClearFollowUpTimesScreen(FollowUpTimesScreen)  
+</div></code></pre>
+<h2 id="coladtraegercurrent">colAdTraegerCurrent</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+colAdTraegerCurrent[/colAdTraegerCurrent/]-. clear .->Clear2201_2(2201_2)  
+</div></code></pre>
+<h2 id="colquestionrow">colQuestionRow</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+colQuestionRow[/colQuestionRow/]-. use .->Use2201_2(2201_2)  
+colQuestionRow[/colQuestionRow/]-. clear .->Clear2201_2(2201_2)  
+</div></code></pre>
+<h2 id="colplassignment">colPlAssignment</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+colPlAssignment[/colPlAssignment/]-. use .->Use2201_2(2201_2)  
+colPlAssignment[/colPlAssignment/]-. clear .->Clear2201_2(2201_2)  
+</div></code></pre>
+<h2 id="coldetailrow">colDetailRow</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+colDetailRow[/colDetailRow/]-. use .->Use2201_2(2201_2)  
+colDetailRow[/colDetailRow/]-. clear .->Clear2201_2(2201_2)  
+</div></code></pre>
+<h1 id="global-flows">Global Flows</h1>
+<p>Usage of global flows is shown based on the screen(s) where this flows is executed.</p>
+<h2 id="weditsqlrunoperations">weDit_SQL_runOperations</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+weDit_SQL_runOperations[/weDit_SQL_runOperations/]-. executed_from .->executed_from2201_2(2201_2)  
+</div></code></pre>
+<h2 id="weditsqlmodriskassessment">weDit_SQL_modRiskAssessment</h2>
+<pre><code class="language-mermaid"><div class="mermaid">graph LR  
+weDit_SQL_modRiskAssessment[/weDit_SQL_modRiskAssessment/]-. executed_from .->executed_from2201_2(2201_2)  
+</div></code></pre>
+
+</body>
+</html>
