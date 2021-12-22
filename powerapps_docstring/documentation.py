@@ -3,7 +3,7 @@ import re
 from mdutils.mdutils import MdUtils
 from powerapps_docstring.parser import Parser
 import gh_md_to_html
-from shutil import copyfile
+#from shutil import copyfile
 
 
 # https://mdutils.readthedocs.io/en/latest/examples/Example_Python.html

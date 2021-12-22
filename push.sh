@@ -11,14 +11,14 @@ echo '####################################################'
 git checkout master
 
 echo '####################################################'
-echo 'git add example/export.html'
+echo 'git add .'
 echo '####################################################'
 git add .
 
 echo '####################################################'
-echo 'git commit: push export.html from azure pipeline'
+echo 'git commit: push markdown and html from azure pipeline'
 echo '####################################################'
-git commit -m 'push export.html from azure pipeline'
+git commit -m 'push markdown and html from azure pipeline'
 
 echo '####################################################'
 echo 'git push'
