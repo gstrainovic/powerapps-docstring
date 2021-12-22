@@ -1,15 +1,20 @@
 #!/bin/bash
-ECHO GIT STATUS
+echo 'git config'
+git config --global user.email "g.strainovic@gmail.com"
+git config --global user.name "gstrainovic"
+
+
+echo 'git status'
 git status
 
-ECHO GIT ADD example/export.html
+echo 'git add example/export.html'
 git add example/export.html
 
-ECHO GIT COMMIT -m 'push export.html from azure pipeline'
+echo 'git commit: push export.html from azure pipeline'
 git commit -m 'push export.html from azure pipeline'
 
-ECHO GIT PUSH
+echo 'git push'
 git push origin
 
-ECHO GIT STATUS
+echo 'git status'
 git status
