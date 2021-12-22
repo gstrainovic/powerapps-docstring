@@ -615,7 +615,7 @@ class Docstring():
         fout.writelines(new_lines)
         fout.close()
 
-        copyfile(html_path,self.output_path + '/export.html')
+        #copyfile(html_path,self.output_path + '/export.html')
         
 
         print(f"HTML Documentation created successfully: {html_path}")

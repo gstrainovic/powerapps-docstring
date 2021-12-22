@@ -13,7 +13,7 @@ git checkout master
 echo '####################################################'
 echo 'git add example/export.html'
 echo '####################################################'
-git add example/export.html
+git add .
 
 echo '####################################################'
 echo 'git commit: push export.html from azure pipeline'
