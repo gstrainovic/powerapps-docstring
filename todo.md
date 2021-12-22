@@ -1,16 +1,14 @@
-[x] Script erstellen das den Quellcode abändern kann: 
-    Alle Werte mit UpdateIf([Tabelle],Lookup(...),{xxx}) durch Patch([Tabelle],ThisItem,{xxx}) ersetzten.
-    In der Spalte des Lookup können verschiedene Werte stehen. Der Tabellenname [Tabelle] und {xxx} sollen identisch bleiben.   
-    Der Lookup entfällt und wird durch ThisItem ersetzt.
+[ ] html generieren per Code
+    [f] markdown don't work
+    [f] markdown2 
 
-    From:
-    UpdateIf(colQuestionRow,ID218=ThisItem.ID218,{Edit:"Edit"}),
+[ ] In csv Datei steht Name der "Tabelle"
+Der Inhalt dieser Zeile soll dann in einer Datei ausgegeben werden. 
 
-    To:
-    Patch(colQuestionRow,ThisItem,{Edit:"Edit"}),
+    "'9110_au_location-14' As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.Dotted
+        DisabledBorderColor: ='9110_au_location-14'.BorderColor
 
-[x] 
-Ich würde gerne auf den Screens sehen welcher Flow dort jeweils getriggert wird. [Flowname].Run ist das eindeutige Merkmal.
-Umgekehrt hätte ich auch gerne eine Übersicht aller Flows und dann wo diese verwendet werden.
 
-[ ] Migratie to Azure DevOps
+9110_au_location-14, DisplayMode, =If(varItem=10, DisplayMode.Edit, DisplayMode.View)

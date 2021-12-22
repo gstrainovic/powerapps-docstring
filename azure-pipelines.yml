@@ -5,7 +5,7 @@ pool:
 steps:
 - task: UsePythonVersion@0
   inputs:
-    versionSpec: 3.5
+    versionSpec: 3.9.9
     architecture: 'x64'
 
 - script: |
@@ -13,12 +13,8 @@ steps:
     pip install -r requirements.txt
   displayName: 'Install prerequisites'
 
-- task: CmdLine@2
-  inputs:
-    script: |
-      echo  '$(System.DefaultWorkingDirectory)'
-
 - task: PythonScript@0
   inputs:
     scriptSource: 'filePath'
     scriptPath: 'debug.py'
+
