@@ -1,8 +1,9 @@
-
 pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+- checkout: self
+  persistCredentials: true
 - task: UsePythonVersion@0
   inputs:
     versionSpec: 3.9.9
@@ -18,3 +19,6 @@ steps:
     scriptSource: 'filePath'
     scriptPath: 'run.py'
 
+- task: ShellScript@2
+  inputs:
+    scriptPath: 'push.sh'

@@ -3,6 +3,8 @@ import re
 from mdutils.mdutils import MdUtils
 from powerapps_docstring.parser import Parser
 import gh_md_to_html
+from shutil import copyfile
+
 
 # https://mdutils.readthedocs.io/en/latest/examples/Example_Python.html
 
@@ -609,9 +611,13 @@ class Docstring():
             else:
                 new_lines.append(line)
 
-        fout = open(documentation_output_path + '.html', "w")
+        fout = open(html_path, "w")
         fout.writelines(new_lines)
         fout.close()
+
+        copyfile(html_path,self.output_path + '/export.html')
+        
+
         print(f"HTML Documentation created successfully: {html_path}")
 
         return documentation_output_path
