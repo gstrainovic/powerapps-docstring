@@ -1,0 +1,2448 @@
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script><script>mermaid.initialize({ startOnLoad: true });</script><!-- ?xml version='1.0' encoding='UTF-8'? -->
+<link href="/github-markdown-css/github-css.css" rel="stylesheet"/>
+<meta charset="utf-8" content="text/html"/>
+<div class="gist">
+<style class="formula-style">
+        svg.gh-md-to-html-formula {
+            fill: black;
+        }
+    </style>
+<div class="gist-file"> <!-- This is the class that is responsible for the boxing! -->
+<div class="gist-data">
+<div class="js-gist-file-update-container js-task-list-container file-box">
+<div class="file" id="user-content-article-Meeting Capture Demo-doc">
+<div class="Box-body readme blob js-code-block-container p-5 p-xl-6" id="user-content-file-docker-image-pull-md-readme" style="margin-left: 40px; margin-right: 40px; margin-top: 20px; margin-bottom: 20px">
+<article class="markdown-body entry-content container-lg" itemprop="text">
+<h1 id="user-content-power-app-documentation">
+<a aria-hidden="true" class="anchor" href="#user-content-power-app-documentation" id="user-content-power-app-documentation" name="user-content-power-app-documentation"><span aria-hidden="true" class="octicon octicon-link"></span></a>Power App Documentation</h1>
+<h1 id="user-content-contents">
+<a aria-hidden="true" class="anchor" href="#user-content-contents" id="user-content-contents" name="user-content-contents"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contents</h1>
+<ul>
+<li>
+<a href="#user-content-meeting-capture-demo">Meeting Capture Demo</a>
+<ul>
+<li><a href="#user-content-onstart">OnStart</a></li>
+</ul>
+</li>
+<li><a href="#user-content-connections">Connections</a></li>
+<li>
+<a href="#user-content-screens">Screens</a>
+<ul>
+<li><a href="#user-content-2201_2">2201_2</a></li>
+<li><a href="#user-content-welcomescreen">WelcomeScreen</a></li>
+<li><a href="#user-content-homescreen">HomeScreen</a></li>
+<li><a href="#user-content-sketch-screen">Sketch Screen</a></li>
+<li><a href="#user-content-camerascreen">CameraScreen</a></li>
+<li><a href="#user-content-emailscreen">EmailScreen</a></li>
+<li><a href="#user-content-attachmentsscreen">AttachmentsScreen</a></li>
+<li><a href="#user-content-confirmscreen">ConfirmScreen</a></li>
+<li><a href="#user-content-exportscreen">ExportScreen</a></li>
+<li><a href="#user-content-followupscreen">FollowUpScreen</a></li>
+<li><a href="#user-content-followuptimesscreen">FollowUpTimesScreen</a></li>
+<li><a href="#user-content-homepopupsscreen">HomePopUpsScreen</a></li>
+<li><a href="#user-content-exportpopupsscreen">ExportPopUpsScreen</a></li>
+<li><a href="#user-content-collectionsandvariables">CollectionsAndVariables</a></li>
+<li><a href="#user-content-testemptyscreen">TestEmptyScreen</a></li>
+</ul>
+</li>
+<li>
+<a href="#user-content-global-variables">Global Variables</a>
+<ul>
+<li><a href="#user-content-v_showconfirm">V_ShowConfirm</a></li>
+<li><a href="#user-content-varaddmemo">varAddMemo</a></li>
+<li><a href="#user-content-selectedimage">SelectedImage</a></li>
+<li><a href="#user-content-progressbarposition">ProgressBarPosition</a></li>
+<li><a href="#user-content-selectedplan">SelectedPlan</a></li>
+<li><a href="#user-content-varloadingpopup">varLoadingPopup</a></li>
+<li><a href="#user-content-vcontinue">vContinue</a></li>
+<li><a href="#user-content-showonenote">ShowOneNote</a></li>
+<li><a href="#user-content-varduplicatepopup">varDuplicatePopup</a></li>
+<li><a href="#user-content-selecteduser">SelectedUser</a></li>
+<li><a href="#user-content-vguid208">vGUID208</a></li>
+<li><a href="#user-content-isloading">IsLoading</a></li>
+<li><a href="#user-content-myedit">myedit</a></li>
+<li><a href="#user-content--varloadingpopup"> varLoadingPopup</a></li>
+<li><a href="#user-content-autoselectmeeting">AutoSelectMeeting</a></li>
+<li><a href="#user-content-multirecipients">MultiRecipients</a></li>
+<li><a href="#user-content-photonumber">PhotoNumber</a></li>
+<li><a href="#user-content-vaddlevel_2">vAddLevel_2</a></li>
+<li><a href="#user-content-visedit">vIsEdit</a></li>
+<li><a href="#user-content-vguid221">vGUID221</a></li>
+<li><a href="#user-content-vfilter">vFilter</a></li>
+<li><a href="#user-content-exportconfirmed">ExportConfirmed</a></li>
+<li><a href="#user-content-varselectedpl">varSelectedPL</a></li>
+<li><a href="#user-content-varguid208">varGUID208</a></li>
+<li><a href="#user-content-varaddgoal">varAddGoal</a></li>
+<li><a href="#user-content-showmeetingtimes">ShowMeetingTimes</a></li>
+<li><a href="#user-content-showtakenimage">ShowTakenImage</a></li>
+<li><a href="#user-content-selectedsection">SelectedSection</a></li>
+<li><a href="#user-content-selectednotebook">SelectedNoteBook</a></li>
+<li><a href="#user-content-followupconfirmed">FollowUpConfirmed</a></li>
+<li><a href="#user-content-showimagesaved">ShowImageSaved</a></li>
+<li><a href="#user-content-showdatalosswarning">ShowDataLossWarning</a></li>
+<li><a href="#user-content-varguid216">varGUID216</a></li>
+<li><a href="#user-content-showoverlay">ShowOverlay</a></li>
+<li><a href="#user-content-sketchnumber">SketchNumber</a></li>
+<li><a href="#user-content-followupstart">FollowUpStart</a></li>
+<li><a href="#user-content-varshowsort">varShowSort</a></li>
+<li><a href="#user-content-emailconfirmed">EmailConfirmed</a></li>
+<li><a href="#user-content-varguid211">varGUID211</a></li>
+<li><a href="#user-content-selectedtask">SelectedTask</a></li>
+<li><a href="#user-content-showsketchsaved">ShowSketchSaved</a></li>
+<li><a href="#user-content-selectedbucket">SelectedBucket</a></li>
+<li><a href="#user-content-showplanner">ShowPlanner</a></li>
+<li><a href="#user-content-attachmentdeleteconfirm">AttachmentDeleteConfirm</a></li>
+<li><a href="#user-content-loading">Loading</a></li>
+<li><a href="#user-content-vaddlevel_1">vAddLevel_1</a></li>
+<li><a href="#user-content-taskselected">TaskSelected</a></li>
+<li><a href="#user-content-userselected">UserSelected</a></li>
+<li><a href="#user-content-selectedmeetingduration">SelectedMeetingDuration</a></li>
+<li><a href="#user-content-varreviewteam">varReviewTeam</a></li>
+<li><a href="#user-content-selectedusertasks">SelectedUserTasks</a></li>
+<li><a href="#user-content-userselectedfromtasks">UserSelectedFromTasks</a></li>
+<li><a href="#user-content-vaddlevel_3">vAddLevel_3</a></li>
+<li><a href="#user-content-selectedmeeting">SelectedMeeting</a></li>
+<li><a href="#user-content-followupend">FollowUpEnd</a></li>
+<li><a href="#user-content-secondsremain">SecondsRemain</a></li>
+<li><a href="#user-content-vshowfilter">vShowFilter</a></li>
+</ul>
+</li>
+<li>
+<a href="#user-content-global-collects">Global Collects</a>
+<ul>
+<li><a href="#user-content-plannerplans">PlannerPlans</a></li>
+<li><a href="#user-content-colmodelrow">colModelRow</a></li>
+<li><a href="#user-content-colflowresponse">colFlowResponse</a></li>
+<li><a href="#user-content-meetingattendees">MeetingAttendees</a></li>
+<li><a href="#user-content-colpldistribution">colPlDistribution</a></li>
+<li><a href="#user-content-tempri_question">TempRi_Question</a></li>
+<li><a href="#user-content-coladrolle">colAdRolle</a></li>
+<li><a href="#user-content-colallocation">colAllocation</a></li>
+<li><a href="#user-content-tempau_level_3">TempAu_Level_3</a></li>
+<li><a href="#user-content-colpldistributioncurrent">colPlDistributionCurrent</a></li>
+<li><a href="#user-content-indexes">Indexes</a></li>
+<li><a href="#user-content-followupmeetingattendees">FollowUpMeetingAttendees</a></li>
+<li><a href="#user-content-temprisk">TempRisk</a></li>
+<li><a href="#user-content-plannerbuckets">PlannerBuckets</a></li>
+<li><a href="#user-content-tempau_level_4">TempAu_Level_4</a></li>
+<li><a href="#user-content-colquestionrow">colQuestionRow</a></li>
+<li><a href="#user-content-tempview_plan">TempView_Plan</a></li>
+<li><a href="#user-content-temppl_allocation">TempPl_Allocation</a></li>
+<li><a href="#user-content-onenotebooks">OneNoteBooks</a></li>
+<li><a href="#user-content-meetingtimes">MeetingTimes</a></li>
+<li><a href="#user-content-tasks">Tasks</a></li>
+<li><a href="#user-content-meetingattendeeemails">MeetingAttendeeEmails</a></li>
+<li><a href="#user-content-meetingattendeestemp">MeetingAttendeesTemp</a></li>
+<li><a href="#user-content-emailattachments">EmailAttachments</a></li>
+<li><a href="#user-content-coladtraegercurrent">colAdTraegerCurrent</a></li>
+<li><a href="#user-content-meetingdurations">MeetingDurations</a></li>
+<li><a href="#user-content-emailrecipients">EmailRecipients</a></li>
+<li><a href="#user-content-coldetailrow">colDetailRow</a></li>
+<li><a href="#user-content-coladassignment">colAdAssignment</a></li>
+<li><a href="#user-content-photos">Photos</a></li>
+<li><a href="#user-content-sketches">Sketches</a></li>
+<li><a href="#user-content-temppl_goals">TempPl_Goals</a></li>
+<li><a href="#user-content-colquestionsadd">colQuestionsAdd</a></li>
+<li><a href="#user-content-templates">Templates</a></li>
+<li><a href="#user-content-updatetable2201augoals">updateTable2201auGoals</a></li>
+<li><a href="#user-content-hourslist">HoursList</a></li>
+<li><a href="#user-content-templatedata">TemplateData</a></li>
+<li><a href="#user-content-colanswerrow">colAnswerRow</a></li>
+<li><a href="#user-content-coladtraeger">colAdTraeger</a></li>
+<li><a href="#user-content-patchtable2011ridetail">patchTable2011riDetail</a></li>
+<li><a href="#user-content-colplassignment">colPlAssignment</a></li>
+<li><a href="#user-content-onenotesections">OneNoteSections</a></li>
+</ul>
+</li>
+<li>
+<a href="#user-content-global-flows">Global Flows</a>
+<ul>
+<li><a href="#user-content-wedit_sql_modriskassessment">weDit_SQL_modRiskAssessment</a></li>
+<li><a href="#user-content-wedit_sql_runoperations">weDit_SQL_runOperations</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="user-content-meeting-capture-demo">
+<a aria-hidden="true" class="anchor" href="#user-content-meeting-capture-demo" id="user-content-meeting-capture-demo" name="user-content-meeting-capture-demo"><span aria-hidden="true" class="octicon octicon-link"></span></a>Meeting Capture Demo</h1>
+<p>An all-in-one meeting capture tool.</p>
+<p>This tool helps you to keep everythin in one place during your meetings.</p>
+<p>Key
+features are:</p>
+<ul>
+<li>View meeting details</li>
+<li>capture notes and pictures of whiteboards</li>
+<li>assign tasks</li>
+<li>send meeting notes to
+all attendees in one click</li>
+</ul>
+<h2 id="user-content-onstart">
+<a aria-hidden="true" class="anchor" href="#user-content-onstart" id="user-content-onstart" name="user-content-onstart"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnStart</h2>
+<pre><code>Collect(CalendarLocalizedLabel,      {Value:"Calendar"},{Value:"Kalender"},
+{Value:"Təqvim"},{Value:"Kalendar"},{Value:"Calendari"},{Value:"Kalendář"},{Value:"Calendr"},{Value:"Calendario"},
+{Value:"Egutegia"},{Value:"Kalendaryo"},{Value:"Calendrier"},{Value:"Féilire"},{Value:"Am mìosachan"},{Value:"Kalanda"},
+{Value:"Dagbók"},{Value:"Kalenda"},{Value:"Kalendārs"},{Value:"Kalenner"},{Value:"Kalendorius"},{Value:"Naptár"},
+{Value:"Kalendarju"},{Value:"Agenda"},{Value:"Taqvim"},{Value:"Kalendarz"},{Value:"Calendário"},{Value:"Intiwatana"},
+{Value:"Kalendari"},{Value:"Kalendár"},{Value:"Koledar"},{Value:"Kalenteri"},{Value:"Maramataka"},{Value:"Lịch"},
+{Value:"Takvim"},{Value:"Senenama"},{Value:"Ημερολόγιο"},{Value:"კალენდარი"},{Value:"לוח שנה"},{Value:"کیلنڈر"},
+{Value:"التقويم"},{Value:"कैलेंडर"},{Value:"दिनदर्शिका"},{Value:"ক্যালেন্ডার"},{Value:"કૅલેન્ડર"},{Value:"予定表"},
+{Value:"行事曆"},{Value:"日历"},{Value:"క్యాలెండర్"});
+
+Concurrent(Set(MyCalendarID,LookUp(Office365Outlook.CalendarGetTables().value,DisplayName=LookUp(CalendarLocalizedLabel,Value=DisplayName).Value).Name);ClearCollect(AllFutureEvents,Office365Outlook.GetEventsCalendarView(MyCalendarID,Text(Today(),UTC),Text(DateAdd(Today(),2,Days),UTC)).Values),Set(MyUserProfile,Office365Users.MyProfile().Id),
+    /*used to determine if meeting attendees are in app user's org*/
+Set(MyDomain,Last(Split(User().Email,"@")).Result),
+    /*used to determine countdown to end of selected meeting*/
+Set(HomeTimerStart,Now()));
+/*Meetings are defined to be calendar events less than 6 hours in length*/
+ClearCollect(MeetingsOnly,Filter(AddColumns(AllFutureEvents,"isCurrent",DateDiff(Start,Now(),Seconds)&gt;0&amp;&amp;DateDiff(Now(),End,Seconds)&gt;0),DateDiff(Start,End,Hours)&lt;6));Set(NumberOfCurrentMeetings,CountRows(Filter(MeetingsOnly,isCurrent)));
+/*If a single meeting is happening now, autoselect it*/
+If(NumberOfCurrentMeetings=1,Set(AutoSelectMeeting, true );Set(SelectedMeeting,LookUp(MeetingsOnly,isCurrent)))
+</code></pre>
+<h1 id="user-content-connections">
+<a aria-hidden="true" class="anchor" href="#user-content-connections" id="user-content-connections" name="user-content-connections"><span aria-hidden="true" class="octicon octicon-link"></span></a>Connections</h1>
+<p><strong>OneNote (Business) (Standard)</strong></p>
+<p>sku: Enterprise</p>
+<p>With following datasources:</p>
+<ul>
+<li>OneNote(Business)</li>
+</ul>
+<p><strong>Planner (Standard)</strong></p>
+<p>sku: Enterprise</p>
+<p>With following datasources:</p>
+<ul>
+<li>Planner</li>
+</ul>
+<p><strong>Office 365-Benutzer (Standard)</strong></p>
+<p>sku: Enterprise</p>
+<p>With following datasources:</p>
+<ul>
+<li>Office365Users</li>
+</ul>
+<p><strong>Office 365 Outlook (Standard)</strong></p>
+<p>sku: Enterprise</p>
+<p>With following datasources:</p>
+<ul>
+<li>Office365Outlook</li>
+</ul>
+<h1 id="user-content-screens">
+<a aria-hidden="true" class="anchor" href="#user-content-screens" id="user-content-screens" name="user-content-screens"><span aria-hidden="true" class="octicon octicon-link"></span></a>Screens</h1>
+<p><div class="mermaid">
+graph LR
+WelcomeScreen(WelcomeScreen) --&gt; HomePopUpsScreen(HomePopUpsScreen)
+HomeScreen(HomeScreen) --&gt; SketchScreen(Sketch Screen)
+HomeScreen(HomeScreen) --&gt; CameraScreen(CameraScreen)
+HomeScreen(HomeScreen) --&gt; EmailScreen(EmailScreen)
+HomeScreen(HomeScreen) --&gt; AttachmentsScreen(AttachmentsScreen)
+HomeScreen(HomeScreen) --&gt; ExportScreen(ExportScreen)
+HomeScreen(HomeScreen) --&gt; HomePopUpsScreen(HomePopUpsScreen)
+SketchScreen(Sketch Screen) --&gt; HomeScreen(HomeScreen)
+SketchScreen(Sketch Screen) --&gt; CameraScreen(CameraScreen)
+CameraScreen(CameraScreen) --&gt; HomeScreen(HomeScreen)
+CameraScreen(CameraScreen) --&gt; SketchScreen(Sketch Screen)
+EmailScreen(EmailScreen) --&gt; ConfirmScreen(ConfirmScreen)
+ConfirmScreen(ConfirmScreen) --&gt; HomeScreen(HomeScreen)
+ConfirmScreen(ConfirmScreen) --&gt; FollowUpScreen(FollowUpScreen)
+ConfirmScreen(ConfirmScreen) --&gt; WelcomeScreen(WelcomeScreen)
+ExportScreen(ExportScreen) --&gt; HomeScreen(HomeScreen)
+ExportScreen(ExportScreen) --&gt; ExportPopUpsScreen(ExportPopUpsScreen)
+FollowUpScreen(FollowUpScreen) --&gt; FollowUpTimesScreen(FollowUpTimesScreen)
+FollowUpTimesScreen(FollowUpTimesScreen) --&gt; ConfirmScreen(ConfirmScreen)
+HomePopUpsScreen(HomePopUpsScreen) --&gt; HomeScreen(HomeScreen)
+ExportPopUpsScreen(ExportPopUpsScreen) --&gt; ExportScreen(ExportScreen)
+ExportPopUpsScreen(ExportPopUpsScreen) --&gt; ConfirmScreen(ConfirmScreen)
+</div></p>
+<h2 id="user-content-2201_2">
+<a aria-hidden="true" class="anchor" href="#user-content-2201_2" id="user-content-2201_2" name="user-content-2201_2"><span aria-hidden="true" class="octicon octicon-link"></span></a>2201_2</h2>
+<hr/>
+<h3 id="user-content-variables">
+<a aria-hidden="true" class="anchor" href="#user-content-variables" id="user-content-variables" name="user-content-variables"><span aria-hidden="true" class="octicon octicon-link"></span></a>Variables</h3>
+<p>Following variables have been created / or updated on this screen</p>
+<ul>
+<li><a href="#user-content-v_showconfirm">V_ShowConfirm</a></li>
+<li><a href="#user-content-varaddmemo">varAddMemo</a></li>
+<li><a href="#user-content-varloadingpopup">varLoadingPopup</a></li>
+<li><a href="#user-content-vcontinue">vContinue</a></li>
+<li><a href="#user-content-varduplicatepopup">varDuplicatePopup</a></li>
+<li><a href="#user-content-vguid208">vGUID208</a></li>
+<li><a href="#user-content-isloading">IsLoading</a></li>
+<li><a href="#user-content-myedit">myedit</a></li>
+<li><a href="#user-content-varloadingpopup">varLoadingPopup</a></li>
+<li><a href="#user-content-vaddlevel_2">vAddLevel_2</a></li>
+<li><a href="#user-content-visedit">vIsEdit</a></li>
+<li><a href="#user-content-vguid221">vGUID221</a></li>
+<li><a href="#user-content-vfilter">vFilter</a></li>
+<li><a href="#user-content-varselectedpl">varSelectedPL</a></li>
+<li><a href="#user-content-varguid208">varGUID208</a></li>
+<li><a href="#user-content-varaddgoal">varAddGoal</a></li>
+<li><a href="#user-content-varguid216">varGUID216</a></li>
+<li><a href="#user-content-varshowsort">varShowSort</a></li>
+<li><a href="#user-content-varguid211">varGUID211</a></li>
+<li><a href="#user-content-vaddlevel_1">vAddLevel_1</a></li>
+<li><a href="#user-content-varreviewteam">varReviewTeam</a></li>
+<li><a href="#user-content-vaddlevel_3">vAddLevel_3</a></li>
+<li><a href="#user-content-vshowfilter">vShowFilter</a></li>
+</ul>
+<h3 id="user-content-collects">
+<a aria-hidden="true" class="anchor" href="#user-content-collects" id="user-content-collects" name="user-content-collects"><span aria-hidden="true" class="octicon octicon-link"></span></a>Collects</h3>
+<p>Following collects have been created, updated or cleared on this screen</p>
+<ul>
+<li><a href="#user-content-colmodelrow">colModelRow</a></li>
+<li><a href="#user-content-colflowresponse">colFlowResponse</a></li>
+<li><a href="#user-content-tempview_plan">TempView_Plan</a></li>
+<li><a href="#user-content-colpldistribution">colPlDistribution</a></li>
+<li><a href="#user-content-patchtable2011ridetail">patchTable2011riDetail</a></li>
+<li><a href="#user-content-coladrolle">colAdRolle</a></li>
+<li><a href="#user-content-colallocation">colAllocation</a></li>
+<li><a href="#user-content-temprisk">TempRisk</a></li>
+<li><a href="#user-content-tempau_level_3">TempAu_Level_3</a></li>
+<li><a href="#user-content-colpldistributioncurrent">colPlDistributionCurrent</a></li>
+<li><a href="#user-content-tempri_question">TempRi_Question</a></li>
+<li><a href="#user-content-tempau_level_4">TempAu_Level_4</a></li>
+<li><a href="#user-content-colquestionrow">colQuestionRow</a></li>
+<li><a href="#user-content-temppl_goals">TempPl_Goals</a></li>
+<li><a href="#user-content-temppl_allocation">TempPl_Allocation</a></li>
+<li><a href="#user-content-coladtraegercurrent">colAdTraegerCurrent</a></li>
+<li><a href="#user-content-patchtable2011ridetail">patchTable2011riDetail</a></li>
+<li><a href="#user-content-temppl_allocation">TempPl_Allocation</a></li>
+<li><a href="#user-content-coldetailrow">colDetailRow</a></li>
+<li><a href="#user-content-colflowresponse">colFlowResponse</a></li>
+<li><a href="#user-content-temppl_goals">TempPl_Goals</a></li>
+<li><a href="#user-content-colquestionsadd">colQuestionsAdd</a></li>
+<li><a href="#user-content-updatetable2201augoals">updateTable2201auGoals</a></li>
+<li><a href="#user-content-colanswerrow">colAnswerRow</a></li>
+<li><a href="#user-content-coladtraeger">colAdTraeger</a></li>
+<li><a href="#user-content-coladassignment">colAdAssignment</a></li>
+<li><a href="#user-content-colplassignment">colPlAssignment</a></li>
+</ul>
+<h3 id="user-content-flows">
+<a aria-hidden="true" class="anchor" href="#user-content-flows" id="user-content-flows" name="user-content-flows"><span aria-hidden="true" class="octicon octicon-link"></span></a>Flows</h3>
+<p>Following flows have used on this screen</p>
+<ul>
+<li><a href="#user-content-wedit_sql_modriskassessment">weDit_SQL_modRiskAssessment</a></li>
+<li><a href="#user-content-wedit_sql_runoperations">weDit_SQL_runOperations</a></li>
+</ul>
+<h3 id="user-content-2201_2-as-screen">
+<a aria-hidden="true" class="anchor" href="#user-content-2201_2-as-screen" id="user-content-2201_2-as-screen" name="user-content-2201_2-as-screen"><span aria-hidden="true" class="octicon octicon-link"></span></a>'2201_2' As screen</h3>
+<h4 id="user-content-onvisible">
+<a aria-hidden="true" class="anchor" href="#user-content-onvisible" id="user-content-onvisible" name="user-content-onvisible"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnVisible</h4>
+<pre><code>=//Warum kein Loading Spinner
+//Concurrent prüfen
+
+    Set(vContinue,false);
+    Set(V_ShowConfirm,false);
+    Set(vFilter,"Risk");
+
+    //Collection prüfen
+    Set(vAddLevel_1,false);
+    Set(vAddLevel_2,false);
+    Set(vAddLevel_3,false);
+
+    Set(varAddGoal,false);
+
+    //Dopplung der Collections prüfen
+    ClearCollect(TempAu_Level_3, 'au.level_3');
+    ClearCollect(TempAu_Level_4, 'au.level_4');
+
+    Set(vGUID208,GUID());
+    Set(vGUID221,GUID());
+    ClearCollect(
+        TempPl_Goals,
+        AddColumns(
+            Filter('pl.goals', fkey221 = varSelectedPL.ID221),
+            "Edit",""
+        )
+    );
+    ClearCollect(
+        TempRisk,
+        Filter('ri.detail', fkey208 = varSelectedPL.ID208)
+    );
+    ClearCollect(
+        TempRi_Question,
+        'ri.question'
+    );
+    ClearCollect(
+        TempPl_Allocation,
+        AddColumns(
+            Filter('pl.allocation', fkey221 = varSelectedPL.ID221),
+            "Edit","",
+            "Surname", LookUp('ad.contact', ID281 = fkey281, Surname)
+        )
+    );
+    Set(vShowFilter,false);
+    UpdateContext(
+        {
+            locSortColumn: "pl_c_goals",
+            locSortAscending: locSortColumn&lt;&gt;"pl_c_goals" Or !locSortAscending
+        }
+    )
+
+//End concurrent
+
+// Übernahme von ehemaligem Navigationsbutton 
+Set(varAddMemo,false);
+Clear(patchTable2011riDetail);
+Set(varGUID211,LookUp('ri.version',And(fkey206 = varSelectedPL.fkey206,active=true),ID211));
+Set(varGUID216,LookUp('ri.vDetail',And(active = true,fkey211 = varGUID211),fkey216));
+If(IsBlankOrError(LookUp('ri.vDetail',And(fkey208 = varSelectedPL.fkey208,fkey211 = varGUID211,fkey216 =varGUID216),ID213)),
+ClearCollect(colModelRow,Filter('ri.vModel',ID216 = varGUID216));
+ClearCollect(colQuestionsAdd,Distinct(colModelRow,ID218));
+ForAll(colQuestionsAdd,
+Collect(patchTable2011riDetail,
+Table({
+ID213 : GUID(),
+fkey208: varSelectedPL.fkey208,
+fkey211: varGUID211,
+fkey216: varGUID216,
+fkey218: colQuestionsAdd[@Result],
+fkey219: LookUp(colModelRow,ID218 = colQuestionsAdd[@Result],ID219),
+ri_base: 0,
+active: 1,
+tableName: "[ri].[detail]",
+fkey217: LookUp('ri.weight',And(fkey216 = varGUID216,fkey218 = colQuestionsAdd[@Result]),ID217),
+type: "POST",
+    UPN: User().Email})));
+ClearCollect(colFlowResponse,weDit_SQL_runOperations.Run(JSON(patchTable2011riDetail, JSONFormat.IndentFour)));
+Refresh('ri.vDetail');
+Set(vFilter,"Risk");
+ClearCollect(colDetailRow,Filter('ri.vDetail',And(fkey208 = varSelectedPL.fkey208,active = true)));
+ClearCollect(colModelRow,Filter('ri.vModel',ID216 in colDetailRow.fkey216));
+ClearCollect(colQuestionRow,AddColumns(Filter('ri.question',ID218 in colModelRow.ID218),"Edit",""));
+ClearCollect(colAnswerRow,Filter('ri.answer',ID219 in colModelRow.ID219)),
+Set(vFilter,"Risk");
+Refresh('ri.vDetail');
+ClearCollect(colDetailRow,Filter('ri.vDetail',And(fkey208 = varSelectedPL.fkey208,active = true)));
+ClearCollect(colModelRow,Filter('ri.vModel',ID216 in colDetailRow.fkey216));
+ClearCollect(colQuestionRow,AddColumns(Filter('ri.question',ID218 in colModelRow.ID218),"Edit",""));
+ClearCollect(colAnswerRow,Filter('ri.answer',ID219 in colModelRow.ID219)))
+
+</code></pre>
+<h3 id="user-content-2201_memo-18_2-as-text">
+<a aria-hidden="true" class="anchor" href="#user-content-2201_memo-18_2-as-text" id="user-content-2201_memo-18_2-as-text" name="user-content-2201_memo-18_2-as-text"><span aria-hidden="true" class="octicon octicon-link"></span></a>'2201_Memo-18_2' As text</h3>
+<h3 id="user-content-2201_risc-04_2-as-galleryvariabletemplateheightgallery">
+<a aria-hidden="true" class="anchor" href="#user-content-2201_risc-04_2-as-galleryvariabletemplateheightgallery" id="user-content-2201_risc-04_2-as-galleryvariabletemplateheightgallery" name="user-content-2201_risc-04_2-as-galleryvariabletemplateheightgallery"><span aria-hidden="true" class="octicon octicon-link"></span></a>'2201_Risc-04_2' As gallery.variableTemplateHeightGallery</h3>
+<h4 id="user-content-items">
+<a aria-hidden="true" class="anchor" href="#user-content-items" id="user-content-items" name="user-content-items"><span aria-hidden="true" class="octicon octicon-link"></span></a>Items</h4>
+<pre><code>=Sort(colQuestionRow,rq_count)
+</code></pre>
+<h2 id="user-content-welcomescreen">
+<a aria-hidden="true" class="anchor" href="#user-content-welcomescreen" id="user-content-welcomescreen" name="user-content-welcomescreen"><span aria-hidden="true" class="octicon octicon-link"></span></a>WelcomeScreen</h2>
+<hr/>
+<p><div class="mermaid">
+graph LR
+WelcomeScreen(WelcomeScreen) --&gt; HomePopUpsScreen(HomePopUpsScreen)
+ConfirmScreen(ConfirmScreen) --&gt; WelcomeScreen(WelcomeScreen)
+</div></p>
+<h3 id="user-content-variables-1">
+<a aria-hidden="true" class="anchor" href="#user-content-variables-1" id="user-content-variables-1" name="user-content-variables-1"><span aria-hidden="true" class="octicon octicon-link"></span></a>Variables</h3>
+<p>Following variables have been created / or updated on this screen</p>
+<ul>
+<li><a href="#user-content-exportconfirmed">ExportConfirmed</a></li>
+<li><a href="#user-content-followupconfirmed">FollowUpConfirmed</a></li>
+<li><a href="#user-content-showdatalosswarning">ShowDataLossWarning</a></li>
+<li><a href="#user-content-selectedmeeting">SelectedMeeting</a></li>
+<li><a href="#user-content-emailconfirmed">EmailConfirmed</a></li>
+<li><a href="#user-content-autoselectmeeting">AutoSelectMeeting</a></li>
+</ul>
+<h3 id="user-content-collects-1">
+<a aria-hidden="true" class="anchor" href="#user-content-collects-1" id="user-content-collects-1" name="user-content-collects-1"><span aria-hidden="true" class="octicon octicon-link"></span></a>Collects</h3>
+<p>Following collects have been created, updated or cleared on this screen</p>
+<ul>
+<li><a href="#user-content-templates">Templates</a></li>
+</ul>
+<h3 id="user-content-flows-1">
+<a aria-hidden="true" class="anchor" href="#user-content-flows-1" id="user-content-flows-1" name="user-content-flows-1"><span aria-hidden="true" class="octicon octicon-link"></span></a>Flows</h3>
+<p>Following flows have used on this screen</p>
+<h3 id="user-content-welcomescreen-as-screen">
+<a aria-hidden="true" class="anchor" href="#user-content-welcomescreen-as-screen" id="user-content-welcomescreen-as-screen" name="user-content-welcomescreen-as-screen"><span aria-hidden="true" class="octicon octicon-link"></span></a>WelcomeScreen As screen</h3>
+<p>if any additional meeting is captured in the same session, guarantees all collections are empty</p>
+<h4 id="user-content-onvisible-1">
+<a aria-hidden="true" class="anchor" href="#user-content-onvisible-1" id="user-content-onvisible-1" name="user-content-onvisible-1"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnVisible</h4>
+<pre><code>Clear(MeetingAttendees);
+Clear(MeetingTimes);
+Clear(EmailRecipients);
+Clear(FollowUpMeetingAttendees);
+Clear(Tasks);
+Clear(Photos);
+Clear(Sketches);
+Clear(EmailAttachments);
+Reset(NotesInput);
+Reset(AssnTaskSearchUser_1);
+Set(FollowUpConfirmed, false);
+Set(EmailConfirmed, false);
+Set(ExportConfirmed, false);
+
+/*Email and OneNote templates with {placeholder} values for dynamic information*/
+
+ClearCollect(Templates,
+{Template: "Email", Value: "&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;" &amp; "{MeetingName}" &amp; "&lt;/title&gt;&lt;style&gt;div{box-sizing:border-box}table{table-layout:fixed;background-color:#eaedef;width:829px;font-family:'Open Sans',sans-serif;color:#2c3034}table.with-border td{border:2px solid #e3e3e3;background-color:#fff;vertical-align:top}td.caption{height:65px;background:#ed2955;color:#fff;text-align:center;vertical-align:middle}.details{font-size:14px;color:#2c3034;padding-top:10px}.header{font-size:16px;font-weight:600}.mark{font-weight:400;color:#617281}.name{font-size:12px;font-weight:600;color:#ed2955}table.no-border td.user-name{font-size:14px;font-weight:600;color:#2c3034;vertical-align:middle;height:20px;}.due-time{text-align:right;font-size:10px;vertical-align:middle;color:#617281;font-weight:400}.assign-to{font-size:12px;color:#617281}.job-title{font-size:12px;color:#4a4a4a;height:20px}table.no-border{width:100%}table.no-border td{border:0}table.no-border td.task{padding:10px 0;border-top:1px solid #f1f1f1}.user-img img{width:17px;height:19px;border:0;}.name a.link-name,.name a.link-name:visited{color:#ed2955;text-decoration:none;}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;table border='0' cellpadding='0' cellspacing='0'&gt;&lt;tr&gt;&lt;td class='caption'&gt;[ Meeting Capture ]&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style='border: 0;background-color: #eaedef;padding:30px 0 0 0;text-align: center;color: #2c3034;font-size: 20px;font-weight: 600;'&gt;" &amp; "{MeetingName}" &amp; "&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style='border: 0;background-color: #eaedef;padding: 9px 0 10px 0;text-align: center;color: #2c3034;font-size: 14px;'&gt;" &amp; "{MeetingStartDate}" &amp;" | " &amp; "{MeetingStartTime}" &amp; " - "&amp; "{MeetingEndTime}" &amp; " (" &amp; "{MeetingMinutes}" &amp; " Minutes)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;table class='with-border' border='0' cellpadding='20' cellspacing='20'&gt;&lt;tr&gt;
+&lt;td colspan='2' style='padding-bottom:10px;'&gt;&lt;table border='0' cellpadding='0' cellspacing='0' class='no-border' style='table-layout:auto;'&gt;&lt;tr&gt;&lt;td colspan='3' class='header'&gt;Attendees &lt;span class='mark'&gt;(" &amp; "{MeetingAttendeeNum}" &amp; ")&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan='3' style='height:10px;'&gt;&lt;/td&gt;&lt;/tr&gt;" &amp; "{1}" &amp; "&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan='2'&gt;&lt;table border='0' cellpadding='0' cellspacing='0' class='no-border'&gt;&lt;tr&gt;&lt;td class='header'&gt;Meeting details&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class='details'&gt;" &amp; "{MeetingDetails}" &amp; "&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width='50%'&gt;&lt;table border='0' cellpadding='0' cellspacing='0' class='no-border'&gt;&lt;tr&gt;&lt;td class='header'&gt;Meeting Notes&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class='details'&gt;" &amp; "{MeetingNotes}" &amp; "&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;td width='50%'&gt;&lt;table border='0' cellpadding='0' cellspacing='0' class='no-border'&gt;&lt;tr&gt;&lt;td class='header' style='padding-bottom:10px;'&gt;Tasks&lt;/td&gt;&lt;/tr&gt;" &amp; "{2}" &amp; "&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style='border:0;background-color:#eaedef;padding:0;height:10px;'&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;"},
+{Template: "OneNote", Value: "&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;" &amp; "{MeetingName}" &amp; "&lt;/title&gt;&lt;meta http-equiv='Content-Type' content='text/html; charset=utf-8'/&gt;&lt;/head&gt;&lt;body data-absolute-enabled='true' style='font-family:Calibri;font-size:11pt'&gt;&lt;div data-id='_default' style='position:absolute;left:48px;top:120px;width:829px;'&gt;&lt;table border='0' cellpadding='0' cellspacing='0' width='829'&gt;&lt;tr&gt;&lt;td style='background-color:#ed2955;font-size:10pt;'&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style='background-color:#ed2955;border:0px;text-align:center;font-weight:600;'&gt;&lt;span style='color:white'&gt;[ Meeting Capture ]&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style='background-color:#ed2955;font-size:8pt;'&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style='background-color:#eaedef;font-size:14pt;'&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style='background-color:#eaedef;border:0px;text-align:center;'&gt;&lt;span style='font-size:15pt;color:#2c3034;font-weight:bold'&gt;" &amp; "{MeetingName}" &amp; "&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style='background-color:#eaedef;border:0px;text-align:center;'&gt;&lt;span style='font-size:10.5pt;color:#2c3034'&gt;" &amp; "{MeetingStartDate}" &amp;" | " &amp; "{MeetingStartTime}"&amp;" - "&amp; "{MeetingEndTime}" &amp; " (" &amp; "{MeetingMinutes}" &amp; " Minutes)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style='background-color:#eaedef;font-size:14pt;'&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style='background-color:white;'&gt;&lt;table border='0' cellpadding='0' cellspacing='0' width='829'&gt;&lt;colgroup&gt;&lt;col style='width: 210px;'&gt;&lt;col style='width: 210px;'&gt;&lt;col style='width: 210px;'&gt;&lt;col style='width: 210px;'&gt;&lt;/colgroup&gt;&lt;tr&gt;&lt;td colspan='4' style='font-size:14pt;'&gt;&lt;span style='font-weight:600;color:#2c3034'&gt;Attendees&lt;/span&gt;&amp;nbsp;&lt;span style='color:#617281'&gt;(" &amp; "{MeetingAttendeeNum}" &amp; ")&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;" &amp; "{1}" &amp; "&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style='background-color:#ffffff;font-size:8pt;'&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style='background-color:#ffffff;font-size:8pt;'&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style='background-color:white;'&gt;&lt;table border='0' cellpadding='0' cellspacing='0' width='829'&gt;&lt;tr&gt;&lt;td width='420' style='font-size:14pt;font-weight:600;color:#2c3034'&gt;Meeting Notes&lt;/td&gt;&lt;td width='420' style='font-size:14pt;font-weight:600;color:#2c3034;border:10px solid red;'&gt;Tasks&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style='font-size:12pt;color:#2c3034'&gt;" &amp; "{MeetingNotes}" &amp; "&lt;/td&gt;&lt;td style='font-size:14pt;font-weight:600;color:#2c3034'&gt;&lt;table border='0' cellpadding='0' cellspacing='0' width='420'&gt;" &amp; "{2}" &amp; "&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style='background-color:#ffffff;font-size:8pt;'&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style='background-color:white;'&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style='background-color:#eaedef;font-size:26.5pt;'&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"})
+</code></pre>
+<h3 id="user-content-meetingsgallerybkg-as-button">
+<a aria-hidden="true" class="anchor" href="#user-content-meetingsgallerybkg-as-button" id="user-content-meetingsgallerybkg-as-button" name="user-content-meetingsgallerybkg-as-button"><span aria-hidden="true" class="octicon octicon-link"></span></a>MeetingsGalleryBkg As button</h3>
+<h4 id="user-content-onselect">
+<a aria-hidden="true" class="anchor" href="#user-content-onselect" id="user-content-onselect" name="user-content-onselect"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnSelect</h4>
+<pre><code>=Select(Parent)
+</code></pre>
+<h4 id="user-content-text">
+<a aria-hidden="true" class="anchor" href="#user-content-text" id="user-content-text" name="user-content-text"><span aria-hidden="true" class="octicon octicon-link"></span></a>Text</h4>
+<pre><code>=""
+</code></pre>
+<h3 id="user-content-btnchangeauto-as-button">
+<a aria-hidden="true" class="anchor" href="#user-content-btnchangeauto-as-button" id="user-content-btnchangeauto-as-button" name="user-content-btnchangeauto-as-button"><span aria-hidden="true" class="octicon octicon-link"></span></a>BtnChangeAuto As button</h3>
+<h4 id="user-content-onselect-1">
+<a aria-hidden="true" class="anchor" href="#user-content-onselect-1" id="user-content-onselect-1" name="user-content-onselect-1"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnSelect</h4>
+<pre><code>=Set(AutoSelectMeeting, false)
+</code></pre>
+<h4 id="user-content-text-1">
+<a aria-hidden="true" class="anchor" href="#user-content-text-1" id="user-content-text-1" name="user-content-text-1"><span aria-hidden="true" class="octicon octicon-link"></span></a>Text</h4>
+<pre><code>="Change"
+</code></pre>
+<h2 id="user-content-homescreen">
+<a aria-hidden="true" class="anchor" href="#user-content-homescreen" id="user-content-homescreen" name="user-content-homescreen"><span aria-hidden="true" class="octicon octicon-link"></span></a>HomeScreen</h2>
+<hr/>
+<p><div class="mermaid">
+graph LR
+HomeScreen(HomeScreen) --&gt; SketchScreen(Sketch Screen)
+HomeScreen(HomeScreen) --&gt; CameraScreen(CameraScreen)
+HomeScreen(HomeScreen) --&gt; EmailScreen(EmailScreen)
+HomeScreen(HomeScreen) --&gt; AttachmentsScreen(AttachmentsScreen)
+HomeScreen(HomeScreen) --&gt; ExportScreen(ExportScreen)
+HomeScreen(HomeScreen) --&gt; HomePopUpsScreen(HomePopUpsScreen)
+SketchScreen(Sketch Screen) --&gt; HomeScreen(HomeScreen)
+CameraScreen(CameraScreen) --&gt; HomeScreen(HomeScreen)
+ConfirmScreen(ConfirmScreen) --&gt; HomeScreen(HomeScreen)
+ExportScreen(ExportScreen) --&gt; HomeScreen(HomeScreen)
+HomePopUpsScreen(HomePopUpsScreen) --&gt; HomeScreen(HomeScreen)
+</div></p>
+<h3 id="user-content-variables-2">
+<a aria-hidden="true" class="anchor" href="#user-content-variables-2" id="user-content-variables-2" name="user-content-variables-2"><span aria-hidden="true" class="octicon octicon-link"></span></a>Variables</h3>
+<p>Following variables have been created / or updated on this screen</p>
+<ul>
+<li><a href="#user-content-progressbarposition">ProgressBarPosition</a></li>
+<li><a href="#user-content-exportconfirmed">ExportConfirmed</a></li>
+<li><a href="#user-content-taskselected">TaskSelected</a></li>
+<li><a href="#user-content-userselected">UserSelected</a></li>
+<li><a href="#user-content-followupconfirmed">FollowUpConfirmed</a></li>
+<li><a href="#user-content-selectedusertasks">SelectedUserTasks</a></li>
+<li><a href="#user-content-userselectedfromtasks">UserSelectedFromTasks</a></li>
+<li><a href="#user-content-showoverlay">ShowOverlay</a></li>
+<li><a href="#user-content-emailconfirmed">EmailConfirmed</a></li>
+<li><a href="#user-content-selectedtask">SelectedTask</a></li>
+<li><a href="#user-content-secondsremain">SecondsRemain</a></li>
+<li><a href="#user-content-multirecipients">MultiRecipients</a></li>
+</ul>
+<h3 id="user-content-collects-2">
+<a aria-hidden="true" class="anchor" href="#user-content-collects-2" id="user-content-collects-2" name="user-content-collects-2"><span aria-hidden="true" class="octicon octicon-link"></span></a>Collects</h3>
+<p>Following collects have been created, updated or cleared on this screen</p>
+<ul>
+<li><a href="#user-content-emailrecipients">EmailRecipients</a></li>
+</ul>
+<h3 id="user-content-flows-2">
+<a aria-hidden="true" class="anchor" href="#user-content-flows-2" id="user-content-flows-2" name="user-content-flows-2"><span aria-hidden="true" class="octicon octicon-link"></span></a>Flows</h3>
+<p>Following flows have used on this screen</p>
+<h3 id="user-content-homescreen-as-screen">
+<a aria-hidden="true" class="anchor" href="#user-content-homescreen-as-screen" id="user-content-homescreen-as-screen" name="user-content-homescreen-as-screen"><span aria-hidden="true" class="octicon octicon-link"></span></a>HomeScreen As screen</h3>
+<p>The main screen for meeting captures during a meeting.</p>
+<ul>
+<li>create meeting notes</li>
+<li>create tasks</li>
+<li>see meeting details</li>
+</ul>
+<h4 id="user-content-onvisible-2">
+<a aria-hidden="true" class="anchor" href="#user-content-onvisible-2" id="user-content-onvisible-2" name="user-content-onvisible-2"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnVisible</h4>
+<pre><code>Set(FollowUpConfirmed, false);
+Set(EmailConfirmed, false);
+Set(ExportConfirmed, false)
+</code></pre>
+<h3 id="user-content-applogo1-as-image">
+<a aria-hidden="true" class="anchor" href="#user-content-applogo1-as-image" id="user-content-applogo1-as-image" name="user-content-applogo1-as-image"><span aria-hidden="true" class="octicon octicon-link"></span></a>AppLogo1 As image</h3>
+<h4 id="user-content-image">
+<a aria-hidden="true" class="anchor" href="#user-content-image" id="user-content-image" name="user-content-image"><span aria-hidden="true" class="octicon octicon-link"></span></a>Image</h4>
+<pre><code>='nav-logo'
+</code></pre>
+<h3 id="user-content-navhome1-as-image">
+<a aria-hidden="true" class="anchor" href="#user-content-navhome1-as-image" id="user-content-navhome1-as-image" name="user-content-navhome1-as-image"><span aria-hidden="true" class="octicon octicon-link"></span></a>NavHome1 As image</h3>
+<h4 id="user-content-image-1">
+<a aria-hidden="true" class="anchor" href="#user-content-image-1" id="user-content-image-1" name="user-content-image-1"><span aria-hidden="true" class="octicon octicon-link"></span></a>Image</h4>
+<pre><code>='nav-notes'
+</code></pre>
+<h3 id="user-content-navsketch1-as-image">
+<a aria-hidden="true" class="anchor" href="#user-content-navsketch1-as-image" id="user-content-navsketch1-as-image" name="user-content-navsketch1-as-image"><span aria-hidden="true" class="octicon octicon-link"></span></a>NavSketch1 As image</h3>
+<h4 id="user-content-image-2">
+<a aria-hidden="true" class="anchor" href="#user-content-image-2" id="user-content-image-2" name="user-content-image-2"><span aria-hidden="true" class="octicon octicon-link"></span></a>Image</h4>
+<pre><code>='nav-sketch'
+</code></pre>
+<h4 id="user-content-onselect-2">
+<a aria-hidden="true" class="anchor" href="#user-content-onselect-2" id="user-content-onselect-2" name="user-content-onselect-2"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnSelect</h4>
+<pre><code>=Navigate('Sketch Screen', None)
+</code></pre>
+<h3 id="user-content-navphotos1-as-image">
+<a aria-hidden="true" class="anchor" href="#user-content-navphotos1-as-image" id="user-content-navphotos1-as-image" name="user-content-navphotos1-as-image"><span aria-hidden="true" class="octicon octicon-link"></span></a>NavPhotos1 As image</h3>
+<h4 id="user-content-image-3">
+<a aria-hidden="true" class="anchor" href="#user-content-image-3" id="user-content-image-3" name="user-content-image-3"><span aria-hidden="true" class="octicon octicon-link"></span></a>Image</h4>
+<pre><code>='nav-camera'
+</code></pre>
+<h4 id="user-content-onselect-3">
+<a aria-hidden="true" class="anchor" href="#user-content-onselect-3" id="user-content-onselect-3" name="user-content-onselect-3"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnSelect</h4>
+<pre><code>=Navigate(CameraScreen, None)
+</code></pre>
+<h3 id="user-content-attendeesbannerimage-as-image">
+<a aria-hidden="true" class="anchor" href="#user-content-attendeesbannerimage-as-image" id="user-content-attendeesbannerimage-as-image" name="user-content-attendeesbannerimage-as-image"><span aria-hidden="true" class="octicon octicon-link"></span></a>AttendeesBannerImage As image</h3>
+<h4 id="user-content-image-4">
+<a aria-hidden="true" class="anchor" href="#user-content-image-4" id="user-content-image-4" name="user-content-image-4"><span aria-hidden="true" class="octicon octicon-link"></span></a>Image</h4>
+<pre><code>=attendees
+</code></pre>
+<h3 id="user-content-attendeegallery1-as-gallerygalleryvertical">
+<a aria-hidden="true" class="anchor" href="#user-content-attendeegallery1-as-gallerygalleryvertical" id="user-content-attendeegallery1-as-gallerygalleryvertical" name="user-content-attendeegallery1-as-gallerygalleryvertical"><span aria-hidden="true" class="octicon octicon-link"></span></a>AttendeeGallery1 As gallery.galleryVertical</h3>
+<h4 id="user-content-items-1">
+<a aria-hidden="true" class="anchor" href="#user-content-items-1" id="user-content-items-1" name="user-content-items-1"><span aria-hidden="true" class="octicon octicon-link"></span></a>Items</h4>
+<pre><code>=MeetingAttendees
+</code></pre>
+<h3 id="user-content-mailallbutton-as-button">
+<a aria-hidden="true" class="anchor" href="#user-content-mailallbutton-as-button" id="user-content-mailallbutton-as-button" name="user-content-mailallbutton-as-button"><span aria-hidden="true" class="octicon octicon-link"></span></a>MailAllButton As button</h3>
+<h4 id="user-content-onselect-4">
+<a aria-hidden="true" class="anchor" href="#user-content-onselect-4" id="user-content-onselect-4" name="user-content-onselect-4"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnSelect</h4>
+<pre><code>=Navigate(EmailScreen, None);
+Set(MultiRecipients, true);
+ClearCollect(EmailRecipients, AttendeeGallery1.AllItems)
+</code></pre>
+<h4 id="user-content-text-2">
+<a aria-hidden="true" class="anchor" href="#user-content-text-2" id="user-content-text-2" name="user-content-text-2"><span aria-hidden="true" class="octicon octicon-link"></span></a>Text</h4>
+<pre><code>="Email"
+</code></pre>
+<h3 id="user-content-notesicon-as-image">
+<a aria-hidden="true" class="anchor" href="#user-content-notesicon-as-image" id="user-content-notesicon-as-image" name="user-content-notesicon-as-image"><span aria-hidden="true" class="octicon octicon-link"></span></a>NotesIcon As image</h3>
+<h4 id="user-content-image-5">
+<a aria-hidden="true" class="anchor" href="#user-content-image-5" id="user-content-image-5" name="user-content-image-5"><span aria-hidden="true" class="octicon octicon-link"></span></a>Image</h4>
+<pre><code>=notes
+</code></pre>
+<h3 id="user-content-notesinput-as-text">
+<a aria-hidden="true" class="anchor" href="#user-content-notesinput-as-text" id="user-content-notesinput-as-text" name="user-content-notesinput-as-text"><span aria-hidden="true" class="octicon octicon-link"></span></a>NotesInput As text</h3>
+<h3 id="user-content-finish_savebutton-as-button">
+<a aria-hidden="true" class="anchor" href="#user-content-finish_savebutton-as-button" id="user-content-finish_savebutton-as-button" name="user-content-finish_savebutton-as-button"><span aria-hidden="true" class="octicon octicon-link"></span></a>Finish_SaveButton As button</h3>
+<h4 id="user-content-onselect-5">
+<a aria-hidden="true" class="anchor" href="#user-content-onselect-5" id="user-content-onselect-5" name="user-content-onselect-5"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnSelect</h4>
+<pre><code>=Navigate(ExportScreen, None)
+</code></pre>
+<h4 id="user-content-text-3">
+<a aria-hidden="true" class="anchor" href="#user-content-text-3" id="user-content-text-3" name="user-content-text-3"><span aria-hidden="true" class="octicon octicon-link"></span></a>Text</h4>
+<pre><code>="Finish &amp; Save"
+</code></pre>
+<h3 id="user-content-finish_saveicon-as-image">
+<a aria-hidden="true" class="anchor" href="#user-content-finish_saveicon-as-image" id="user-content-finish_saveicon-as-image" name="user-content-finish_saveicon-as-image"><span aria-hidden="true" class="octicon octicon-link"></span></a>Finish_SaveIcon As image</h3>
+<h4 id="user-content-image-6">
+<a aria-hidden="true" class="anchor" href="#user-content-image-6" id="user-content-image-6" name="user-content-image-6"><span aria-hidden="true" class="octicon octicon-link"></span></a>Image</h4>
+<pre><code>=export
+</code></pre>
+<h4 id="user-content-onselect-6">
+<a aria-hidden="true" class="anchor" href="#user-content-onselect-6" id="user-content-onselect-6" name="user-content-onselect-6"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnSelect</h4>
+<pre><code>=Select(Finish_SaveButton)
+</code></pre>
+<h3 id="user-content-tasksicon-as-image">
+<a aria-hidden="true" class="anchor" href="#user-content-tasksicon-as-image" id="user-content-tasksicon-as-image" name="user-content-tasksicon-as-image"><span aria-hidden="true" class="octicon octicon-link"></span></a>TasksIcon As image</h3>
+<h4 id="user-content-image-7">
+<a aria-hidden="true" class="anchor" href="#user-content-image-7" id="user-content-image-7" name="user-content-image-7"><span aria-hidden="true" class="octicon octicon-link"></span></a>Image</h4>
+<pre><code>=tasks
+</code></pre>
+<h3 id="user-content-taskgallery-as-gallerygalleryvertical">
+<a aria-hidden="true" class="anchor" href="#user-content-taskgallery-as-gallerygalleryvertical" id="user-content-taskgallery-as-gallerygalleryvertical" name="user-content-taskgallery-as-gallerygalleryvertical"><span aria-hidden="true" class="octicon octicon-link"></span></a>TaskGallery As gallery.galleryVertical</h3>
+<h4 id="user-content-items-2">
+<a aria-hidden="true" class="anchor" href="#user-content-items-2" id="user-content-items-2" name="user-content-items-2"><span aria-hidden="true" class="octicon octicon-link"></span></a>Items</h4>
+<pre><code>=Tasks
+</code></pre>
+<h4 id="user-content-onselect-7">
+<a aria-hidden="true" class="anchor" href="#user-content-onselect-7" id="user-content-onselect-7" name="user-content-onselect-7"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnSelect</h4>
+<pre><code>=If(CountRows(Tasks) &gt; 0, 
+Set(SelectedTask, ThisItem);
+Set(TaskSelected, true);
+Set(UserSelected, true);
+Set(UserSelectedFromTasks, true);
+Set(SelectedUserTasks, ThisItem.AssignToUser);
+Set(ShowOverlay, true)
+)
+</code></pre>
+<h3 id="user-content-tasktitle-as-text">
+<a aria-hidden="true" class="anchor" href="#user-content-tasktitle-as-text" id="user-content-tasktitle-as-text" name="user-content-tasktitle-as-text"><span aria-hidden="true" class="octicon octicon-link"></span></a>TaskTitle As text</h3>
+<h2 id="user-content-sketch-screen">
+<a aria-hidden="true" class="anchor" href="#user-content-sketch-screen" id="user-content-sketch-screen" name="user-content-sketch-screen"><span aria-hidden="true" class="octicon octicon-link"></span></a>Sketch Screen</h2>
+<hr/>
+<p><div class="mermaid">
+graph LR
+HomeScreen(HomeScreen) --&gt; SketchScreen(Sketch Screen)
+SketchScreen(Sketch Screen) --&gt; HomeScreen(HomeScreen)
+SketchScreen(Sketch Screen) --&gt; CameraScreen(CameraScreen)
+CameraScreen(CameraScreen) --&gt; SketchScreen(Sketch Screen)
+</div></p>
+<h3 id="user-content-variables-3">
+<a aria-hidden="true" class="anchor" href="#user-content-variables-3" id="user-content-variables-3" name="user-content-variables-3"><span aria-hidden="true" class="octicon octicon-link"></span></a>Variables</h3>
+<p>Following variables have been created / or updated on this screen</p>
+<ul>
+<li><a href="#user-content-sketchnumber">SketchNumber</a></li>
+<li><a href="#user-content-showsketchsaved">ShowSketchSaved</a></li>
+</ul>
+<h3 id="user-content-collects-3">
+<a aria-hidden="true" class="anchor" href="#user-content-collects-3" id="user-content-collects-3" name="user-content-collects-3"><span aria-hidden="true" class="octicon octicon-link"></span></a>Collects</h3>
+<p>Following collects have been created, updated or cleared on this screen</p>
+<ul>
+<li><a href="#user-content-sketches">Sketches</a></li>
+</ul>
+<h3 id="user-content-flows-3">
+<a aria-hidden="true" class="anchor" href="#user-content-flows-3" id="user-content-flows-3" name="user-content-flows-3"><span aria-hidden="true" class="octicon octicon-link"></span></a>Flows</h3>
+<p>Following flows have used on this screen</p>
+<h3 id="user-content-sketch-screen-as-screen">
+<a aria-hidden="true" class="anchor" href="#user-content-sketch-screen-as-screen" id="user-content-sketch-screen-as-screen" name="user-content-sketch-screen-as-screen"><span aria-hidden="true" class="octicon octicon-link"></span></a>'Sketch Screen' As screen</h3>
+<p>Create a sketch during a meeting.</p>
+<p>The screen name "Sketch Screen" (notice the blank) akt's as a test for screen names
+with blank</p>
+<h4 id="user-content-onvisible-3">
+<a aria-hidden="true" class="anchor" href="#user-content-onvisible-3" id="user-content-onvisible-3" name="user-content-onvisible-3"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnVisible</h4>
+<pre><code>Set(ShowSketchSaved, false)
+</code></pre>
+<h3 id="user-content-applogo2-as-image">
+<a aria-hidden="true" class="anchor" href="#user-content-applogo2-as-image" id="user-content-applogo2-as-image" name="user-content-applogo2-as-image"><span aria-hidden="true" class="octicon octicon-link"></span></a>AppLogo2 As image</h3>
+<h4 id="user-content-image-8">
+<a aria-hidden="true" class="anchor" href="#user-content-image-8" id="user-content-image-8" name="user-content-image-8"><span aria-hidden="true" class="octicon octicon-link"></span></a>Image</h4>
+<pre><code>='nav-logo'
+</code></pre>
+<h3 id="user-content-navhome2-as-image">
+<a aria-hidden="true" class="anchor" href="#user-content-navhome2-as-image" id="user-content-navhome2-as-image" name="user-content-navhome2-as-image"><span aria-hidden="true" class="octicon octicon-link"></span></a>NavHome2 As image</h3>
+<h4 id="user-content-image-9">
+<a aria-hidden="true" class="anchor" href="#user-content-image-9" id="user-content-image-9" name="user-content-image-9"><span aria-hidden="true" class="octicon octicon-link"></span></a>Image</h4>
+<pre><code>='nav-notes'
+</code></pre>
+<h4 id="user-content-onselect-8">
+<a aria-hidden="true" class="anchor" href="#user-content-onselect-8" id="user-content-onselect-8" name="user-content-onselect-8"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnSelect</h4>
+<pre><code>=Navigate(HomeScreen, None)
+</code></pre>
+<h3 id="user-content-navsketch2-as-image">
+<a aria-hidden="true" class="anchor" href="#user-content-navsketch2-as-image" id="user-content-navsketch2-as-image" name="user-content-navsketch2-as-image"><span aria-hidden="true" class="octicon octicon-link"></span></a>NavSketch2 As image</h3>
+<h4 id="user-content-image-10">
+<a aria-hidden="true" class="anchor" href="#user-content-image-10" id="user-content-image-10" name="user-content-image-10"><span aria-hidden="true" class="octicon octicon-link"></span></a>Image</h4>
+<pre><code>='nav-sketch'
+</code></pre>
+<h3 id="user-content-navphotos2-as-image">
+<a aria-hidden="true" class="anchor" href="#user-content-navphotos2-as-image" id="user-content-navphotos2-as-image" name="user-content-navphotos2-as-image"><span aria-hidden="true" class="octicon octicon-link"></span></a>NavPhotos2 As image</h3>
+<h4 id="user-content-image-11">
+<a aria-hidden="true" class="anchor" href="#user-content-image-11" id="user-content-image-11" name="user-content-image-11"><span aria-hidden="true" class="octicon octicon-link"></span></a>Image</h4>
+<pre><code>='nav-camera'
+</code></pre>
+<h4 id="user-content-onselect-9">
+<a aria-hidden="true" class="anchor" href="#user-content-onselect-9" id="user-content-onselect-9" name="user-content-onselect-9"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnSelect</h4>
+<pre><code>=Navigate(CameraScreen, None)
+</code></pre>
+<h3 id="user-content-savesketch-as-button">
+<a aria-hidden="true" class="anchor" href="#user-content-savesketch-as-button" id="user-content-savesketch-as-button" name="user-content-savesketch-as-button"><span aria-hidden="true" class="octicon octicon-link"></span></a>SaveSketch As button</h3>
+<h4 id="user-content-onselect-10">
+<a aria-hidden="true" class="anchor" href="#user-content-onselect-10" id="user-content-onselect-10" name="user-content-onselect-10"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnSelect</h4>
+<pre><code>=/*store sketches in sketch collection*/
+Set(SketchNumber, SketchNumber + 1);
+Collect(Sketches, {Image:SketchCanvas.Image, Name: "Sketch" &amp; SketchNumber &amp; ".jpg"});
+Reset(SketchCanvas);
+Set(ShowSketchSaved, true)
+</code></pre>
+<h4 id="user-content-text-4">
+<a aria-hidden="true" class="anchor" href="#user-content-text-4" id="user-content-text-4" name="user-content-text-4"><span aria-hidden="true" class="octicon octicon-link"></span></a>Text</h4>
+<pre><code>="Save sketch"
+</code></pre>
+<h2 id="user-content-camerascreen">
+<a aria-hidden="true" class="anchor" href="#user-content-camerascreen" id="user-content-camerascreen" name="user-content-camerascreen"><span aria-hidden="true" class="octicon octicon-link"></span></a>CameraScreen</h2>
+<hr/>
+<p><div class="mermaid">
+graph LR
+HomeScreen(HomeScreen) --&gt; CameraScreen(CameraScreen)
+SketchScreen(Sketch Screen) --&gt; CameraScreen(CameraScreen)
+CameraScreen(CameraScreen) --&gt; HomeScreen(HomeScreen)
+CameraScreen(CameraScreen) --&gt; SketchScreen(Sketch Screen)
+</div></p>
+<h3 id="user-content-variables-4">
+<a aria-hidden="true" class="anchor" href="#user-content-variables-4" id="user-content-variables-4" name="user-content-variables-4"><span aria-hidden="true" class="octicon octicon-link"></span></a>Variables</h3>
+<p>Following variables have been created / or updated on this screen</p>
+<ul>
+<li><a href="#user-content-showtakenimage">ShowTakenImage</a></li>
+<li><a href="#user-content-photonumber">PhotoNumber</a></li>
+<li><a href="#user-content-showimagesaved">ShowImageSaved</a></li>
+</ul>
+<h3 id="user-content-collects-4">
+<a aria-hidden="true" class="anchor" href="#user-content-collects-4" id="user-content-collects-4" name="user-content-collects-4"><span aria-hidden="true" class="octicon octicon-link"></span></a>Collects</h3>
+<p>Following collects have been created, updated or cleared on this screen</p>
+<ul>
+<li><a href="#user-content-photos">Photos</a></li>
+</ul>
+<h3 id="user-content-flows-4">
+<a aria-hidden="true" class="anchor" href="#user-content-flows-4" id="user-content-flows-4" name="user-content-flows-4"><span aria-hidden="true" class="octicon octicon-link"></span></a>Flows</h3>
+<p>Following flows have used on this screen</p>
+<h3 id="user-content-camerascreen-as-screen">
+<a aria-hidden="true" class="anchor" href="#user-content-camerascreen-as-screen" id="user-content-camerascreen-as-screen" name="user-content-camerascreen-as-screen"><span aria-hidden="true" class="octicon octicon-link"></span></a>CameraScreen As screen</h3>
+<p>Take picture during a meeting</p>
+<h4 id="user-content-onvisible-4">
+<a aria-hidden="true" class="anchor" href="#user-content-onvisible-4" id="user-content-onvisible-4" name="user-content-onvisible-4"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnVisible</h4>
+<pre><code>Set(ShowImageSaved, false);
+Set(ShowTakenImage, false)
+</code></pre>
+<h3 id="user-content-applogo3-as-image">
+<a aria-hidden="true" class="anchor" href="#user-content-applogo3-as-image" id="user-content-applogo3-as-image" name="user-content-applogo3-as-image"><span aria-hidden="true" class="octicon octicon-link"></span></a>AppLogo3 As image</h3>
+<h4 id="user-content-image-12">
+<a aria-hidden="true" class="anchor" href="#user-content-image-12" id="user-content-image-12" name="user-content-image-12"><span aria-hidden="true" class="octicon octicon-link"></span></a>Image</h4>
+<pre><code>='nav-logo'
+</code></pre>
+<h3 id="user-content-navhome3-as-image">
+<a aria-hidden="true" class="anchor" href="#user-content-navhome3-as-image" id="user-content-navhome3-as-image" name="user-content-navhome3-as-image"><span aria-hidden="true" class="octicon octicon-link"></span></a>NavHome3 As image</h3>
+<h4 id="user-content-image-13">
+<a aria-hidden="true" class="anchor" href="#user-content-image-13" id="user-content-image-13" name="user-content-image-13"><span aria-hidden="true" class="octicon octicon-link"></span></a>Image</h4>
+<pre><code>='nav-notes'
+</code></pre>
+<h4 id="user-content-onselect-11">
+<a aria-hidden="true" class="anchor" href="#user-content-onselect-11" id="user-content-onselect-11" name="user-content-onselect-11"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnSelect</h4>
+<pre><code>=Navigate(HomeScreen, None)
+</code></pre>
+<h3 id="user-content-navsketch3-as-image">
+<a aria-hidden="true" class="anchor" href="#user-content-navsketch3-as-image" id="user-content-navsketch3-as-image" name="user-content-navsketch3-as-image"><span aria-hidden="true" class="octicon octicon-link"></span></a>NavSketch3 As image</h3>
+<h4 id="user-content-image-14">
+<a aria-hidden="true" class="anchor" href="#user-content-image-14" id="user-content-image-14" name="user-content-image-14"><span aria-hidden="true" class="octicon octicon-link"></span></a>Image</h4>
+<pre><code>='nav-sketch'
+</code></pre>
+<h4 id="user-content-onselect-12">
+<a aria-hidden="true" class="anchor" href="#user-content-onselect-12" id="user-content-onselect-12" name="user-content-onselect-12"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnSelect</h4>
+<pre><code>=Navigate('Sketch Screen', None)
+</code></pre>
+<h3 id="user-content-navphotos3-as-image">
+<a aria-hidden="true" class="anchor" href="#user-content-navphotos3-as-image" id="user-content-navphotos3-as-image" name="user-content-navphotos3-as-image"><span aria-hidden="true" class="octicon octicon-link"></span></a>NavPhotos3 As image</h3>
+<h4 id="user-content-image-15">
+<a aria-hidden="true" class="anchor" href="#user-content-image-15" id="user-content-image-15" name="user-content-image-15"><span aria-hidden="true" class="octicon octicon-link"></span></a>Image</h4>
+<pre><code>='nav-camera'
+</code></pre>
+<h2 id="user-content-emailscreen">
+<a aria-hidden="true" class="anchor" href="#user-content-emailscreen" id="user-content-emailscreen" name="user-content-emailscreen"><span aria-hidden="true" class="octicon octicon-link"></span></a>EmailScreen</h2>
+<hr/>
+<p><div class="mermaid">
+graph LR
+HomeScreen(HomeScreen) --&gt; EmailScreen(EmailScreen)
+EmailScreen(EmailScreen) --&gt; ConfirmScreen(ConfirmScreen)
+</div></p>
+<h3 id="user-content-variables-5">
+<a aria-hidden="true" class="anchor" href="#user-content-variables-5" id="user-content-variables-5" name="user-content-variables-5"><span aria-hidden="true" class="octicon octicon-link"></span></a>Variables</h3>
+<p>Following variables have been created / or updated on this screen</p>
+<ul>
+<li><a href="#user-content-emailconfirmed">EmailConfirmed</a></li>
+</ul>
+<h3 id="user-content-collects-5">
+<a aria-hidden="true" class="anchor" href="#user-content-collects-5" id="user-content-collects-5" name="user-content-collects-5"><span aria-hidden="true" class="octicon octicon-link"></span></a>Collects</h3>
+<p>Following collects have been created, updated or cleared on this screen</p>
+<h3 id="user-content-flows-5">
+<a aria-hidden="true" class="anchor" href="#user-content-flows-5" id="user-content-flows-5" name="user-content-flows-5"><span aria-hidden="true" class="octicon octicon-link"></span></a>Flows</h3>
+<p>Following flows have used on this screen</p>
+<h3 id="user-content-emailscreen-as-screen">
+<a aria-hidden="true" class="anchor" href="#user-content-emailscreen-as-screen" id="user-content-emailscreen-as-screen" name="user-content-emailscreen-as-screen"><span aria-hidden="true" class="octicon octicon-link"></span></a>EmailScreen As screen</h3>
+<p>Email meeting notes to attendees</p>
+<h3 id="user-content-applogo4-as-image">
+<a aria-hidden="true" class="anchor" href="#user-content-applogo4-as-image" id="user-content-applogo4-as-image" name="user-content-applogo4-as-image"><span aria-hidden="true" class="octicon octicon-link"></span></a>AppLogo4 As image</h3>
+<h4 id="user-content-image-16">
+<a aria-hidden="true" class="anchor" href="#user-content-image-16" id="user-content-image-16" name="user-content-image-16"><span aria-hidden="true" class="octicon octicon-link"></span></a>Image</h4>
+<pre><code>='nav-logo'
+</code></pre>
+<h3 id="user-content-sendemail-as-button">
+<a aria-hidden="true" class="anchor" href="#user-content-sendemail-as-button" id="user-content-sendemail-as-button" name="user-content-sendemail-as-button"><span aria-hidden="true" class="octicon octicon-link"></span></a>SendEmail As button</h3>
+<h4 id="user-content-onselect-13">
+<a aria-hidden="true" class="anchor" href="#user-content-onselect-13" id="user-content-onselect-13" name="user-content-onselect-13"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnSelect</h4>
+<pre><code>=Office365Outlook.SendEmail(Concat(EmailRecipients, UserPrincipalName &amp; ";"), EmailSubject.Text, EmailMessage.Text, {Importance: "Normal"});
+/*Sets text to display email confirmation info*/
+Set(EmailConfirmed, true);
+Navigate(ConfirmScreen, None)
+</code></pre>
+<h4 id="user-content-text-5">
+<a aria-hidden="true" class="anchor" href="#user-content-text-5" id="user-content-text-5" name="user-content-text-5"><span aria-hidden="true" class="octicon octicon-link"></span></a>Text</h4>
+<pre><code>="Send"
+</code></pre>
+<h3 id="user-content-gallerybkg-as-button">
+<a aria-hidden="true" class="anchor" href="#user-content-gallerybkg-as-button" id="user-content-gallerybkg-as-button" name="user-content-gallerybkg-as-button"><span aria-hidden="true" class="octicon octicon-link"></span></a>GalleryBkg As button</h3>
+<h4 id="user-content-text-6">
+<a aria-hidden="true" class="anchor" href="#user-content-text-6" id="user-content-text-6" name="user-content-text-6"><span aria-hidden="true" class="octicon octicon-link"></span></a>Text</h4>
+<pre><code>=""
+</code></pre>
+<h3 id="user-content-emailrecipientgallery-as-gallerygalleryhorizontal">
+<a aria-hidden="true" class="anchor" href="#user-content-emailrecipientgallery-as-gallerygalleryhorizontal" id="user-content-emailrecipientgallery-as-gallerygalleryhorizontal" name="user-content-emailrecipientgallery-as-gallerygalleryhorizontal"><span aria-hidden="true" class="octicon octicon-link"></span></a>EmailRecipientGallery As gallery.galleryHorizontal</h3>
+<h4 id="user-content-items-3">
+<a aria-hidden="true" class="anchor" href="#user-content-items-3" id="user-content-items-3" name="user-content-items-3"><span aria-hidden="true" class="octicon octicon-link"></span></a>Items</h4>
+<pre><code>=EmailRecipients
+</code></pre>
+<h3 id="user-content-emailsubject-as-text">
+<a aria-hidden="true" class="anchor" href="#user-content-emailsubject-as-text" id="user-content-emailsubject-as-text" name="user-content-emailsubject-as-text"><span aria-hidden="true" class="octicon octicon-link"></span></a>EmailSubject As text</h3>
+<h3 id="user-content-emailmessage-as-text">
+<a aria-hidden="true" class="anchor" href="#user-content-emailmessage-as-text" id="user-content-emailmessage-as-text" name="user-content-emailmessage-as-text"><span aria-hidden="true" class="octicon octicon-link"></span></a>EmailMessage As text</h3>
+<h2 id="user-content-attachmentsscreen">
+<a aria-hidden="true" class="anchor" href="#user-content-attachmentsscreen" id="user-content-attachmentsscreen" name="user-content-attachmentsscreen"><span aria-hidden="true" class="octicon octicon-link"></span></a>AttachmentsScreen</h2>
+<hr/>
+<p><div class="mermaid">
+graph LR
+HomeScreen(HomeScreen) --&gt; AttachmentsScreen(AttachmentsScreen)
+</div></p>
+<h3 id="user-content-variables-6">
+<a aria-hidden="true" class="anchor" href="#user-content-variables-6" id="user-content-variables-6" name="user-content-variables-6"><span aria-hidden="true" class="octicon octicon-link"></span></a>Variables</h3>
+<p>Following variables have been created / or updated on this screen</p>
+<ul>
+<li><a href="#user-content-showoverlay">ShowOverlay</a></li>
+<li><a href="#user-content-selectedimage">SelectedImage</a></li>
+<li><a href="#user-content-attachmentdeleteconfirm">AttachmentDeleteConfirm</a></li>
+</ul>
+<h3 id="user-content-collects-6">
+<a aria-hidden="true" class="anchor" href="#user-content-collects-6" id="user-content-collects-6" name="user-content-collects-6"><span aria-hidden="true" class="octicon octicon-link"></span></a>Collects</h3>
+<p>Following collects have been created, updated or cleared on this screen</p>
+<h3 id="user-content-flows-6">
+<a aria-hidden="true" class="anchor" href="#user-content-flows-6" id="user-content-flows-6" name="user-content-flows-6"><span aria-hidden="true" class="octicon octicon-link"></span></a>Flows</h3>
+<p>Following flows have used on this screen</p>
+<h3 id="user-content-attachmentsscreen-as-screen">
+<a aria-hidden="true" class="anchor" href="#user-content-attachmentsscreen-as-screen" id="user-content-attachmentsscreen-as-screen" name="user-content-attachmentsscreen-as-screen"><span aria-hidden="true" class="octicon octicon-link"></span></a>AttachmentsScreen As screen</h3>
+<p>See attachments created during meeting</p>
+<h3 id="user-content-applogo5-as-image">
+<a aria-hidden="true" class="anchor" href="#user-content-applogo5-as-image" id="user-content-applogo5-as-image" name="user-content-applogo5-as-image"><span aria-hidden="true" class="octicon octicon-link"></span></a>AppLogo5 As image</h3>
+<h4 id="user-content-image-17">
+<a aria-hidden="true" class="anchor" href="#user-content-image-17" id="user-content-image-17" name="user-content-image-17"><span aria-hidden="true" class="octicon octicon-link"></span></a>Image</h4>
+<pre><code>='nav-logo'
+</code></pre>
+<h3 id="user-content-photosicon-as-image">
+<a aria-hidden="true" class="anchor" href="#user-content-photosicon-as-image" id="user-content-photosicon-as-image" name="user-content-photosicon-as-image"><span aria-hidden="true" class="octicon octicon-link"></span></a>PhotosIcon As image</h3>
+<h4 id="user-content-image-18">
+<a aria-hidden="true" class="anchor" href="#user-content-image-18" id="user-content-image-18" name="user-content-image-18"><span aria-hidden="true" class="octicon octicon-link"></span></a>Image</h4>
+<pre><code>='attachments-camera'
+</code></pre>
+<h3 id="user-content-photosgallery-as-gallerygalleryhorizontal">
+<a aria-hidden="true" class="anchor" href="#user-content-photosgallery-as-gallerygalleryhorizontal" id="user-content-photosgallery-as-gallerygalleryhorizontal" name="user-content-photosgallery-as-gallerygalleryhorizontal"><span aria-hidden="true" class="octicon octicon-link"></span></a>PhotosGallery As gallery.galleryHorizontal</h3>
+<h4 id="user-content-items-4">
+<a aria-hidden="true" class="anchor" href="#user-content-items-4" id="user-content-items-4" name="user-content-items-4"><span aria-hidden="true" class="octicon octicon-link"></span></a>Items</h4>
+<pre><code>=Photos
+</code></pre>
+<h4 id="user-content-onselect-14">
+<a aria-hidden="true" class="anchor" href="#user-content-onselect-14" id="user-content-onselect-14" name="user-content-onselect-14"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnSelect</h4>
+<pre><code>=Set(ShowOverlay, true);
+Set(SelectedImage, ThisItem)
+</code></pre>
+<h3 id="user-content-sketchesicon-as-image">
+<a aria-hidden="true" class="anchor" href="#user-content-sketchesicon-as-image" id="user-content-sketchesicon-as-image" name="user-content-sketchesicon-as-image"><span aria-hidden="true" class="octicon octicon-link"></span></a>SketchesIcon As image</h3>
+<h4 id="user-content-image-19">
+<a aria-hidden="true" class="anchor" href="#user-content-image-19" id="user-content-image-19" name="user-content-image-19"><span aria-hidden="true" class="octicon octicon-link"></span></a>Image</h4>
+<pre><code>='attachments-sketch'
+</code></pre>
+<h3 id="user-content-sketchesgallery-as-gallerygalleryhorizontal">
+<a aria-hidden="true" class="anchor" href="#user-content-sketchesgallery-as-gallerygalleryhorizontal" id="user-content-sketchesgallery-as-gallerygalleryhorizontal" name="user-content-sketchesgallery-as-gallerygalleryhorizontal"><span aria-hidden="true" class="octicon octicon-link"></span></a>SketchesGallery As gallery.galleryHorizontal</h3>
+<h4 id="user-content-items-5">
+<a aria-hidden="true" class="anchor" href="#user-content-items-5" id="user-content-items-5" name="user-content-items-5"><span aria-hidden="true" class="octicon octicon-link"></span></a>Items</h4>
+<pre><code>=Sketches
+</code></pre>
+<h4 id="user-content-onselect-15">
+<a aria-hidden="true" class="anchor" href="#user-content-onselect-15" id="user-content-onselect-15" name="user-content-onselect-15"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnSelect</h4>
+<pre><code>=Set(ShowOverlay, true);
+Set(SelectedImage, ThisItem)
+</code></pre>
+<h3 id="user-content-attachmenttodelete-as-image">
+<a aria-hidden="true" class="anchor" href="#user-content-attachmenttodelete-as-image" id="user-content-attachmenttodelete-as-image" name="user-content-attachmenttodelete-as-image"><span aria-hidden="true" class="octicon octicon-link"></span></a>AttachmentToDelete As image</h3>
+<h4 id="user-content-image-20">
+<a aria-hidden="true" class="anchor" href="#user-content-image-20" id="user-content-image-20" name="user-content-image-20"><span aria-hidden="true" class="octicon octicon-link"></span></a>Image</h4>
+<pre><code>=SelectedImage.Image
+</code></pre>
+<h3 id="user-content-canceldeleteattach-as-button">
+<a aria-hidden="true" class="anchor" href="#user-content-canceldeleteattach-as-button" id="user-content-canceldeleteattach-as-button" name="user-content-canceldeleteattach-as-button"><span aria-hidden="true" class="octicon octicon-link"></span></a>CancelDeleteAttach As button</h3>
+<h4 id="user-content-onselect-16">
+<a aria-hidden="true" class="anchor" href="#user-content-onselect-16" id="user-content-onselect-16" name="user-content-onselect-16"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnSelect</h4>
+<pre><code>=Set(AttachmentDeleteConfirm, false);
+Set(ShowOverlay, false)
+</code></pre>
+<h4 id="user-content-text-7">
+<a aria-hidden="true" class="anchor" href="#user-content-text-7" id="user-content-text-7" name="user-content-text-7"><span aria-hidden="true" class="octicon octicon-link"></span></a>Text</h4>
+<pre><code>=If(TaskSelected, "Delete", "Cancel")
+</code></pre>
+<h3 id="user-content-confirmdeleteattach-as-button">
+<a aria-hidden="true" class="anchor" href="#user-content-confirmdeleteattach-as-button" id="user-content-confirmdeleteattach-as-button" name="user-content-confirmdeleteattach-as-button"><span aria-hidden="true" class="octicon octicon-link"></span></a>ConfirmDeleteAttach As button</h3>
+<h4 id="user-content-onselect-17">
+<a aria-hidden="true" class="anchor" href="#user-content-onselect-17" id="user-content-onselect-17" name="user-content-onselect-17"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnSelect</h4>
+<pre><code>=Set(ShowOverlay, false);
+Set(AttachmentDeleteConfirm, false);
+RemoveIf(Sketches, SelectedImage.Name = Name);
+RemoveIf(Photos, SelectedImage.Name = Name)
+
+</code></pre>
+<h4 id="user-content-text-8">
+<a aria-hidden="true" class="anchor" href="#user-content-text-8" id="user-content-text-8" name="user-content-text-8"><span aria-hidden="true" class="octicon octicon-link"></span></a>Text</h4>
+<pre><code>="Yes, delete"
+</code></pre>
+<h2 id="user-content-confirmscreen">
+<a aria-hidden="true" class="anchor" href="#user-content-confirmscreen" id="user-content-confirmscreen" name="user-content-confirmscreen"><span aria-hidden="true" class="octicon octicon-link"></span></a>ConfirmScreen</h2>
+<hr/>
+<p><div class="mermaid">
+graph LR
+EmailScreen(EmailScreen) --&gt; ConfirmScreen(ConfirmScreen)
+ConfirmScreen(ConfirmScreen) --&gt; HomeScreen(HomeScreen)
+ConfirmScreen(ConfirmScreen) --&gt; FollowUpScreen(FollowUpScreen)
+ConfirmScreen(ConfirmScreen) --&gt; WelcomeScreen(WelcomeScreen)
+FollowUpTimesScreen(FollowUpTimesScreen) --&gt; ConfirmScreen(ConfirmScreen)
+ExportPopUpsScreen(ExportPopUpsScreen) --&gt; ConfirmScreen(ConfirmScreen)
+</div></p>
+<h3 id="user-content-variables-7">
+<a aria-hidden="true" class="anchor" href="#user-content-variables-7" id="user-content-variables-7" name="user-content-variables-7"><span aria-hidden="true" class="octicon octicon-link"></span></a>Variables</h3>
+<p>Following variables have been created / or updated on this screen</p>
+<ul>
+<li><a href="#user-content-loading">Loading</a></li>
+</ul>
+<h3 id="user-content-collects-7">
+<a aria-hidden="true" class="anchor" href="#user-content-collects-7" id="user-content-collects-7" name="user-content-collects-7"><span aria-hidden="true" class="octicon octicon-link"></span></a>Collects</h3>
+<p>Following collects have been created, updated or cleared on this screen</p>
+<ul>
+<li><a href="#user-content-emailattachments">EmailAttachments</a></li>
+<li><a href="#user-content-templatedata">TemplateData</a></li>
+<li><a href="#user-content-indexes">Indexes</a></li>
+</ul>
+<h3 id="user-content-flows-7">
+<a aria-hidden="true" class="anchor" href="#user-content-flows-7" id="user-content-flows-7" name="user-content-flows-7"><span aria-hidden="true" class="octicon octicon-link"></span></a>Flows</h3>
+<p>Following flows have used on this screen</p>
+<h3 id="user-content-confirmscreen-as-screen">
+<a aria-hidden="true" class="anchor" href="#user-content-confirmscreen-as-screen" id="user-content-confirmscreen-as-screen" name="user-content-confirmscreen-as-screen"><span aria-hidden="true" class="octicon octicon-link"></span></a>ConfirmScreen As screen</h3>
+<p>Export confirmation screen
+Once the export is completed another meeting can be scheduled with the attendees.</p>
+<h4 id="user-content-onvisible-5">
+<a aria-hidden="true" class="anchor" href="#user-content-onvisible-5" id="user-content-onvisible-5" name="user-content-onvisible-5"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnVisible</h4>
+<pre><code>If(ExportConfirmed,
+    Set(Loading, true);
+
+    /*Collects the dynamic data which will be substituted into the Email/OneNote templates and associates it to the {placeholder} values in the templates
+       At {Field: "{1}" at &lt;tr&gt;&lt;td colspan='3'&gt; changed &lt;td colspan='3' style='height:10px;'&gt; to &lt;td colspan='3'&gt; because OneNote stopped displaying the export content with the inline style content present 
+    */
+        If(CheckEmail.Value || CheckOneNote.Value, 
+             ClearCollect(TemplateData, {Field:"{MeetingName}", Data:SelectedMeeting.Subject}, {Field: "{MeetingStartDate}", Data: Text(SelectedMeeting.Start, "[$-en-US]mmm. dd, yyyy")}, 
+            {Field: "{MeetingStartTime}", Data: Lower(Text(SelectedMeeting.Start, "[$-en-US]hh:mm am/pm"))}, {Field: "{MeetingEndTime}", Data: Lower(Text(SelectedMeeting.End, "[$-en-US]hh:mm am/pm"))},
+            {Field: "{MeetingMinutes}", Data: Text(SelectedMeetingDuration/60)}, {Field: "{MeetingAttendeeNum}", Data: Text(CountRows(MeetingAttendees))},
+            {Field: "{1}", 
+            Data: Concat(
+                GroupBy(
+                    ForAll(MeetingAttendees,
+                        Collect(Indexes, {Index:Last(Indexes).Index + 1});
+                        {Page:RoundDown(Last(Indexes).Index / 3,0),
+                        Id:Id, 
+                        DisplayName:DisplayName, 
+                        JobTitle:JobTitle}
+                    ),
+            "Page","Attendees"),"&lt;tr&gt;" &amp; Concat(Attendees,"&lt;td class='user-name' width='221'&gt;" &amp; DisplayName &amp; "&lt;/td&gt;") &amp; If(CountRows(Attendees)=2,"&lt;td class='user-name' width='221'&gt;&lt;/td&gt;",CountRows(Attendees)=1,
+            "&lt;td class='user-name' width='221'&gt;&lt;/td&gt;&lt;td class='user-name' width='221'&gt;&lt;/td&gt;") &amp; "&lt;/tr&gt;&lt;tr&gt;" &amp; Concat(Attendees,"&lt;td class='job-title'&gt;" &amp; JobTitle &amp; "&lt;/td&gt;") &amp; If(CountRows(Attendees)=2,
+            "&lt;td class='job-title'&gt;&lt;/td&gt;",CountRows(Attendees)=1,"&lt;td class='job-title'&gt;&lt;/td&gt;&lt;td class='job-title'&gt;&lt;/td&gt;") &amp; "&lt;/tr&gt;&lt;tr&gt;&lt;td colspan='3'&gt;&lt;/td&gt;&lt;/tr&gt;")},
+            {Field: "{MeetingDetails}", Data:MeetingBody.HtmlText}, {Field: "{MeetingNotes}", Data: Substitute(NotesInput.Text, Char(10), "&lt;br/&gt;")},
+            {Field: "{2}", Data: Concat(Tasks,"&lt;tr&gt;&lt;td class='task'&gt;&lt;table border='0' cellpadding='0' cellspacing='0' class='no-border' style='table-layout:auto'&gt;&lt;tr&gt;&lt;td class='name'&gt;&lt;a class='link-name' href='https://tasks.office.com' target='_blank'&gt;" &amp; Name &amp; "&lt;/a&gt;&lt;/td&gt;&lt;td class='due-time'&gt;" &amp; If(IsBlank(DueDate),"","Due " &amp; If(IsToday(DueDate),"Today",Text(DueDate,"[$-en-US]mmm d"))) &amp; "&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan='2' class='assign-to'&gt;" &amp; AssignToUser.DisplayName &amp; "&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;")})
+        );
+
+        /*Creates planner tasks based on the Tasks collection*/
+        If(CheckPlanner.Value,ForAll(Tasks,Planner.CreateTask(SelectedPlan.'data-ADB4D7A662F548B49FAC2B986E348A1Bid',Name,{bucketId:SelectedBucket.'data-ADB4D7A662F548B49FAC2B986E348A1Bid',dueDateTime:AssnTaskDueDate_1,assignments:AssignToUser.Id})));
+        /*combines photos and sketches into a single email attachments collection*/
+        If(CheckEmail.Value,
+            ForAll(Photos, Collect(EmailAttachments, {ContentBytes: Image, Image: Image, Name: Name}));
+            ForAll(Sketches, Collect(EmailAttachments, {ContentBytes: Image, Image: Image, Name: Name}));
+        /*replaces {placeholder} values for Email template with dynamic data collected from user's input as they progress through app*/   
+            ForAll(TemplateData, Patch(Templates, LookUp(Templates, Template="Email"), {Value: Substitute(LookUp(Templates, Template="Email").Value, Field, Data)}));
+            Office365Outlook.SendEmail(Concat(EmailRecipients, UserPrincipalName &amp; ";"), SelectedMeeting.Subject, LookUp(Templates, Template="Email").Value, {Attachments: EmailAttachments, Importance: "Normal", IsHtml: true}
+            )    
+        );
+        If(CheckOneNote.Value,
+        /*replaces {placeholder} values for OneNote template with dynamic data collected from user's input as they progress through app*/    
+            ForAll(TemplateData, Patch(Templates, LookUp(Templates, Template="OneNote"), {Value: Substitute(LookUp(Templates, Template="OneNote").Value, Field, Data)}));
+            'OneNote(Business)'.CreatePageInSection(SelectedNoteBook.'data-ADB4D7A662F548B49FAC2B986E348A1BKey', SelectedSection.'data-ADB4D7A662F548B49FAC2B986E348A1BpagesUrl', LookUp(Templates, Template="OneNote").Value)
+        );
+
+    Set(Loading, false)
+)
+</code></pre>
+<h2 id="user-content-exportscreen">
+<a aria-hidden="true" class="anchor" href="#user-content-exportscreen" id="user-content-exportscreen" name="user-content-exportscreen"><span aria-hidden="true" class="octicon octicon-link"></span></a>ExportScreen</h2>
+<hr/>
+<p><div class="mermaid">
+graph LR
+HomeScreen(HomeScreen) --&gt; ExportScreen(ExportScreen)
+ExportScreen(ExportScreen) --&gt; HomeScreen(HomeScreen)
+ExportScreen(ExportScreen) --&gt; ExportPopUpsScreen(ExportPopUpsScreen)
+ExportPopUpsScreen(ExportPopUpsScreen) --&gt; ExportScreen(ExportScreen)
+</div></p>
+<h3 id="user-content-variables-8">
+<a aria-hidden="true" class="anchor" href="#user-content-variables-8" id="user-content-variables-8" name="user-content-variables-8"><span aria-hidden="true" class="octicon octicon-link"></span></a>Variables</h3>
+<p>Following variables have been created / or updated on this screen</p>
+<ul>
+<li><a href="#user-content-selectedplan">SelectedPlan</a></li>
+<li><a href="#user-content-selectedsection">SelectedSection</a></li>
+<li><a href="#user-content-selectednotebook">SelectedNoteBook</a></li>
+<li><a href="#user-content-showoverlay">ShowOverlay</a></li>
+<li><a href="#user-content-showplanner">ShowPlanner</a></li>
+<li><a href="#user-content-selectedbucket">SelectedBucket</a></li>
+<li><a href="#user-content-showonenote">ShowOneNote</a></li>
+</ul>
+<h3 id="user-content-collects-8">
+<a aria-hidden="true" class="anchor" href="#user-content-collects-8" id="user-content-collects-8" name="user-content-collects-8"><span aria-hidden="true" class="octicon octicon-link"></span></a>Collects</h3>
+<p>Following collects have been created, updated or cleared on this screen</p>
+<ul>
+<li><a href="#user-content-onenotebooks">OneNoteBooks</a></li>
+<li><a href="#user-content-plannerplans">PlannerPlans</a></li>
+<li><a href="#user-content-emailrecipients">EmailRecipients</a></li>
+<li><a href="#user-content-onenotesections">OneNoteSections</a></li>
+<li><a href="#user-content-plannerbuckets">PlannerBuckets</a></li>
+</ul>
+<h3 id="user-content-flows-8">
+<a aria-hidden="true" class="anchor" href="#user-content-flows-8" id="user-content-flows-8" name="user-content-flows-8"><span aria-hidden="true" class="octicon octicon-link"></span></a>Flows</h3>
+<p>Following flows have used on this screen</p>
+<h3 id="user-content-exportscreen-as-screen">
+<a aria-hidden="true" class="anchor" href="#user-content-exportscreen-as-screen" id="user-content-exportscreen-as-screen" name="user-content-exportscreen-as-screen"><span aria-hidden="true" class="octicon octicon-link"></span></a>ExportScreen As screen</h3>
+<p>Export creation screen
+Select where to export to.
+Possible exports:</p>
+<ul>
+<li>OneNote</li>
+<li>Office Planner</li>
+<li>Email</li>
+</ul>
+<h4 id="user-content-onvisible-6">
+<a aria-hidden="true" class="anchor" href="#user-content-onvisible-6" id="user-content-onvisible-6" name="user-content-onvisible-6"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnVisible</h4>
+<pre><code>If(IsEmpty(EmailRecipients), 
+    ClearCollect(EmailRecipients, AttendeeGallery1.AllItems)
+);
+If(IsEmpty(OneNoteBooks), ClearCollect(OneNoteBooks,'OneNote(Business)'.GetNotebooks()));
+If(!IsEmpty(OneNoteBooks),ClearCollect(OneNoteSections,'OneNote(Business)'.GetSectionsInNotebook(OneNoteBookSelect_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BKey').value));
+If(IsEmpty(PlannerPlans), ClearCollect(PlannerPlans, Planner.ListMyPlans().value));
+If(!IsEmpty(PlannerPlans),ClearCollect(PlannerBuckets,Planner.ListBuckets(PlannerPlanSelect_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bid').value))
+</code></pre>
+<h3 id="user-content-applogo7-as-image">
+<a aria-hidden="true" class="anchor" href="#user-content-applogo7-as-image" id="user-content-applogo7-as-image" name="user-content-applogo7-as-image"><span aria-hidden="true" class="octicon octicon-link"></span></a>AppLogo7 As image</h3>
+<h4 id="user-content-image-21">
+<a aria-hidden="true" class="anchor" href="#user-content-image-21" id="user-content-image-21" name="user-content-image-21"><span aria-hidden="true" class="octicon octicon-link"></span></a>Image</h4>
+<pre><code>='nav-logo'
+</code></pre>
+<h3 id="user-content-exportbutton-as-button">
+<a aria-hidden="true" class="anchor" href="#user-content-exportbutton-as-button" id="user-content-exportbutton-as-button" name="user-content-exportbutton-as-button"><span aria-hidden="true" class="octicon octicon-link"></span></a>ExportButton As button</h3>
+<h4 id="user-content-onselect-18">
+<a aria-hidden="true" class="anchor" href="#user-content-onselect-18" id="user-content-onselect-18" name="user-content-onselect-18"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnSelect</h4>
+<pre><code>=Set(ShowOverlay, true);
+Navigate(ExportPopUpsScreen, None)
+</code></pre>
+<h4 id="user-content-text-9">
+<a aria-hidden="true" class="anchor" href="#user-content-text-9" id="user-content-text-9" name="user-content-text-9"><span aria-hidden="true" class="octicon octicon-link"></span></a>Text</h4>
+<pre><code>="Export"
+</code></pre>
+<h3 id="user-content-exporticon-as-image">
+<a aria-hidden="true" class="anchor" href="#user-content-exporticon-as-image" id="user-content-exporticon-as-image" name="user-content-exporticon-as-image"><span aria-hidden="true" class="octicon octicon-link"></span></a>ExportIcon As image</h3>
+<h4 id="user-content-image-22">
+<a aria-hidden="true" class="anchor" href="#user-content-image-22" id="user-content-image-22" name="user-content-image-22"><span aria-hidden="true" class="octicon octicon-link"></span></a>Image</h4>
+<pre><code>=export
+</code></pre>
+<h4 id="user-content-onselect-19">
+<a aria-hidden="true" class="anchor" href="#user-content-onselect-19" id="user-content-onselect-19" name="user-content-onselect-19"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnSelect</h4>
+<pre><code>=Select(ExportButton)
+</code></pre>
+<h3 id="user-content-onenoteicon-as-image">
+<a aria-hidden="true" class="anchor" href="#user-content-onenoteicon-as-image" id="user-content-onenoteicon-as-image" name="user-content-onenoteicon-as-image"><span aria-hidden="true" class="octicon octicon-link"></span></a>OneNoteIcon As image</h3>
+<h4 id="user-content-image-23">
+<a aria-hidden="true" class="anchor" href="#user-content-image-23" id="user-content-image-23" name="user-content-image-23"><span aria-hidden="true" class="octicon octicon-link"></span></a>Image</h4>
+<pre><code>='one-note'
+</code></pre>
+<h3 id="user-content-showonenoteselection-as-button">
+<a aria-hidden="true" class="anchor" href="#user-content-showonenoteselection-as-button" id="user-content-showonenoteselection-as-button" name="user-content-showonenoteselection-as-button"><span aria-hidden="true" class="octicon octicon-link"></span></a>ShowOneNoteSelection As button</h3>
+<h4 id="user-content-onselect-20">
+<a aria-hidden="true" class="anchor" href="#user-content-onselect-20" id="user-content-onselect-20" name="user-content-onselect-20"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnSelect</h4>
+<pre><code>=Set(ShowOneNote, true);
+Navigate(ExportPopUpsScreen, None);
+/*retrieves OneNote sections of (pre)selected OneNote book (if user hasn't selected one yet)*/
+ClearCollect(OneNoteSections, 'OneNote(Business)'.GetSectionsInNotebook(OneNoteBookSelect_1.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BKey').value)
+</code></pre>
+<h4 id="user-content-text-10">
+<a aria-hidden="true" class="anchor" href="#user-content-text-10" id="user-content-text-10" name="user-content-text-10"><span aria-hidden="true" class="octicon octicon-link"></span></a>Text</h4>
+<pre><code>=If(ExportToOneNote.Height &gt; 0, "Select new location", "Select Location")
+</code></pre>
+<h3 id="user-content-emailicon-as-image">
+<a aria-hidden="true" class="anchor" href="#user-content-emailicon-as-image" id="user-content-emailicon-as-image" name="user-content-emailicon-as-image"><span aria-hidden="true" class="octicon octicon-link"></span></a>EmailIcon As image</h3>
+<h4 id="user-content-image-24">
+<a aria-hidden="true" class="anchor" href="#user-content-image-24" id="user-content-image-24" name="user-content-image-24"><span aria-hidden="true" class="octicon octicon-link"></span></a>Image</h4>
+<pre><code>=outlook
+</code></pre>
+<h3 id="user-content-recipientgallerybkg-as-button">
+<a aria-hidden="true" class="anchor" href="#user-content-recipientgallerybkg-as-button" id="user-content-recipientgallerybkg-as-button" name="user-content-recipientgallerybkg-as-button"><span aria-hidden="true" class="octicon octicon-link"></span></a>RecipientGalleryBkg As button</h3>
+<h4 id="user-content-text-11">
+<a aria-hidden="true" class="anchor" href="#user-content-text-11" id="user-content-text-11" name="user-content-text-11"><span aria-hidden="true" class="octicon octicon-link"></span></a>Text</h4>
+<pre><code>=""
+</code></pre>
+<h3 id="user-content-emailrecipientsgallery-as-gallerygalleryvertical">
+<a aria-hidden="true" class="anchor" href="#user-content-emailrecipientsgallery-as-gallerygalleryvertical" id="user-content-emailrecipientsgallery-as-gallerygalleryvertical" name="user-content-emailrecipientsgallery-as-gallerygalleryvertical"><span aria-hidden="true" class="octicon octicon-link"></span></a>EmailRecipientsGallery As gallery.galleryVertical</h3>
+<h4 id="user-content-items-6">
+<a aria-hidden="true" class="anchor" href="#user-content-items-6" id="user-content-items-6" name="user-content-items-6"><span aria-hidden="true" class="octicon octicon-link"></span></a>Items</h4>
+<pre><code>=EmailRecipients
+</code></pre>
+<h3 id="user-content-assntasksearchuser_1-as-text">
+<a aria-hidden="true" class="anchor" href="#user-content-assntasksearchuser_1-as-text" id="user-content-assntasksearchuser_1-as-text" name="user-content-assntasksearchuser_1-as-text"><span aria-hidden="true" class="octicon octicon-link"></span></a>AssnTaskSearchUser_1 As text</h3>
+<h3 id="user-content-usersearchresults-as-gallerygalleryvertical">
+<a aria-hidden="true" class="anchor" href="#user-content-usersearchresults-as-gallerygalleryvertical" id="user-content-usersearchresults-as-gallerygalleryvertical" name="user-content-usersearchresults-as-gallerygalleryvertical"><span aria-hidden="true" class="octicon octicon-link"></span></a>UserSearchResults As gallery.galleryVertical</h3>
+<h4 id="user-content-items-7">
+<a aria-hidden="true" class="anchor" href="#user-content-items-7" id="user-content-items-7" name="user-content-items-7"><span aria-hidden="true" class="octicon octicon-link"></span></a>Items</h4>
+<pre><code>=If(!IsBlank(AssnTaskSearchUser_1.Text), Office365Users.SearchUser({searchTerm:Trim(AssnTaskSearchUser_1.Text), top:15}))
+</code></pre>
+<h4 id="user-content-onselect-21">
+<a aria-hidden="true" class="anchor" href="#user-content-onselect-21" id="user-content-onselect-21" name="user-content-onselect-21"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnSelect</h4>
+<pre><code>=If(Not(ThisItem.Id in EmailRecipients.Id), Collect(EmailRecipients, ThisItem))
+</code></pre>
+<h3 id="user-content-plannericon-as-image">
+<a aria-hidden="true" class="anchor" href="#user-content-plannericon-as-image" id="user-content-plannericon-as-image" name="user-content-plannericon-as-image"><span aria-hidden="true" class="octicon octicon-link"></span></a>PlannerIcon As image</h3>
+<h4 id="user-content-image-25">
+<a aria-hidden="true" class="anchor" href="#user-content-image-25" id="user-content-image-25" name="user-content-image-25"><span aria-hidden="true" class="octicon octicon-link"></span></a>Image</h4>
+<pre><code>=planner
+</code></pre>
+<h3 id="user-content-showplannerselection-as-button">
+<a aria-hidden="true" class="anchor" href="#user-content-showplannerselection-as-button" id="user-content-showplannerselection-as-button" name="user-content-showplannerselection-as-button"><span aria-hidden="true" class="octicon octicon-link"></span></a>ShowPlannerSelection As button</h3>
+<h4 id="user-content-onselect-22">
+<a aria-hidden="true" class="anchor" href="#user-content-onselect-22" id="user-content-onselect-22" name="user-content-onselect-22"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnSelect</h4>
+<pre><code>=Set(ShowPlanner, true);
+Navigate(ExportPopUpsScreen, None)
+</code></pre>
+<h4 id="user-content-text-12">
+<a aria-hidden="true" class="anchor" href="#user-content-text-12" id="user-content-text-12" name="user-content-text-12"><span aria-hidden="true" class="octicon octicon-link"></span></a>Text</h4>
+<pre><code>=If(PlannerExportTo.Height &gt; 0, "Select new location", "Select Location")
+</code></pre>
+<h2 id="user-content-followupscreen">
+<a aria-hidden="true" class="anchor" href="#user-content-followupscreen" id="user-content-followupscreen" name="user-content-followupscreen"><span aria-hidden="true" class="octicon octicon-link"></span></a>FollowUpScreen</h2>
+<hr/>
+<p><div class="mermaid">
+graph LR
+ConfirmScreen(ConfirmScreen) --&gt; FollowUpScreen(FollowUpScreen)
+FollowUpScreen(FollowUpScreen) --&gt; FollowUpTimesScreen(FollowUpTimesScreen)
+</div></p>
+<h3 id="user-content-variables-9">
+<a aria-hidden="true" class="anchor" href="#user-content-variables-9" id="user-content-variables-9" name="user-content-variables-9"><span aria-hidden="true" class="octicon octicon-link"></span></a>Variables</h3>
+<p>Following variables have been created / or updated on this screen</p>
+<ul>
+<li><a href="#user-content-exportconfirmed">ExportConfirmed</a></li>
+</ul>
+<h3 id="user-content-collects-9">
+<a aria-hidden="true" class="anchor" href="#user-content-collects-9" id="user-content-collects-9" name="user-content-collects-9"><span aria-hidden="true" class="octicon octicon-link"></span></a>Collects</h3>
+<p>Following collects have been created, updated or cleared on this screen</p>
+<ul>
+<li><a href="#user-content-followupmeetingattendees">FollowUpMeetingAttendees</a></li>
+</ul>
+<h3 id="user-content-flows-9">
+<a aria-hidden="true" class="anchor" href="#user-content-flows-9" id="user-content-flows-9" name="user-content-flows-9"><span aria-hidden="true" class="octicon octicon-link"></span></a>Flows</h3>
+<p>Following flows have used on this screen</p>
+<h3 id="user-content-followupscreen-as-screen">
+<a aria-hidden="true" class="anchor" href="#user-content-followupscreen-as-screen" id="user-content-followupscreen-as-screen" name="user-content-followupscreen-as-screen"><span aria-hidden="true" class="octicon octicon-link"></span></a>FollowUpScreen As screen</h3>
+<p>Schedule follow up for this meeting</p>
+<h4 id="user-content-onvisible-7">
+<a aria-hidden="true" class="anchor" href="#user-content-onvisible-7" id="user-content-onvisible-7" name="user-content-onvisible-7"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnVisible</h4>
+<pre><code>Set(ExportConfirmed, false);
+ClearCollect(FollowUpMeetingAttendees, MeetingAttendees)
+</code></pre>
+<h3 id="user-content-appicon7-as-image">
+<a aria-hidden="true" class="anchor" href="#user-content-appicon7-as-image" id="user-content-appicon7-as-image" name="user-content-appicon7-as-image"><span aria-hidden="true" class="octicon octicon-link"></span></a>AppIcon7 As image</h3>
+<h4 id="user-content-image-26">
+<a aria-hidden="true" class="anchor" href="#user-content-image-26" id="user-content-image-26" name="user-content-image-26"><span aria-hidden="true" class="octicon octicon-link"></span></a>Image</h4>
+<pre><code>='nav-logo'
+</code></pre>
+<h3 id="user-content-findavailabletimesbutton-as-button">
+<a aria-hidden="true" class="anchor" href="#user-content-findavailabletimesbutton-as-button" id="user-content-findavailabletimesbutton-as-button" name="user-content-findavailabletimesbutton-as-button"><span aria-hidden="true" class="octicon octicon-link"></span></a>FindAvailableTimesButton As button</h3>
+<h4 id="user-content-onselect-23">
+<a aria-hidden="true" class="anchor" href="#user-content-onselect-23" id="user-content-onselect-23" name="user-content-onselect-23"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnSelect</h4>
+<pre><code>=Navigate(FollowUpTimesScreen, None)
+</code></pre>
+<h4 id="user-content-text-13">
+<a aria-hidden="true" class="anchor" href="#user-content-text-13" id="user-content-text-13" name="user-content-text-13"><span aria-hidden="true" class="octicon octicon-link"></span></a>Text</h4>
+<pre><code>="Find Available Times"
+</code></pre>
+<h3 id="user-content-followupgallbkg-as-button">
+<a aria-hidden="true" class="anchor" href="#user-content-followupgallbkg-as-button" id="user-content-followupgallbkg-as-button" name="user-content-followupgallbkg-as-button"><span aria-hidden="true" class="octicon octicon-link"></span></a>FollowUpGallBkg As button</h3>
+<h4 id="user-content-text-14">
+<a aria-hidden="true" class="anchor" href="#user-content-text-14" id="user-content-text-14" name="user-content-text-14"><span aria-hidden="true" class="octicon octicon-link"></span></a>Text</h4>
+<pre><code>=""
+</code></pre>
+<h3 id="user-content-followupattendeesgall-as-gallerygalleryvertical">
+<a aria-hidden="true" class="anchor" href="#user-content-followupattendeesgall-as-gallerygalleryvertical" id="user-content-followupattendeesgall-as-gallerygalleryvertical" name="user-content-followupattendeesgall-as-gallerygalleryvertical"><span aria-hidden="true" class="octicon octicon-link"></span></a>FollowUpAttendeesGall As gallery.galleryVertical</h3>
+<h4 id="user-content-items-8">
+<a aria-hidden="true" class="anchor" href="#user-content-items-8" id="user-content-items-8" name="user-content-items-8"><span aria-hidden="true" class="octicon octicon-link"></span></a>Items</h4>
+<pre><code>=FollowUpMeetingAttendees
+</code></pre>
+<h3 id="user-content-followupsearchtext-as-text">
+<a aria-hidden="true" class="anchor" href="#user-content-followupsearchtext-as-text" id="user-content-followupsearchtext-as-text" name="user-content-followupsearchtext-as-text"><span aria-hidden="true" class="octicon octicon-link"></span></a>FollowUpSearchText As text</h3>
+<h3 id="user-content-followupsearchuserresults-as-gallerygalleryvertical">
+<a aria-hidden="true" class="anchor" href="#user-content-followupsearchuserresults-as-gallerygalleryvertical" id="user-content-followupsearchuserresults-as-gallerygalleryvertical" name="user-content-followupsearchuserresults-as-gallerygalleryvertical"><span aria-hidden="true" class="octicon octicon-link"></span></a>FollowUpSearchUserResults As gallery.galleryVertical</h3>
+<h4 id="user-content-items-9">
+<a aria-hidden="true" class="anchor" href="#user-content-items-9" id="user-content-items-9" name="user-content-items-9"><span aria-hidden="true" class="octicon octicon-link"></span></a>Items</h4>
+<pre><code>=If(!IsBlank(FollowUpSearchText.Text), Office365Users.SearchUser({searchTerm:Trim(FollowUpSearchText.Text), top:15}))
+</code></pre>
+<h4 id="user-content-onselect-24">
+<a aria-hidden="true" class="anchor" href="#user-content-onselect-24" id="user-content-onselect-24" name="user-content-onselect-24"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnSelect</h4>
+<pre><code>=If(Not(ThisItem.Id in FollowUpMeetingAttendees.Id), Collect(FollowUpMeetingAttendees, ThisItem))
+</code></pre>
+<h3 id="user-content-followupsubject-as-text">
+<a aria-hidden="true" class="anchor" href="#user-content-followupsubject-as-text" id="user-content-followupsubject-as-text" name="user-content-followupsubject-as-text"><span aria-hidden="true" class="octicon octicon-link"></span></a>FollowUpSubject As text</h3>
+<h3 id="user-content-followupmessage-as-text">
+<a aria-hidden="true" class="anchor" href="#user-content-followupmessage-as-text" id="user-content-followupmessage-as-text" name="user-content-followupmessage-as-text"><span aria-hidden="true" class="octicon octicon-link"></span></a>FollowUpMessage As text</h3>
+<h2 id="user-content-followuptimesscreen">
+<a aria-hidden="true" class="anchor" href="#user-content-followuptimesscreen" id="user-content-followuptimesscreen" name="user-content-followuptimesscreen"><span aria-hidden="true" class="octicon octicon-link"></span></a>FollowUpTimesScreen</h2>
+<hr/>
+<p><div class="mermaid">
+graph LR
+FollowUpScreen(FollowUpScreen) --&gt; FollowUpTimesScreen(FollowUpTimesScreen)
+FollowUpTimesScreen(FollowUpTimesScreen) --&gt; ConfirmScreen(ConfirmScreen)
+</div></p>
+<h3 id="user-content-variables-10">
+<a aria-hidden="true" class="anchor" href="#user-content-variables-10" id="user-content-variables-10" name="user-content-variables-10"><span aria-hidden="true" class="octicon octicon-link"></span></a>Variables</h3>
+<p>Following variables have been created / or updated on this screen</p>
+<ul>
+<li><a href="#user-content-showmeetingtimes">ShowMeetingTimes</a></li>
+<li><a href="#user-content-followupconfirmed">FollowUpConfirmed</a></li>
+<li><a href="#user-content-followupend">FollowUpEnd</a></li>
+<li><a href="#user-content-followupstart">FollowUpStart</a></li>
+<li><a href="#user-content-loading">Loading</a></li>
+</ul>
+<h3 id="user-content-collects-10">
+<a aria-hidden="true" class="anchor" href="#user-content-collects-10" id="user-content-collects-10" name="user-content-collects-10"><span aria-hidden="true" class="octicon octicon-link"></span></a>Collects</h3>
+<p>Following collects have been created, updated or cleared on this screen</p>
+<ul>
+<li><a href="#user-content-hourslist">HoursList</a></li>
+<li><a href="#user-content-meetingdurations">MeetingDurations</a></li>
+<li><a href="#user-content-meetingtimes">MeetingTimes</a></li>
+</ul>
+<h3 id="user-content-flows-10">
+<a aria-hidden="true" class="anchor" href="#user-content-flows-10" id="user-content-flows-10" name="user-content-flows-10"><span aria-hidden="true" class="octicon octicon-link"></span></a>Flows</h3>
+<p>Following flows have used on this screen</p>
+<h3 id="user-content-followuptimesscreen-as-screen">
+<a aria-hidden="true" class="anchor" href="#user-content-followuptimesscreen-as-screen" id="user-content-followuptimesscreen-as-screen" name="user-content-followuptimesscreen-as-screen"><span aria-hidden="true" class="octicon octicon-link"></span></a>FollowUpTimesScreen As screen</h3>
+<p>Collections used in galleries and drop downs on this screen</p>
+<ul>
+<li>MeetingDurations</li>
+<li>HoursList</li>
+</ul>
+<h4 id="user-content-onvisible-8">
+<a aria-hidden="true" class="anchor" href="#user-content-onvisible-8" id="user-content-onvisible-8" name="user-content-onvisible-8"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnVisible</h4>
+<pre><code>ClearCollect(MeetingDurations,
+{Name:"30 minutes", Minutes:30},{Name:"1 hour", Minutes:60},{Name:"90 minutes", Minutes:90},{Name:"2 hours", Minutes:120},
+{Name:"2.5 hours", Minutes:150},{Name:"3 hours", Minutes:180},{Name:"3.5 hours", Minutes:210},{Name:"4 hours", Minutes:240});
+
+ClearCollect(HoursList, {Name:"12:00 am",Minutes:0}, {Name:"12:30 am",Minutes:30}, {Name:"01:00 am",Minutes:60}, {Name:"01:30 am",Minutes:90}, {Name:"02:00 am",Minutes:120}, {Name:"02:30 am",Minutes:150}, {Name:"03:00 am",Minutes:180}, {Name:"03:30 am",Minutes:210}, {Name:"04:00 am",Minutes:240, Short: "4 am"}, {Name:"04:30 am",Minutes:270}, {Name:"05:00 am",Minutes:300}, {Name:"05:30 am",Minutes:330}, {Name:"06:00 am",Minutes:360}, {Name:"06:30 am",Minutes:390}, {Name:"07:00 am",Minutes:420}, {Name:"07:30 am",Minutes:450}, {Name:"08:00 am",Minutes:480, Short: "8 am"}, {Name:"08:30 am",Minutes:510}, {Name:"09:00 am",Minutes:540}, {Name:"09:30 am",Minutes:570}, {Name:"10:00 am",Minutes:600}, {Name:"10:30 am",Minutes:630}, {Name:"11:00 am",Minutes:660}, {Name:"11:30 am",Minutes:690}, {Name:"12:00 pm",Minutes:720, Short: "12 pm"
+}, {Name:"12:30 pm",Minutes:750}, {Name:"01:00 pm",Minutes:780}, {Name:"01:30 pm",Minutes:810}, {Name:"02:00 pm",Minutes:840}, {Name:"02:30 pm",Minutes:870}, {Name:"03:00 pm",Minutes:900}, {Name:"03:30 pm",Minutes:930}, {Name:"04:00 pm",Minutes:960, Short: "4 pm"}, {Name:"04:30 pm",Minutes:990}, {Name:"05:00 pm",Minutes:1020}, {Name:"05:30 pm",Minutes:1050}, {Name:"06:00 pm",Minutes:1080}, {Name:"06:30 pm",Minutes:1110}, {Name:"07:00 pm",Minutes:1140}, {Name:"07:30 pm",Minutes:1170}, {Name:"08:00 pm",Minutes:1200, Short: "8 pm"}, {Name:"08:30 pm",Minutes:1230}, {Name:"09:00 pm",Minutes:1260}, {Name:"09:30 pm",Minutes:1290}, {Name:"10:00 pm",Minutes:1320}, {Name:"10:30 pm",Minutes:1350}, {Name:"11:00 pm",Minutes:1380}, {Name:"11:30 pm",Minutes:1410})
+</code></pre>
+<h3 id="user-content-appicon8-as-image">
+<a aria-hidden="true" class="anchor" href="#user-content-appicon8-as-image" id="user-content-appicon8-as-image" name="user-content-appicon8-as-image"><span aria-hidden="true" class="octicon octicon-link"></span></a>AppIcon8 As image</h3>
+<h4 id="user-content-image-27">
+<a aria-hidden="true" class="anchor" href="#user-content-image-27" id="user-content-image-27" name="user-content-image-27"><span aria-hidden="true" class="octicon octicon-link"></span></a>Image</h4>
+<pre><code>='nav-logo'
+</code></pre>
+<h3 id="user-content-sendinvite-as-button">
+<a aria-hidden="true" class="anchor" href="#user-content-sendinvite-as-button" id="user-content-sendinvite-as-button" name="user-content-sendinvite-as-button"><span aria-hidden="true" class="octicon octicon-link"></span></a>SendInvite As button</h3>
+<h4 id="user-content-onselect-25">
+<a aria-hidden="true" class="anchor" href="#user-content-onselect-25" id="user-content-onselect-25" name="user-content-onselect-25"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnSelect</h4>
+<pre><code>=/*creates calendar event for meeting*/
+UpdateContext({requiredAttendees:Concat(FollowUpMeetingAttendees, UserPrincipalName &amp; ";")});
+UpdateContext({requiredAttendees:Left(requiredAttendees, Len(requiredAttendees)-1)});
+Office365Outlook.V4CalendarPostItem(MyCalendarID, FollowUpSubject.Text, FollowUpStart, FollowUpEnd, "UTC",{importance:"Normal", body:FollowUpMessage.Text, showAs:"busy", requiredAttendees:requiredAttendees});
+Set(FollowUpConfirmed, true);
+Navigate(ConfirmScreen,None)
+</code></pre>
+<h4 id="user-content-text-15">
+<a aria-hidden="true" class="anchor" href="#user-content-text-15" id="user-content-text-15" name="user-content-text-15"><span aria-hidden="true" class="octicon octicon-link"></span></a>Text</h4>
+<pre><code>="Send Invite"
+</code></pre>
+<h3 id="user-content-loadavailabletimes-as-button">
+<a aria-hidden="true" class="anchor" href="#user-content-loadavailabletimes-as-button" id="user-content-loadavailabletimes-as-button" name="user-content-loadavailabletimes-as-button"><span aria-hidden="true" class="octicon octicon-link"></span></a>LoadAvailableTimes As button</h3>
+<h4 id="user-content-onselect-26">
+<a aria-hidden="true" class="anchor" href="#user-content-onselect-26" id="user-content-onselect-26" name="user-content-onselect-26"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnSelect</h4>
+<pre><code>=Set(Loading, true);
+/*
+Collects available meeting times for attendees based on user determined data from this page. Adds 'StartTime' and 'EndTime' columns to the collection as a means of simplifying the MeetingTimeSlot column
+*/
+ClearCollect(MeetingTimes,AddColumns(Office365Outlook.FindMeetingTimes({MaxCandidates:15,MinimumAttendeePercentage: 1, MeetingDuration: MeetingDurationSelection.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes',Start:Text(DateAdd(DatePicker1.SelectedDate,MeetingStartRange.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes', Minutes), UTC),End:Text(DateAdd(DatePicker1.SelectedDate, MeetingEndRange.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BMinutes', Minutes), UTC),RequiredAttendees:Concat(FollowUpMeetingAttendees,UserPrincipalName &amp; ";")}).MeetingTimeSuggestions,"StartTime",MeetingTimeSlot.Start.DateTime,
+"EndTime",MeetingTimeSlot.End.DateTime));
+Set(ShowMeetingTimes, true);
+Set(Loading, false)
+</code></pre>
+<h4 id="user-content-text-16">
+<a aria-hidden="true" class="anchor" href="#user-content-text-16" id="user-content-text-16" name="user-content-text-16"><span aria-hidden="true" class="octicon octicon-link"></span></a>Text</h4>
+<pre><code>="Find Available Times"
+</code></pre>
+<h3 id="user-content-timeline-as-gallerygalleryhorizontal">
+<a aria-hidden="true" class="anchor" href="#user-content-timeline-as-gallerygalleryhorizontal" id="user-content-timeline-as-gallerygalleryhorizontal" name="user-content-timeline-as-gallerygalleryhorizontal"><span aria-hidden="true" class="octicon octicon-link"></span></a>TimeLine As gallery.galleryHorizontal</h3>
+<h4 id="user-content-items-10">
+<a aria-hidden="true" class="anchor" href="#user-content-items-10" id="user-content-items-10" name="user-content-items-10"><span aria-hidden="true" class="octicon octicon-link"></span></a>Items</h4>
+<pre><code>=HoursList
+</code></pre>
+<h3 id="user-content-availabletimesgall-as-gallerygalleryvertical">
+<a aria-hidden="true" class="anchor" href="#user-content-availabletimesgall-as-gallerygalleryvertical" id="user-content-availabletimesgall-as-gallerygalleryvertical" name="user-content-availabletimesgall-as-gallerygalleryvertical"><span aria-hidden="true" class="octicon octicon-link"></span></a>AvailableTimesGall As gallery.galleryVertical</h3>
+<h4 id="user-content-items-11">
+<a aria-hidden="true" class="anchor" href="#user-content-items-11" id="user-content-items-11" name="user-content-items-11"><span aria-hidden="true" class="octicon octicon-link"></span></a>Items</h4>
+<pre><code>=SortByColumns(MeetingTimes,"Confidence",Descending,"StartTime",Ascending)
+</code></pre>
+<h2 id="user-content-homepopupsscreen">
+<a aria-hidden="true" class="anchor" href="#user-content-homepopupsscreen" id="user-content-homepopupsscreen" name="user-content-homepopupsscreen"><span aria-hidden="true" class="octicon octicon-link"></span></a>HomePopUpsScreen</h2>
+<hr/>
+<p><div class="mermaid">
+graph LR
+WelcomeScreen(WelcomeScreen) --&gt; HomePopUpsScreen(HomePopUpsScreen)
+HomeScreen(HomeScreen) --&gt; HomePopUpsScreen(HomePopUpsScreen)
+HomePopUpsScreen(HomePopUpsScreen) --&gt; HomeScreen(HomeScreen)
+</div></p>
+<h3 id="user-content-variables-11">
+<a aria-hidden="true" class="anchor" href="#user-content-variables-11" id="user-content-variables-11" name="user-content-variables-11"><span aria-hidden="true" class="octicon octicon-link"></span></a>Variables</h3>
+<p>Following variables have been created / or updated on this screen</p>
+<ul>
+<li><a href="#user-content-userselected">UserSelected</a></li>
+<li><a href="#user-content-taskselected">TaskSelected</a></li>
+<li><a href="#user-content-selectedmeetingduration">SelectedMeetingDuration</a></li>
+<li><a href="#user-content-selecteduser">SelectedUser</a></li>
+<li><a href="#user-content-userselectedfromtasks">UserSelectedFromTasks</a></li>
+<li><a href="#user-content-showoverlay">ShowOverlay</a></li>
+<li><a href="#user-content-showdatalosswarning">ShowDataLossWarning</a></li>
+<li><a href="#user-content-loading">Loading</a></li>
+</ul>
+<h3 id="user-content-collects-11">
+<a aria-hidden="true" class="anchor" href="#user-content-collects-11" id="user-content-collects-11" name="user-content-collects-11"><span aria-hidden="true" class="octicon octicon-link"></span></a>Collects</h3>
+<p>Following collects have been created, updated or cleared on this screen</p>
+<ul>
+<li><a href="#user-content-tasks">Tasks</a></li>
+<li><a href="#user-content-meetingattendeeemails">MeetingAttendeeEmails</a></li>
+<li><a href="#user-content-meetingattendees">MeetingAttendees</a></li>
+<li><a href="#user-content-meetingattendeestemp">MeetingAttendeesTemp</a></li>
+</ul>
+<h3 id="user-content-flows-11">
+<a aria-hidden="true" class="anchor" href="#user-content-flows-11" id="user-content-flows-11" name="user-content-flows-11"><span aria-hidden="true" class="octicon octicon-link"></span></a>Flows</h3>
+<p>Following flows have used on this screen</p>
+<h3 id="user-content-homepopupsscreen-as-screen">
+<a aria-hidden="true" class="anchor" href="#user-content-homepopupsscreen-as-screen" id="user-content-homepopupsscreen-as-screen" name="user-content-homepopupsscreen-as-screen"><span aria-hidden="true" class="octicon octicon-link"></span></a>HomePopUpsScreen As screen</h3>
+<p>Gathers and stores the Office 365 profiles of the meeting attendees if they are within the app user's org</p>
+<h4 id="user-content-onvisible-9">
+<a aria-hidden="true" class="anchor" href="#user-content-onvisible-9" id="user-content-onvisible-9" name="user-content-onvisible-9"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnVisible</h4>
+<pre><code>If(IsEmpty(MeetingAttendees),
+    Set(Loading, true);
+    ClearCollect(MeetingAttendeeEmails, Filter(Split(Concatenate(SelectedMeeting.RequiredAttendees,
+     SelectedMeeting.OptionalAttendees), ";"), Result &lt;&gt; ""));
+    ClearCollect(MeetingAttendeesTemp, ForAll(MeetingAttendeeEmails, If(Lower(MyDomain) = Lower(Last(Split(Result, "@")).Result), Office365Users.UserProfileV2(Result), {displayName: Result, id: "", image: Blank(), jobTitle: "", userPrincipalName: Result})));
+    ClearCollect(MeetingAttendees, RenameColumns(MeetingAttendeesTemp, "id", "Id", "jobTitle", "JobTitle", "displayName", "DisplayName", "userPrincipalName", "UserPrincipalName"));
+    Set(SelectedMeetingDuration, DateDiff(SelectedMeeting.Start, SelectedMeeting.End, Seconds));
+    Set(Loading, false)
+)
+</code></pre>
+<h3 id="user-content-assntaskdescription_1-as-text">
+<a aria-hidden="true" class="anchor" href="#user-content-assntaskdescription_1-as-text" id="user-content-assntaskdescription_1-as-text" name="user-content-assntaskdescription_1-as-text"><span aria-hidden="true" class="octicon octicon-link"></span></a>AssnTaskDescription_1 As text</h3>
+<h3 id="user-content-assntaskgallery_2-as-gallerygalleryvertical">
+<a aria-hidden="true" class="anchor" href="#user-content-assntaskgallery_2-as-gallerygalleryvertical" id="user-content-assntaskgallery_2-as-gallerygalleryvertical" name="user-content-assntaskgallery_2-as-gallerygalleryvertical"><span aria-hidden="true" class="octicon octicon-link"></span></a>AssnTaskGallery_2 As gallery.galleryVertical</h3>
+<h4 id="user-content-items-12">
+<a aria-hidden="true" class="anchor" href="#user-content-items-12" id="user-content-items-12" name="user-content-items-12"><span aria-hidden="true" class="octicon octicon-link"></span></a>Items</h4>
+<pre><code>=/*
+In-org attendee gallery for task assignment
+If the attendee DisplayName is an actual name and not an email address, then they are in the app user's org, so we can assign them a task.
+Tasks are stored in an 0365 tenant, so cannot be assigned to external users
+*/
+Filter(AttendeeGallery1.AllItems, Not(".com" in DisplayName))
+</code></pre>
+<h4 id="user-content-onselect-27">
+<a aria-hidden="true" class="anchor" href="#user-content-onselect-27" id="user-content-onselect-27" name="user-content-onselect-27"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnSelect</h4>
+<pre><code>=If(AssnTaskGallery_2.Visible,
+    Set(UserSelected, true);
+    Set(SelectedUser, {DisplayName:AssnTaskGallery_2.Selected.DisplayName, Id:AssnTaskGallery_2.Selected.Id, Image: AssnTaskGallery_2.Selected.AssnTaskUserImg_3.Image, JobTitle:AssnTaskGallery_2.Selected.JobTitle})
+)
+</code></pre>
+<h3 id="user-content-assntasksearchuser_2-as-text">
+<a aria-hidden="true" class="anchor" href="#user-content-assntasksearchuser_2-as-text" id="user-content-assntasksearchuser_2-as-text" name="user-content-assntasksearchuser_2-as-text"><span aria-hidden="true" class="octicon octicon-link"></span></a>AssnTaskSearchUser_2 As text</h3>
+<h3 id="user-content-cancelassntask_1-as-button">
+<a aria-hidden="true" class="anchor" href="#user-content-cancelassntask_1-as-button" id="user-content-cancelassntask_1-as-button" name="user-content-cancelassntask_1-as-button"><span aria-hidden="true" class="octicon octicon-link"></span></a>CancelAssnTask_1 As button</h3>
+<h4 id="user-content-onselect-28">
+<a aria-hidden="true" class="anchor" href="#user-content-onselect-28" id="user-content-onselect-28" name="user-content-onselect-28"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnSelect</h4>
+<pre><code>=Navigate(HomeScreen, None);
+Set(ShowOverlay, !ShowOverlay);
+If(TaskSelected, RemoveIf(Tasks, Id = SelectedTask.Id));
+Set(UserSelected, false);
+Set(UserSelectedFromTasks, false);
+Set(TaskSelected, false);
+Reset(AssnTaskSearchUser_2);
+Reset(AssnTaskDueDate_1);
+Reset(AssnTaskDescription_1);
+Reset(TaskTitle)
+</code></pre>
+<h4 id="user-content-text-17">
+<a aria-hidden="true" class="anchor" href="#user-content-text-17" id="user-content-text-17" name="user-content-text-17"><span aria-hidden="true" class="octicon octicon-link"></span></a>Text</h4>
+<pre><code>=If(TaskSelected, "Delete", "Cancel")
+</code></pre>
+<h3 id="user-content-saveassntask_1-as-button">
+<a aria-hidden="true" class="anchor" href="#user-content-saveassntask_1-as-button" id="user-content-saveassntask_1-as-button" name="user-content-saveassntask_1-as-button"><span aria-hidden="true" class="octicon octicon-link"></span></a>SaveAssnTask_1 As button</h3>
+<h4 id="user-content-onselect-29">
+<a aria-hidden="true" class="anchor" href="#user-content-onselect-29" id="user-content-onselect-29" name="user-content-onselect-29"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnSelect</h4>
+<pre><code>=Navigate(HomeScreen, None);
+Set(ShowOverlay, !ShowOverlay);
+/*If user is making a new task, collect the information from form, otherwise, revise the task the user is editing*/
+If(!TaskSelected,
+    Collect(Tasks, {Id: CountRows(Tasks)+1, Name:AssnTaskDescription_1.Text, DueDate: AssnTaskDueDate_1.SelectedDate, 
+AssignToUser: SelectedUser}),
+    Patch(Tasks, LookUp(Tasks, Id=SelectedTask.Id), {Name:AssnTaskDescription_1.Text, DueDate: AssnTaskDueDate_1.SelectedDate, AssignToUser: SelectedUser}));
+Set(UserSelected, false);
+Set(UserSelectedFromTasks, false);
+Set(TaskSelected, false);
+Reset(AssnTaskSearchUser_2);
+Reset(AssnTaskDueDate_1);
+Reset(AssnTaskDescription_1);
+Reset(TaskTitle)
+</code></pre>
+<h4 id="user-content-text-18">
+<a aria-hidden="true" class="anchor" href="#user-content-text-18" id="user-content-text-18" name="user-content-text-18"><span aria-hidden="true" class="octicon octicon-link"></span></a>Text</h4>
+<pre><code>="Save task"
+</code></pre>
+<h3 id="user-content-assntaskgallery_3-as-gallerygalleryvertical">
+<a aria-hidden="true" class="anchor" href="#user-content-assntaskgallery_3-as-gallerygalleryvertical" id="user-content-assntaskgallery_3-as-gallerygalleryvertical" name="user-content-assntaskgallery_3-as-gallerygalleryvertical"><span aria-hidden="true" class="octicon octicon-link"></span></a>AssnTaskGallery_3 As gallery.galleryVertical</h3>
+<h4 id="user-content-items-13">
+<a aria-hidden="true" class="anchor" href="#user-content-items-13" id="user-content-items-13" name="user-content-items-13"><span aria-hidden="true" class="octicon octicon-link"></span></a>Items</h4>
+<pre><code>=/*User search gallery*/
+If(!IsBlank(AssnTaskSearchUser_2.Text), Office365Users.SearchUser({searchTerm:Trim(AssnTaskSearchUser_2.Text), top:15}))
+</code></pre>
+<h4 id="user-content-onselect-30">
+<a aria-hidden="true" class="anchor" href="#user-content-onselect-30" id="user-content-onselect-30" name="user-content-onselect-30"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnSelect</h4>
+<pre><code>=Set(SelectedUser, {DisplayName:AssnTaskGallery_3.Selected.DisplayName, Id:AssnTaskGallery_3.Selected.Id, Image: AssnTaskGallery_3.Selected.AssnTaskUserImg_4.Image, JobTitle:AssnTaskGallery_3.Selected.JobTitle});
+Set(UserSelected, true)
+</code></pre>
+<h3 id="user-content-assntaskuserimg_5-as-image">
+<a aria-hidden="true" class="anchor" href="#user-content-assntaskuserimg_5-as-image" id="user-content-assntaskuserimg_5-as-image" name="user-content-assntaskuserimg_5-as-image"><span aria-hidden="true" class="octicon octicon-link"></span></a>AssnTaskUserImg_5 As image</h3>
+<h4 id="user-content-image-28">
+<a aria-hidden="true" class="anchor" href="#user-content-image-28" id="user-content-image-28" name="user-content-image-28"><span aria-hidden="true" class="octicon octicon-link"></span></a>Image</h4>
+<pre><code>=If(UserSelectedFromTasks,SelectedUserTasks.Image,SelectedUser.Image)
+</code></pre>
+<h4 id="user-content-onselect-31">
+<a aria-hidden="true" class="anchor" href="#user-content-onselect-31" id="user-content-onselect-31" name="user-content-onselect-31"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnSelect</h4>
+<pre><code>=
+</code></pre>
+<h3 id="user-content-datawarningaccept_1-as-button">
+<a aria-hidden="true" class="anchor" href="#user-content-datawarningaccept_1-as-button" id="user-content-datawarningaccept_1-as-button" name="user-content-datawarningaccept_1-as-button"><span aria-hidden="true" class="octicon octicon-link"></span></a>DataWarningAccept_1 As button</h3>
+<h4 id="user-content-onselect-32">
+<a aria-hidden="true" class="anchor" href="#user-content-onselect-32" id="user-content-onselect-32" name="user-content-onselect-32"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnSelect</h4>
+<pre><code>=Set(ShowDataLossWarning, false);
+Navigate(HomeScreen, None)
+</code></pre>
+<h4 id="user-content-text-19">
+<a aria-hidden="true" class="anchor" href="#user-content-text-19" id="user-content-text-19" name="user-content-text-19"><span aria-hidden="true" class="octicon octicon-link"></span></a>Text</h4>
+<pre><code>="Got it!"
+</code></pre>
+<h2 id="user-content-exportpopupsscreen">
+<a aria-hidden="true" class="anchor" href="#user-content-exportpopupsscreen" id="user-content-exportpopupsscreen" name="user-content-exportpopupsscreen"><span aria-hidden="true" class="octicon octicon-link"></span></a>ExportPopUpsScreen</h2>
+<hr/>
+<p><div class="mermaid">
+graph LR
+ExportScreen(ExportScreen) --&gt; ExportPopUpsScreen(ExportPopUpsScreen)
+ExportPopUpsScreen(ExportPopUpsScreen) --&gt; ExportScreen(ExportScreen)
+ExportPopUpsScreen(ExportPopUpsScreen) --&gt; ConfirmScreen(ConfirmScreen)
+</div></p>
+<h3 id="user-content-variables-12">
+<a aria-hidden="true" class="anchor" href="#user-content-variables-12" id="user-content-variables-12" name="user-content-variables-12"><span aria-hidden="true" class="octicon octicon-link"></span></a>Variables</h3>
+<p>Following variables have been created / or updated on this screen</p>
+<ul>
+<li><a href="#user-content-selectedplan">SelectedPlan</a></li>
+<li><a href="#user-content-exportconfirmed">ExportConfirmed</a></li>
+<li><a href="#user-content-selectedsection">SelectedSection</a></li>
+<li><a href="#user-content-selectednotebook">SelectedNoteBook</a></li>
+<li><a href="#user-content-showonenote">ShowOneNote</a></li>
+<li><a href="#user-content-showoverlay">ShowOverlay</a></li>
+<li><a href="#user-content-selectedbucket">SelectedBucket</a></li>
+<li><a href="#user-content-showplanner">ShowPlanner</a></li>
+</ul>
+<h3 id="user-content-collects-12">
+<a aria-hidden="true" class="anchor" href="#user-content-collects-12" id="user-content-collects-12" name="user-content-collects-12"><span aria-hidden="true" class="octicon octicon-link"></span></a>Collects</h3>
+<p>Following collects have been created, updated or cleared on this screen</p>
+<ul>
+<li><a href="#user-content-plannerbuckets">PlannerBuckets</a></li>
+<li><a href="#user-content-onenotesections">OneNoteSections</a></li>
+</ul>
+<h3 id="user-content-flows-12">
+<a aria-hidden="true" class="anchor" href="#user-content-flows-12" id="user-content-flows-12" name="user-content-flows-12"><span aria-hidden="true" class="octicon octicon-link"></span></a>Flows</h3>
+<p>Following flows have used on this screen</p>
+<h3 id="user-content-exportpopupsscreen-as-screen">
+<a aria-hidden="true" class="anchor" href="#user-content-exportpopupsscreen-as-screen" id="user-content-exportpopupsscreen-as-screen" name="user-content-exportpopupsscreen-as-screen"><span aria-hidden="true" class="octicon octicon-link"></span></a>ExportPopUpsScreen As screen</h3>
+<h3 id="user-content-exportcancel_1-as-button">
+<a aria-hidden="true" class="anchor" href="#user-content-exportcancel_1-as-button" id="user-content-exportcancel_1-as-button" name="user-content-exportcancel_1-as-button"><span aria-hidden="true" class="octicon octicon-link"></span></a>ExportCancel_1 As button</h3>
+<h4 id="user-content-onselect-33">
+<a aria-hidden="true" class="anchor" href="#user-content-onselect-33" id="user-content-onselect-33" name="user-content-onselect-33"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnSelect</h4>
+<pre><code>=Set(ShowOneNote, false);
+Set(ShowPlanner, false);
+Set(ShowOverlay, false);
+Navigate(ExportScreen, None)
+</code></pre>
+<h4 id="user-content-text-20">
+<a aria-hidden="true" class="anchor" href="#user-content-text-20" id="user-content-text-20" name="user-content-text-20"><span aria-hidden="true" class="octicon octicon-link"></span></a>Text</h4>
+<pre><code>=If(TaskSelected, "Delete", "Cancel")
+</code></pre>
+<h3 id="user-content-exportconfirm_1-as-button">
+<a aria-hidden="true" class="anchor" href="#user-content-exportconfirm_1-as-button" id="user-content-exportconfirm_1-as-button" name="user-content-exportconfirm_1-as-button"><span aria-hidden="true" class="octicon octicon-link"></span></a>ExportConfirm_1 As button</h3>
+<h4 id="user-content-onselect-34">
+<a aria-hidden="true" class="anchor" href="#user-content-onselect-34" id="user-content-onselect-34" name="user-content-onselect-34"><span aria-hidden="true" class="octicon octicon-link"></span></a>OnSelect</h4>
+<pre><code>=If(ShowOneNote,
+    Set(ShowOneNote, false);
+    Set(SelectedNoteBook, OneNoteBookSelect_1.SelectedText);
+    Set(SelectedSection, SectionsSelect_1.SelectedText);
+    Navigate(ExportScreen, None),
+   ShowPlanner,
+    Set(ShowPlanner, false);
+    Set(SelectedPlan, PlannerPlanSelect_1.SelectedText);
+    Set(SelectedBucket, PlannerBucketSelect_1.SelectedText);
+    Navigate(ExportScreen, None),
+   ShowOverlay,
+    Set(ShowOverlay, false);
+    Set(ExportConfirmed, true);
+    Navigate(ConfirmScreen, None)
+)
+
+</code></pre>
+<h4 id="user-content-text-21">
+<a aria-hidden="true" class="anchor" href="#user-content-text-21" id="user-content-text-21" name="user-content-text-21"><span aria-hidden="true" class="octicon octicon-link"></span></a>Text</h4>
+<pre><code>=If(ShowOverlay, "Yes, continue", "OK")
+</code></pre>
+<h2 id="user-content-collectionsandvariables">
+<a aria-hidden="true" class="anchor" href="#user-content-collectionsandvariables" id="user-content-collectionsandvariables" name="user-content-collectionsandvariables"><span aria-hidden="true" class="octicon octicon-link"></span></a>CollectionsAndVariables</h2>
+<hr/>
+<h3 id="user-content-variables-13">
+<a aria-hidden="true" class="anchor" href="#user-content-variables-13" id="user-content-variables-13" name="user-content-variables-13"><span aria-hidden="true" class="octicon octicon-link"></span></a>Variables</h3>
+<p>Following variables have been created / or updated on this screen</p>
+<h3 id="user-content-collects-13">
+<a aria-hidden="true" class="anchor" href="#user-content-collects-13" id="user-content-collects-13" name="user-content-collects-13"><span aria-hidden="true" class="octicon octicon-link"></span></a>Collects</h3>
+<p>Following collects have been created, updated or cleared on this screen</p>
+<h3 id="user-content-flows-13">
+<a aria-hidden="true" class="anchor" href="#user-content-flows-13" id="user-content-flows-13" name="user-content-flows-13"><span aria-hidden="true" class="octicon octicon-link"></span></a>Flows</h3>
+<p>Following flows have used on this screen</p>
+<h3 id="user-content-collectionsandvariables-as-screen">
+<a aria-hidden="true" class="anchor" href="#user-content-collectionsandvariables-as-screen" id="user-content-collectionsandvariables-as-screen" name="user-content-collectionsandvariables-as-screen"><span aria-hidden="true" class="octicon octicon-link"></span></a>CollectionsAndVariables As screen</h3>
+<p>This screen lists all collections and variables used inside the app</p>
+<h2 id="user-content-testemptyscreen">
+<a aria-hidden="true" class="anchor" href="#user-content-testemptyscreen" id="user-content-testemptyscreen" name="user-content-testemptyscreen"><span aria-hidden="true" class="octicon octicon-link"></span></a>TestEmptyScreen</h2>
+<hr/>
+<h3 id="user-content-variables-14">
+<a aria-hidden="true" class="anchor" href="#user-content-variables-14" id="user-content-variables-14" name="user-content-variables-14"><span aria-hidden="true" class="octicon octicon-link"></span></a>Variables</h3>
+<p>Following variables have been created / or updated on this screen</p>
+<h3 id="user-content-collects-14">
+<a aria-hidden="true" class="anchor" href="#user-content-collects-14" id="user-content-collects-14" name="user-content-collects-14"><span aria-hidden="true" class="octicon octicon-link"></span></a>Collects</h3>
+<p>Following collects have been created, updated or cleared on this screen</p>
+<h3 id="user-content-flows-14">
+<a aria-hidden="true" class="anchor" href="#user-content-flows-14" id="user-content-flows-14" name="user-content-flows-14"><span aria-hidden="true" class="octicon octicon-link"></span></a>Flows</h3>
+<p>Following flows have used on this screen</p>
+<h3 id="user-content-testemptyscreen-as-screen">
+<a aria-hidden="true" class="anchor" href="#user-content-testemptyscreen-as-screen" id="user-content-testemptyscreen-as-screen" name="user-content-testemptyscreen-as-screen"><span aria-hidden="true" class="octicon octicon-link"></span></a>TestEmptyScreen As screen</h3>
+<h1 id="user-content-global-variables">
+<a aria-hidden="true" class="anchor" href="#user-content-global-variables" id="user-content-global-variables" name="user-content-global-variables"><span aria-hidden="true" class="octicon octicon-link"></span></a>Global Variables</h1>
+<p>Usage of global variables is shown based on the screen(s) where this variable is set and the screen(s) where it is used.</p>
+<h2 id="user-content-v_showconfirm">
+<a aria-hidden="true" class="anchor" href="#user-content-v_showconfirm" id="user-content-v_showconfirm" name="user-content-v_showconfirm"><span aria-hidden="true" class="octicon octicon-link"></span></a>V_ShowConfirm</h2>
+<p><div class="mermaid">
+graph LR
+Set2201_2(2201_2)-- set --&gt;V_ShowConfirm[/V_ShowConfirm/]
+</div></p>
+<h2 id="user-content-varaddmemo">
+<a aria-hidden="true" class="anchor" href="#user-content-varaddmemo" id="user-content-varaddmemo" name="user-content-varaddmemo"><span aria-hidden="true" class="octicon octicon-link"></span></a>varAddMemo</h2>
+<p><div class="mermaid">
+graph LR
+Set2201_2(2201_2)-- set --&gt;varAddMemo[/varAddMemo/]
+varAddMemo[/varAddMemo/]-. use .-&gt;Use2201_2(2201_2)
+</div></p>
+<h2 id="user-content-selectedimage">
+<a aria-hidden="true" class="anchor" href="#user-content-selectedimage" id="user-content-selectedimage" name="user-content-selectedimage"><span aria-hidden="true" class="octicon octicon-link"></span></a>SelectedImage</h2>
+<p><div class="mermaid">
+graph LR
+SetAttachmentsScreen(AttachmentsScreen)-- set --&gt;SelectedImage[/SelectedImage/]
+SelectedImage[/SelectedImage/]-. use .-&gt;UseAttachmentsScreen(AttachmentsScreen)
+SelectedImage[/SelectedImage/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+</div></p>
+<h2 id="user-content-progressbarposition">
+<a aria-hidden="true" class="anchor" href="#user-content-progressbarposition" id="user-content-progressbarposition" name="user-content-progressbarposition"><span aria-hidden="true" class="octicon octicon-link"></span></a>ProgressBarPosition</h2>
+<p><div class="mermaid">
+graph LR
+SetHomeScreen(HomeScreen)-- set --&gt;ProgressBarPosition[/ProgressBarPosition/]
+ProgressBarPosition[/ProgressBarPosition/]-. use .-&gt;UseHomeScreen(HomeScreen)
+ProgressBarPosition[/ProgressBarPosition/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+</div></p>
+<h2 id="user-content-selectedplan">
+<a aria-hidden="true" class="anchor" href="#user-content-selectedplan" id="user-content-selectedplan" name="user-content-selectedplan"><span aria-hidden="true" class="octicon octicon-link"></span></a>SelectedPlan</h2>
+<p><div class="mermaid">
+graph LR
+SetExportScreen(ExportScreen)-- set --&gt;SelectedPlan[/SelectedPlan/]
+SetExportPopUpsScreen(ExportPopUpsScreen)-- set --&gt;SelectedPlan[/SelectedPlan/]
+SelectedPlan[/SelectedPlan/]-. use .-&gt;UseConfirmScreen(ConfirmScreen)
+SelectedPlan[/SelectedPlan/]-. use .-&gt;UseExportScreen(ExportScreen)
+SelectedPlan[/SelectedPlan/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+</div></p>
+<h2 id="user-content-varloadingpopup">
+<a aria-hidden="true" class="anchor" href="#user-content-varloadingpopup" id="user-content-varloadingpopup" name="user-content-varloadingpopup"><span aria-hidden="true" class="octicon octicon-link"></span></a>varLoadingPopup</h2>
+<p><div class="mermaid">
+graph LR
+Set2201_2(2201_2)-- set --&gt;varLoadingPopup[/varLoadingPopup/]
+varLoadingPopup[/varLoadingPopup/]-. use .-&gt;Use2201_2(2201_2)
+</div></p>
+<h2 id="user-content-vcontinue">
+<a aria-hidden="true" class="anchor" href="#user-content-vcontinue" id="user-content-vcontinue" name="user-content-vcontinue"><span aria-hidden="true" class="octicon octicon-link"></span></a>vContinue</h2>
+<p><div class="mermaid">
+graph LR
+Set2201_2(2201_2)-- set --&gt;vContinue[/vContinue/]
+vContinue[/vContinue/]-. use .-&gt;Use2201_2(2201_2)
+</div></p>
+<h2 id="user-content-showonenote">
+<a aria-hidden="true" class="anchor" href="#user-content-showonenote" id="user-content-showonenote" name="user-content-showonenote"><span aria-hidden="true" class="octicon octicon-link"></span></a>ShowOneNote</h2>
+<p><div class="mermaid">
+graph LR
+SetExportScreen(ExportScreen)-- set --&gt;ShowOneNote[/ShowOneNote/]
+SetExportPopUpsScreen(ExportPopUpsScreen)-- set --&gt;ShowOneNote[/ShowOneNote/]
+ShowOneNote[/ShowOneNote/]-. use .-&gt;UseExportScreen(ExportScreen)
+ShowOneNote[/ShowOneNote/]-. use .-&gt;UseExportPopUpsScreen(ExportPopUpsScreen)
+ShowOneNote[/ShowOneNote/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+</div></p>
+<h2 id="user-content-varduplicatepopup">
+<a aria-hidden="true" class="anchor" href="#user-content-varduplicatepopup" id="user-content-varduplicatepopup" name="user-content-varduplicatepopup"><span aria-hidden="true" class="octicon octicon-link"></span></a>varDuplicatePopup</h2>
+<p><div class="mermaid">
+graph LR
+Set2201_2(2201_2)-- set --&gt;varDuplicatePopup[/varDuplicatePopup/]
+varDuplicatePopup[/varDuplicatePopup/]-. use .-&gt;Use2201_2(2201_2)
+</div></p>
+<h2 id="user-content-selecteduser">
+<a aria-hidden="true" class="anchor" href="#user-content-selecteduser" id="user-content-selecteduser" name="user-content-selecteduser"><span aria-hidden="true" class="octicon octicon-link"></span></a>SelectedUser</h2>
+<p><div class="mermaid">
+graph LR
+SetHomePopUpsScreen(HomePopUpsScreen)-- set --&gt;SelectedUser[/SelectedUser/]
+SelectedUser[/SelectedUser/]-. use .-&gt;UseHomePopUpsScreen(HomePopUpsScreen)
+SelectedUser[/SelectedUser/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+</div></p>
+<h2 id="user-content-vguid208">
+<a aria-hidden="true" class="anchor" href="#user-content-vguid208" id="user-content-vguid208" name="user-content-vguid208"><span aria-hidden="true" class="octicon octicon-link"></span></a>vGUID208</h2>
+<p><div class="mermaid">
+graph LR
+Set2201_2(2201_2)-- set --&gt;vGUID208[/vGUID208/]
+</div></p>
+<h2 id="user-content-isloading">
+<a aria-hidden="true" class="anchor" href="#user-content-isloading" id="user-content-isloading" name="user-content-isloading"><span aria-hidden="true" class="octicon octicon-link"></span></a>IsLoading</h2>
+<p><div class="mermaid">
+graph LR
+Set2201_2(2201_2)-- set --&gt;IsLoading[/IsLoading/]
+</div></p>
+<h2 id="user-content-myedit">
+<a aria-hidden="true" class="anchor" href="#user-content-myedit" id="user-content-myedit" name="user-content-myedit"><span aria-hidden="true" class="octicon octicon-link"></span></a>myedit</h2>
+<p><div class="mermaid">
+graph LR
+Set2201_2(2201_2)-- set --&gt;myedit[/myedit/]
+</div></p>
+<h2 id="user-content-varloadingpopup-1">
+<a aria-hidden="true" class="anchor" href="#user-content-varloadingpopup-1" id="user-content-varloadingpopup-1" name="user-content-varloadingpopup-1"><span aria-hidden="true" class="octicon octicon-link"></span></a>varLoadingPopup</h2>
+<p><div class="mermaid">
+graph LR
+Set2201_2(2201_2)-- set --&gt;varLoadingPopup[/ varLoadingPopup/]
+</div></p>
+<h2 id="user-content-autoselectmeeting">
+<a aria-hidden="true" class="anchor" href="#user-content-autoselectmeeting" id="user-content-autoselectmeeting" name="user-content-autoselectmeeting"><span aria-hidden="true" class="octicon octicon-link"></span></a>AutoSelectMeeting</h2>
+<p><div class="mermaid">
+graph LR
+SetWelcomeScreen(WelcomeScreen)-- set --&gt;AutoSelectMeeting[/AutoSelectMeeting/]
+AutoSelectMeeting[/AutoSelectMeeting/]-. use .-&gt;UseWelcomeScreen(WelcomeScreen)
+AutoSelectMeeting[/AutoSelectMeeting/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+</div></p>
+<h2 id="user-content-multirecipients">
+<a aria-hidden="true" class="anchor" href="#user-content-multirecipients" id="user-content-multirecipients" name="user-content-multirecipients"><span aria-hidden="true" class="octicon octicon-link"></span></a>MultiRecipients</h2>
+<p><div class="mermaid">
+graph LR
+SetHomeScreen(HomeScreen)-- set --&gt;MultiRecipients[/MultiRecipients/]
+MultiRecipients[/MultiRecipients/]-. use .-&gt;UseEmailScreen(EmailScreen)
+MultiRecipients[/MultiRecipients/]-. use .-&gt;UseExportScreen(ExportScreen)
+MultiRecipients[/MultiRecipients/]-. use .-&gt;UseFollowUpScreen(FollowUpScreen)
+MultiRecipients[/MultiRecipients/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+</div></p>
+<h2 id="user-content-photonumber">
+<a aria-hidden="true" class="anchor" href="#user-content-photonumber" id="user-content-photonumber" name="user-content-photonumber"><span aria-hidden="true" class="octicon octicon-link"></span></a>PhotoNumber</h2>
+<p><div class="mermaid">
+graph LR
+SetCameraScreen(CameraScreen)-- set --&gt;PhotoNumber[/PhotoNumber/]
+PhotoNumber[/PhotoNumber/]-. use .-&gt;UseCameraScreen(CameraScreen)
+PhotoNumber[/PhotoNumber/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+</div></p>
+<h2 id="user-content-vaddlevel_2">
+<a aria-hidden="true" class="anchor" href="#user-content-vaddlevel_2" id="user-content-vaddlevel_2" name="user-content-vaddlevel_2"><span aria-hidden="true" class="octicon octicon-link"></span></a>vAddLevel_2</h2>
+<p><div class="mermaid">
+graph LR
+Set2201_2(2201_2)-- set --&gt;vAddLevel_2[/vAddLevel_2/]
+</div></p>
+<h2 id="user-content-visedit">
+<a aria-hidden="true" class="anchor" href="#user-content-visedit" id="user-content-visedit" name="user-content-visedit"><span aria-hidden="true" class="octicon octicon-link"></span></a>vIsEdit</h2>
+<p><div class="mermaid">
+graph LR
+Set2201_2(2201_2)-- set --&gt;vIsEdit[/vIsEdit/]
+vIsEdit[/vIsEdit/]-. use .-&gt;Use2201_2(2201_2)
+</div></p>
+<h2 id="user-content-vguid221">
+<a aria-hidden="true" class="anchor" href="#user-content-vguid221" id="user-content-vguid221" name="user-content-vguid221"><span aria-hidden="true" class="octicon octicon-link"></span></a>vGUID221</h2>
+<p><div class="mermaid">
+graph LR
+Set2201_2(2201_2)-- set --&gt;vGUID221[/vGUID221/]
+</div></p>
+<h2 id="user-content-vfilter">
+<a aria-hidden="true" class="anchor" href="#user-content-vfilter" id="user-content-vfilter" name="user-content-vfilter"><span aria-hidden="true" class="octicon octicon-link"></span></a>vFilter</h2>
+<p><div class="mermaid">
+graph LR
+Set2201_2(2201_2)-- set --&gt;vFilter[/vFilter/]
+vFilter[/vFilter/]-. use .-&gt;Use2201_2(2201_2)
+</div></p>
+<h2 id="user-content-exportconfirmed">
+<a aria-hidden="true" class="anchor" href="#user-content-exportconfirmed" id="user-content-exportconfirmed" name="user-content-exportconfirmed"><span aria-hidden="true" class="octicon octicon-link"></span></a>ExportConfirmed</h2>
+<p><div class="mermaid">
+graph LR
+SetWelcomeScreen(WelcomeScreen)-- set --&gt;ExportConfirmed[/ExportConfirmed/]
+SetHomeScreen(HomeScreen)-- set --&gt;ExportConfirmed[/ExportConfirmed/]
+SetFollowUpScreen(FollowUpScreen)-- set --&gt;ExportConfirmed[/ExportConfirmed/]
+SetExportPopUpsScreen(ExportPopUpsScreen)-- set --&gt;ExportConfirmed[/ExportConfirmed/]
+ExportConfirmed[/ExportConfirmed/]-. use .-&gt;UseConfirmScreen(ConfirmScreen)
+ExportConfirmed[/ExportConfirmed/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+</div></p>
+<h2 id="user-content-varselectedpl">
+<a aria-hidden="true" class="anchor" href="#user-content-varselectedpl" id="user-content-varselectedpl" name="user-content-varselectedpl"><span aria-hidden="true" class="octicon octicon-link"></span></a>varSelectedPL</h2>
+<p><div class="mermaid">
+graph LR
+Set2201_2(2201_2)-- set --&gt;varSelectedPL[/varSelectedPL/]
+varSelectedPL[/varSelectedPL/]-. use .-&gt;Use2201_2(2201_2)
+</div></p>
+<h2 id="user-content-varguid208">
+<a aria-hidden="true" class="anchor" href="#user-content-varguid208" id="user-content-varguid208" name="user-content-varguid208"><span aria-hidden="true" class="octicon octicon-link"></span></a>varGUID208</h2>
+<p><div class="mermaid">
+graph LR
+Set2201_2(2201_2)-- set --&gt;varGUID208[/varGUID208/]
+</div></p>
+<h2 id="user-content-varaddgoal">
+<a aria-hidden="true" class="anchor" href="#user-content-varaddgoal" id="user-content-varaddgoal" name="user-content-varaddgoal"><span aria-hidden="true" class="octicon octicon-link"></span></a>varAddGoal</h2>
+<p><div class="mermaid">
+graph LR
+Set2201_2(2201_2)-- set --&gt;varAddGoal[/varAddGoal/]
+</div></p>
+<h2 id="user-content-showmeetingtimes">
+<a aria-hidden="true" class="anchor" href="#user-content-showmeetingtimes" id="user-content-showmeetingtimes" name="user-content-showmeetingtimes"><span aria-hidden="true" class="octicon octicon-link"></span></a>ShowMeetingTimes</h2>
+<p><div class="mermaid">
+graph LR
+SetFollowUpTimesScreen(FollowUpTimesScreen)-- set --&gt;ShowMeetingTimes[/ShowMeetingTimes/]
+ShowMeetingTimes[/ShowMeetingTimes/]-. use .-&gt;UseFollowUpTimesScreen(FollowUpTimesScreen)
+ShowMeetingTimes[/ShowMeetingTimes/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+</div></p>
+<h2 id="user-content-showtakenimage">
+<a aria-hidden="true" class="anchor" href="#user-content-showtakenimage" id="user-content-showtakenimage" name="user-content-showtakenimage"><span aria-hidden="true" class="octicon octicon-link"></span></a>ShowTakenImage</h2>
+<p><div class="mermaid">
+graph LR
+SetCameraScreen(CameraScreen)-- set --&gt;ShowTakenImage[/ShowTakenImage/]
+ShowTakenImage[/ShowTakenImage/]-. use .-&gt;UseCameraScreen(CameraScreen)
+ShowTakenImage[/ShowTakenImage/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+</div></p>
+<h2 id="user-content-selectedsection">
+<a aria-hidden="true" class="anchor" href="#user-content-selectedsection" id="user-content-selectedsection" name="user-content-selectedsection"><span aria-hidden="true" class="octicon octicon-link"></span></a>SelectedSection</h2>
+<p><div class="mermaid">
+graph LR
+SetExportScreen(ExportScreen)-- set --&gt;SelectedSection[/SelectedSection/]
+SetExportPopUpsScreen(ExportPopUpsScreen)-- set --&gt;SelectedSection[/SelectedSection/]
+SelectedSection[/SelectedSection/]-. use .-&gt;UseConfirmScreen(ConfirmScreen)
+SelectedSection[/SelectedSection/]-. use .-&gt;UseExportScreen(ExportScreen)
+SelectedSection[/SelectedSection/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+</div></p>
+<h2 id="user-content-selectednotebook">
+<a aria-hidden="true" class="anchor" href="#user-content-selectednotebook" id="user-content-selectednotebook" name="user-content-selectednotebook"><span aria-hidden="true" class="octicon octicon-link"></span></a>SelectedNoteBook</h2>
+<p><div class="mermaid">
+graph LR
+SetExportScreen(ExportScreen)-- set --&gt;SelectedNoteBook[/SelectedNoteBook/]
+SetExportPopUpsScreen(ExportPopUpsScreen)-- set --&gt;SelectedNoteBook[/SelectedNoteBook/]
+SelectedNoteBook[/SelectedNoteBook/]-. use .-&gt;UseConfirmScreen(ConfirmScreen)
+SelectedNoteBook[/SelectedNoteBook/]-. use .-&gt;UseExportScreen(ExportScreen)
+SelectedNoteBook[/SelectedNoteBook/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+</div></p>
+<h2 id="user-content-followupconfirmed">
+<a aria-hidden="true" class="anchor" href="#user-content-followupconfirmed" id="user-content-followupconfirmed" name="user-content-followupconfirmed"><span aria-hidden="true" class="octicon octicon-link"></span></a>FollowUpConfirmed</h2>
+<p><div class="mermaid">
+graph LR
+SetWelcomeScreen(WelcomeScreen)-- set --&gt;FollowUpConfirmed[/FollowUpConfirmed/]
+SetHomeScreen(HomeScreen)-- set --&gt;FollowUpConfirmed[/FollowUpConfirmed/]
+SetFollowUpTimesScreen(FollowUpTimesScreen)-- set --&gt;FollowUpConfirmed[/FollowUpConfirmed/]
+FollowUpConfirmed[/FollowUpConfirmed/]-. use .-&gt;UseConfirmScreen(ConfirmScreen)
+FollowUpConfirmed[/FollowUpConfirmed/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+</div></p>
+<h2 id="user-content-showimagesaved">
+<a aria-hidden="true" class="anchor" href="#user-content-showimagesaved" id="user-content-showimagesaved" name="user-content-showimagesaved"><span aria-hidden="true" class="octicon octicon-link"></span></a>ShowImageSaved</h2>
+<p><div class="mermaid">
+graph LR
+SetCameraScreen(CameraScreen)-- set --&gt;ShowImageSaved[/ShowImageSaved/]
+ShowImageSaved[/ShowImageSaved/]-. use .-&gt;UseCameraScreen(CameraScreen)
+ShowImageSaved[/ShowImageSaved/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+</div></p>
+<h2 id="user-content-showdatalosswarning">
+<a aria-hidden="true" class="anchor" href="#user-content-showdatalosswarning" id="user-content-showdatalosswarning" name="user-content-showdatalosswarning"><span aria-hidden="true" class="octicon octicon-link"></span></a>ShowDataLossWarning</h2>
+<p><div class="mermaid">
+graph LR
+SetWelcomeScreen(WelcomeScreen)-- set --&gt;ShowDataLossWarning[/ShowDataLossWarning/]
+SetHomePopUpsScreen(HomePopUpsScreen)-- set --&gt;ShowDataLossWarning[/ShowDataLossWarning/]
+ShowDataLossWarning[/ShowDataLossWarning/]-. use .-&gt;UseHomePopUpsScreen(HomePopUpsScreen)
+ShowDataLossWarning[/ShowDataLossWarning/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+</div></p>
+<h2 id="user-content-varguid216">
+<a aria-hidden="true" class="anchor" href="#user-content-varguid216" id="user-content-varguid216" name="user-content-varguid216"><span aria-hidden="true" class="octicon octicon-link"></span></a>varGUID216</h2>
+<p><div class="mermaid">
+graph LR
+Set2201_2(2201_2)-- set --&gt;varGUID216[/varGUID216/]
+varGUID216[/varGUID216/]-. use .-&gt;Use2201_2(2201_2)
+</div></p>
+<h2 id="user-content-showoverlay">
+<a aria-hidden="true" class="anchor" href="#user-content-showoverlay" id="user-content-showoverlay" name="user-content-showoverlay"><span aria-hidden="true" class="octicon octicon-link"></span></a>ShowOverlay</h2>
+<p><div class="mermaid">
+graph LR
+SetHomeScreen(HomeScreen)-- set --&gt;ShowOverlay[/ShowOverlay/]
+SetAttachmentsScreen(AttachmentsScreen)-- set --&gt;ShowOverlay[/ShowOverlay/]
+SetExportScreen(ExportScreen)-- set --&gt;ShowOverlay[/ShowOverlay/]
+SetHomePopUpsScreen(HomePopUpsScreen)-- set --&gt;ShowOverlay[/ShowOverlay/]
+SetExportPopUpsScreen(ExportPopUpsScreen)-- set --&gt;ShowOverlay[/ShowOverlay/]
+ShowOverlay[/ShowOverlay/]-. use .-&gt;UseAttachmentsScreen(AttachmentsScreen)
+ShowOverlay[/ShowOverlay/]-. use .-&gt;UseHomePopUpsScreen(HomePopUpsScreen)
+ShowOverlay[/ShowOverlay/]-. use .-&gt;UseExportPopUpsScreen(ExportPopUpsScreen)
+ShowOverlay[/ShowOverlay/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+</div></p>
+<h2 id="user-content-sketchnumber">
+<a aria-hidden="true" class="anchor" href="#user-content-sketchnumber" id="user-content-sketchnumber" name="user-content-sketchnumber"><span aria-hidden="true" class="octicon octicon-link"></span></a>SketchNumber</h2>
+<p><div class="mermaid">
+graph LR
+SetSketchScreen(Sketch Screen)-- set --&gt;SketchNumber[/SketchNumber/]
+SketchNumber[/SketchNumber/]-. use .-&gt;UseSketchScreen(Sketch Screen)
+SketchNumber[/SketchNumber/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+</div></p>
+<h2 id="user-content-followupstart">
+<a aria-hidden="true" class="anchor" href="#user-content-followupstart" id="user-content-followupstart" name="user-content-followupstart"><span aria-hidden="true" class="octicon octicon-link"></span></a>FollowUpStart</h2>
+<p><div class="mermaid">
+graph LR
+SetFollowUpTimesScreen(FollowUpTimesScreen)-- set --&gt;FollowUpStart[/FollowUpStart/]
+FollowUpStart[/FollowUpStart/]-. use .-&gt;UseFollowUpTimesScreen(FollowUpTimesScreen)
+FollowUpStart[/FollowUpStart/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+</div></p>
+<h2 id="user-content-varshowsort">
+<a aria-hidden="true" class="anchor" href="#user-content-varshowsort" id="user-content-varshowsort" name="user-content-varshowsort"><span aria-hidden="true" class="octicon octicon-link"></span></a>varShowSort</h2>
+<p><div class="mermaid">
+graph LR
+Set2201_2(2201_2)-- set --&gt;varShowSort[/varShowSort/]
+</div></p>
+<h2 id="user-content-emailconfirmed">
+<a aria-hidden="true" class="anchor" href="#user-content-emailconfirmed" id="user-content-emailconfirmed" name="user-content-emailconfirmed"><span aria-hidden="true" class="octicon octicon-link"></span></a>EmailConfirmed</h2>
+<p><div class="mermaid">
+graph LR
+SetWelcomeScreen(WelcomeScreen)-- set --&gt;EmailConfirmed[/EmailConfirmed/]
+SetHomeScreen(HomeScreen)-- set --&gt;EmailConfirmed[/EmailConfirmed/]
+SetEmailScreen(EmailScreen)-- set --&gt;EmailConfirmed[/EmailConfirmed/]
+EmailConfirmed[/EmailConfirmed/]-. use .-&gt;UseConfirmScreen(ConfirmScreen)
+EmailConfirmed[/EmailConfirmed/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+</div></p>
+<h2 id="user-content-varguid211">
+<a aria-hidden="true" class="anchor" href="#user-content-varguid211" id="user-content-varguid211" name="user-content-varguid211"><span aria-hidden="true" class="octicon octicon-link"></span></a>varGUID211</h2>
+<p><div class="mermaid">
+graph LR
+Set2201_2(2201_2)-- set --&gt;varGUID211[/varGUID211/]
+varGUID211[/varGUID211/]-. use .-&gt;Use2201_2(2201_2)
+</div></p>
+<h2 id="user-content-selectedtask">
+<a aria-hidden="true" class="anchor" href="#user-content-selectedtask" id="user-content-selectedtask" name="user-content-selectedtask"><span aria-hidden="true" class="octicon octicon-link"></span></a>SelectedTask</h2>
+<p><div class="mermaid">
+graph LR
+SetHomeScreen(HomeScreen)-- set --&gt;SelectedTask[/SelectedTask/]
+SelectedTask[/SelectedTask/]-. use .-&gt;UseHomePopUpsScreen(HomePopUpsScreen)
+SelectedTask[/SelectedTask/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+</div></p>
+<h2 id="user-content-showsketchsaved">
+<a aria-hidden="true" class="anchor" href="#user-content-showsketchsaved" id="user-content-showsketchsaved" name="user-content-showsketchsaved"><span aria-hidden="true" class="octicon octicon-link"></span></a>ShowSketchSaved</h2>
+<p><div class="mermaid">
+graph LR
+SetSketchScreen(Sketch Screen)-- set --&gt;ShowSketchSaved[/ShowSketchSaved/]
+ShowSketchSaved[/ShowSketchSaved/]-. use .-&gt;UseSketchScreen(Sketch Screen)
+ShowSketchSaved[/ShowSketchSaved/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+</div></p>
+<h2 id="user-content-selectedbucket">
+<a aria-hidden="true" class="anchor" href="#user-content-selectedbucket" id="user-content-selectedbucket" name="user-content-selectedbucket"><span aria-hidden="true" class="octicon octicon-link"></span></a>SelectedBucket</h2>
+<p><div class="mermaid">
+graph LR
+SetExportScreen(ExportScreen)-- set --&gt;SelectedBucket[/SelectedBucket/]
+SetExportPopUpsScreen(ExportPopUpsScreen)-- set --&gt;SelectedBucket[/SelectedBucket/]
+SelectedBucket[/SelectedBucket/]-. use .-&gt;UseConfirmScreen(ConfirmScreen)
+SelectedBucket[/SelectedBucket/]-. use .-&gt;UseExportScreen(ExportScreen)
+SelectedBucket[/SelectedBucket/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+</div></p>
+<h2 id="user-content-showplanner">
+<a aria-hidden="true" class="anchor" href="#user-content-showplanner" id="user-content-showplanner" name="user-content-showplanner"><span aria-hidden="true" class="octicon octicon-link"></span></a>ShowPlanner</h2>
+<p><div class="mermaid">
+graph LR
+SetExportScreen(ExportScreen)-- set --&gt;ShowPlanner[/ShowPlanner/]
+SetExportPopUpsScreen(ExportPopUpsScreen)-- set --&gt;ShowPlanner[/ShowPlanner/]
+ShowPlanner[/ShowPlanner/]-. use .-&gt;UseExportScreen(ExportScreen)
+ShowPlanner[/ShowPlanner/]-. use .-&gt;UseExportPopUpsScreen(ExportPopUpsScreen)
+ShowPlanner[/ShowPlanner/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+</div></p>
+<h2 id="user-content-attachmentdeleteconfirm">
+<a aria-hidden="true" class="anchor" href="#user-content-attachmentdeleteconfirm" id="user-content-attachmentdeleteconfirm" name="user-content-attachmentdeleteconfirm"><span aria-hidden="true" class="octicon octicon-link"></span></a>AttachmentDeleteConfirm</h2>
+<p><div class="mermaid">
+graph LR
+SetAttachmentsScreen(AttachmentsScreen)-- set --&gt;AttachmentDeleteConfirm[/AttachmentDeleteConfirm/]
+AttachmentDeleteConfirm[/AttachmentDeleteConfirm/]-. use .-&gt;UseAttachmentsScreen(AttachmentsScreen)
+AttachmentDeleteConfirm[/AttachmentDeleteConfirm/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+</div></p>
+<h2 id="user-content-loading">
+<a aria-hidden="true" class="anchor" href="#user-content-loading" id="user-content-loading" name="user-content-loading"><span aria-hidden="true" class="octicon octicon-link"></span></a>Loading</h2>
+<p><div class="mermaid">
+graph LR
+SetConfirmScreen(ConfirmScreen)-- set --&gt;Loading[/Loading/]
+SetFollowUpTimesScreen(FollowUpTimesScreen)-- set --&gt;Loading[/Loading/]
+SetHomePopUpsScreen(HomePopUpsScreen)-- set --&gt;Loading[/Loading/]
+Loading[/Loading/]-. use .-&gt;Use2201_2(2201_2)
+Loading[/Loading/]-. use .-&gt;UseWelcomeScreen(WelcomeScreen)
+Loading[/Loading/]-. use .-&gt;UseHomeScreen(HomeScreen)
+Loading[/Loading/]-. use .-&gt;UseEmailScreen(EmailScreen)
+Loading[/Loading/]-. use .-&gt;UseAttachmentsScreen(AttachmentsScreen)
+Loading[/Loading/]-. use .-&gt;UseConfirmScreen(ConfirmScreen)
+Loading[/Loading/]-. use .-&gt;UseExportScreen(ExportScreen)
+Loading[/Loading/]-. use .-&gt;UseFollowUpScreen(FollowUpScreen)
+Loading[/Loading/]-. use .-&gt;UseFollowUpTimesScreen(FollowUpTimesScreen)
+Loading[/Loading/]-. use .-&gt;UseHomePopUpsScreen(HomePopUpsScreen)
+Loading[/Loading/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+</div></p>
+<h2 id="user-content-vaddlevel_1">
+<a aria-hidden="true" class="anchor" href="#user-content-vaddlevel_1" id="user-content-vaddlevel_1" name="user-content-vaddlevel_1"><span aria-hidden="true" class="octicon octicon-link"></span></a>vAddLevel_1</h2>
+<p><div class="mermaid">
+graph LR
+Set2201_2(2201_2)-- set --&gt;vAddLevel_1[/vAddLevel_1/]
+</div></p>
+<h2 id="user-content-taskselected">
+<a aria-hidden="true" class="anchor" href="#user-content-taskselected" id="user-content-taskselected" name="user-content-taskselected"><span aria-hidden="true" class="octicon octicon-link"></span></a>TaskSelected</h2>
+<p><div class="mermaid">
+graph LR
+SetHomeScreen(HomeScreen)-- set --&gt;TaskSelected[/TaskSelected/]
+SetHomePopUpsScreen(HomePopUpsScreen)-- set --&gt;TaskSelected[/TaskSelected/]
+TaskSelected[/TaskSelected/]-. use .-&gt;UseAttachmentsScreen(AttachmentsScreen)
+TaskSelected[/TaskSelected/]-. use .-&gt;UseHomePopUpsScreen(HomePopUpsScreen)
+TaskSelected[/TaskSelected/]-. use .-&gt;UseExportPopUpsScreen(ExportPopUpsScreen)
+</div></p>
+<h2 id="user-content-userselected">
+<a aria-hidden="true" class="anchor" href="#user-content-userselected" id="user-content-userselected" name="user-content-userselected"><span aria-hidden="true" class="octicon octicon-link"></span></a>UserSelected</h2>
+<p><div class="mermaid">
+graph LR
+SetHomeScreen(HomeScreen)-- set --&gt;UserSelected[/UserSelected/]
+SetHomePopUpsScreen(HomePopUpsScreen)-- set --&gt;UserSelected[/UserSelected/]
+UserSelected[/UserSelected/]-. use .-&gt;UseHomePopUpsScreen(HomePopUpsScreen)
+UserSelected[/UserSelected/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+</div></p>
+<h2 id="user-content-selectedmeetingduration">
+<a aria-hidden="true" class="anchor" href="#user-content-selectedmeetingduration" id="user-content-selectedmeetingduration" name="user-content-selectedmeetingduration"><span aria-hidden="true" class="octicon octicon-link"></span></a>SelectedMeetingDuration</h2>
+<p><div class="mermaid">
+graph LR
+SetHomePopUpsScreen(HomePopUpsScreen)-- set --&gt;SelectedMeetingDuration[/SelectedMeetingDuration/]
+SelectedMeetingDuration[/SelectedMeetingDuration/]-. use .-&gt;UseHomeScreen(HomeScreen)
+SelectedMeetingDuration[/SelectedMeetingDuration/]-. use .-&gt;UseConfirmScreen(ConfirmScreen)
+SelectedMeetingDuration[/SelectedMeetingDuration/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+</div></p>
+<h2 id="user-content-varreviewteam">
+<a aria-hidden="true" class="anchor" href="#user-content-varreviewteam" id="user-content-varreviewteam" name="user-content-varreviewteam"><span aria-hidden="true" class="octicon octicon-link"></span></a>varReviewTeam</h2>
+<p><div class="mermaid">
+graph LR
+Set2201_2(2201_2)-- set --&gt;varReviewTeam[/varReviewTeam/]
+varReviewTeam[/varReviewTeam/]-. use .-&gt;Use2201_2(2201_2)
+</div></p>
+<h2 id="user-content-selectedusertasks">
+<a aria-hidden="true" class="anchor" href="#user-content-selectedusertasks" id="user-content-selectedusertasks" name="user-content-selectedusertasks"><span aria-hidden="true" class="octicon octicon-link"></span></a>SelectedUserTasks</h2>
+<p><div class="mermaid">
+graph LR
+SetHomeScreen(HomeScreen)-- set --&gt;SelectedUserTasks[/SelectedUserTasks/]
+SelectedUserTasks[/SelectedUserTasks/]-. use .-&gt;UseHomePopUpsScreen(HomePopUpsScreen)
+SelectedUserTasks[/SelectedUserTasks/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+</div></p>
+<h2 id="user-content-userselectedfromtasks">
+<a aria-hidden="true" class="anchor" href="#user-content-userselectedfromtasks" id="user-content-userselectedfromtasks" name="user-content-userselectedfromtasks"><span aria-hidden="true" class="octicon octicon-link"></span></a>UserSelectedFromTasks</h2>
+<p><div class="mermaid">
+graph LR
+SetHomeScreen(HomeScreen)-- set --&gt;UserSelectedFromTasks[/UserSelectedFromTasks/]
+SetHomePopUpsScreen(HomePopUpsScreen)-- set --&gt;UserSelectedFromTasks[/UserSelectedFromTasks/]
+UserSelectedFromTasks[/UserSelectedFromTasks/]-. use .-&gt;UseHomePopUpsScreen(HomePopUpsScreen)
+UserSelectedFromTasks[/UserSelectedFromTasks/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+</div></p>
+<h2 id="user-content-vaddlevel_3">
+<a aria-hidden="true" class="anchor" href="#user-content-vaddlevel_3" id="user-content-vaddlevel_3" name="user-content-vaddlevel_3"><span aria-hidden="true" class="octicon octicon-link"></span></a>vAddLevel_3</h2>
+<p><div class="mermaid">
+graph LR
+Set2201_2(2201_2)-- set --&gt;vAddLevel_3[/vAddLevel_3/]
+</div></p>
+<h2 id="user-content-selectedmeeting">
+<a aria-hidden="true" class="anchor" href="#user-content-selectedmeeting" id="user-content-selectedmeeting" name="user-content-selectedmeeting"><span aria-hidden="true" class="octicon octicon-link"></span></a>SelectedMeeting</h2>
+<p><div class="mermaid">
+graph LR
+SetWelcomeScreen(WelcomeScreen)-- set --&gt;SelectedMeeting[/SelectedMeeting/]
+SelectedMeeting[/SelectedMeeting/]-. use .-&gt;UseWelcomeScreen(WelcomeScreen)
+SelectedMeeting[/SelectedMeeting/]-. use .-&gt;UseHomeScreen(HomeScreen)
+SelectedMeeting[/SelectedMeeting/]-. use .-&gt;UseEmailScreen(EmailScreen)
+SelectedMeeting[/SelectedMeeting/]-. use .-&gt;UseConfirmScreen(ConfirmScreen)
+SelectedMeeting[/SelectedMeeting/]-. use .-&gt;UseExportScreen(ExportScreen)
+SelectedMeeting[/SelectedMeeting/]-. use .-&gt;UseFollowUpScreen(FollowUpScreen)
+SelectedMeeting[/SelectedMeeting/]-. use .-&gt;UseHomePopUpsScreen(HomePopUpsScreen)
+SelectedMeeting[/SelectedMeeting/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+</div></p>
+<h2 id="user-content-followupend">
+<a aria-hidden="true" class="anchor" href="#user-content-followupend" id="user-content-followupend" name="user-content-followupend"><span aria-hidden="true" class="octicon octicon-link"></span></a>FollowUpEnd</h2>
+<p><div class="mermaid">
+graph LR
+SetFollowUpTimesScreen(FollowUpTimesScreen)-- set --&gt;FollowUpEnd[/FollowUpEnd/]
+FollowUpEnd[/FollowUpEnd/]-. use .-&gt;UseFollowUpTimesScreen(FollowUpTimesScreen)
+FollowUpEnd[/FollowUpEnd/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+</div></p>
+<h2 id="user-content-secondsremain">
+<a aria-hidden="true" class="anchor" href="#user-content-secondsremain" id="user-content-secondsremain" name="user-content-secondsremain"><span aria-hidden="true" class="octicon octicon-link"></span></a>SecondsRemain</h2>
+<p><div class="mermaid">
+graph LR
+SetHomeScreen(HomeScreen)-- set --&gt;SecondsRemain[/SecondsRemain/]
+SecondsRemain[/SecondsRemain/]-. use .-&gt;UseHomeScreen(HomeScreen)
+SecondsRemain[/SecondsRemain/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+</div></p>
+<h2 id="user-content-vshowfilter">
+<a aria-hidden="true" class="anchor" href="#user-content-vshowfilter" id="user-content-vshowfilter" name="user-content-vshowfilter"><span aria-hidden="true" class="octicon octicon-link"></span></a>vShowFilter</h2>
+<p><div class="mermaid">
+graph LR
+Set2201_2(2201_2)-- set --&gt;vShowFilter[/vShowFilter/]
+</div></p>
+<h1 id="user-content-global-collects">
+<a aria-hidden="true" class="anchor" href="#user-content-global-collects" id="user-content-global-collects" name="user-content-global-collects"><span aria-hidden="true" class="octicon octicon-link"></span></a>Global Collects</h1>
+<p>Usage of global collects is shown based on the screen(s) where this collect is set, used or cleared</p>
+<h2 id="user-content-plannerplans">
+<a aria-hidden="true" class="anchor" href="#user-content-plannerplans" id="user-content-plannerplans" name="user-content-plannerplans"><span aria-hidden="true" class="octicon octicon-link"></span></a>PlannerPlans</h2>
+<p><div class="mermaid">
+graph LR
+PlannerPlans[/PlannerPlans/]-. use .-&gt;UseExportScreen(ExportScreen)
+PlannerPlans[/PlannerPlans/]-. use .-&gt;UseExportPopUpsScreen(ExportPopUpsScreen)
+PlannerPlans[/PlannerPlans/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+PlannerPlans[/PlannerPlans/]-. clear .-&gt;ClearExportScreen(ExportScreen)
+</div></p>
+<h2 id="user-content-colmodelrow">
+<a aria-hidden="true" class="anchor" href="#user-content-colmodelrow" id="user-content-colmodelrow" name="user-content-colmodelrow"><span aria-hidden="true" class="octicon octicon-link"></span></a>colModelRow</h2>
+<p><div class="mermaid">
+graph LR
+colModelRow[/colModelRow/]-. use .-&gt;Use2201_2(2201_2)
+colModelRow[/colModelRow/]-. clear .-&gt;Clear2201_2(2201_2)
+</div></p>
+<h2 id="user-content-colflowresponse">
+<a aria-hidden="true" class="anchor" href="#user-content-colflowresponse" id="user-content-colflowresponse" name="user-content-colflowresponse"><span aria-hidden="true" class="octicon octicon-link"></span></a>colFlowResponse</h2>
+<p><div class="mermaid">
+graph LR
+colFlowResponse[/colFlowResponse/]-. use .-&gt;Use2201_2(2201_2)
+colFlowResponse[/colFlowResponse/]-. clear .-&gt;Clear2201_2(2201_2)
+</div></p>
+<h2 id="user-content-meetingattendees">
+<a aria-hidden="true" class="anchor" href="#user-content-meetingattendees" id="user-content-meetingattendees" name="user-content-meetingattendees"><span aria-hidden="true" class="octicon octicon-link"></span></a>MeetingAttendees</h2>
+<p><div class="mermaid">
+graph LR
+MeetingAttendees[/MeetingAttendees/]-. use .-&gt;UseWelcomeScreen(WelcomeScreen)
+MeetingAttendees[/MeetingAttendees/]-. use .-&gt;UseHomeScreen(HomeScreen)
+MeetingAttendees[/MeetingAttendees/]-. use .-&gt;UseConfirmScreen(ConfirmScreen)
+MeetingAttendees[/MeetingAttendees/]-. use .-&gt;UseFollowUpScreen(FollowUpScreen)
+MeetingAttendees[/MeetingAttendees/]-. use .-&gt;UseFollowUpTimesScreen(FollowUpTimesScreen)
+MeetingAttendees[/MeetingAttendees/]-. use .-&gt;UseHomePopUpsScreen(HomePopUpsScreen)
+MeetingAttendees[/MeetingAttendees/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+MeetingAttendees[/MeetingAttendees/]-. clear .-&gt;ClearHomePopUpsScreen(HomePopUpsScreen)
+</div></p>
+<h2 id="user-content-colpldistribution">
+<a aria-hidden="true" class="anchor" href="#user-content-colpldistribution" id="user-content-colpldistribution" name="user-content-colpldistribution"><span aria-hidden="true" class="octicon octicon-link"></span></a>colPlDistribution</h2>
+<p><div class="mermaid">
+graph LR
+colPlDistribution[/colPlDistribution/]-. clear .-&gt;Clear2201_2(2201_2)
+</div></p>
+<h2 id="user-content-tempri_question">
+<a aria-hidden="true" class="anchor" href="#user-content-tempri_question" id="user-content-tempri_question" name="user-content-tempri_question"><span aria-hidden="true" class="octicon octicon-link"></span></a>TempRi_Question</h2>
+<p><div class="mermaid">
+graph LR
+TempRi_Question[/TempRi_Question/]-. use .-&gt;Use2201_2(2201_2)
+TempRi_Question[/TempRi_Question/]-. clear .-&gt;Clear2201_2(2201_2)
+</div></p>
+<h2 id="user-content-coladrolle">
+<a aria-hidden="true" class="anchor" href="#user-content-coladrolle" id="user-content-coladrolle" name="user-content-coladrolle"><span aria-hidden="true" class="octicon octicon-link"></span></a>colAdRolle</h2>
+<p><div class="mermaid">
+graph LR
+colAdRolle[/colAdRolle/]-. clear .-&gt;Clear2201_2(2201_2)
+</div></p>
+<h2 id="user-content-colallocation">
+<a aria-hidden="true" class="anchor" href="#user-content-colallocation" id="user-content-colallocation" name="user-content-colallocation"><span aria-hidden="true" class="octicon octicon-link"></span></a>colAllocation</h2>
+<p><div class="mermaid">
+graph LR
+colAllocation[/colAllocation/]-. clear .-&gt;Clear2201_2(2201_2)
+</div></p>
+<h2 id="user-content-tempau_level_3">
+<a aria-hidden="true" class="anchor" href="#user-content-tempau_level_3" id="user-content-tempau_level_3" name="user-content-tempau_level_3"><span aria-hidden="true" class="octicon octicon-link"></span></a>TempAu_Level_3</h2>
+<p><div class="mermaid">
+graph LR
+TempAu_Level_3[/TempAu_Level_3/]-. clear .-&gt;Clear2201_2(2201_2)
+</div></p>
+<h2 id="user-content-colpldistributioncurrent">
+<a aria-hidden="true" class="anchor" href="#user-content-colpldistributioncurrent" id="user-content-colpldistributioncurrent" name="user-content-colpldistributioncurrent"><span aria-hidden="true" class="octicon octicon-link"></span></a>colPlDistributionCurrent</h2>
+<p><div class="mermaid">
+graph LR
+colPlDistributionCurrent[/colPlDistributionCurrent/]-. clear .-&gt;Clear2201_2(2201_2)
+</div></p>
+<h2 id="user-content-indexes">
+<a aria-hidden="true" class="anchor" href="#user-content-indexes" id="user-content-indexes" name="user-content-indexes"><span aria-hidden="true" class="octicon octicon-link"></span></a>Indexes</h2>
+<p><div class="mermaid">
+graph LR
+CollectConfirmScreen(ConfirmScreen)-- collect --&gt;Indexes[/Indexes/]
+Indexes[/Indexes/]-. use .-&gt;UseConfirmScreen(ConfirmScreen)
+Indexes[/Indexes/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+</div></p>
+<h2 id="user-content-followupmeetingattendees">
+<a aria-hidden="true" class="anchor" href="#user-content-followupmeetingattendees" id="user-content-followupmeetingattendees" name="user-content-followupmeetingattendees"><span aria-hidden="true" class="octicon octicon-link"></span></a>FollowUpMeetingAttendees</h2>
+<p><div class="mermaid">
+graph LR
+CollectFollowUpScreen(FollowUpScreen)-- collect --&gt;FollowUpMeetingAttendees[/FollowUpMeetingAttendees/]
+FollowUpMeetingAttendees[/FollowUpMeetingAttendees/]-. use .-&gt;UseWelcomeScreen(WelcomeScreen)
+FollowUpMeetingAttendees[/FollowUpMeetingAttendees/]-. use .-&gt;UseFollowUpScreen(FollowUpScreen)
+FollowUpMeetingAttendees[/FollowUpMeetingAttendees/]-. use .-&gt;UseFollowUpTimesScreen(FollowUpTimesScreen)
+FollowUpMeetingAttendees[/FollowUpMeetingAttendees/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+FollowUpMeetingAttendees[/FollowUpMeetingAttendees/]-. clear .-&gt;ClearFollowUpScreen(FollowUpScreen)
+</div></p>
+<h2 id="user-content-temprisk">
+<a aria-hidden="true" class="anchor" href="#user-content-temprisk" id="user-content-temprisk" name="user-content-temprisk"><span aria-hidden="true" class="octicon octicon-link"></span></a>TempRisk</h2>
+<p><div class="mermaid">
+graph LR
+TempRisk[/TempRisk/]-. use .-&gt;Use2201_2(2201_2)
+TempRisk[/TempRisk/]-. clear .-&gt;Clear2201_2(2201_2)
+</div></p>
+<h2 id="user-content-plannerbuckets">
+<a aria-hidden="true" class="anchor" href="#user-content-plannerbuckets" id="user-content-plannerbuckets" name="user-content-plannerbuckets"><span aria-hidden="true" class="octicon octicon-link"></span></a>PlannerBuckets</h2>
+<p><div class="mermaid">
+graph LR
+PlannerBuckets[/PlannerBuckets/]-. use .-&gt;UseExportPopUpsScreen(ExportPopUpsScreen)
+PlannerBuckets[/PlannerBuckets/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+PlannerBuckets[/PlannerBuckets/]-. clear .-&gt;ClearExportScreen(ExportScreen)
+PlannerBuckets[/PlannerBuckets/]-. clear .-&gt;ClearExportPopUpsScreen(ExportPopUpsScreen)
+</div></p>
+<h2 id="user-content-tempau_level_4">
+<a aria-hidden="true" class="anchor" href="#user-content-tempau_level_4" id="user-content-tempau_level_4" name="user-content-tempau_level_4"><span aria-hidden="true" class="octicon octicon-link"></span></a>TempAu_Level_4</h2>
+<p><div class="mermaid">
+graph LR
+TempAu_Level_4[/TempAu_Level_4/]-. clear .-&gt;Clear2201_2(2201_2)
+</div></p>
+<h2 id="user-content-colquestionrow">
+<a aria-hidden="true" class="anchor" href="#user-content-colquestionrow" id="user-content-colquestionrow" name="user-content-colquestionrow"><span aria-hidden="true" class="octicon octicon-link"></span></a>colQuestionRow</h2>
+<p><div class="mermaid">
+graph LR
+colQuestionRow[/colQuestionRow/]-. use .-&gt;Use2201_2(2201_2)
+colQuestionRow[/colQuestionRow/]-. clear .-&gt;Clear2201_2(2201_2)
+</div></p>
+<h2 id="user-content-tempview_plan">
+<a aria-hidden="true" class="anchor" href="#user-content-tempview_plan" id="user-content-tempview_plan" name="user-content-tempview_plan"><span aria-hidden="true" class="octicon octicon-link"></span></a>TempView_Plan</h2>
+<p><div class="mermaid">
+graph LR
+TempView_Plan[/TempView_Plan/]-. use .-&gt;Use2201_2(2201_2)
+TempView_Plan[/TempView_Plan/]-. clear .-&gt;Clear2201_2(2201_2)
+</div></p>
+<h2 id="user-content-temppl_allocation">
+<a aria-hidden="true" class="anchor" href="#user-content-temppl_allocation" id="user-content-temppl_allocation" name="user-content-temppl_allocation"><span aria-hidden="true" class="octicon octicon-link"></span></a>TempPl_Allocation</h2>
+<p><div class="mermaid">
+graph LR
+TempPl_Allocation[/TempPl_Allocation/]-. use .-&gt;Use2201_2(2201_2)
+TempPl_Allocation[/TempPl_Allocation/]-. clear .-&gt;Clear2201_2(2201_2)
+</div></p>
+<h2 id="user-content-onenotebooks">
+<a aria-hidden="true" class="anchor" href="#user-content-onenotebooks" id="user-content-onenotebooks" name="user-content-onenotebooks"><span aria-hidden="true" class="octicon octicon-link"></span></a>OneNoteBooks</h2>
+<p><div class="mermaid">
+graph LR
+OneNoteBooks[/OneNoteBooks/]-. use .-&gt;UseExportScreen(ExportScreen)
+OneNoteBooks[/OneNoteBooks/]-. use .-&gt;UseExportPopUpsScreen(ExportPopUpsScreen)
+OneNoteBooks[/OneNoteBooks/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+OneNoteBooks[/OneNoteBooks/]-. clear .-&gt;ClearExportScreen(ExportScreen)
+</div></p>
+<h2 id="user-content-meetingtimes">
+<a aria-hidden="true" class="anchor" href="#user-content-meetingtimes" id="user-content-meetingtimes" name="user-content-meetingtimes"><span aria-hidden="true" class="octicon octicon-link"></span></a>MeetingTimes</h2>
+<p><div class="mermaid">
+graph LR
+MeetingTimes[/MeetingTimes/]-. use .-&gt;UseWelcomeScreen(WelcomeScreen)
+MeetingTimes[/MeetingTimes/]-. use .-&gt;UseFollowUpTimesScreen(FollowUpTimesScreen)
+MeetingTimes[/MeetingTimes/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+MeetingTimes[/MeetingTimes/]-. clear .-&gt;ClearFollowUpTimesScreen(FollowUpTimesScreen)
+</div></p>
+<h2 id="user-content-tasks">
+<a aria-hidden="true" class="anchor" href="#user-content-tasks" id="user-content-tasks" name="user-content-tasks"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tasks</h2>
+<p><div class="mermaid">
+graph LR
+CollectHomePopUpsScreen(HomePopUpsScreen)-- collect --&gt;Tasks[/Tasks/]
+Tasks[/Tasks/]-. use .-&gt;Use2201_2(2201_2)
+Tasks[/Tasks/]-. use .-&gt;UseWelcomeScreen(WelcomeScreen)
+Tasks[/Tasks/]-. use .-&gt;UseHomeScreen(HomeScreen)
+Tasks[/Tasks/]-. use .-&gt;UseConfirmScreen(ConfirmScreen)
+Tasks[/Tasks/]-. use .-&gt;UseExportScreen(ExportScreen)
+Tasks[/Tasks/]-. use .-&gt;UseHomePopUpsScreen(HomePopUpsScreen)
+Tasks[/Tasks/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+</div></p>
+<h2 id="user-content-meetingattendeeemails">
+<a aria-hidden="true" class="anchor" href="#user-content-meetingattendeeemails" id="user-content-meetingattendeeemails" name="user-content-meetingattendeeemails"><span aria-hidden="true" class="octicon octicon-link"></span></a>MeetingAttendeeEmails</h2>
+<p><div class="mermaid">
+graph LR
+MeetingAttendeeEmails[/MeetingAttendeeEmails/]-. use .-&gt;UseHomePopUpsScreen(HomePopUpsScreen)
+MeetingAttendeeEmails[/MeetingAttendeeEmails/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+MeetingAttendeeEmails[/MeetingAttendeeEmails/]-. clear .-&gt;ClearHomePopUpsScreen(HomePopUpsScreen)
+</div></p>
+<h2 id="user-content-meetingattendeestemp">
+<a aria-hidden="true" class="anchor" href="#user-content-meetingattendeestemp" id="user-content-meetingattendeestemp" name="user-content-meetingattendeestemp"><span aria-hidden="true" class="octicon octicon-link"></span></a>MeetingAttendeesTemp</h2>
+<p><div class="mermaid">
+graph LR
+MeetingAttendeesTemp[/MeetingAttendeesTemp/]-. use .-&gt;UseHomePopUpsScreen(HomePopUpsScreen)
+MeetingAttendeesTemp[/MeetingAttendeesTemp/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+MeetingAttendeesTemp[/MeetingAttendeesTemp/]-. clear .-&gt;ClearHomePopUpsScreen(HomePopUpsScreen)
+</div></p>
+<h2 id="user-content-emailattachments">
+<a aria-hidden="true" class="anchor" href="#user-content-emailattachments" id="user-content-emailattachments" name="user-content-emailattachments"><span aria-hidden="true" class="octicon octicon-link"></span></a>EmailAttachments</h2>
+<p><div class="mermaid">
+graph LR
+CollectConfirmScreen(ConfirmScreen)-- collect --&gt;EmailAttachments[/EmailAttachments/]
+EmailAttachments[/EmailAttachments/]-. use .-&gt;UseWelcomeScreen(WelcomeScreen)
+EmailAttachments[/EmailAttachments/]-. use .-&gt;UseConfirmScreen(ConfirmScreen)
+EmailAttachments[/EmailAttachments/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+</div></p>
+<h2 id="user-content-coladtraegercurrent">
+<a aria-hidden="true" class="anchor" href="#user-content-coladtraegercurrent" id="user-content-coladtraegercurrent" name="user-content-coladtraegercurrent"><span aria-hidden="true" class="octicon octicon-link"></span></a>colAdTraegerCurrent</h2>
+<p><div class="mermaid">
+graph LR
+colAdTraegerCurrent[/colAdTraegerCurrent/]-. clear .-&gt;Clear2201_2(2201_2)
+</div></p>
+<h2 id="user-content-meetingdurations">
+<a aria-hidden="true" class="anchor" href="#user-content-meetingdurations" id="user-content-meetingdurations" name="user-content-meetingdurations"><span aria-hidden="true" class="octicon octicon-link"></span></a>MeetingDurations</h2>
+<p><div class="mermaid">
+graph LR
+MeetingDurations[/MeetingDurations/]-. use .-&gt;UseFollowUpTimesScreen(FollowUpTimesScreen)
+MeetingDurations[/MeetingDurations/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+MeetingDurations[/MeetingDurations/]-. clear .-&gt;ClearFollowUpTimesScreen(FollowUpTimesScreen)
+</div></p>
+<h2 id="user-content-emailrecipients">
+<a aria-hidden="true" class="anchor" href="#user-content-emailrecipients" id="user-content-emailrecipients" name="user-content-emailrecipients"><span aria-hidden="true" class="octicon octicon-link"></span></a>EmailRecipients</h2>
+<p><div class="mermaid">
+graph LR
+CollectExportScreen(ExportScreen)-- collect --&gt;EmailRecipients[/EmailRecipients/]
+EmailRecipients[/EmailRecipients/]-. use .-&gt;UseWelcomeScreen(WelcomeScreen)
+EmailRecipients[/EmailRecipients/]-. use .-&gt;UseEmailScreen(EmailScreen)
+EmailRecipients[/EmailRecipients/]-. use .-&gt;UseConfirmScreen(ConfirmScreen)
+EmailRecipients[/EmailRecipients/]-. use .-&gt;UseExportScreen(ExportScreen)
+EmailRecipients[/EmailRecipients/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+EmailRecipients[/EmailRecipients/]-. clear .-&gt;ClearHomeScreen(HomeScreen)
+EmailRecipients[/EmailRecipients/]-. clear .-&gt;ClearExportScreen(ExportScreen)
+</div></p>
+<h2 id="user-content-coldetailrow">
+<a aria-hidden="true" class="anchor" href="#user-content-coldetailrow" id="user-content-coldetailrow" name="user-content-coldetailrow"><span aria-hidden="true" class="octicon octicon-link"></span></a>colDetailRow</h2>
+<p><div class="mermaid">
+graph LR
+colDetailRow[/colDetailRow/]-. use .-&gt;Use2201_2(2201_2)
+colDetailRow[/colDetailRow/]-. clear .-&gt;Clear2201_2(2201_2)
+</div></p>
+<h2 id="user-content-coladassignment">
+<a aria-hidden="true" class="anchor" href="#user-content-coladassignment" id="user-content-coladassignment" name="user-content-coladassignment"><span aria-hidden="true" class="octicon octicon-link"></span></a>colAdAssignment</h2>
+<p><div class="mermaid">
+graph LR
+colAdAssignment[/colAdAssignment/]-. clear .-&gt;Clear2201_2(2201_2)
+</div></p>
+<h2 id="user-content-photos">
+<a aria-hidden="true" class="anchor" href="#user-content-photos" id="user-content-photos" name="user-content-photos"><span aria-hidden="true" class="octicon octicon-link"></span></a>Photos</h2>
+<p><div class="mermaid">
+graph LR
+CollectCameraScreen(CameraScreen)-- collect --&gt;Photos[/Photos/]
+Photos[/Photos/]-. use .-&gt;UseWelcomeScreen(WelcomeScreen)
+Photos[/Photos/]-. use .-&gt;UseHomeScreen(HomeScreen)
+Photos[/Photos/]-. use .-&gt;UseSketchScreen(Sketch Screen)
+Photos[/Photos/]-. use .-&gt;UseCameraScreen(CameraScreen)
+Photos[/Photos/]-. use .-&gt;UseAttachmentsScreen(AttachmentsScreen)
+Photos[/Photos/]-. use .-&gt;UseConfirmScreen(ConfirmScreen)
+Photos[/Photos/]-. use .-&gt;UseExportScreen(ExportScreen)
+Photos[/Photos/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+</div></p>
+<h2 id="user-content-sketches">
+<a aria-hidden="true" class="anchor" href="#user-content-sketches" id="user-content-sketches" name="user-content-sketches"><span aria-hidden="true" class="octicon octicon-link"></span></a>Sketches</h2>
+<p><div class="mermaid">
+graph LR
+CollectSketchScreen(Sketch Screen)-- collect --&gt;Sketches[/Sketches/]
+Sketches[/Sketches/]-. use .-&gt;UseWelcomeScreen(WelcomeScreen)
+Sketches[/Sketches/]-. use .-&gt;UseHomeScreen(HomeScreen)
+Sketches[/Sketches/]-. use .-&gt;UseAttachmentsScreen(AttachmentsScreen)
+Sketches[/Sketches/]-. use .-&gt;UseConfirmScreen(ConfirmScreen)
+Sketches[/Sketches/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+</div></p>
+<h2 id="user-content-temppl_goals">
+<a aria-hidden="true" class="anchor" href="#user-content-temppl_goals" id="user-content-temppl_goals" name="user-content-temppl_goals"><span aria-hidden="true" class="octicon octicon-link"></span></a>TempPl_Goals</h2>
+<p><div class="mermaid">
+graph LR
+TempPl_Goals[/TempPl_Goals/]-. use .-&gt;Use2201_2(2201_2)
+TempPl_Goals[/TempPl_Goals/]-. clear .-&gt;Clear2201_2(2201_2)
+</div></p>
+<h2 id="user-content-colquestionsadd">
+<a aria-hidden="true" class="anchor" href="#user-content-colquestionsadd" id="user-content-colquestionsadd" name="user-content-colquestionsadd"><span aria-hidden="true" class="octicon octicon-link"></span></a>colQuestionsAdd</h2>
+<p><div class="mermaid">
+graph LR
+colQuestionsAdd[/colQuestionsAdd/]-. use .-&gt;Use2201_2(2201_2)
+colQuestionsAdd[/colQuestionsAdd/]-. clear .-&gt;Clear2201_2(2201_2)
+</div></p>
+<h2 id="user-content-templates">
+<a aria-hidden="true" class="anchor" href="#user-content-templates" id="user-content-templates" name="user-content-templates"><span aria-hidden="true" class="octicon octicon-link"></span></a>Templates</h2>
+<p><div class="mermaid">
+graph LR
+Templates[/Templates/]-. use .-&gt;UseConfirmScreen(ConfirmScreen)
+Templates[/Templates/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+Templates[/Templates/]-. clear .-&gt;ClearWelcomeScreen(WelcomeScreen)
+</div></p>
+<h2 id="user-content-updatetable2201augoals">
+<a aria-hidden="true" class="anchor" href="#user-content-updatetable2201augoals" id="user-content-updatetable2201augoals" name="user-content-updatetable2201augoals"><span aria-hidden="true" class="octicon octicon-link"></span></a>updateTable2201auGoals</h2>
+<p><div class="mermaid">
+graph LR
+updateTable2201auGoals[/updateTable2201auGoals/]-. use .-&gt;Use2201_2(2201_2)
+updateTable2201auGoals[/updateTable2201auGoals/]-. clear .-&gt;Clear2201_2(2201_2)
+</div></p>
+<h2 id="user-content-hourslist">
+<a aria-hidden="true" class="anchor" href="#user-content-hourslist" id="user-content-hourslist" name="user-content-hourslist"><span aria-hidden="true" class="octicon octicon-link"></span></a>HoursList</h2>
+<p><div class="mermaid">
+graph LR
+HoursList[/HoursList/]-. use .-&gt;UseFollowUpTimesScreen(FollowUpTimesScreen)
+HoursList[/HoursList/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+HoursList[/HoursList/]-. clear .-&gt;ClearFollowUpTimesScreen(FollowUpTimesScreen)
+</div></p>
+<h2 id="user-content-templatedata">
+<a aria-hidden="true" class="anchor" href="#user-content-templatedata" id="user-content-templatedata" name="user-content-templatedata"><span aria-hidden="true" class="octicon octicon-link"></span></a>TemplateData</h2>
+<p><div class="mermaid">
+graph LR
+TemplateData[/TemplateData/]-. use .-&gt;UseConfirmScreen(ConfirmScreen)
+TemplateData[/TemplateData/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+TemplateData[/TemplateData/]-. clear .-&gt;ClearConfirmScreen(ConfirmScreen)
+</div></p>
+<h2 id="user-content-colanswerrow">
+<a aria-hidden="true" class="anchor" href="#user-content-colanswerrow" id="user-content-colanswerrow" name="user-content-colanswerrow"><span aria-hidden="true" class="octicon octicon-link"></span></a>colAnswerRow</h2>
+<p><div class="mermaid">
+graph LR
+colAnswerRow[/colAnswerRow/]-. clear .-&gt;Clear2201_2(2201_2)
+</div></p>
+<h2 id="user-content-coladtraeger">
+<a aria-hidden="true" class="anchor" href="#user-content-coladtraeger" id="user-content-coladtraeger" name="user-content-coladtraeger"><span aria-hidden="true" class="octicon octicon-link"></span></a>colAdTraeger</h2>
+<p><div class="mermaid">
+graph LR
+colAdTraeger[/colAdTraeger/]-. use .-&gt;Use2201_2(2201_2)
+colAdTraeger[/colAdTraeger/]-. clear .-&gt;Clear2201_2(2201_2)
+</div></p>
+<h2 id="user-content-patchtable2011ridetail">
+<a aria-hidden="true" class="anchor" href="#user-content-patchtable2011ridetail" id="user-content-patchtable2011ridetail" name="user-content-patchtable2011ridetail"><span aria-hidden="true" class="octicon octicon-link"></span></a>patchTable2011riDetail</h2>
+<p><div class="mermaid">
+graph LR
+Collect2201_2(2201_2)-- collect --&gt;patchTable2011riDetail[/patchTable2011riDetail/]
+patchTable2011riDetail[/patchTable2011riDetail/]-. use .-&gt;Use2201_2(2201_2)
+</div></p>
+<h2 id="user-content-colplassignment">
+<a aria-hidden="true" class="anchor" href="#user-content-colplassignment" id="user-content-colplassignment" name="user-content-colplassignment"><span aria-hidden="true" class="octicon octicon-link"></span></a>colPlAssignment</h2>
+<p><div class="mermaid">
+graph LR
+colPlAssignment[/colPlAssignment/]-. use .-&gt;Use2201_2(2201_2)
+colPlAssignment[/colPlAssignment/]-. clear .-&gt;Clear2201_2(2201_2)
+</div></p>
+<h2 id="user-content-onenotesections">
+<a aria-hidden="true" class="anchor" href="#user-content-onenotesections" id="user-content-onenotesections" name="user-content-onenotesections"><span aria-hidden="true" class="octicon octicon-link"></span></a>OneNoteSections</h2>
+<p><div class="mermaid">
+graph LR
+OneNoteSections[/OneNoteSections/]-. use .-&gt;UseExportPopUpsScreen(ExportPopUpsScreen)
+OneNoteSections[/OneNoteSections/]-. use .-&gt;UseCollectionsAndVariables(CollectionsAndVariables)
+OneNoteSections[/OneNoteSections/]-. clear .-&gt;ClearExportScreen(ExportScreen)
+OneNoteSections[/OneNoteSections/]-. clear .-&gt;ClearExportPopUpsScreen(ExportPopUpsScreen)
+</div></p>
+<h1 id="user-content-global-flows">
+<a aria-hidden="true" class="anchor" href="#user-content-global-flows" id="user-content-global-flows" name="user-content-global-flows"><span aria-hidden="true" class="octicon octicon-link"></span></a>Global Flows</h1>
+<p>Usage of global flows is shown based on the screen(s) where this flows is executed.</p>
+<h2 id="user-content-wedit_sql_modriskassessment">
+<a aria-hidden="true" class="anchor" href="#user-content-wedit_sql_modriskassessment" id="user-content-wedit_sql_modriskassessment" name="user-content-wedit_sql_modriskassessment"><span aria-hidden="true" class="octicon octicon-link"></span></a>weDit_SQL_modRiskAssessment</h2>
+<p><div class="mermaid">
+graph LR
+weDit_SQL_modRiskAssessment[/weDit_SQL_modRiskAssessment/]-. executed_from .-&gt;executed_from2201_2(2201_2)
+</div></p>
+<h2 id="user-content-wedit_sql_runoperations">
+<a aria-hidden="true" class="anchor" href="#user-content-wedit_sql_runoperations" id="user-content-wedit_sql_runoperations" name="user-content-wedit_sql_runoperations"><span aria-hidden="true" class="octicon octicon-link"></span></a>weDit_SQL_runOperations</h2>
+<p><div class="mermaid">
+graph LR
+weDit_SQL_runOperations[/weDit_SQL_runOperations/]-. executed_from .-&gt;executed_from2201_2(2201_2)
+</div></p>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
