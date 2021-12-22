@@ -45,16 +45,6 @@ Once the application finished successfully the documentation file is created in 
 - mermaid graph looks wierd whe to many screens and is not displayed in github since github currently does not support mermaid
 - currently not tested with modell driven apps
 
-### Create html or pdf manually from pdf
-install vscode
-install vscode extension 'Markdown PDF'
-open *.md file
-Press F1 and choose Mardkdown PDF: Export (html) or Mardkdown PDF: Export (pdf)
-In config.yaml must be:
-```
-MermaidPrefix: "```mermaid"
-MermaidSuffix: "```"
-```
 
 ## Feature ideas
 If you would like to submit your idea, feel free to create an issue.
@@ -66,7 +56,7 @@ If you would like to submit your idea, feel free to create an issue.
 - output
   - user ~~and technical~~ documentation
   - ~~markdown~~
-  - html
+  - ~~html~~
   - pdf
 - handle following formats:
   - zip

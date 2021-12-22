@@ -2,6 +2,7 @@ import os
 import re
 from mdutils.mdutils import MdUtils
 from powerapps_docstring.parser import Parser
+import gh_md_to_html
 
 # https://mdutils.readthedocs.io/en/latest/examples/Example_Python.html
 
@@ -582,4 +583,35 @@ class Docstring():
         self.md_file.new_table_of_contents(table_title='Contents', depth=2)
         self.md_file.create_md_file()
 
-        return output_file + ".md"
+        documentation_output_path = output_file + ".md"
+
+        print(f"Start HTML Documentation creating")
+        html_path = documentation_output_path + '.html'
+        html = gh_md_to_html.main(documentation_output_path)
+        
+        with open(html_path, "w") as html_file:
+            html_file.write(html)
+        html_file.close
+
+        with open(html_path) as fin:
+            html_lines = fin.readlines()
+        fin.close
+
+        new_lines = [r'<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>']
+        new_lines.append(r'<script>mermaid.initialize({ startOnLoad: true });</script>')
+
+        for line in html_lines:
+            if ':::' or '<br/>' in line:
+                line = (line.replace('<br/>', ''))
+                line = (line.replace(':::mermaid', '<div class="mermaid">'))
+                line = (line.replace(':::', '</div>'))
+                new_lines.append(line)
+            else:
+                new_lines.append(line)
+
+        fout = open(documentation_output_path + '.html', "w")
+        fout.writelines(new_lines)
+        fout.close()
+        print(f"HTML Documentation created successfully: {html_path}")
+
+        return documentation_output_path

@@ -16,5 +16,5 @@ steps:
 - task: PythonScript@0
   inputs:
     scriptSource: 'filePath'
-    scriptPath: 'debug.py'
+    scriptPath: 'run.py'
 
