@@ -1,5 +1,5 @@
 [x] html generieren per Code
-[ ] generierter html per azure pipeline in repo pushen 
+[ ] generierter html per azure pipeline in repo pushen ...
 
 [ ] In csv Datei steht Name der "Tabelle"
 Der Inhalt dieser Zeile soll dann in einer Datei ausgegeben werden. 
