@@ -18,6 +18,7 @@
         Reset('2201_AuType-17_2');
         //Set(vFilter,"Overview"); 
         Set(vIsEdit,false);Set(varShowSort,false)
+        Navigate(HomeScreen);Set(varID,Blank())
     OnVisible: |
         =//Warum kein Loading Spinner
         //Concurrent prüfen
