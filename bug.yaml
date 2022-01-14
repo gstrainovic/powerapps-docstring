@@ -1,0 +1,36 @@
+        NavHome3 As image:
+            Fill: =RGBA(44, 48, 52, 0)
+            FocusedBorderColor: =NavHome3.BorderColor
+            Height: =NavHome3.Width
+            HoverBorderColor: =ColorFade(NavHome3.BorderColor, 20%)
+            HoverFill: =ColorFade(HomeMenuBkg_3.Fill, 20%)
+            Image: ='nav-notes'
+            ImagePosition: =ImagePosition.Center
+            OnSelect: =Navigate('1000');Set(varTest,true)
+            PressedBorderColor: =ColorFade(NavHome3.BorderColor, -20%)
+            PressedFill: =ColorFade(NavHome3.Fill, -20%)
+            Width: =HomeMenuBkg_3.Width
+            Y: =66
+            ZIndex: =4
+
+Im CameraScreen
+
+# Screens
+  
+:::mermaid  
+graph LR  
+WelcomeScreen(WelcomeScreen) --> HomePopUpsScreen(HomePopUpsScreen)  
+HomeScreen(HomeScreen) --> SketchScreen(Sketch Screen)  
+HomeScreen(HomeScreen) --> CameraScreen(CameraScreen)  
+HomeScreen(HomeScreen) --> EmailScreen(EmailScreen)  
+HomeScreen(HomeScreen) --> AttachmentsScreen(AttachmentsScreen)  
+HomeScreen(HomeScreen) --> ExportScreen(ExportScreen)  
+HomeScreen(HomeScreen) --> HomePopUpsScreen(HomePopUpsScreen)  
+SketchScreen(Sketch Screen) --> HomeScreen(HomeScreen)  
+SketchScreen(Sketch Screen) --> CameraScreen(CameraScreen)  
+CameraScreen(CameraScreen) --> 1000;Set(varTest(1000;Set(varTest)  
+CameraScreen(CameraScreen) --> SketchScreen(Sketch Screen)  
+EmailScreen(EmailScreen) --> ConfirmScreen(ConfirmScreen)  
+ConfirmScreen(ConfirmScreen) --> HomeScreen(HomeScreen)  
+ConfirmScreen(ConfirmScreen) --> FollowUpScreen(FollowUpScreen)  
+ConfirmScreen(ConfirmScreen) --> WelcomeScreen(WelcomeScreen)  

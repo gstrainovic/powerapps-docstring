@@ -9,7 +9,6 @@ Contents
 	* [OnStart](#onstart)
 * [Connections](#connections)
 * [Screens](#screens)
-	* [2201_2](#2201_2)
 	* [WelcomeScreen](#welcomescreen)
 	* [HomeScreen](#homescreen)
 	* [Sketch Screen](#sketch-screen)
@@ -25,110 +24,61 @@ Contents
 	* [CollectionsAndVariables](#collectionsandvariables)
 	* [TestEmptyScreen](#testemptyscreen)
 * [Global Variables](#global-variables)
-	* [vGUID208](#vguid208)
-	* [varID](#varid)
-	* [vShowFilter](#vshowfilter)
-	* [ExportConfirmed](#exportconfirmed)
-	* [ShowPlanner](#showplanner)
-	* [varShowSort](#varshowsort)
-	* [myedit](#myedit)
-	* [IsLoading](#isloading)
-	* [varGUID216](#varguid216)
-	* [vFilter](#vfilter)
-	* [SelectedTask](#selectedtask)
-	* [Loading](#loading)
-	* [FollowUpConfirmed](#followupconfirmed)
-	* [vAddLevel_3](#vaddlevel_3)
-	* [UserSelectedFromTasks](#userselectedfromtasks)
-	* [SelectedSection](#selectedsection)
-	* [EmailConfirmed](#emailconfirmed)
-	* [varLoadingPopup](#varloadingpopup)
-	* [vGUID221](#vguid221)
-	* [SelectedMeeting](#selectedmeeting)
-	* [UserSelected](#userselected)
-	* [vIsEdit](#visedit)
-	* [SelectedUserTasks](#selectedusertasks)
-	* [varAddMemo](#varaddmemo)
-	* [ShowMeetingTimes](#showmeetingtimes)
-	* [ShowOverlay](#showoverlay)
-	* [ShowSketchSaved](#showsketchsaved)
-	* [varAddGoal](#varaddgoal)
-	* [AutoSelectMeeting](#autoselectmeeting)
-	* [vContinue](#vcontinue)
-	* [MultiRecipients](#multirecipients)
-	* [FollowUpStart](#followupstart)
-	* [SketchNumber](#sketchnumber)
-	* [PhotoNumber](#photonumber)
-	* [SelectedMeetingDuration](#selectedmeetingduration)
-	* [SecondsRemain](#secondsremain)
-	* [vAddLevel_2](#vaddlevel_2)
-	* [ProgressBarPosition](#progressbarposition)
-	* [FollowUpEnd](#followupend)
-	* [varDuplicatePopup](#varduplicatepopup)
 	* [SelectedImage](#selectedimage)
+	* [FollowUpEnd](#followupend)
+	* [SelectedPlan](#selectedplan)
+	* [EmailConfirmed](#emailconfirmed)
+	* [SecondsRemain](#secondsremain)
+	* [UserSelected](#userselected)
+	* [ShowOverlay](#showoverlay)
 	* [SelectedUser](#selecteduser)
-	* [AttachmentDeleteConfirm](#attachmentdeleteconfirm)
 	* [ShowOneNote](#showonenote)
+	* [Loading](#loading)
+	* [ExportConfirmed](#exportconfirmed)
+	* [SelectedTask](#selectedtask)
+	* [UserSelectedFromTasks](#userselectedfromtasks)
 	* [SelectedNoteBook](#selectednotebook)
 	* [ShowDataLossWarning](#showdatalosswarning)
+	* [FollowUpConfirmed](#followupconfirmed)
+	* [SketchNumber](#sketchnumber)
+	* [ShowPlanner](#showplanner)
+	* [FollowUpStart](#followupstart)
 	* [ShowTakenImage](#showtakenimage)
-	* [varSelectedPL](#varselectedpl)
-	* [SelectedPlan](#selectedplan)
-	* [V_ShowConfirm](#v_showconfirm)
-	* [vAddLevel_1](#vaddlevel_1)
-	* [TaskSelected](#taskselected)
-	* [varGUID211](#varguid211)
-	* [SelectedBucket](#selectedbucket)
-	* [varGUID208](#varguid208)
-	* [varReviewTeam](#varreviewteam)
 	* [ShowImageSaved](#showimagesaved)
-	* [ varLoadingPopup](#-varloadingpopup)
+	* [AttachmentDeleteConfirm](#attachmentdeleteconfirm)
+	* [ProgressBarPosition](#progressbarposition)
+	* [MultiRecipients](#multirecipients)
+	* [SelectedUserTasks](#selectedusertasks)
+	* [SelectedMeeting](#selectedmeeting)
+	* [SelectedBucket](#selectedbucket)
+	* [ShowMeetingTimes](#showmeetingtimes)
+	* [ShowSketchSaved](#showsketchsaved)
+	* [TaskSelected](#taskselected)
+	* [PhotoNumber](#photonumber)
+	* [SelectedSection](#selectedsection)
+	* [AutoSelectMeeting](#autoselectmeeting)
+	* [SelectedMeetingDuration](#selectedmeetingduration)
 * [Global Collects](#global-collects)
-	* [updateTable2201auGoals](#updatetable2201augoals)
-	* [MeetingAttendeesTemp](#meetingattendeestemp)
-	* [PlannerPlans](#plannerplans)
-	* [FollowUpMeetingAttendees](#followupmeetingattendees)
-	* [Sketches](#sketches)
-	* [PlannerBuckets](#plannerbuckets)
-	* [EmailRecipients](#emailrecipients)
-	* [colAdTraegerCurrent](#coladtraegercurrent)
+	* [Photos](#photos)
+	* [Indexes](#indexes)
 	* [MeetingAttendees](#meetingattendees)
 	* [MeetingTimes](#meetingtimes)
-	* [TempPl_Allocation](#temppl_allocation)
-	* [colAllocation](#colallocation)
-	* [OneNoteBooks](#onenotebooks)
-	* [MeetingDurations](#meetingdurations)
-	* [colFlowResponse](#colflowresponse)
-	* [colPlAssignment](#colplassignment)
-	* [TempView_Plan](#tempview_plan)
-	* [Photos](#photos)
-	* [colQuestionRow](#colquestionrow)
-	* [colQuestionsAdd](#colquestionsadd)
-	* [TemplateData](#templatedata)
-	* [colPlDistributionCurrent](#colpldistributioncurrent)
-	* [colModelRow](#colmodelrow)
-	* [TempRisk](#temprisk)
-	* [TempAu_Level_4](#tempau_level_4)
-	* [TempAu_Level_3](#tempau_level_3)
-	* [HoursList](#hourslist)
-	* [MeetingAttendeeEmails](#meetingattendeeemails)
-	* [colAdRolle](#coladrolle)
-	* [OneNoteSections](#onenotesections)
-	* [Indexes](#indexes)
-	* [colAnswerRow](#colanswerrow)
-	* [colPlDistribution](#colpldistribution)
 	* [EmailAttachments](#emailattachments)
-	* [TempPl_Goals](#temppl_goals)
-	* [colAdAssignment](#coladassignment)
+	* [TemplateData](#templatedata)
+	* [HoursList](#hourslist)
+	* [FollowUpMeetingAttendees](#followupmeetingattendees)
+	* [OneNoteBooks](#onenotebooks)
+	* [PlannerBuckets](#plannerbuckets)
+	* [MeetingAttendeeEmails](#meetingattendeeemails)
 	* [Templates](#templates)
-	* [colDetailRow](#coldetailrow)
+	* [PlannerPlans](#plannerplans)
 	* [Tasks](#tasks)
-	* [patchTable2011riDetail](#patchtable2011ridetail)
-	* [colAdTraeger](#coladtraeger)
-	* [TempRi_Question](#tempri_question)
+	* [Sketches](#sketches)
+	* [OneNoteSections](#onenotesections)
+	* [MeetingAttendeesTemp](#meetingattendeestemp)
+	* [EmailRecipients](#emailrecipients)
+	* [MeetingDurations](#meetingdurations)
 * [Global Flows](#global-flows)
-	* [weDit_SQL_runOperations](#wedit_sql_runoperations)
-	* [weDit_SQL_modRiskAssessment](#wedit_sql_modriskassessment)
   
   
 
@@ -215,221 +165,38 @@ With following datasources:
   
 :::mermaid  
 graph LR  
-WelcomeScreen(WelcomeScreen) --> HomePopUpsScreen(HomePopUpsScreen)  
 HomeScreen(HomeScreen) --> SketchScreen(Sketch Screen)  
 HomeScreen(HomeScreen) --> CameraScreen(CameraScreen)  
 HomeScreen(HomeScreen) --> EmailScreen(EmailScreen)  
 HomeScreen(HomeScreen) --> AttachmentsScreen(AttachmentsScreen)  
 HomeScreen(HomeScreen) --> ExportScreen(ExportScreen)  
-HomeScreen(HomeScreen) --> HomePopUpsScreen(HomePopUpsScreen)  
 SketchScreen(Sketch Screen) --> HomeScreen(HomeScreen)  
 SketchScreen(Sketch Screen) --> CameraScreen(CameraScreen)  
 CameraScreen(CameraScreen) --> HomeScreen(HomeScreen)  
 CameraScreen(CameraScreen) --> SketchScreen(Sketch Screen)  
-EmailScreen(EmailScreen) --> ConfirmScreen(ConfirmScreen)  
 ConfirmScreen(ConfirmScreen) --> HomeScreen(HomeScreen)  
 ConfirmScreen(ConfirmScreen) --> FollowUpScreen(FollowUpScreen)  
 ConfirmScreen(ConfirmScreen) --> WelcomeScreen(WelcomeScreen)  
 ExportScreen(ExportScreen) --> HomeScreen(HomeScreen)  
-ExportScreen(ExportScreen) --> ExportPopUpsScreen(ExportPopUpsScreen)  
 FollowUpScreen(FollowUpScreen) --> FollowUpTimesScreen(FollowUpTimesScreen)  
-FollowUpTimesScreen(FollowUpTimesScreen) --> ConfirmScreen(ConfirmScreen)  
 HomePopUpsScreen(HomePopUpsScreen) --> HomeScreen(HomeScreen)  
-ExportPopUpsScreen(ExportPopUpsScreen) --> ExportScreen(ExportScreen)  
-ExportPopUpsScreen(ExportPopUpsScreen) --> ConfirmScreen(ConfirmScreen)  
 :::
-## 2201_2
-  
----
-### Variables
-  
-Following variables have been created / or updated on this screen
-- [vGUID208](#vguid208)
-- [varID](#varid)
-- [vShowFilter](#vshowfilter)
-- [varShowSort](#varshowsort)
-- [myedit](#myedit)
-- [IsLoading](#isloading)
-- [varGUID216](#varguid216)
-- [vFilter](#vfilter)
-- [vAddLevel_3](#vaddlevel_3)
-- [varLoadingPopup](#varloadingpopup)
-- [vGUID221](#vguid221)
-- [vIsEdit](#visedit)
-- [varAddMemo](#varaddmemo)
-- [varAddGoal](#varaddgoal)
-- [vContinue](#vcontinue)
-- [vAddLevel_2](#vaddlevel_2)
-- [varDuplicatePopup](#varduplicatepopup)
-- [varSelectedPL](#varselectedpl)
-- [V_ShowConfirm](#v_showconfirm)
-- [vAddLevel_1](#vaddlevel_1)
-- [varGUID211](#varguid211)
-- [varGUID208](#varguid208)
-- [varReviewTeam](#varreviewteam)
-- [varLoadingPopup](#varloadingpopup)
-
-### Collects
-  
-Following collects have been created, updated or cleared on this screen
-- [updateTable2201auGoals](#updatetable2201augoals)
-- [colAdTraegerCurrent](#coladtraegercurrent)
-- [colFlowResponse](#colflowresponse)
-- [TempPl_Allocation](#temppl_allocation)
-- [TempPl_Allocation](#temppl_allocation)
-- [colAllocation](#colallocation)
-- [colFlowResponse](#colflowresponse)
-- [colPlAssignment](#colplassignment)
-- [colQuestionRow](#colquestionrow)
-- [colQuestionsAdd](#colquestionsadd)
-- [TempRi_Question](#tempri_question)
-- [colPlDistributionCurrent](#colpldistributioncurrent)
-- [colModelRow](#colmodelrow)
-- [TempAu_Level_3](#tempau_level_3)
-- [TempAu_Level_4](#tempau_level_4)
-- [colAdRolle](#coladrolle)
-- [TempView_Plan](#tempview_plan)
-- [colAnswerRow](#colanswerrow)
-- [colPlDistribution](#colpldistribution)
-- [TempPl_Goals](#temppl_goals)
-- [colAdAssignment](#coladassignment)
-- [patchTable2011riDetail](#patchtable2011ridetail)
-- [colDetailRow](#coldetailrow)
-- [TempPl_Goals](#temppl_goals)
-- [TempRisk](#temprisk)
-- [patchTable2011riDetail](#patchtable2011ridetail)
-- [colAdTraeger](#coladtraeger)
-
-### Flows
-  
-Following flows have used on this screen
-- [weDit_SQL_runOperations](#wedit_sql_runoperations)
-- [weDit_SQL_modRiskAssessment](#wedit_sql_modriskassessment)
-
-### '2201_2' As screen
-
-#### OnVisible
-
-
-```
-=//Warum kein Loading Spinner
-//Concurrent prüfen
-
-    Set(vContinue,false);
-    Set(V_ShowConfirm,false);
-    Set(vFilter,"Risk");
-
-    //Collection prüfen
-    Set(vAddLevel_1,false);
-    Set(vAddLevel_2,false);
-    Set(vAddLevel_3,false);
-
-    Set(varAddGoal,false);
-
-    //Dopplung der Collections prüfen
-    ClearCollect(TempAu_Level_3, 'au.level_3');
-    ClearCollect(TempAu_Level_4, 'au.level_4');
-
-    Set(vGUID208,GUID());
-    Set(vGUID221,GUID());
-    ClearCollect(
-        TempPl_Goals,
-        AddColumns(
-            Filter('pl.goals', fkey221 = varSelectedPL.ID221),
-            "Edit",""
-        )
-    );
-    ClearCollect(
-        TempRisk,
-        Filter('ri.detail', fkey208 = varSelectedPL.ID208)
-    );
-    ClearCollect(
-        TempRi_Question,
-        'ri.question'
-    );
-    ClearCollect(
-        TempPl_Allocation,
-        AddColumns(
-            Filter('pl.allocation', fkey221 = varSelectedPL.ID221),
-            "Edit","",
-            "Surname", LookUp('ad.contact', ID281 = fkey281, Surname)
-        )
-    );
-    Set(vShowFilter,false);
-    UpdateContext(
-        {
-            locSortColumn: "pl_c_goals",
-            locSortAscending: locSortColumn<>"pl_c_goals" Or !locSortAscending
-        }
-    )
-
-//End concurrent
-
-// Übernahme von ehemaligem Navigationsbutton 
-Set(varAddMemo,false);
-Clear(patchTable2011riDetail);
-Set(varGUID211,LookUp('ri.version',And(fkey206 = varSelectedPL.fkey206,active=true),ID211));
-Set(varGUID216,LookUp('ri.vDetail',And(active = true,fkey211 = varGUID211),fkey216));
-If(IsBlankOrError(LookUp('ri.vDetail',And(fkey208 = varSelectedPL.fkey208,fkey211 = varGUID211,fkey216 =varGUID216),ID213)),
-ClearCollect(colModelRow,Filter('ri.vModel',ID216 = varGUID216));
-ClearCollect(colQuestionsAdd,Distinct(colModelRow,ID218));
-ForAll(colQuestionsAdd,
-Collect(patchTable2011riDetail,
-Table({
-ID213 : GUID(),
-fkey208: varSelectedPL.fkey208,
-fkey211: varGUID211,
-fkey216: varGUID216,
-fkey218: colQuestionsAdd[@Result],
-fkey219: LookUp(colModelRow,ID218 = colQuestionsAdd[@Result],ID219),
-ri_base: 0,
-active: 1,
-tableName: "[ri].[detail]",
-fkey217: LookUp('ri.weight',And(fkey216 = varGUID216,fkey218 = colQuestionsAdd[@Result]),ID217),
-type: "POST",
-    UPN: User().Email})));
-ClearCollect(colFlowResponse,weDit_SQL_runOperations.Run(JSON(patchTable2011riDetail, JSONFormat.IndentFour)));
-Refresh('ri.vDetail');
-Set(vFilter,"Risk");
-ClearCollect(colDetailRow,Filter('ri.vDetail',And(fkey208 = varSelectedPL.fkey208,active = true)));
-ClearCollect(colModelRow,Filter('ri.vModel',ID216 in colDetailRow.fkey216));
-ClearCollect(colQuestionRow,AddColumns(Filter('ri.question',ID218 in colModelRow.ID218),"Edit",""));
-ClearCollect(colAnswerRow,Filter('ri.answer',ID219 in colModelRow.ID219)),
-Set(vFilter,"Risk");
-Refresh('ri.vDetail');
-ClearCollect(colDetailRow,Filter('ri.vDetail',And(fkey208 = varSelectedPL.fkey208,active = true)));
-ClearCollect(colModelRow,Filter('ri.vModel',ID216 in colDetailRow.fkey216));
-ClearCollect(colQuestionRow,AddColumns(Filter('ri.question',ID218 in colModelRow.ID218),"Edit",""));
-ClearCollect(colAnswerRow,Filter('ri.answer',ID219 in colModelRow.ID219)))
-
-```
-### '2201_Memo-18_2' As text
-
-### '2201_Risc-04_2' As gallery.variableTemplateHeightGallery
-
-#### Items
-
-
-```
-=Sort(colQuestionRow,rq_count)
-```
 ## WelcomeScreen
   
 ---  
 :::mermaid  
 graph LR  
-WelcomeScreen(WelcomeScreen) --> HomePopUpsScreen(HomePopUpsScreen)  
 ConfirmScreen(ConfirmScreen) --> WelcomeScreen(WelcomeScreen)  
 :::
 ### Variables
   
 Following variables have been created / or updated on this screen
-- [SelectedMeeting](#selectedmeeting)
-- [ExportConfirmed](#exportconfirmed)
 - [FollowUpConfirmed](#followupconfirmed)
-- [AutoSelectMeeting](#autoselectmeeting)
 - [EmailConfirmed](#emailconfirmed)
+- [ExportConfirmed](#exportconfirmed)
+- [AutoSelectMeeting](#autoselectmeeting)
 - [ShowDataLossWarning](#showdatalosswarning)
+- [SelectedMeeting](#selectedmeeting)
 
 ### Collects
   
@@ -507,7 +274,6 @@ HomeScreen(HomeScreen) --> CameraScreen(CameraScreen)
 HomeScreen(HomeScreen) --> EmailScreen(EmailScreen)  
 HomeScreen(HomeScreen) --> AttachmentsScreen(AttachmentsScreen)  
 HomeScreen(HomeScreen) --> ExportScreen(ExportScreen)  
-HomeScreen(HomeScreen) --> HomePopUpsScreen(HomePopUpsScreen)  
 SketchScreen(Sketch Screen) --> HomeScreen(HomeScreen)  
 CameraScreen(CameraScreen) --> HomeScreen(HomeScreen)  
 ConfirmScreen(ConfirmScreen) --> HomeScreen(HomeScreen)  
@@ -517,18 +283,18 @@ HomePopUpsScreen(HomePopUpsScreen) --> HomeScreen(HomeScreen)
 ### Variables
   
 Following variables have been created / or updated on this screen
-- [ExportConfirmed](#exportconfirmed)
-- [UserSelected](#userselected)
-- [SelectedUserTasks](#selectedusertasks)
-- [SecondsRemain](#secondsremain)
-- [TaskSelected](#taskselected)
-- [ShowOverlay](#showoverlay)
-- [ProgressBarPosition](#progressbarposition)
-- [SelectedTask](#selectedtask)
 - [FollowUpConfirmed](#followupconfirmed)
 - [MultiRecipients](#multirecipients)
-- [UserSelectedFromTasks](#userselectedfromtasks)
 - [EmailConfirmed](#emailconfirmed)
+- [ProgressBarPosition](#progressbarposition)
+- [TaskSelected](#taskselected)
+- [SecondsRemain](#secondsremain)
+- [ExportConfirmed](#exportconfirmed)
+- [SelectedTask](#selectedtask)
+- [UserSelectedFromTasks](#userselectedfromtasks)
+- [SelectedUserTasks](#selectedusertasks)
+- [UserSelected](#userselected)
+- [ShowOverlay](#showoverlay)
 
 ### Collects
   
@@ -714,8 +480,8 @@ CameraScreen(CameraScreen) --> SketchScreen(Sketch Screen)
 ### Variables
   
 Following variables have been created / or updated on this screen
-- [SketchNumber](#sketchnumber)
 - [ShowSketchSaved](#showsketchsaved)
+- [SketchNumber](#sketchnumber)
 
 ### Collects
   
@@ -859,7 +625,7 @@ Set(ShowTakenImage, false)
 
 
 ```
-=Navigate(HomeScreen, None)
+=Navigate(HomeScreen)//Navigiere zurück zum Homescreen.
 ```
 ### NavSketch3 As image
 
@@ -889,7 +655,6 @@ Set(ShowTakenImage, false)
 :::mermaid  
 graph LR  
 HomeScreen(HomeScreen) --> EmailScreen(EmailScreen)  
-EmailScreen(EmailScreen) --> ConfirmScreen(ConfirmScreen)  
 :::
 ### Variables
   
@@ -963,9 +728,9 @@ HomeScreen(HomeScreen) --> AttachmentsScreen(AttachmentsScreen)
 ### Variables
   
 Following variables have been created / or updated on this screen
-- [ShowOverlay](#showoverlay)
 - [AttachmentDeleteConfirm](#attachmentdeleteconfirm)
 - [SelectedImage](#selectedimage)
+- [ShowOverlay](#showoverlay)
 
 ### Collects
   
@@ -1079,12 +844,9 @@ RemoveIf(Photos, SelectedImage.Name = Name)
 ---  
 :::mermaid  
 graph LR  
-EmailScreen(EmailScreen) --> ConfirmScreen(ConfirmScreen)  
 ConfirmScreen(ConfirmScreen) --> HomeScreen(HomeScreen)  
 ConfirmScreen(ConfirmScreen) --> FollowUpScreen(FollowUpScreen)  
 ConfirmScreen(ConfirmScreen) --> WelcomeScreen(WelcomeScreen)  
-FollowUpTimesScreen(FollowUpTimesScreen) --> ConfirmScreen(ConfirmScreen)  
-ExportPopUpsScreen(ExportPopUpsScreen) --> ConfirmScreen(ConfirmScreen)  
 :::
 ### Variables
   
@@ -1095,8 +857,8 @@ Following variables have been created / or updated on this screen
   
 Following collects have been created, updated or cleared on this screen
 - [Indexes](#indexes)
-- [TemplateData](#templatedata)
 - [EmailAttachments](#emailattachments)
+- [TemplateData](#templatedata)
 
 ### Flows
   
@@ -1166,28 +928,26 @@ If(ExportConfirmed,
 graph LR  
 HomeScreen(HomeScreen) --> ExportScreen(ExportScreen)  
 ExportScreen(ExportScreen) --> HomeScreen(HomeScreen)  
-ExportScreen(ExportScreen) --> ExportPopUpsScreen(ExportPopUpsScreen)  
-ExportPopUpsScreen(ExportPopUpsScreen) --> ExportScreen(ExportScreen)  
 :::
 ### Variables
   
 Following variables have been created / or updated on this screen
 - [ShowOneNote](#showonenote)
-- [ShowPlanner](#showplanner)
-- [SelectedPlan](#selectedplan)
-- [ShowOverlay](#showoverlay)
 - [SelectedBucket](#selectedbucket)
-- [SelectedNoteBook](#selectednotebook)
+- [SelectedPlan](#selectedplan)
+- [ShowPlanner](#showplanner)
 - [SelectedSection](#selectedsection)
+- [SelectedNoteBook](#selectednotebook)
+- [ShowOverlay](#showoverlay)
 
 ### Collects
   
 Following collects have been created, updated or cleared on this screen
-- [PlannerPlans](#plannerplans)
 - [OneNoteBooks](#onenotebooks)
 - [PlannerBuckets](#plannerbuckets)
-- [OneNoteSections](#onenotesections)
 - [EmailRecipients](#emailrecipients)
+- [OneNoteSections](#onenotesections)
+- [PlannerPlans](#plannerplans)
 
 ### Flows
   
@@ -1437,22 +1197,21 @@ ClearCollect(FollowUpMeetingAttendees, MeetingAttendees)
 :::mermaid  
 graph LR  
 FollowUpScreen(FollowUpScreen) --> FollowUpTimesScreen(FollowUpTimesScreen)  
-FollowUpTimesScreen(FollowUpTimesScreen) --> ConfirmScreen(ConfirmScreen)  
 :::
 ### Variables
   
 Following variables have been created / or updated on this screen
-- [ShowMeetingTimes](#showmeetingtimes)
-- [FollowUpEnd](#followupend)
-- [Loading](#loading)
 - [FollowUpConfirmed](#followupconfirmed)
+- [FollowUpEnd](#followupend)
 - [FollowUpStart](#followupstart)
+- [ShowMeetingTimes](#showmeetingtimes)
+- [Loading](#loading)
 
 ### Collects
   
 Following collects have been created, updated or cleared on this screen
-- [MeetingDurations](#meetingdurations)
 - [HoursList](#hourslist)
+- [MeetingDurations](#meetingdurations)
 - [MeetingTimes](#meetingtimes)
 
 ### Flows
@@ -1546,29 +1305,27 @@ Set(Loading, false)
 ---  
 :::mermaid  
 graph LR  
-WelcomeScreen(WelcomeScreen) --> HomePopUpsScreen(HomePopUpsScreen)  
-HomeScreen(HomeScreen) --> HomePopUpsScreen(HomePopUpsScreen)  
 HomePopUpsScreen(HomePopUpsScreen) --> HomeScreen(HomeScreen)  
 :::
 ### Variables
   
 Following variables have been created / or updated on this screen
-- [UserSelected](#userselected)
-- [SelectedMeetingDuration](#selectedmeetingduration)
-- [TaskSelected](#taskselected)
-- [ShowOverlay](#showoverlay)
-- [Loading](#loading)
 - [SelectedUser](#selecteduser)
+- [Loading](#loading)
+- [TaskSelected](#taskselected)
 - [UserSelectedFromTasks](#userselectedfromtasks)
+- [SelectedMeetingDuration](#selectedmeetingduration)
 - [ShowDataLossWarning](#showdatalosswarning)
+- [UserSelected](#userselected)
+- [ShowOverlay](#showoverlay)
 
 ### Collects
   
 Following collects have been created, updated or cleared on this screen
-- [Tasks](#tasks)
 - [MeetingAttendeesTemp](#meetingattendeestemp)
-- [MeetingAttendeeEmails](#meetingattendeeemails)
 - [MeetingAttendees](#meetingattendees)
+- [Tasks](#tasks)
+- [MeetingAttendeeEmails](#meetingattendeeemails)
 
 ### Flows
   
@@ -1715,24 +1472,18 @@ Navigate(HomeScreen, None)
 ```
 ## ExportPopUpsScreen
   
----  
-:::mermaid  
-graph LR  
-ExportScreen(ExportScreen) --> ExportPopUpsScreen(ExportPopUpsScreen)  
-ExportPopUpsScreen(ExportPopUpsScreen) --> ExportScreen(ExportScreen)  
-ExportPopUpsScreen(ExportPopUpsScreen) --> ConfirmScreen(ConfirmScreen)  
-:::
+---
 ### Variables
   
 Following variables have been created / or updated on this screen
-- [SelectedNoteBook](#selectednotebook)
-- [ShowPlanner](#showplanner)
-- [ExportConfirmed](#exportconfirmed)
-- [SelectedPlan](#selectedplan)
-- [ShowOverlay](#showoverlay)
-- [SelectedBucket](#selectedbucket)
 - [ShowOneNote](#showonenote)
+- [SelectedBucket](#selectedbucket)
+- [ShowPlanner](#showplanner)
+- [SelectedPlan](#selectedplan)
+- [ExportConfirmed](#exportconfirmed)
 - [SelectedSection](#selectedsection)
+- [SelectedNoteBook](#selectednotebook)
+- [ShowOverlay](#showoverlay)
 
 ### Collects
   
@@ -1833,138 +1584,31 @@ Following flows have used on this screen
   
 Usage of global variables is shown based on the screen(s) where this variable is set and the screen(s) where it is used.
  
-## vGUID208
+## SelectedImage
   
 :::mermaid  
 graph LR  
-Set2201_2(2201_2)-- set -->vGUID208[/vGUID208/]  
+SetAttachmentsScreen(AttachmentsScreen)-- set -->SelectedImage[/SelectedImage/]  
+SelectedImage[/SelectedImage/]-. use .->UseAttachmentsScreen(AttachmentsScreen)  
+SelectedImage[/SelectedImage/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 :::
-## varID
+## FollowUpEnd
   
 :::mermaid  
 graph LR  
-Set2201_2(2201_2)-- set -->varID[/varID/]  
+SetFollowUpTimesScreen(FollowUpTimesScreen)-- set -->FollowUpEnd[/FollowUpEnd/]  
+FollowUpEnd[/FollowUpEnd/]-. use .->UseFollowUpTimesScreen(FollowUpTimesScreen)  
+FollowUpEnd[/FollowUpEnd/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 :::
-## vShowFilter
+## SelectedPlan
   
 :::mermaid  
 graph LR  
-Set2201_2(2201_2)-- set -->vShowFilter[/vShowFilter/]  
-:::
-## ExportConfirmed
-  
-:::mermaid  
-graph LR  
-SetWelcomeScreen(WelcomeScreen)-- set -->ExportConfirmed[/ExportConfirmed/]  
-SetHomeScreen(HomeScreen)-- set -->ExportConfirmed[/ExportConfirmed/]  
-SetFollowUpScreen(FollowUpScreen)-- set -->ExportConfirmed[/ExportConfirmed/]  
-SetExportPopUpsScreen(ExportPopUpsScreen)-- set -->ExportConfirmed[/ExportConfirmed/]  
-ExportConfirmed[/ExportConfirmed/]-. use .->UseConfirmScreen(ConfirmScreen)  
-ExportConfirmed[/ExportConfirmed/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## ShowPlanner
-  
-:::mermaid  
-graph LR  
-SetExportScreen(ExportScreen)-- set -->ShowPlanner[/ShowPlanner/]  
-SetExportPopUpsScreen(ExportPopUpsScreen)-- set -->ShowPlanner[/ShowPlanner/]  
-ShowPlanner[/ShowPlanner/]-. use .->UseExportScreen(ExportScreen)  
-ShowPlanner[/ShowPlanner/]-. use .->UseExportPopUpsScreen(ExportPopUpsScreen)  
-ShowPlanner[/ShowPlanner/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## varShowSort
-  
-:::mermaid  
-graph LR  
-Set2201_2(2201_2)-- set -->varShowSort[/varShowSort/]  
-:::
-## myedit
-  
-:::mermaid  
-graph LR  
-Set2201_2(2201_2)-- set -->myedit[/myedit/]  
-:::
-## IsLoading
-  
-:::mermaid  
-graph LR  
-Set2201_2(2201_2)-- set -->IsLoading[/IsLoading/]  
-:::
-## varGUID216
-  
-:::mermaid  
-graph LR  
-Set2201_2(2201_2)-- set -->varGUID216[/varGUID216/]  
-varGUID216[/varGUID216/]-. use .->Use2201_2(2201_2)  
-:::
-## vFilter
-  
-:::mermaid  
-graph LR  
-Set2201_2(2201_2)-- set -->vFilter[/vFilter/]  
-vFilter[/vFilter/]-. use .->Use2201_2(2201_2)  
-:::
-## SelectedTask
-  
-:::mermaid  
-graph LR  
-SetHomeScreen(HomeScreen)-- set -->SelectedTask[/SelectedTask/]  
-SelectedTask[/SelectedTask/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
-SelectedTask[/SelectedTask/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## Loading
-  
-:::mermaid  
-graph LR  
-SetConfirmScreen(ConfirmScreen)-- set -->Loading[/Loading/]  
-SetFollowUpTimesScreen(FollowUpTimesScreen)-- set -->Loading[/Loading/]  
-SetHomePopUpsScreen(HomePopUpsScreen)-- set -->Loading[/Loading/]  
-Loading[/Loading/]-. use .->Use2201_2(2201_2)  
-Loading[/Loading/]-. use .->UseWelcomeScreen(WelcomeScreen)  
-Loading[/Loading/]-. use .->UseHomeScreen(HomeScreen)  
-Loading[/Loading/]-. use .->UseEmailScreen(EmailScreen)  
-Loading[/Loading/]-. use .->UseAttachmentsScreen(AttachmentsScreen)  
-Loading[/Loading/]-. use .->UseConfirmScreen(ConfirmScreen)  
-Loading[/Loading/]-. use .->UseExportScreen(ExportScreen)  
-Loading[/Loading/]-. use .->UseFollowUpScreen(FollowUpScreen)  
-Loading[/Loading/]-. use .->UseFollowUpTimesScreen(FollowUpTimesScreen)  
-Loading[/Loading/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
-Loading[/Loading/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## FollowUpConfirmed
-  
-:::mermaid  
-graph LR  
-SetWelcomeScreen(WelcomeScreen)-- set -->FollowUpConfirmed[/FollowUpConfirmed/]  
-SetHomeScreen(HomeScreen)-- set -->FollowUpConfirmed[/FollowUpConfirmed/]  
-SetFollowUpTimesScreen(FollowUpTimesScreen)-- set -->FollowUpConfirmed[/FollowUpConfirmed/]  
-FollowUpConfirmed[/FollowUpConfirmed/]-. use .->UseConfirmScreen(ConfirmScreen)  
-FollowUpConfirmed[/FollowUpConfirmed/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## vAddLevel_3
-  
-:::mermaid  
-graph LR  
-Set2201_2(2201_2)-- set -->vAddLevel_3[/vAddLevel_3/]  
-:::
-## UserSelectedFromTasks
-  
-:::mermaid  
-graph LR  
-SetHomeScreen(HomeScreen)-- set -->UserSelectedFromTasks[/UserSelectedFromTasks/]  
-SetHomePopUpsScreen(HomePopUpsScreen)-- set -->UserSelectedFromTasks[/UserSelectedFromTasks/]  
-UserSelectedFromTasks[/UserSelectedFromTasks/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
-UserSelectedFromTasks[/UserSelectedFromTasks/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## SelectedSection
-  
-:::mermaid  
-graph LR  
-SetExportScreen(ExportScreen)-- set -->SelectedSection[/SelectedSection/]  
-SetExportPopUpsScreen(ExportPopUpsScreen)-- set -->SelectedSection[/SelectedSection/]  
-SelectedSection[/SelectedSection/]-. use .->UseConfirmScreen(ConfirmScreen)  
-SelectedSection[/SelectedSection/]-. use .->UseExportScreen(ExportScreen)  
-SelectedSection[/SelectedSection/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+SetExportScreen(ExportScreen)-- set -->SelectedPlan[/SelectedPlan/]  
+SetExportPopUpsScreen(ExportPopUpsScreen)-- set -->SelectedPlan[/SelectedPlan/]  
+SelectedPlan[/SelectedPlan/]-. use .->UseConfirmScreen(ConfirmScreen)  
+SelectedPlan[/SelectedPlan/]-. use .->UseExportScreen(ExportScreen)  
+SelectedPlan[/SelectedPlan/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 :::
 ## EmailConfirmed
   
@@ -1976,32 +1620,13 @@ SetEmailScreen(EmailScreen)-- set -->EmailConfirmed[/EmailConfirmed/]
 EmailConfirmed[/EmailConfirmed/]-. use .->UseConfirmScreen(ConfirmScreen)  
 EmailConfirmed[/EmailConfirmed/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 :::
-## varLoadingPopup
+## SecondsRemain
   
 :::mermaid  
 graph LR  
-Set2201_2(2201_2)-- set -->varLoadingPopup[/varLoadingPopup/]  
-varLoadingPopup[/varLoadingPopup/]-. use .->Use2201_2(2201_2)  
-:::
-## vGUID221
-  
-:::mermaid  
-graph LR  
-Set2201_2(2201_2)-- set -->vGUID221[/vGUID221/]  
-:::
-## SelectedMeeting
-  
-:::mermaid  
-graph LR  
-SetWelcomeScreen(WelcomeScreen)-- set -->SelectedMeeting[/SelectedMeeting/]  
-SelectedMeeting[/SelectedMeeting/]-. use .->UseWelcomeScreen(WelcomeScreen)  
-SelectedMeeting[/SelectedMeeting/]-. use .->UseHomeScreen(HomeScreen)  
-SelectedMeeting[/SelectedMeeting/]-. use .->UseEmailScreen(EmailScreen)  
-SelectedMeeting[/SelectedMeeting/]-. use .->UseConfirmScreen(ConfirmScreen)  
-SelectedMeeting[/SelectedMeeting/]-. use .->UseExportScreen(ExportScreen)  
-SelectedMeeting[/SelectedMeeting/]-. use .->UseFollowUpScreen(FollowUpScreen)  
-SelectedMeeting[/SelectedMeeting/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
-SelectedMeeting[/SelectedMeeting/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+SetHomeScreen(HomeScreen)-- set -->SecondsRemain[/SecondsRemain/]  
+SecondsRemain[/SecondsRemain/]-. use .->UseHomeScreen(HomeScreen)  
+SecondsRemain[/SecondsRemain/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 :::
 ## UserSelected
   
@@ -2011,36 +1636,6 @@ SetHomeScreen(HomeScreen)-- set -->UserSelected[/UserSelected/]
 SetHomePopUpsScreen(HomePopUpsScreen)-- set -->UserSelected[/UserSelected/]  
 UserSelected[/UserSelected/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
 UserSelected[/UserSelected/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## vIsEdit
-  
-:::mermaid  
-graph LR  
-Set2201_2(2201_2)-- set -->vIsEdit[/vIsEdit/]  
-vIsEdit[/vIsEdit/]-. use .->Use2201_2(2201_2)  
-:::
-## SelectedUserTasks
-  
-:::mermaid  
-graph LR  
-SetHomeScreen(HomeScreen)-- set -->SelectedUserTasks[/SelectedUserTasks/]  
-SelectedUserTasks[/SelectedUserTasks/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
-SelectedUserTasks[/SelectedUserTasks/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## varAddMemo
-  
-:::mermaid  
-graph LR  
-Set2201_2(2201_2)-- set -->varAddMemo[/varAddMemo/]  
-varAddMemo[/varAddMemo/]-. use .->Use2201_2(2201_2)  
-:::
-## ShowMeetingTimes
-  
-:::mermaid  
-graph LR  
-SetFollowUpTimesScreen(FollowUpTimesScreen)-- set -->ShowMeetingTimes[/ShowMeetingTimes/]  
-ShowMeetingTimes[/ShowMeetingTimes/]-. use .->UseFollowUpTimesScreen(FollowUpTimesScreen)  
-ShowMeetingTimes[/ShowMeetingTimes/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 :::
 ## ShowOverlay
   
@@ -2056,123 +1651,6 @@ ShowOverlay[/ShowOverlay/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)
 ShowOverlay[/ShowOverlay/]-. use .->UseExportPopUpsScreen(ExportPopUpsScreen)  
 ShowOverlay[/ShowOverlay/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 :::
-## ShowSketchSaved
-  
-:::mermaid  
-graph LR  
-SetSketchScreen(Sketch Screen)-- set -->ShowSketchSaved[/ShowSketchSaved/]  
-ShowSketchSaved[/ShowSketchSaved/]-. use .->UseSketchScreen(Sketch Screen)  
-ShowSketchSaved[/ShowSketchSaved/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## varAddGoal
-  
-:::mermaid  
-graph LR  
-Set2201_2(2201_2)-- set -->varAddGoal[/varAddGoal/]  
-:::
-## AutoSelectMeeting
-  
-:::mermaid  
-graph LR  
-SetWelcomeScreen(WelcomeScreen)-- set -->AutoSelectMeeting[/AutoSelectMeeting/]  
-AutoSelectMeeting[/AutoSelectMeeting/]-. use .->UseWelcomeScreen(WelcomeScreen)  
-AutoSelectMeeting[/AutoSelectMeeting/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## vContinue
-  
-:::mermaid  
-graph LR  
-Set2201_2(2201_2)-- set -->vContinue[/vContinue/]  
-vContinue[/vContinue/]-. use .->Use2201_2(2201_2)  
-:::
-## MultiRecipients
-  
-:::mermaid  
-graph LR  
-SetHomeScreen(HomeScreen)-- set -->MultiRecipients[/MultiRecipients/]  
-MultiRecipients[/MultiRecipients/]-. use .->UseEmailScreen(EmailScreen)  
-MultiRecipients[/MultiRecipients/]-. use .->UseExportScreen(ExportScreen)  
-MultiRecipients[/MultiRecipients/]-. use .->UseFollowUpScreen(FollowUpScreen)  
-MultiRecipients[/MultiRecipients/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## FollowUpStart
-  
-:::mermaid  
-graph LR  
-SetFollowUpTimesScreen(FollowUpTimesScreen)-- set -->FollowUpStart[/FollowUpStart/]  
-FollowUpStart[/FollowUpStart/]-. use .->UseFollowUpTimesScreen(FollowUpTimesScreen)  
-FollowUpStart[/FollowUpStart/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## SketchNumber
-  
-:::mermaid  
-graph LR  
-SetSketchScreen(Sketch Screen)-- set -->SketchNumber[/SketchNumber/]  
-SketchNumber[/SketchNumber/]-. use .->UseSketchScreen(Sketch Screen)  
-SketchNumber[/SketchNumber/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## PhotoNumber
-  
-:::mermaid  
-graph LR  
-SetCameraScreen(CameraScreen)-- set -->PhotoNumber[/PhotoNumber/]  
-PhotoNumber[/PhotoNumber/]-. use .->UseCameraScreen(CameraScreen)  
-PhotoNumber[/PhotoNumber/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## SelectedMeetingDuration
-  
-:::mermaid  
-graph LR  
-SetHomePopUpsScreen(HomePopUpsScreen)-- set -->SelectedMeetingDuration[/SelectedMeetingDuration/]  
-SelectedMeetingDuration[/SelectedMeetingDuration/]-. use .->UseHomeScreen(HomeScreen)  
-SelectedMeetingDuration[/SelectedMeetingDuration/]-. use .->UseConfirmScreen(ConfirmScreen)  
-SelectedMeetingDuration[/SelectedMeetingDuration/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## SecondsRemain
-  
-:::mermaid  
-graph LR  
-SetHomeScreen(HomeScreen)-- set -->SecondsRemain[/SecondsRemain/]  
-SecondsRemain[/SecondsRemain/]-. use .->UseHomeScreen(HomeScreen)  
-SecondsRemain[/SecondsRemain/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## vAddLevel_2
-  
-:::mermaid  
-graph LR  
-Set2201_2(2201_2)-- set -->vAddLevel_2[/vAddLevel_2/]  
-:::
-## ProgressBarPosition
-  
-:::mermaid  
-graph LR  
-SetHomeScreen(HomeScreen)-- set -->ProgressBarPosition[/ProgressBarPosition/]  
-ProgressBarPosition[/ProgressBarPosition/]-. use .->UseHomeScreen(HomeScreen)  
-ProgressBarPosition[/ProgressBarPosition/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## FollowUpEnd
-  
-:::mermaid  
-graph LR  
-SetFollowUpTimesScreen(FollowUpTimesScreen)-- set -->FollowUpEnd[/FollowUpEnd/]  
-FollowUpEnd[/FollowUpEnd/]-. use .->UseFollowUpTimesScreen(FollowUpTimesScreen)  
-FollowUpEnd[/FollowUpEnd/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## varDuplicatePopup
-  
-:::mermaid  
-graph LR  
-Set2201_2(2201_2)-- set -->varDuplicatePopup[/varDuplicatePopup/]  
-varDuplicatePopup[/varDuplicatePopup/]-. use .->Use2201_2(2201_2)  
-:::
-## SelectedImage
-  
-:::mermaid  
-graph LR  
-SetAttachmentsScreen(AttachmentsScreen)-- set -->SelectedImage[/SelectedImage/]  
-SelectedImage[/SelectedImage/]-. use .->UseAttachmentsScreen(AttachmentsScreen)  
-SelectedImage[/SelectedImage/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
 ## SelectedUser
   
 :::mermaid  
@@ -2180,14 +1658,6 @@ graph LR
 SetHomePopUpsScreen(HomePopUpsScreen)-- set -->SelectedUser[/SelectedUser/]  
 SelectedUser[/SelectedUser/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
 SelectedUser[/SelectedUser/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## AttachmentDeleteConfirm
-  
-:::mermaid  
-graph LR  
-SetAttachmentsScreen(AttachmentsScreen)-- set -->AttachmentDeleteConfirm[/AttachmentDeleteConfirm/]  
-AttachmentDeleteConfirm[/AttachmentDeleteConfirm/]-. use .->UseAttachmentsScreen(AttachmentsScreen)  
-AttachmentDeleteConfirm[/AttachmentDeleteConfirm/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 :::
 ## ShowOneNote
   
@@ -2198,6 +1668,52 @@ SetExportPopUpsScreen(ExportPopUpsScreen)-- set -->ShowOneNote[/ShowOneNote/]
 ShowOneNote[/ShowOneNote/]-. use .->UseExportScreen(ExportScreen)  
 ShowOneNote[/ShowOneNote/]-. use .->UseExportPopUpsScreen(ExportPopUpsScreen)  
 ShowOneNote[/ShowOneNote/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+:::
+## Loading
+  
+:::mermaid  
+graph LR  
+SetConfirmScreen(ConfirmScreen)-- set -->Loading[/Loading/]  
+SetFollowUpTimesScreen(FollowUpTimesScreen)-- set -->Loading[/Loading/]  
+SetHomePopUpsScreen(HomePopUpsScreen)-- set -->Loading[/Loading/]  
+Loading[/Loading/]-. use .->UseWelcomeScreen(WelcomeScreen)  
+Loading[/Loading/]-. use .->UseHomeScreen(HomeScreen)  
+Loading[/Loading/]-. use .->UseEmailScreen(EmailScreen)  
+Loading[/Loading/]-. use .->UseAttachmentsScreen(AttachmentsScreen)  
+Loading[/Loading/]-. use .->UseConfirmScreen(ConfirmScreen)  
+Loading[/Loading/]-. use .->UseExportScreen(ExportScreen)  
+Loading[/Loading/]-. use .->UseFollowUpScreen(FollowUpScreen)  
+Loading[/Loading/]-. use .->UseFollowUpTimesScreen(FollowUpTimesScreen)  
+Loading[/Loading/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
+Loading[/Loading/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+:::
+## ExportConfirmed
+  
+:::mermaid  
+graph LR  
+SetWelcomeScreen(WelcomeScreen)-- set -->ExportConfirmed[/ExportConfirmed/]  
+SetHomeScreen(HomeScreen)-- set -->ExportConfirmed[/ExportConfirmed/]  
+SetFollowUpScreen(FollowUpScreen)-- set -->ExportConfirmed[/ExportConfirmed/]  
+SetExportPopUpsScreen(ExportPopUpsScreen)-- set -->ExportConfirmed[/ExportConfirmed/]  
+ExportConfirmed[/ExportConfirmed/]-. use .->UseConfirmScreen(ConfirmScreen)  
+ExportConfirmed[/ExportConfirmed/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+:::
+## SelectedTask
+  
+:::mermaid  
+graph LR  
+SetHomeScreen(HomeScreen)-- set -->SelectedTask[/SelectedTask/]  
+SelectedTask[/SelectedTask/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
+SelectedTask[/SelectedTask/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+:::
+## UserSelectedFromTasks
+  
+:::mermaid  
+graph LR  
+SetHomeScreen(HomeScreen)-- set -->UserSelectedFromTasks[/UserSelectedFromTasks/]  
+SetHomePopUpsScreen(HomePopUpsScreen)-- set -->UserSelectedFromTasks[/UserSelectedFromTasks/]  
+UserSelectedFromTasks[/UserSelectedFromTasks/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
+UserSelectedFromTasks[/UserSelectedFromTasks/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 :::
 ## SelectedNoteBook
   
@@ -2218,6 +1734,42 @@ SetHomePopUpsScreen(HomePopUpsScreen)-- set -->ShowDataLossWarning[/ShowDataLoss
 ShowDataLossWarning[/ShowDataLossWarning/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
 ShowDataLossWarning[/ShowDataLossWarning/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 :::
+## FollowUpConfirmed
+  
+:::mermaid  
+graph LR  
+SetWelcomeScreen(WelcomeScreen)-- set -->FollowUpConfirmed[/FollowUpConfirmed/]  
+SetHomeScreen(HomeScreen)-- set -->FollowUpConfirmed[/FollowUpConfirmed/]  
+SetFollowUpTimesScreen(FollowUpTimesScreen)-- set -->FollowUpConfirmed[/FollowUpConfirmed/]  
+FollowUpConfirmed[/FollowUpConfirmed/]-. use .->UseConfirmScreen(ConfirmScreen)  
+FollowUpConfirmed[/FollowUpConfirmed/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+:::
+## SketchNumber
+  
+:::mermaid  
+graph LR  
+SetSketchScreen(Sketch Screen)-- set -->SketchNumber[/SketchNumber/]  
+SketchNumber[/SketchNumber/]-. use .->UseSketchScreen(Sketch Screen)  
+SketchNumber[/SketchNumber/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+:::
+## ShowPlanner
+  
+:::mermaid  
+graph LR  
+SetExportScreen(ExportScreen)-- set -->ShowPlanner[/ShowPlanner/]  
+SetExportPopUpsScreen(ExportPopUpsScreen)-- set -->ShowPlanner[/ShowPlanner/]  
+ShowPlanner[/ShowPlanner/]-. use .->UseExportScreen(ExportScreen)  
+ShowPlanner[/ShowPlanner/]-. use .->UseExportPopUpsScreen(ExportPopUpsScreen)  
+ShowPlanner[/ShowPlanner/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+:::
+## FollowUpStart
+  
+:::mermaid  
+graph LR  
+SetFollowUpTimesScreen(FollowUpTimesScreen)-- set -->FollowUpStart[/FollowUpStart/]  
+FollowUpStart[/FollowUpStart/]-. use .->UseFollowUpTimesScreen(FollowUpTimesScreen)  
+FollowUpStart[/FollowUpStart/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+:::
 ## ShowTakenImage
   
 :::mermaid  
@@ -2226,51 +1778,61 @@ SetCameraScreen(CameraScreen)-- set -->ShowTakenImage[/ShowTakenImage/]
 ShowTakenImage[/ShowTakenImage/]-. use .->UseCameraScreen(CameraScreen)  
 ShowTakenImage[/ShowTakenImage/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 :::
-## varSelectedPL
+## ShowImageSaved
   
 :::mermaid  
 graph LR  
-Set2201_2(2201_2)-- set -->varSelectedPL[/varSelectedPL/]  
-varSelectedPL[/varSelectedPL/]-. use .->Use2201_2(2201_2)  
+SetCameraScreen(CameraScreen)-- set -->ShowImageSaved[/ShowImageSaved/]  
+ShowImageSaved[/ShowImageSaved/]-. use .->UseCameraScreen(CameraScreen)  
+ShowImageSaved[/ShowImageSaved/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 :::
-## SelectedPlan
+## AttachmentDeleteConfirm
   
 :::mermaid  
 graph LR  
-SetExportScreen(ExportScreen)-- set -->SelectedPlan[/SelectedPlan/]  
-SetExportPopUpsScreen(ExportPopUpsScreen)-- set -->SelectedPlan[/SelectedPlan/]  
-SelectedPlan[/SelectedPlan/]-. use .->UseConfirmScreen(ConfirmScreen)  
-SelectedPlan[/SelectedPlan/]-. use .->UseExportScreen(ExportScreen)  
-SelectedPlan[/SelectedPlan/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+SetAttachmentsScreen(AttachmentsScreen)-- set -->AttachmentDeleteConfirm[/AttachmentDeleteConfirm/]  
+AttachmentDeleteConfirm[/AttachmentDeleteConfirm/]-. use .->UseAttachmentsScreen(AttachmentsScreen)  
+AttachmentDeleteConfirm[/AttachmentDeleteConfirm/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 :::
-## V_ShowConfirm
+## ProgressBarPosition
   
 :::mermaid  
 graph LR  
-Set2201_2(2201_2)-- set -->V_ShowConfirm[/V_ShowConfirm/]  
+SetHomeScreen(HomeScreen)-- set -->ProgressBarPosition[/ProgressBarPosition/]  
+ProgressBarPosition[/ProgressBarPosition/]-. use .->UseHomeScreen(HomeScreen)  
+ProgressBarPosition[/ProgressBarPosition/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 :::
-## vAddLevel_1
+## MultiRecipients
   
 :::mermaid  
 graph LR  
-Set2201_2(2201_2)-- set -->vAddLevel_1[/vAddLevel_1/]  
+SetHomeScreen(HomeScreen)-- set -->MultiRecipients[/MultiRecipients/]  
+MultiRecipients[/MultiRecipients/]-. use .->UseEmailScreen(EmailScreen)  
+MultiRecipients[/MultiRecipients/]-. use .->UseExportScreen(ExportScreen)  
+MultiRecipients[/MultiRecipients/]-. use .->UseFollowUpScreen(FollowUpScreen)  
+MultiRecipients[/MultiRecipients/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 :::
-## TaskSelected
+## SelectedUserTasks
   
 :::mermaid  
 graph LR  
-SetHomeScreen(HomeScreen)-- set -->TaskSelected[/TaskSelected/]  
-SetHomePopUpsScreen(HomePopUpsScreen)-- set -->TaskSelected[/TaskSelected/]  
-TaskSelected[/TaskSelected/]-. use .->UseAttachmentsScreen(AttachmentsScreen)  
-TaskSelected[/TaskSelected/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
-TaskSelected[/TaskSelected/]-. use .->UseExportPopUpsScreen(ExportPopUpsScreen)  
+SetHomeScreen(HomeScreen)-- set -->SelectedUserTasks[/SelectedUserTasks/]  
+SelectedUserTasks[/SelectedUserTasks/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
+SelectedUserTasks[/SelectedUserTasks/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 :::
-## varGUID211
+## SelectedMeeting
   
 :::mermaid  
 graph LR  
-Set2201_2(2201_2)-- set -->varGUID211[/varGUID211/]  
-varGUID211[/varGUID211/]-. use .->Use2201_2(2201_2)  
+SetWelcomeScreen(WelcomeScreen)-- set -->SelectedMeeting[/SelectedMeeting/]  
+SelectedMeeting[/SelectedMeeting/]-. use .->UseWelcomeScreen(WelcomeScreen)  
+SelectedMeeting[/SelectedMeeting/]-. use .->UseHomeScreen(HomeScreen)  
+SelectedMeeting[/SelectedMeeting/]-. use .->UseEmailScreen(EmailScreen)  
+SelectedMeeting[/SelectedMeeting/]-. use .->UseConfirmScreen(ConfirmScreen)  
+SelectedMeeting[/SelectedMeeting/]-. use .->UseExportScreen(ExportScreen)  
+SelectedMeeting[/SelectedMeeting/]-. use .->UseFollowUpScreen(FollowUpScreen)  
+SelectedMeeting[/SelectedMeeting/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
+SelectedMeeting[/SelectedMeeting/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 :::
 ## SelectedBucket
   
@@ -2282,109 +1844,91 @@ SelectedBucket[/SelectedBucket/]-. use .->UseConfirmScreen(ConfirmScreen)
 SelectedBucket[/SelectedBucket/]-. use .->UseExportScreen(ExportScreen)  
 SelectedBucket[/SelectedBucket/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 :::
-## varGUID208
+## ShowMeetingTimes
   
 :::mermaid  
 graph LR  
-Set2201_2(2201_2)-- set -->varGUID208[/varGUID208/]  
+SetFollowUpTimesScreen(FollowUpTimesScreen)-- set -->ShowMeetingTimes[/ShowMeetingTimes/]  
+ShowMeetingTimes[/ShowMeetingTimes/]-. use .->UseFollowUpTimesScreen(FollowUpTimesScreen)  
+ShowMeetingTimes[/ShowMeetingTimes/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 :::
-## varReviewTeam
+## ShowSketchSaved
   
 :::mermaid  
 graph LR  
-Set2201_2(2201_2)-- set -->varReviewTeam[/varReviewTeam/]  
-varReviewTeam[/varReviewTeam/]-. use .->Use2201_2(2201_2)  
+SetSketchScreen(Sketch Screen)-- set -->ShowSketchSaved[/ShowSketchSaved/]  
+ShowSketchSaved[/ShowSketchSaved/]-. use .->UseSketchScreen(Sketch Screen)  
+ShowSketchSaved[/ShowSketchSaved/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 :::
-## ShowImageSaved
+## TaskSelected
   
 :::mermaid  
 graph LR  
-SetCameraScreen(CameraScreen)-- set -->ShowImageSaved[/ShowImageSaved/]  
-ShowImageSaved[/ShowImageSaved/]-. use .->UseCameraScreen(CameraScreen)  
-ShowImageSaved[/ShowImageSaved/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+SetHomeScreen(HomeScreen)-- set -->TaskSelected[/TaskSelected/]  
+SetHomePopUpsScreen(HomePopUpsScreen)-- set -->TaskSelected[/TaskSelected/]  
+TaskSelected[/TaskSelected/]-. use .->UseAttachmentsScreen(AttachmentsScreen)  
+TaskSelected[/TaskSelected/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
+TaskSelected[/TaskSelected/]-. use .->UseExportPopUpsScreen(ExportPopUpsScreen)  
 :::
-##  varLoadingPopup
+## PhotoNumber
   
 :::mermaid  
 graph LR  
-Set2201_2(2201_2)-- set -->varLoadingPopup[/ varLoadingPopup/]  
+SetCameraScreen(CameraScreen)-- set -->PhotoNumber[/PhotoNumber/]  
+PhotoNumber[/PhotoNumber/]-. use .->UseCameraScreen(CameraScreen)  
+PhotoNumber[/PhotoNumber/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+:::
+## SelectedSection
+  
+:::mermaid  
+graph LR  
+SetExportScreen(ExportScreen)-- set -->SelectedSection[/SelectedSection/]  
+SetExportPopUpsScreen(ExportPopUpsScreen)-- set -->SelectedSection[/SelectedSection/]  
+SelectedSection[/SelectedSection/]-. use .->UseConfirmScreen(ConfirmScreen)  
+SelectedSection[/SelectedSection/]-. use .->UseExportScreen(ExportScreen)  
+SelectedSection[/SelectedSection/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+:::
+## AutoSelectMeeting
+  
+:::mermaid  
+graph LR  
+SetWelcomeScreen(WelcomeScreen)-- set -->AutoSelectMeeting[/AutoSelectMeeting/]  
+AutoSelectMeeting[/AutoSelectMeeting/]-. use .->UseWelcomeScreen(WelcomeScreen)  
+AutoSelectMeeting[/AutoSelectMeeting/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+:::
+## SelectedMeetingDuration
+  
+:::mermaid  
+graph LR  
+SetHomePopUpsScreen(HomePopUpsScreen)-- set -->SelectedMeetingDuration[/SelectedMeetingDuration/]  
+SelectedMeetingDuration[/SelectedMeetingDuration/]-. use .->UseHomeScreen(HomeScreen)  
+SelectedMeetingDuration[/SelectedMeetingDuration/]-. use .->UseConfirmScreen(ConfirmScreen)  
+SelectedMeetingDuration[/SelectedMeetingDuration/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 :::
 # Global Collects
   
 Usage of global collects is shown based on the screen(s) where this collect is set, used or cleared
-## updateTable2201auGoals
+## Photos
   
 :::mermaid  
 graph LR  
-updateTable2201auGoals[/updateTable2201auGoals/]-. use .->Use2201_2(2201_2)  
-updateTable2201auGoals[/updateTable2201auGoals/]-. clear .->Clear2201_2(2201_2)  
+CollectCameraScreen(CameraScreen)-- collect -->Photos[/Photos/]  
+Photos[/Photos/]-. use .->UseWelcomeScreen(WelcomeScreen)  
+Photos[/Photos/]-. use .->UseHomeScreen(HomeScreen)  
+Photos[/Photos/]-. use .->UseSketchScreen(Sketch Screen)  
+Photos[/Photos/]-. use .->UseCameraScreen(CameraScreen)  
+Photos[/Photos/]-. use .->UseAttachmentsScreen(AttachmentsScreen)  
+Photos[/Photos/]-. use .->UseConfirmScreen(ConfirmScreen)  
+Photos[/Photos/]-. use .->UseExportScreen(ExportScreen)  
+Photos[/Photos/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 :::
-## MeetingAttendeesTemp
+## Indexes
   
 :::mermaid  
 graph LR  
-MeetingAttendeesTemp[/MeetingAttendeesTemp/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
-MeetingAttendeesTemp[/MeetingAttendeesTemp/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-MeetingAttendeesTemp[/MeetingAttendeesTemp/]-. clear .->ClearHomePopUpsScreen(HomePopUpsScreen)  
-:::
-## PlannerPlans
-  
-:::mermaid  
-graph LR  
-PlannerPlans[/PlannerPlans/]-. use .->UseExportScreen(ExportScreen)  
-PlannerPlans[/PlannerPlans/]-. use .->UseExportPopUpsScreen(ExportPopUpsScreen)  
-PlannerPlans[/PlannerPlans/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-PlannerPlans[/PlannerPlans/]-. clear .->ClearExportScreen(ExportScreen)  
-:::
-## FollowUpMeetingAttendees
-  
-:::mermaid  
-graph LR  
-CollectFollowUpScreen(FollowUpScreen)-- collect -->FollowUpMeetingAttendees[/FollowUpMeetingAttendees/]  
-FollowUpMeetingAttendees[/FollowUpMeetingAttendees/]-. use .->UseWelcomeScreen(WelcomeScreen)  
-FollowUpMeetingAttendees[/FollowUpMeetingAttendees/]-. use .->UseFollowUpScreen(FollowUpScreen)  
-FollowUpMeetingAttendees[/FollowUpMeetingAttendees/]-. use .->UseFollowUpTimesScreen(FollowUpTimesScreen)  
-FollowUpMeetingAttendees[/FollowUpMeetingAttendees/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-FollowUpMeetingAttendees[/FollowUpMeetingAttendees/]-. clear .->ClearFollowUpScreen(FollowUpScreen)  
-:::
-## Sketches
-  
-:::mermaid  
-graph LR  
-CollectSketchScreen(Sketch Screen)-- collect -->Sketches[/Sketches/]  
-Sketches[/Sketches/]-. use .->UseWelcomeScreen(WelcomeScreen)  
-Sketches[/Sketches/]-. use .->UseHomeScreen(HomeScreen)  
-Sketches[/Sketches/]-. use .->UseAttachmentsScreen(AttachmentsScreen)  
-Sketches[/Sketches/]-. use .->UseConfirmScreen(ConfirmScreen)  
-Sketches[/Sketches/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## PlannerBuckets
-  
-:::mermaid  
-graph LR  
-PlannerBuckets[/PlannerBuckets/]-. use .->UseExportPopUpsScreen(ExportPopUpsScreen)  
-PlannerBuckets[/PlannerBuckets/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-PlannerBuckets[/PlannerBuckets/]-. clear .->ClearExportScreen(ExportScreen)  
-PlannerBuckets[/PlannerBuckets/]-. clear .->ClearExportPopUpsScreen(ExportPopUpsScreen)  
-:::
-## EmailRecipients
-  
-:::mermaid  
-graph LR  
-CollectExportScreen(ExportScreen)-- collect -->EmailRecipients[/EmailRecipients/]  
-EmailRecipients[/EmailRecipients/]-. use .->UseWelcomeScreen(WelcomeScreen)  
-EmailRecipients[/EmailRecipients/]-. use .->UseEmailScreen(EmailScreen)  
-EmailRecipients[/EmailRecipients/]-. use .->UseConfirmScreen(ConfirmScreen)  
-EmailRecipients[/EmailRecipients/]-. use .->UseExportScreen(ExportScreen)  
-EmailRecipients[/EmailRecipients/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-EmailRecipients[/EmailRecipients/]-. clear .->ClearHomeScreen(HomeScreen)  
-EmailRecipients[/EmailRecipients/]-. clear .->ClearExportScreen(ExportScreen)  
-:::
-## colAdTraegerCurrent
-  
-:::mermaid  
-graph LR  
-colAdTraegerCurrent[/colAdTraegerCurrent/]-. clear .->Clear2201_2(2201_2)  
+CollectConfirmScreen(ConfirmScreen)-- collect -->Indexes[/Indexes/]  
+Indexes[/Indexes/]-. use .->UseConfirmScreen(ConfirmScreen)  
+Indexes[/Indexes/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 :::
 ## MeetingAttendees
   
@@ -2408,18 +1952,41 @@ MeetingTimes[/MeetingTimes/]-. use .->UseFollowUpTimesScreen(FollowUpTimesScreen
 MeetingTimes[/MeetingTimes/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 MeetingTimes[/MeetingTimes/]-. clear .->ClearFollowUpTimesScreen(FollowUpTimesScreen)  
 :::
-## TempPl_Allocation
+## EmailAttachments
   
 :::mermaid  
 graph LR  
-TempPl_Allocation[/TempPl_Allocation/]-. use .->Use2201_2(2201_2)  
-TempPl_Allocation[/TempPl_Allocation/]-. clear .->Clear2201_2(2201_2)  
+CollectConfirmScreen(ConfirmScreen)-- collect -->EmailAttachments[/EmailAttachments/]  
+EmailAttachments[/EmailAttachments/]-. use .->UseWelcomeScreen(WelcomeScreen)  
+EmailAttachments[/EmailAttachments/]-. use .->UseConfirmScreen(ConfirmScreen)  
+EmailAttachments[/EmailAttachments/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 :::
-## colAllocation
+## TemplateData
   
 :::mermaid  
 graph LR  
-colAllocation[/colAllocation/]-. clear .->Clear2201_2(2201_2)  
+TemplateData[/TemplateData/]-. use .->UseConfirmScreen(ConfirmScreen)  
+TemplateData[/TemplateData/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+TemplateData[/TemplateData/]-. clear .->ClearConfirmScreen(ConfirmScreen)  
+:::
+## HoursList
+  
+:::mermaid  
+graph LR  
+HoursList[/HoursList/]-. use .->UseFollowUpTimesScreen(FollowUpTimesScreen)  
+HoursList[/HoursList/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+HoursList[/HoursList/]-. clear .->ClearFollowUpTimesScreen(FollowUpTimesScreen)  
+:::
+## FollowUpMeetingAttendees
+  
+:::mermaid  
+graph LR  
+CollectFollowUpScreen(FollowUpScreen)-- collect -->FollowUpMeetingAttendees[/FollowUpMeetingAttendees/]  
+FollowUpMeetingAttendees[/FollowUpMeetingAttendees/]-. use .->UseWelcomeScreen(WelcomeScreen)  
+FollowUpMeetingAttendees[/FollowUpMeetingAttendees/]-. use .->UseFollowUpScreen(FollowUpScreen)  
+FollowUpMeetingAttendees[/FollowUpMeetingAttendees/]-. use .->UseFollowUpTimesScreen(FollowUpTimesScreen)  
+FollowUpMeetingAttendees[/FollowUpMeetingAttendees/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+FollowUpMeetingAttendees[/FollowUpMeetingAttendees/]-. clear .->ClearFollowUpScreen(FollowUpScreen)  
 :::
 ## OneNoteBooks
   
@@ -2430,110 +1997,14 @@ OneNoteBooks[/OneNoteBooks/]-. use .->UseExportPopUpsScreen(ExportPopUpsScreen)
 OneNoteBooks[/OneNoteBooks/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 OneNoteBooks[/OneNoteBooks/]-. clear .->ClearExportScreen(ExportScreen)  
 :::
-## MeetingDurations
+## PlannerBuckets
   
 :::mermaid  
 graph LR  
-MeetingDurations[/MeetingDurations/]-. use .->UseFollowUpTimesScreen(FollowUpTimesScreen)  
-MeetingDurations[/MeetingDurations/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-MeetingDurations[/MeetingDurations/]-. clear .->ClearFollowUpTimesScreen(FollowUpTimesScreen)  
-:::
-## colFlowResponse
-  
-:::mermaid  
-graph LR  
-colFlowResponse[/colFlowResponse/]-. use .->Use2201_2(2201_2)  
-colFlowResponse[/colFlowResponse/]-. clear .->Clear2201_2(2201_2)  
-:::
-## colPlAssignment
-  
-:::mermaid  
-graph LR  
-colPlAssignment[/colPlAssignment/]-. use .->Use2201_2(2201_2)  
-colPlAssignment[/colPlAssignment/]-. clear .->Clear2201_2(2201_2)  
-:::
-## TempView_Plan
-  
-:::mermaid  
-graph LR  
-TempView_Plan[/TempView_Plan/]-. use .->Use2201_2(2201_2)  
-TempView_Plan[/TempView_Plan/]-. clear .->Clear2201_2(2201_2)  
-:::
-## Photos
-  
-:::mermaid  
-graph LR  
-CollectCameraScreen(CameraScreen)-- collect -->Photos[/Photos/]  
-Photos[/Photos/]-. use .->UseWelcomeScreen(WelcomeScreen)  
-Photos[/Photos/]-. use .->UseHomeScreen(HomeScreen)  
-Photos[/Photos/]-. use .->UseSketchScreen(Sketch Screen)  
-Photos[/Photos/]-. use .->UseCameraScreen(CameraScreen)  
-Photos[/Photos/]-. use .->UseAttachmentsScreen(AttachmentsScreen)  
-Photos[/Photos/]-. use .->UseConfirmScreen(ConfirmScreen)  
-Photos[/Photos/]-. use .->UseExportScreen(ExportScreen)  
-Photos[/Photos/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## colQuestionRow
-  
-:::mermaid  
-graph LR  
-colQuestionRow[/colQuestionRow/]-. use .->Use2201_2(2201_2)  
-colQuestionRow[/colQuestionRow/]-. clear .->Clear2201_2(2201_2)  
-:::
-## colQuestionsAdd
-  
-:::mermaid  
-graph LR  
-colQuestionsAdd[/colQuestionsAdd/]-. use .->Use2201_2(2201_2)  
-colQuestionsAdd[/colQuestionsAdd/]-. clear .->Clear2201_2(2201_2)  
-:::
-## TemplateData
-  
-:::mermaid  
-graph LR  
-TemplateData[/TemplateData/]-. use .->UseConfirmScreen(ConfirmScreen)  
-TemplateData[/TemplateData/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-TemplateData[/TemplateData/]-. clear .->ClearConfirmScreen(ConfirmScreen)  
-:::
-## colPlDistributionCurrent
-  
-:::mermaid  
-graph LR  
-colPlDistributionCurrent[/colPlDistributionCurrent/]-. clear .->Clear2201_2(2201_2)  
-:::
-## colModelRow
-  
-:::mermaid  
-graph LR  
-colModelRow[/colModelRow/]-. use .->Use2201_2(2201_2)  
-colModelRow[/colModelRow/]-. clear .->Clear2201_2(2201_2)  
-:::
-## TempRisk
-  
-:::mermaid  
-graph LR  
-TempRisk[/TempRisk/]-. use .->Use2201_2(2201_2)  
-TempRisk[/TempRisk/]-. clear .->Clear2201_2(2201_2)  
-:::
-## TempAu_Level_4
-  
-:::mermaid  
-graph LR  
-TempAu_Level_4[/TempAu_Level_4/]-. clear .->Clear2201_2(2201_2)  
-:::
-## TempAu_Level_3
-  
-:::mermaid  
-graph LR  
-TempAu_Level_3[/TempAu_Level_3/]-. clear .->Clear2201_2(2201_2)  
-:::
-## HoursList
-  
-:::mermaid  
-graph LR  
-HoursList[/HoursList/]-. use .->UseFollowUpTimesScreen(FollowUpTimesScreen)  
-HoursList[/HoursList/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-HoursList[/HoursList/]-. clear .->ClearFollowUpTimesScreen(FollowUpTimesScreen)  
+PlannerBuckets[/PlannerBuckets/]-. use .->UseExportPopUpsScreen(ExportPopUpsScreen)  
+PlannerBuckets[/PlannerBuckets/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+PlannerBuckets[/PlannerBuckets/]-. clear .->ClearExportScreen(ExportScreen)  
+PlannerBuckets[/PlannerBuckets/]-. clear .->ClearExportPopUpsScreen(ExportPopUpsScreen)  
 :::
 ## MeetingAttendeeEmails
   
@@ -2543,11 +2014,45 @@ MeetingAttendeeEmails[/MeetingAttendeeEmails/]-. use .->UseHomePopUpsScreen(Home
 MeetingAttendeeEmails[/MeetingAttendeeEmails/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 MeetingAttendeeEmails[/MeetingAttendeeEmails/]-. clear .->ClearHomePopUpsScreen(HomePopUpsScreen)  
 :::
-## colAdRolle
+## Templates
   
 :::mermaid  
 graph LR  
-colAdRolle[/colAdRolle/]-. clear .->Clear2201_2(2201_2)  
+Templates[/Templates/]-. use .->UseConfirmScreen(ConfirmScreen)  
+Templates[/Templates/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+Templates[/Templates/]-. clear .->ClearWelcomeScreen(WelcomeScreen)  
+:::
+## PlannerPlans
+  
+:::mermaid  
+graph LR  
+PlannerPlans[/PlannerPlans/]-. use .->UseExportScreen(ExportScreen)  
+PlannerPlans[/PlannerPlans/]-. use .->UseExportPopUpsScreen(ExportPopUpsScreen)  
+PlannerPlans[/PlannerPlans/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+PlannerPlans[/PlannerPlans/]-. clear .->ClearExportScreen(ExportScreen)  
+:::
+## Tasks
+  
+:::mermaid  
+graph LR  
+CollectHomePopUpsScreen(HomePopUpsScreen)-- collect -->Tasks[/Tasks/]  
+Tasks[/Tasks/]-. use .->UseWelcomeScreen(WelcomeScreen)  
+Tasks[/Tasks/]-. use .->UseHomeScreen(HomeScreen)  
+Tasks[/Tasks/]-. use .->UseConfirmScreen(ConfirmScreen)  
+Tasks[/Tasks/]-. use .->UseExportScreen(ExportScreen)  
+Tasks[/Tasks/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
+Tasks[/Tasks/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+:::
+## Sketches
+  
+:::mermaid  
+graph LR  
+CollectSketchScreen(Sketch Screen)-- collect -->Sketches[/Sketches/]  
+Sketches[/Sketches/]-. use .->UseWelcomeScreen(WelcomeScreen)  
+Sketches[/Sketches/]-. use .->UseHomeScreen(HomeScreen)  
+Sketches[/Sketches/]-. use .->UseAttachmentsScreen(AttachmentsScreen)  
+Sketches[/Sketches/]-. use .->UseConfirmScreen(ConfirmScreen)  
+Sketches[/Sketches/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 :::
 ## OneNoteSections
   
@@ -2558,109 +2063,35 @@ OneNoteSections[/OneNoteSections/]-. use .->UseCollectionsAndVariables(Collectio
 OneNoteSections[/OneNoteSections/]-. clear .->ClearExportScreen(ExportScreen)  
 OneNoteSections[/OneNoteSections/]-. clear .->ClearExportPopUpsScreen(ExportPopUpsScreen)  
 :::
-## Indexes
+## MeetingAttendeesTemp
   
 :::mermaid  
 graph LR  
-CollectConfirmScreen(ConfirmScreen)-- collect -->Indexes[/Indexes/]  
-Indexes[/Indexes/]-. use .->UseConfirmScreen(ConfirmScreen)  
-Indexes[/Indexes/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+MeetingAttendeesTemp[/MeetingAttendeesTemp/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
+MeetingAttendeesTemp[/MeetingAttendeesTemp/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+MeetingAttendeesTemp[/MeetingAttendeesTemp/]-. clear .->ClearHomePopUpsScreen(HomePopUpsScreen)  
 :::
-## colAnswerRow
+## EmailRecipients
   
 :::mermaid  
 graph LR  
-colAnswerRow[/colAnswerRow/]-. clear .->Clear2201_2(2201_2)  
+CollectExportScreen(ExportScreen)-- collect -->EmailRecipients[/EmailRecipients/]  
+EmailRecipients[/EmailRecipients/]-. use .->UseWelcomeScreen(WelcomeScreen)  
+EmailRecipients[/EmailRecipients/]-. use .->UseEmailScreen(EmailScreen)  
+EmailRecipients[/EmailRecipients/]-. use .->UseConfirmScreen(ConfirmScreen)  
+EmailRecipients[/EmailRecipients/]-. use .->UseExportScreen(ExportScreen)  
+EmailRecipients[/EmailRecipients/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+EmailRecipients[/EmailRecipients/]-. clear .->ClearHomeScreen(HomeScreen)  
+EmailRecipients[/EmailRecipients/]-. clear .->ClearExportScreen(ExportScreen)  
 :::
-## colPlDistribution
+## MeetingDurations
   
 :::mermaid  
 graph LR  
-colPlDistribution[/colPlDistribution/]-. clear .->Clear2201_2(2201_2)  
-:::
-## EmailAttachments
-  
-:::mermaid  
-graph LR  
-CollectConfirmScreen(ConfirmScreen)-- collect -->EmailAttachments[/EmailAttachments/]  
-EmailAttachments[/EmailAttachments/]-. use .->UseWelcomeScreen(WelcomeScreen)  
-EmailAttachments[/EmailAttachments/]-. use .->UseConfirmScreen(ConfirmScreen)  
-EmailAttachments[/EmailAttachments/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## TempPl_Goals
-  
-:::mermaid  
-graph LR  
-TempPl_Goals[/TempPl_Goals/]-. use .->Use2201_2(2201_2)  
-TempPl_Goals[/TempPl_Goals/]-. clear .->Clear2201_2(2201_2)  
-:::
-## colAdAssignment
-  
-:::mermaid  
-graph LR  
-colAdAssignment[/colAdAssignment/]-. clear .->Clear2201_2(2201_2)  
-:::
-## Templates
-  
-:::mermaid  
-graph LR  
-Templates[/Templates/]-. use .->UseConfirmScreen(ConfirmScreen)  
-Templates[/Templates/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-Templates[/Templates/]-. clear .->ClearWelcomeScreen(WelcomeScreen)  
-:::
-## colDetailRow
-  
-:::mermaid  
-graph LR  
-colDetailRow[/colDetailRow/]-. use .->Use2201_2(2201_2)  
-colDetailRow[/colDetailRow/]-. clear .->Clear2201_2(2201_2)  
-:::
-## Tasks
-  
-:::mermaid  
-graph LR  
-CollectHomePopUpsScreen(HomePopUpsScreen)-- collect -->Tasks[/Tasks/]  
-Tasks[/Tasks/]-. use .->Use2201_2(2201_2)  
-Tasks[/Tasks/]-. use .->UseWelcomeScreen(WelcomeScreen)  
-Tasks[/Tasks/]-. use .->UseHomeScreen(HomeScreen)  
-Tasks[/Tasks/]-. use .->UseConfirmScreen(ConfirmScreen)  
-Tasks[/Tasks/]-. use .->UseExportScreen(ExportScreen)  
-Tasks[/Tasks/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
-Tasks[/Tasks/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## patchTable2011riDetail
-  
-:::mermaid  
-graph LR  
-Collect2201_2(2201_2)-- collect -->patchTable2011riDetail[/patchTable2011riDetail/]  
-patchTable2011riDetail[/patchTable2011riDetail/]-. use .->Use2201_2(2201_2)  
-:::
-## colAdTraeger
-  
-:::mermaid  
-graph LR  
-colAdTraeger[/colAdTraeger/]-. use .->Use2201_2(2201_2)  
-colAdTraeger[/colAdTraeger/]-. clear .->Clear2201_2(2201_2)  
-:::
-## TempRi_Question
-  
-:::mermaid  
-graph LR  
-TempRi_Question[/TempRi_Question/]-. use .->Use2201_2(2201_2)  
-TempRi_Question[/TempRi_Question/]-. clear .->Clear2201_2(2201_2)  
+MeetingDurations[/MeetingDurations/]-. use .->UseFollowUpTimesScreen(FollowUpTimesScreen)  
+MeetingDurations[/MeetingDurations/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+MeetingDurations[/MeetingDurations/]-. clear .->ClearFollowUpTimesScreen(FollowUpTimesScreen)  
 :::
 # Global Flows
   
 Usage of global flows is shown based on the screen(s) where this flows is executed. 
-## weDit_SQL_runOperations
-  
-:::mermaid  
-graph LR  
-weDit_SQL_runOperations[/weDit_SQL_runOperations/]-. executed_from .->executed_from2201_2(2201_2)  
-:::
-## weDit_SQL_modRiskAssessment
-  
-:::mermaid  
-graph LR  
-weDit_SQL_modRiskAssessment[/weDit_SQL_modRiskAssessment/]-. executed_from .->executed_from2201_2(2201_2)  
-:::

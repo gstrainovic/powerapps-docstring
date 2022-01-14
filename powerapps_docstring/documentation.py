@@ -208,21 +208,29 @@ class Docstring():
                 for item in list_of_onselects:
                     if "Navigate(" in item:
 
-                        item = item.strip().replace("\n", "").replace("\t", "")
-                        navigate_occurences = [m.start() for m in re.finditer(
-                            'Navigate\(', item)]
+                        regex = r"=Navigate\W{1,2}(.*?)[^a-zA-Z0-9_ ]"
+                        matches = re.search(regex, item)
 
-                        for occurence in navigate_occurences:
-                            # print(occurence)
-                            start = occurence + len("Navigate(")
-                            # print(start)
-                            end = item[start:].find(",")
-                            if end == -1:
-                                end = item[start:].find(")")
-                            end = end + start
-                            to_screen = item[start:end]
-                            to_screen = to_screen.replace("\n", "").replace(
-                                "\t", "").replace(")", "").replace("'", "")
+                        if matches:
+                            groupLen = len(matches.groups())
+
+                            to_screen = matches.group(1)
+
+                            # # item = item.strip().replace("\n", "").replace("\t", "")
+                            # navigate_occurences = [m.start() for m in re.finditer(
+                            #     'Navigate\(', item)]
+
+                            # for occurence in navigate_occurences:
+                            #     # print(occurence)
+                            #     start = occurence + len("Navigate(")
+                            #     # print(start)
+                            #     end = item[start:].find(",")
+                            #     if end == -1:
+                            #         end = item[start:].find(")")
+                            #     end = end + start
+                            #     to_screen = item[start:end]
+                            #     to_screen = to_screen.replace("\n", "").replace(
+                            #         "\t", "").replace(")", "").replace("'", "")
                             if to_screen != None and to_screen != "" and not to_screen.startswith("[@") and to_screen not in self.config["ScreenFlow"]["ExcludeScreens"]:
                                 screenflow_list.append(
                                     "".join(from_screen.split()) + "(" + from_screen + ")" +
@@ -230,8 +238,8 @@ class Docstring():
                                     "".join(to_screen.split()) +
                                     "(" + to_screen + ")"
                                 )
-                                # from_screen_lower_case = str.lower(from_screen)
-                                # screenflow_list.append(f'click {from_screen} "#{from_screen_lower_case}" "link"')
+                                    # from_screen_lower_case = str.lower(from_screen)
+                                    # screenflow_list.append(f'click {from_screen} "#{from_screen_lower_case}" "link"')
 
         screenflow_list.append(self.config["MermaidSuffix"])
 

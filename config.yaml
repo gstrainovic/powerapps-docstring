@@ -50,4 +50,4 @@ ScreenFlow:
 MermaidPrefix: ":::mermaid"
 MermaidSuffix: ":::"
 
-ReplaceFromCSV: true
+ReplaceFromCSV: false
