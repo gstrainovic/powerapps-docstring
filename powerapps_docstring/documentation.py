@@ -1,9 +1,9 @@
+import csv
 import os
 import re
 from mdutils.mdutils import MdUtils
 from powerapps_docstring.parser import Parser
 import gh_md_to_html
-#from shutil import copyfile
 
 
 # https://mdutils.readthedocs.io/en/latest/examples/Example_Python.html
@@ -312,6 +312,36 @@ class Docstring():
             screen_objects = self.parser.get_screen_objects(file)
             self._extract_screen_content_to_markdown(screen_objects)
 
+
+    def _csv_replacer(self):
+
+
+        def find(d, tag):
+            for k, v in d.items():
+                if tag in k:
+                    print(k)
+                if isinstance(v, dict):
+                    for i in find(v, tag):
+                        yield i
+
+
+        # opening the file using "with"
+        # statement
+        with open('input.csv') as csv_file:
+            for line in csv.DictReader(csv_file):
+                screen = line['screen']
+
+            for file in self._get_screen_files():
+                if 'Camera' in file:
+                    # check on which screen variables are set
+                    screen_name, screen_content = self.parser.get_screen_objects(
+                        file)
+
+                    for val in find(screen_content, 'Camera1'):
+                        print(val)
+
+        return ''
+
     def _create_global_variables(self):
         screen_set_variables = {}
         screen_use_variables = {}
@@ -556,6 +586,9 @@ class Docstring():
 
 
     def create_documentation(self, format=None):
+        if self.config["ReplaceFromCSV"]:
+            self._csv_replacer()
+
         if format == None:
             self.format = "markdown"
         else:
@@ -581,6 +614,9 @@ class Docstring():
                 self._create_global_collects()
             elif chapter == "GlobalFlows":
                 self._create_global_flows()
+    
+
+
         # write toc + file
         self.md_file.new_table_of_contents(table_title='Contents', depth=2)
         self.md_file.create_md_file()

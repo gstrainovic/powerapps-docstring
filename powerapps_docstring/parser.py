@@ -28,6 +28,15 @@ class Parser():
 
         return screen_content
 
+    def get_screen_content2(self, screen_name):
+        screen_path = os.path.join(self.source_path, "Src", screen_name)
+        screen_content = {}
+
+        with open(screen_path, "r", encoding='utf8') as file:
+            screen_content = yaml.safe_load(file)
+
+        return screen_content
+
     def get_screen_objects(self, screen_name) -> tuple:
         screen_content = self._get_screen_content(screen_name)
         # print(screen_content)
