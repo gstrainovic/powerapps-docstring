@@ -24,60 +24,60 @@ Contents
 	* [CollectionsAndVariables](#collectionsandvariables)
 	* [TestEmptyScreen](#testemptyscreen)
 * [Global Variables](#global-variables)
-	* [SelectedPlan](#selectedplan)
-	* [PhotoNumber](#photonumber)
 	* [SelectedBucket](#selectedbucket)
-	* [ShowMeetingTimes](#showmeetingtimes)
-	* [ShowOneNote](#showonenote)
-	* [ShowTakenImage](#showtakenimage)
-	* [SelectedTask](#selectedtask)
-	* [SketchNumber](#sketchnumber)
-	* [EmailConfirmed](#emailconfirmed)
-	* [FollowUpEnd](#followupend)
-	* [ProgressBarPosition](#progressbarposition)
-	* [FollowUpConfirmed](#followupconfirmed)
-	* [MultiRecipients](#multirecipients)
-	* [SecondsRemain](#secondsremain)
-	* [ShowOverlay](#showoverlay)
-	* [SelectedImage](#selectedimage)
-	* [Loading](#loading)
-	* [ShowSketchSaved](#showsketchsaved)
+	* [SelectedNoteBook](#selectednotebook)
 	* [ShowPlanner](#showplanner)
+	* [AttachmentDeleteConfirm](#attachmentdeleteconfirm)
+	* [UserSelectedFromTasks](#userselectedfromtasks)
 	* [ExportConfirmed](#exportconfirmed)
+	* [FollowUpEnd](#followupend)
+	* [SelectedSection](#selectedsection)
+	* [FollowUpStart](#followupstart)
+	* [SelectedMeetingDuration](#selectedmeetingduration)
+	* [ShowMeetingTimes](#showmeetingtimes)
+	* [SelectedUser](#selecteduser)
+	* [ShowImageSaved](#showimagesaved)
+	* [PhotoNumber](#photonumber)
+	* [SketchNumber](#sketchnumber)
+	* [MultiRecipients](#multirecipients)
+	* [UserSelected](#userselected)
+	* [FollowUpConfirmed](#followupconfirmed)
+	* [ShowSketchSaved](#showsketchsaved)
 	* [SelectedUserTasks](#selectedusertasks)
 	* [ShowDataLossWarning](#showdatalosswarning)
-	* [SelectedUser](#selecteduser)
-	* [AttachmentDeleteConfirm](#attachmentdeleteconfirm)
-	* [ShowImageSaved](#showimagesaved)
-	* [UserSelectedFromTasks](#userselectedfromtasks)
-	* [SelectedSection](#selectedsection)
-	* [UserSelected](#userselected)
-	* [SelectedMeetingDuration](#selectedmeetingduration)
+	* [ShowOneNote](#showonenote)
 	* [SelectedMeeting](#selectedmeeting)
-	* [FollowUpStart](#followupstart)
-	* [SelectedNoteBook](#selectednotebook)
+	* [ShowOverlay](#showoverlay)
+	* [Loading](#loading)
+	* [SelectedTask](#selectedtask)
 	* [AutoSelectMeeting](#autoselectmeeting)
+	* [ShowTakenImage](#showtakenimage)
+	* [SecondsRemain](#secondsremain)
+	* [ProgressBarPosition](#progressbarposition)
+	* [EmailConfirmed](#emailconfirmed)
+	* [SelectedImage](#selectedimage)
 	* [TaskSelected](#taskselected)
+	* [SelectedPlan](#selectedplan)
 * [Global Collects](#global-collects)
+	* [MeetingAttendees](#meetingattendees)
+	* [MeetingDurations](#meetingdurations)
+	* [HoursList](#hourslist)
+	* [Templates](#templates)
+	* [MeetingAttendeesTemp](#meetingattendeestemp)
+	* [EmailAttachments](#emailattachments)
+	* [PlannerBuckets](#plannerbuckets)
+	* [MeetingAttendeeEmails](#meetingattendeeemails)
+	* [TemplateData](#templatedata)
+	* [EmailRecipients](#emailrecipients)
+	* [Sketches](#sketches)
+	* [PlannerPlans](#plannerplans)
 	* [Indexes](#indexes)
 	* [Photos](#photos)
-	* [EmailRecipients](#emailrecipients)
-	* [MeetingDurations](#meetingdurations)
-	* [FollowUpMeetingAttendees](#followupmeetingattendees)
-	* [PlannerBuckets](#plannerbuckets)
-	* [Templates](#templates)
-	* [MeetingAttendees](#meetingattendees)
 	* [OneNoteBooks](#onenotebooks)
-	* [Sketches](#sketches)
-	* [MeetingAttendeesTemp](#meetingattendeestemp)
-	* [PlannerPlans](#plannerplans)
-	* [OneNoteSections](#onenotesections)
-	* [HoursList](#hourslist)
-	* [TemplateData](#templatedata)
 	* [MeetingTimes](#meetingtimes)
+	* [FollowUpMeetingAttendees](#followupmeetingattendees)
+	* [OneNoteSections](#onenotesections)
 	* [Tasks](#tasks)
-	* [EmailAttachments](#emailattachments)
-	* [MeetingAttendeeEmails](#meetingattendeeemails)
 * [Global Flows](#global-flows)
   
   
@@ -193,9 +193,9 @@ ConfirmScreen(ConfirmScreen) --> WelcomeScreen(WelcomeScreen)
 Following variables have been created / or updated on this screen
 - [FollowUpConfirmed](#followupconfirmed)
 - [SelectedMeeting](#selectedmeeting)
-- [ExportConfirmed](#exportconfirmed)
-- [ShowDataLossWarning](#showdatalosswarning)
 - [AutoSelectMeeting](#autoselectmeeting)
+- [ShowDataLossWarning](#showdatalosswarning)
+- [ExportConfirmed](#exportconfirmed)
 - [EmailConfirmed](#emailconfirmed)
 
 ### Collects
@@ -283,18 +283,18 @@ HomePopUpsScreen(HomePopUpsScreen) --> HomeScreen(HomeScreen)
 ### Variables
   
 Following variables have been created / or updated on this screen
-- [ProgressBarPosition](#progressbarposition)
-- [FollowUpConfirmed](#followupconfirmed)
 - [MultiRecipients](#multirecipients)
-- [SecondsRemain](#secondsremain)
-- [ShowOverlay](#showoverlay)
-- [TaskSelected](#taskselected)
-- [ExportConfirmed](#exportconfirmed)
-- [SelectedTask](#selectedtask)
-- [UserSelectedFromTasks](#userselectedfromtasks)
-- [SelectedUserTasks](#selectedusertasks)
 - [UserSelected](#userselected)
+- [FollowUpConfirmed](#followupconfirmed)
+- [ShowOverlay](#showoverlay)
+- [SelectedUserTasks](#selectedusertasks)
+- [SelectedTask](#selectedtask)
+- [SecondsRemain](#secondsremain)
+- [ProgressBarPosition](#progressbarposition)
+- [UserSelectedFromTasks](#userselectedfromtasks)
+- [ExportConfirmed](#exportconfirmed)
 - [EmailConfirmed](#emailconfirmed)
+- [TaskSelected](#taskselected)
 
 ### Collects
   
@@ -581,9 +581,9 @@ CameraScreen(CameraScreen) --> SketchScreen(Sketch Screen)
 ### Variables
   
 Following variables have been created / or updated on this screen
-- [PhotoNumber](#photonumber)
 - [ShowTakenImage](#showtakenimage)
 - [ShowImageSaved](#showimagesaved)
+- [PhotoNumber](#photonumber)
 
 ### Collects
   
@@ -932,22 +932,22 @@ ExportScreen(ExportScreen) --> HomeScreen(HomeScreen)
 ### Variables
   
 Following variables have been created / or updated on this screen
-- [SelectedPlan](#selectedplan)
+- [SelectedSection](#selectedsection)
 - [SelectedBucket](#selectedbucket)
 - [ShowOverlay](#showoverlay)
-- [ShowOneNote](#showonenote)
-- [ShowPlanner](#showplanner)
-- [SelectedSection](#selectedsection)
 - [SelectedNoteBook](#selectednotebook)
+- [ShowPlanner](#showplanner)
+- [ShowOneNote](#showonenote)
+- [SelectedPlan](#selectedplan)
 
 ### Collects
   
 Following collects have been created, updated or cleared on this screen
-- [PlannerPlans](#plannerplans)
 - [OneNoteBooks](#onenotebooks)
-- [OneNoteSections](#onenotesections)
-- [EmailRecipients](#emailrecipients)
 - [PlannerBuckets](#plannerbuckets)
+- [OneNoteSections](#onenotesections)
+- [PlannerPlans](#plannerplans)
+- [EmailRecipients](#emailrecipients)
 
 ### Flows
   
@@ -1201,11 +1201,11 @@ FollowUpScreen(FollowUpScreen) --> FollowUpTimesScreen(FollowUpTimesScreen)
 ### Variables
   
 Following variables have been created / or updated on this screen
-- [FollowUpEnd](#followupend)
-- [FollowUpConfirmed](#followupconfirmed)
-- [ShowMeetingTimes](#showmeetingtimes)
-- [Loading](#loading)
 - [FollowUpStart](#followupstart)
+- [FollowUpConfirmed](#followupconfirmed)
+- [Loading](#loading)
+- [ShowMeetingTimes](#showmeetingtimes)
+- [FollowUpEnd](#followupend)
 
 ### Collects
   
@@ -1310,22 +1310,22 @@ HomePopUpsScreen(HomePopUpsScreen) --> HomeScreen(HomeScreen)
 ### Variables
   
 Following variables have been created / or updated on this screen
-- [SelectedUser](#selecteduser)
-- [SelectedMeetingDuration](#selectedmeetingduration)
-- [ShowOverlay](#showoverlay)
-- [Loading](#loading)
-- [UserSelectedFromTasks](#userselectedfromtasks)
-- [ShowDataLossWarning](#showdatalosswarning)
 - [UserSelected](#userselected)
+- [ShowOverlay](#showoverlay)
+- [SelectedMeetingDuration](#selectedmeetingduration)
+- [Loading](#loading)
+- [ShowDataLossWarning](#showdatalosswarning)
+- [SelectedUser](#selecteduser)
+- [UserSelectedFromTasks](#userselectedfromtasks)
 - [TaskSelected](#taskselected)
 
 ### Collects
   
 Following collects have been created, updated or cleared on this screen
 - [MeetingAttendeeEmails](#meetingattendeeemails)
+- [MeetingAttendees](#meetingattendees)
 - [Tasks](#tasks)
 - [MeetingAttendeesTemp](#meetingattendeestemp)
-- [MeetingAttendees](#meetingattendees)
 
 ### Flows
   
@@ -1476,14 +1476,14 @@ Navigate(HomeScreen, None)
 ### Variables
   
 Following variables have been created / or updated on this screen
-- [SelectedPlan](#selectedplan)
+- [SelectedSection](#selectedsection)
 - [SelectedBucket](#selectedbucket)
 - [ShowOverlay](#showoverlay)
-- [ShowOneNote](#showonenote)
-- [ShowPlanner](#showplanner)
-- [ExportConfirmed](#exportconfirmed)
-- [SelectedSection](#selectedsection)
 - [SelectedNoteBook](#selectednotebook)
+- [ShowPlanner](#showplanner)
+- [ShowOneNote](#showonenote)
+- [ExportConfirmed](#exportconfirmed)
+- [SelectedPlan](#selectedplan)
 
 ### Collects
   
@@ -1584,24 +1584,6 @@ Following flows have used on this screen
   
 Usage of global variables is shown based on the screen(s) where this variable is set and the screen(s) where it is used.
  
-## SelectedPlan
-  
-:::mermaid  
-graph LR  
-SetExportScreen(ExportScreen)-- set -->SelectedPlan[/SelectedPlan/]  
-SetExportPopUpsScreen(ExportPopUpsScreen)-- set -->SelectedPlan[/SelectedPlan/]  
-SelectedPlan[/SelectedPlan/]-. use .->UseConfirmScreen(ConfirmScreen)  
-SelectedPlan[/SelectedPlan/]-. use .->UseExportScreen(ExportScreen)  
-SelectedPlan[/SelectedPlan/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## PhotoNumber
-  
-:::mermaid  
-graph LR  
-SetCameraScreen(CameraScreen)-- set -->PhotoNumber[/PhotoNumber/]  
-PhotoNumber[/PhotoNumber/]-. use .->UseCameraScreen(CameraScreen)  
-PhotoNumber[/PhotoNumber/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
 ## SelectedBucket
   
 :::mermaid  
@@ -1612,57 +1594,53 @@ SelectedBucket[/SelectedBucket/]-. use .->UseConfirmScreen(ConfirmScreen)
 SelectedBucket[/SelectedBucket/]-. use .->UseExportScreen(ExportScreen)  
 SelectedBucket[/SelectedBucket/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 :::
-## ShowMeetingTimes
+## SelectedNoteBook
   
 :::mermaid  
 graph LR  
-SetFollowUpTimesScreen(FollowUpTimesScreen)-- set -->ShowMeetingTimes[/ShowMeetingTimes/]  
-ShowMeetingTimes[/ShowMeetingTimes/]-. use .->UseFollowUpTimesScreen(FollowUpTimesScreen)  
-ShowMeetingTimes[/ShowMeetingTimes/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+SetExportScreen(ExportScreen)-- set -->SelectedNoteBook[/SelectedNoteBook/]  
+SetExportPopUpsScreen(ExportPopUpsScreen)-- set -->SelectedNoteBook[/SelectedNoteBook/]  
+SelectedNoteBook[/SelectedNoteBook/]-. use .->UseConfirmScreen(ConfirmScreen)  
+SelectedNoteBook[/SelectedNoteBook/]-. use .->UseExportScreen(ExportScreen)  
+SelectedNoteBook[/SelectedNoteBook/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 :::
-## ShowOneNote
+## ShowPlanner
   
 :::mermaid  
 graph LR  
-SetExportScreen(ExportScreen)-- set -->ShowOneNote[/ShowOneNote/]  
-SetExportPopUpsScreen(ExportPopUpsScreen)-- set -->ShowOneNote[/ShowOneNote/]  
-ShowOneNote[/ShowOneNote/]-. use .->UseExportScreen(ExportScreen)  
-ShowOneNote[/ShowOneNote/]-. use .->UseExportPopUpsScreen(ExportPopUpsScreen)  
-ShowOneNote[/ShowOneNote/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+SetExportScreen(ExportScreen)-- set -->ShowPlanner[/ShowPlanner/]  
+SetExportPopUpsScreen(ExportPopUpsScreen)-- set -->ShowPlanner[/ShowPlanner/]  
+ShowPlanner[/ShowPlanner/]-. use .->UseExportScreen(ExportScreen)  
+ShowPlanner[/ShowPlanner/]-. use .->UseExportPopUpsScreen(ExportPopUpsScreen)  
+ShowPlanner[/ShowPlanner/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 :::
-## ShowTakenImage
+## AttachmentDeleteConfirm
   
 :::mermaid  
 graph LR  
-SetCameraScreen(CameraScreen)-- set -->ShowTakenImage[/ShowTakenImage/]  
-ShowTakenImage[/ShowTakenImage/]-. use .->UseCameraScreen(CameraScreen)  
-ShowTakenImage[/ShowTakenImage/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+SetAttachmentsScreen(AttachmentsScreen)-- set -->AttachmentDeleteConfirm[/AttachmentDeleteConfirm/]  
+AttachmentDeleteConfirm[/AttachmentDeleteConfirm/]-. use .->UseAttachmentsScreen(AttachmentsScreen)  
+AttachmentDeleteConfirm[/AttachmentDeleteConfirm/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 :::
-## SelectedTask
+## UserSelectedFromTasks
   
 :::mermaid  
 graph LR  
-SetHomeScreen(HomeScreen)-- set -->SelectedTask[/SelectedTask/]  
-SelectedTask[/SelectedTask/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
-SelectedTask[/SelectedTask/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+SetHomeScreen(HomeScreen)-- set -->UserSelectedFromTasks[/UserSelectedFromTasks/]  
+SetHomePopUpsScreen(HomePopUpsScreen)-- set -->UserSelectedFromTasks[/UserSelectedFromTasks/]  
+UserSelectedFromTasks[/UserSelectedFromTasks/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
+UserSelectedFromTasks[/UserSelectedFromTasks/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 :::
-## SketchNumber
+## ExportConfirmed
   
 :::mermaid  
 graph LR  
-SetSketchScreen(Sketch Screen)-- set -->SketchNumber[/SketchNumber/]  
-SketchNumber[/SketchNumber/]-. use .->UseSketchScreen(Sketch Screen)  
-SketchNumber[/SketchNumber/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## EmailConfirmed
-  
-:::mermaid  
-graph LR  
-SetWelcomeScreen(WelcomeScreen)-- set -->EmailConfirmed[/EmailConfirmed/]  
-SetHomeScreen(HomeScreen)-- set -->EmailConfirmed[/EmailConfirmed/]  
-SetEmailScreen(EmailScreen)-- set -->EmailConfirmed[/EmailConfirmed/]  
-EmailConfirmed[/EmailConfirmed/]-. use .->UseConfirmScreen(ConfirmScreen)  
-EmailConfirmed[/EmailConfirmed/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+SetWelcomeScreen(WelcomeScreen)-- set -->ExportConfirmed[/ExportConfirmed/]  
+SetHomeScreen(HomeScreen)-- set -->ExportConfirmed[/ExportConfirmed/]  
+SetFollowUpScreen(FollowUpScreen)-- set -->ExportConfirmed[/ExportConfirmed/]  
+SetExportPopUpsScreen(ExportPopUpsScreen)-- set -->ExportConfirmed[/ExportConfirmed/]  
+ExportConfirmed[/ExportConfirmed/]-. use .->UseConfirmScreen(ConfirmScreen)  
+ExportConfirmed[/ExportConfirmed/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 :::
 ## FollowUpEnd
   
@@ -1672,23 +1650,72 @@ SetFollowUpTimesScreen(FollowUpTimesScreen)-- set -->FollowUpEnd[/FollowUpEnd/]
 FollowUpEnd[/FollowUpEnd/]-. use .->UseFollowUpTimesScreen(FollowUpTimesScreen)  
 FollowUpEnd[/FollowUpEnd/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 :::
-## ProgressBarPosition
+## SelectedSection
   
 :::mermaid  
 graph LR  
-SetHomeScreen(HomeScreen)-- set -->ProgressBarPosition[/ProgressBarPosition/]  
-ProgressBarPosition[/ProgressBarPosition/]-. use .->UseHomeScreen(HomeScreen)  
-ProgressBarPosition[/ProgressBarPosition/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+SetExportScreen(ExportScreen)-- set -->SelectedSection[/SelectedSection/]  
+SetExportPopUpsScreen(ExportPopUpsScreen)-- set -->SelectedSection[/SelectedSection/]  
+SelectedSection[/SelectedSection/]-. use .->UseConfirmScreen(ConfirmScreen)  
+SelectedSection[/SelectedSection/]-. use .->UseExportScreen(ExportScreen)  
+SelectedSection[/SelectedSection/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 :::
-## FollowUpConfirmed
+## FollowUpStart
   
 :::mermaid  
 graph LR  
-SetWelcomeScreen(WelcomeScreen)-- set -->FollowUpConfirmed[/FollowUpConfirmed/]  
-SetHomeScreen(HomeScreen)-- set -->FollowUpConfirmed[/FollowUpConfirmed/]  
-SetFollowUpTimesScreen(FollowUpTimesScreen)-- set -->FollowUpConfirmed[/FollowUpConfirmed/]  
-FollowUpConfirmed[/FollowUpConfirmed/]-. use .->UseConfirmScreen(ConfirmScreen)  
-FollowUpConfirmed[/FollowUpConfirmed/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+SetFollowUpTimesScreen(FollowUpTimesScreen)-- set -->FollowUpStart[/FollowUpStart/]  
+FollowUpStart[/FollowUpStart/]-. use .->UseFollowUpTimesScreen(FollowUpTimesScreen)  
+FollowUpStart[/FollowUpStart/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+:::
+## SelectedMeetingDuration
+  
+:::mermaid  
+graph LR  
+SetHomePopUpsScreen(HomePopUpsScreen)-- set -->SelectedMeetingDuration[/SelectedMeetingDuration/]  
+SelectedMeetingDuration[/SelectedMeetingDuration/]-. use .->UseHomeScreen(HomeScreen)  
+SelectedMeetingDuration[/SelectedMeetingDuration/]-. use .->UseConfirmScreen(ConfirmScreen)  
+SelectedMeetingDuration[/SelectedMeetingDuration/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+:::
+## ShowMeetingTimes
+  
+:::mermaid  
+graph LR  
+SetFollowUpTimesScreen(FollowUpTimesScreen)-- set -->ShowMeetingTimes[/ShowMeetingTimes/]  
+ShowMeetingTimes[/ShowMeetingTimes/]-. use .->UseFollowUpTimesScreen(FollowUpTimesScreen)  
+ShowMeetingTimes[/ShowMeetingTimes/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+:::
+## SelectedUser
+  
+:::mermaid  
+graph LR  
+SetHomePopUpsScreen(HomePopUpsScreen)-- set -->SelectedUser[/SelectedUser/]  
+SelectedUser[/SelectedUser/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
+SelectedUser[/SelectedUser/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+:::
+## ShowImageSaved
+  
+:::mermaid  
+graph LR  
+SetCameraScreen(CameraScreen)-- set -->ShowImageSaved[/ShowImageSaved/]  
+ShowImageSaved[/ShowImageSaved/]-. use .->UseCameraScreen(CameraScreen)  
+ShowImageSaved[/ShowImageSaved/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+:::
+## PhotoNumber
+  
+:::mermaid  
+graph LR  
+SetCameraScreen(CameraScreen)-- set -->PhotoNumber[/PhotoNumber/]  
+PhotoNumber[/PhotoNumber/]-. use .->UseCameraScreen(CameraScreen)  
+PhotoNumber[/PhotoNumber/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+:::
+## SketchNumber
+  
+:::mermaid  
+graph LR  
+SetSketchScreen(Sketch Screen)-- set -->SketchNumber[/SketchNumber/]  
+SketchNumber[/SketchNumber/]-. use .->UseSketchScreen(Sketch Screen)  
+SketchNumber[/SketchNumber/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 :::
 ## MultiRecipients
   
@@ -1700,13 +1727,73 @@ MultiRecipients[/MultiRecipients/]-. use .->UseExportScreen(ExportScreen)
 MultiRecipients[/MultiRecipients/]-. use .->UseFollowUpScreen(FollowUpScreen)  
 MultiRecipients[/MultiRecipients/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 :::
-## SecondsRemain
+## UserSelected
   
 :::mermaid  
 graph LR  
-SetHomeScreen(HomeScreen)-- set -->SecondsRemain[/SecondsRemain/]  
-SecondsRemain[/SecondsRemain/]-. use .->UseHomeScreen(HomeScreen)  
-SecondsRemain[/SecondsRemain/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+SetHomeScreen(HomeScreen)-- set -->UserSelected[/UserSelected/]  
+SetHomePopUpsScreen(HomePopUpsScreen)-- set -->UserSelected[/UserSelected/]  
+UserSelected[/UserSelected/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
+UserSelected[/UserSelected/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+:::
+## FollowUpConfirmed
+  
+:::mermaid  
+graph LR  
+SetWelcomeScreen(WelcomeScreen)-- set -->FollowUpConfirmed[/FollowUpConfirmed/]  
+SetHomeScreen(HomeScreen)-- set -->FollowUpConfirmed[/FollowUpConfirmed/]  
+SetFollowUpTimesScreen(FollowUpTimesScreen)-- set -->FollowUpConfirmed[/FollowUpConfirmed/]  
+FollowUpConfirmed[/FollowUpConfirmed/]-. use .->UseConfirmScreen(ConfirmScreen)  
+FollowUpConfirmed[/FollowUpConfirmed/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+:::
+## ShowSketchSaved
+  
+:::mermaid  
+graph LR  
+SetSketchScreen(Sketch Screen)-- set -->ShowSketchSaved[/ShowSketchSaved/]  
+ShowSketchSaved[/ShowSketchSaved/]-. use .->UseSketchScreen(Sketch Screen)  
+ShowSketchSaved[/ShowSketchSaved/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+:::
+## SelectedUserTasks
+  
+:::mermaid  
+graph LR  
+SetHomeScreen(HomeScreen)-- set -->SelectedUserTasks[/SelectedUserTasks/]  
+SelectedUserTasks[/SelectedUserTasks/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
+SelectedUserTasks[/SelectedUserTasks/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+:::
+## ShowDataLossWarning
+  
+:::mermaid  
+graph LR  
+SetWelcomeScreen(WelcomeScreen)-- set -->ShowDataLossWarning[/ShowDataLossWarning/]  
+SetHomePopUpsScreen(HomePopUpsScreen)-- set -->ShowDataLossWarning[/ShowDataLossWarning/]  
+ShowDataLossWarning[/ShowDataLossWarning/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
+ShowDataLossWarning[/ShowDataLossWarning/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+:::
+## ShowOneNote
+  
+:::mermaid  
+graph LR  
+SetExportScreen(ExportScreen)-- set -->ShowOneNote[/ShowOneNote/]  
+SetExportPopUpsScreen(ExportPopUpsScreen)-- set -->ShowOneNote[/ShowOneNote/]  
+ShowOneNote[/ShowOneNote/]-. use .->UseExportScreen(ExportScreen)  
+ShowOneNote[/ShowOneNote/]-. use .->UseExportPopUpsScreen(ExportPopUpsScreen)  
+ShowOneNote[/ShowOneNote/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+:::
+## SelectedMeeting
+  
+:::mermaid  
+graph LR  
+SetWelcomeScreen(WelcomeScreen)-- set -->SelectedMeeting[/SelectedMeeting/]  
+SelectedMeeting[/SelectedMeeting/]-. use .->UseWelcomeScreen(WelcomeScreen)  
+SelectedMeeting[/SelectedMeeting/]-. use .->UseHomeScreen(HomeScreen)  
+SelectedMeeting[/SelectedMeeting/]-. use .->UseEmailScreen(EmailScreen)  
+SelectedMeeting[/SelectedMeeting/]-. use .->UseConfirmScreen(ConfirmScreen)  
+SelectedMeeting[/SelectedMeeting/]-. use .->UseExportScreen(ExportScreen)  
+SelectedMeeting[/SelectedMeeting/]-. use .->UseFollowUpScreen(FollowUpScreen)  
+SelectedMeeting[/SelectedMeeting/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
+SelectedMeeting[/SelectedMeeting/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 :::
 ## ShowOverlay
   
@@ -1721,14 +1808,6 @@ ShowOverlay[/ShowOverlay/]-. use .->UseAttachmentsScreen(AttachmentsScreen)
 ShowOverlay[/ShowOverlay/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
 ShowOverlay[/ShowOverlay/]-. use .->UseExportPopUpsScreen(ExportPopUpsScreen)  
 ShowOverlay[/ShowOverlay/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## SelectedImage
-  
-:::mermaid  
-graph LR  
-SetAttachmentsScreen(AttachmentsScreen)-- set -->SelectedImage[/SelectedImage/]  
-SelectedImage[/SelectedImage/]-. use .->UseAttachmentsScreen(AttachmentsScreen)  
-SelectedImage[/SelectedImage/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 :::
 ## Loading
   
@@ -1748,144 +1827,13 @@ Loading[/Loading/]-. use .->UseFollowUpTimesScreen(FollowUpTimesScreen)
 Loading[/Loading/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
 Loading[/Loading/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 :::
-## ShowSketchSaved
+## SelectedTask
   
 :::mermaid  
 graph LR  
-SetSketchScreen(Sketch Screen)-- set -->ShowSketchSaved[/ShowSketchSaved/]  
-ShowSketchSaved[/ShowSketchSaved/]-. use .->UseSketchScreen(Sketch Screen)  
-ShowSketchSaved[/ShowSketchSaved/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## ShowPlanner
-  
-:::mermaid  
-graph LR  
-SetExportScreen(ExportScreen)-- set -->ShowPlanner[/ShowPlanner/]  
-SetExportPopUpsScreen(ExportPopUpsScreen)-- set -->ShowPlanner[/ShowPlanner/]  
-ShowPlanner[/ShowPlanner/]-. use .->UseExportScreen(ExportScreen)  
-ShowPlanner[/ShowPlanner/]-. use .->UseExportPopUpsScreen(ExportPopUpsScreen)  
-ShowPlanner[/ShowPlanner/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## ExportConfirmed
-  
-:::mermaid  
-graph LR  
-SetWelcomeScreen(WelcomeScreen)-- set -->ExportConfirmed[/ExportConfirmed/]  
-SetHomeScreen(HomeScreen)-- set -->ExportConfirmed[/ExportConfirmed/]  
-SetFollowUpScreen(FollowUpScreen)-- set -->ExportConfirmed[/ExportConfirmed/]  
-SetExportPopUpsScreen(ExportPopUpsScreen)-- set -->ExportConfirmed[/ExportConfirmed/]  
-ExportConfirmed[/ExportConfirmed/]-. use .->UseConfirmScreen(ConfirmScreen)  
-ExportConfirmed[/ExportConfirmed/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## SelectedUserTasks
-  
-:::mermaid  
-graph LR  
-SetHomeScreen(HomeScreen)-- set -->SelectedUserTasks[/SelectedUserTasks/]  
-SelectedUserTasks[/SelectedUserTasks/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
-SelectedUserTasks[/SelectedUserTasks/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## ShowDataLossWarning
-  
-:::mermaid  
-graph LR  
-SetWelcomeScreen(WelcomeScreen)-- set -->ShowDataLossWarning[/ShowDataLossWarning/]  
-SetHomePopUpsScreen(HomePopUpsScreen)-- set -->ShowDataLossWarning[/ShowDataLossWarning/]  
-ShowDataLossWarning[/ShowDataLossWarning/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
-ShowDataLossWarning[/ShowDataLossWarning/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## SelectedUser
-  
-:::mermaid  
-graph LR  
-SetHomePopUpsScreen(HomePopUpsScreen)-- set -->SelectedUser[/SelectedUser/]  
-SelectedUser[/SelectedUser/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
-SelectedUser[/SelectedUser/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## AttachmentDeleteConfirm
-  
-:::mermaid  
-graph LR  
-SetAttachmentsScreen(AttachmentsScreen)-- set -->AttachmentDeleteConfirm[/AttachmentDeleteConfirm/]  
-AttachmentDeleteConfirm[/AttachmentDeleteConfirm/]-. use .->UseAttachmentsScreen(AttachmentsScreen)  
-AttachmentDeleteConfirm[/AttachmentDeleteConfirm/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## ShowImageSaved
-  
-:::mermaid  
-graph LR  
-SetCameraScreen(CameraScreen)-- set -->ShowImageSaved[/ShowImageSaved/]  
-ShowImageSaved[/ShowImageSaved/]-. use .->UseCameraScreen(CameraScreen)  
-ShowImageSaved[/ShowImageSaved/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## UserSelectedFromTasks
-  
-:::mermaid  
-graph LR  
-SetHomeScreen(HomeScreen)-- set -->UserSelectedFromTasks[/UserSelectedFromTasks/]  
-SetHomePopUpsScreen(HomePopUpsScreen)-- set -->UserSelectedFromTasks[/UserSelectedFromTasks/]  
-UserSelectedFromTasks[/UserSelectedFromTasks/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
-UserSelectedFromTasks[/UserSelectedFromTasks/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## SelectedSection
-  
-:::mermaid  
-graph LR  
-SetExportScreen(ExportScreen)-- set -->SelectedSection[/SelectedSection/]  
-SetExportPopUpsScreen(ExportPopUpsScreen)-- set -->SelectedSection[/SelectedSection/]  
-SelectedSection[/SelectedSection/]-. use .->UseConfirmScreen(ConfirmScreen)  
-SelectedSection[/SelectedSection/]-. use .->UseExportScreen(ExportScreen)  
-SelectedSection[/SelectedSection/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## UserSelected
-  
-:::mermaid  
-graph LR  
-SetHomeScreen(HomeScreen)-- set -->UserSelected[/UserSelected/]  
-SetHomePopUpsScreen(HomePopUpsScreen)-- set -->UserSelected[/UserSelected/]  
-UserSelected[/UserSelected/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
-UserSelected[/UserSelected/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## SelectedMeetingDuration
-  
-:::mermaid  
-graph LR  
-SetHomePopUpsScreen(HomePopUpsScreen)-- set -->SelectedMeetingDuration[/SelectedMeetingDuration/]  
-SelectedMeetingDuration[/SelectedMeetingDuration/]-. use .->UseHomeScreen(HomeScreen)  
-SelectedMeetingDuration[/SelectedMeetingDuration/]-. use .->UseConfirmScreen(ConfirmScreen)  
-SelectedMeetingDuration[/SelectedMeetingDuration/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## SelectedMeeting
-  
-:::mermaid  
-graph LR  
-SetWelcomeScreen(WelcomeScreen)-- set -->SelectedMeeting[/SelectedMeeting/]  
-SelectedMeeting[/SelectedMeeting/]-. use .->UseWelcomeScreen(WelcomeScreen)  
-SelectedMeeting[/SelectedMeeting/]-. use .->UseHomeScreen(HomeScreen)  
-SelectedMeeting[/SelectedMeeting/]-. use .->UseEmailScreen(EmailScreen)  
-SelectedMeeting[/SelectedMeeting/]-. use .->UseConfirmScreen(ConfirmScreen)  
-SelectedMeeting[/SelectedMeeting/]-. use .->UseExportScreen(ExportScreen)  
-SelectedMeeting[/SelectedMeeting/]-. use .->UseFollowUpScreen(FollowUpScreen)  
-SelectedMeeting[/SelectedMeeting/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
-SelectedMeeting[/SelectedMeeting/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## FollowUpStart
-  
-:::mermaid  
-graph LR  
-SetFollowUpTimesScreen(FollowUpTimesScreen)-- set -->FollowUpStart[/FollowUpStart/]  
-FollowUpStart[/FollowUpStart/]-. use .->UseFollowUpTimesScreen(FollowUpTimesScreen)  
-FollowUpStart[/FollowUpStart/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## SelectedNoteBook
-  
-:::mermaid  
-graph LR  
-SetExportScreen(ExportScreen)-- set -->SelectedNoteBook[/SelectedNoteBook/]  
-SetExportPopUpsScreen(ExportPopUpsScreen)-- set -->SelectedNoteBook[/SelectedNoteBook/]  
-SelectedNoteBook[/SelectedNoteBook/]-. use .->UseConfirmScreen(ConfirmScreen)  
-SelectedNoteBook[/SelectedNoteBook/]-. use .->UseExportScreen(ExportScreen)  
-SelectedNoteBook[/SelectedNoteBook/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+SetHomeScreen(HomeScreen)-- set -->SelectedTask[/SelectedTask/]  
+SelectedTask[/SelectedTask/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
+SelectedTask[/SelectedTask/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 :::
 ## AutoSelectMeeting
   
@@ -1894,6 +1842,48 @@ graph LR
 SetWelcomeScreen(WelcomeScreen)-- set -->AutoSelectMeeting[/AutoSelectMeeting/]  
 AutoSelectMeeting[/AutoSelectMeeting/]-. use .->UseWelcomeScreen(WelcomeScreen)  
 AutoSelectMeeting[/AutoSelectMeeting/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+:::
+## ShowTakenImage
+  
+:::mermaid  
+graph LR  
+SetCameraScreen(CameraScreen)-- set -->ShowTakenImage[/ShowTakenImage/]  
+ShowTakenImage[/ShowTakenImage/]-. use .->UseCameraScreen(CameraScreen)  
+ShowTakenImage[/ShowTakenImage/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+:::
+## SecondsRemain
+  
+:::mermaid  
+graph LR  
+SetHomeScreen(HomeScreen)-- set -->SecondsRemain[/SecondsRemain/]  
+SecondsRemain[/SecondsRemain/]-. use .->UseHomeScreen(HomeScreen)  
+SecondsRemain[/SecondsRemain/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+:::
+## ProgressBarPosition
+  
+:::mermaid  
+graph LR  
+SetHomeScreen(HomeScreen)-- set -->ProgressBarPosition[/ProgressBarPosition/]  
+ProgressBarPosition[/ProgressBarPosition/]-. use .->UseHomeScreen(HomeScreen)  
+ProgressBarPosition[/ProgressBarPosition/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+:::
+## EmailConfirmed
+  
+:::mermaid  
+graph LR  
+SetWelcomeScreen(WelcomeScreen)-- set -->EmailConfirmed[/EmailConfirmed/]  
+SetHomeScreen(HomeScreen)-- set -->EmailConfirmed[/EmailConfirmed/]  
+SetEmailScreen(EmailScreen)-- set -->EmailConfirmed[/EmailConfirmed/]  
+EmailConfirmed[/EmailConfirmed/]-. use .->UseConfirmScreen(ConfirmScreen)  
+EmailConfirmed[/EmailConfirmed/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+:::
+## SelectedImage
+  
+:::mermaid  
+graph LR  
+SetAttachmentsScreen(AttachmentsScreen)-- set -->SelectedImage[/SelectedImage/]  
+SelectedImage[/SelectedImage/]-. use .->UseAttachmentsScreen(AttachmentsScreen)  
+SelectedImage[/SelectedImage/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 :::
 ## TaskSelected
   
@@ -1905,9 +1895,131 @@ TaskSelected[/TaskSelected/]-. use .->UseAttachmentsScreen(AttachmentsScreen)
 TaskSelected[/TaskSelected/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
 TaskSelected[/TaskSelected/]-. use .->UseExportPopUpsScreen(ExportPopUpsScreen)  
 :::
+## SelectedPlan
+  
+:::mermaid  
+graph LR  
+SetExportScreen(ExportScreen)-- set -->SelectedPlan[/SelectedPlan/]  
+SetExportPopUpsScreen(ExportPopUpsScreen)-- set -->SelectedPlan[/SelectedPlan/]  
+SelectedPlan[/SelectedPlan/]-. use .->UseConfirmScreen(ConfirmScreen)  
+SelectedPlan[/SelectedPlan/]-. use .->UseExportScreen(ExportScreen)  
+SelectedPlan[/SelectedPlan/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+:::
 # Global Collects
   
 Usage of global collects is shown based on the screen(s) where this collect is set, used or cleared
+## MeetingAttendees
+  
+:::mermaid  
+graph LR  
+MeetingAttendees[/MeetingAttendees/]-. use .->UseWelcomeScreen(WelcomeScreen)  
+MeetingAttendees[/MeetingAttendees/]-. use .->UseHomeScreen(HomeScreen)  
+MeetingAttendees[/MeetingAttendees/]-. use .->UseConfirmScreen(ConfirmScreen)  
+MeetingAttendees[/MeetingAttendees/]-. use .->UseFollowUpScreen(FollowUpScreen)  
+MeetingAttendees[/MeetingAttendees/]-. use .->UseFollowUpTimesScreen(FollowUpTimesScreen)  
+MeetingAttendees[/MeetingAttendees/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
+MeetingAttendees[/MeetingAttendees/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+MeetingAttendees[/MeetingAttendees/]-. clear .->ClearHomePopUpsScreen(HomePopUpsScreen)  
+:::
+## MeetingDurations
+  
+:::mermaid  
+graph LR  
+MeetingDurations[/MeetingDurations/]-. use .->UseFollowUpTimesScreen(FollowUpTimesScreen)  
+MeetingDurations[/MeetingDurations/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+MeetingDurations[/MeetingDurations/]-. clear .->ClearFollowUpTimesScreen(FollowUpTimesScreen)  
+:::
+## HoursList
+  
+:::mermaid  
+graph LR  
+HoursList[/HoursList/]-. use .->UseFollowUpTimesScreen(FollowUpTimesScreen)  
+HoursList[/HoursList/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+HoursList[/HoursList/]-. clear .->ClearFollowUpTimesScreen(FollowUpTimesScreen)  
+:::
+## Templates
+  
+:::mermaid  
+graph LR  
+Templates[/Templates/]-. use .->UseConfirmScreen(ConfirmScreen)  
+Templates[/Templates/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+Templates[/Templates/]-. clear .->ClearWelcomeScreen(WelcomeScreen)  
+:::
+## MeetingAttendeesTemp
+  
+:::mermaid  
+graph LR  
+MeetingAttendeesTemp[/MeetingAttendeesTemp/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
+MeetingAttendeesTemp[/MeetingAttendeesTemp/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+MeetingAttendeesTemp[/MeetingAttendeesTemp/]-. clear .->ClearHomePopUpsScreen(HomePopUpsScreen)  
+:::
+## EmailAttachments
+  
+:::mermaid  
+graph LR  
+CollectConfirmScreen(ConfirmScreen)-- collect -->EmailAttachments[/EmailAttachments/]  
+EmailAttachments[/EmailAttachments/]-. use .->UseWelcomeScreen(WelcomeScreen)  
+EmailAttachments[/EmailAttachments/]-. use .->UseConfirmScreen(ConfirmScreen)  
+EmailAttachments[/EmailAttachments/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+:::
+## PlannerBuckets
+  
+:::mermaid  
+graph LR  
+PlannerBuckets[/PlannerBuckets/]-. use .->UseExportPopUpsScreen(ExportPopUpsScreen)  
+PlannerBuckets[/PlannerBuckets/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+PlannerBuckets[/PlannerBuckets/]-. clear .->ClearExportScreen(ExportScreen)  
+PlannerBuckets[/PlannerBuckets/]-. clear .->ClearExportPopUpsScreen(ExportPopUpsScreen)  
+:::
+## MeetingAttendeeEmails
+  
+:::mermaid  
+graph LR  
+MeetingAttendeeEmails[/MeetingAttendeeEmails/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
+MeetingAttendeeEmails[/MeetingAttendeeEmails/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+MeetingAttendeeEmails[/MeetingAttendeeEmails/]-. clear .->ClearHomePopUpsScreen(HomePopUpsScreen)  
+:::
+## TemplateData
+  
+:::mermaid  
+graph LR  
+TemplateData[/TemplateData/]-. use .->UseConfirmScreen(ConfirmScreen)  
+TemplateData[/TemplateData/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+TemplateData[/TemplateData/]-. clear .->ClearConfirmScreen(ConfirmScreen)  
+:::
+## EmailRecipients
+  
+:::mermaid  
+graph LR  
+CollectExportScreen(ExportScreen)-- collect -->EmailRecipients[/EmailRecipients/]  
+EmailRecipients[/EmailRecipients/]-. use .->UseWelcomeScreen(WelcomeScreen)  
+EmailRecipients[/EmailRecipients/]-. use .->UseEmailScreen(EmailScreen)  
+EmailRecipients[/EmailRecipients/]-. use .->UseConfirmScreen(ConfirmScreen)  
+EmailRecipients[/EmailRecipients/]-. use .->UseExportScreen(ExportScreen)  
+EmailRecipients[/EmailRecipients/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+EmailRecipients[/EmailRecipients/]-. clear .->ClearHomeScreen(HomeScreen)  
+EmailRecipients[/EmailRecipients/]-. clear .->ClearExportScreen(ExportScreen)  
+:::
+## Sketches
+  
+:::mermaid  
+graph LR  
+CollectSketchScreen(Sketch Screen)-- collect -->Sketches[/Sketches/]  
+Sketches[/Sketches/]-. use .->UseWelcomeScreen(WelcomeScreen)  
+Sketches[/Sketches/]-. use .->UseHomeScreen(HomeScreen)  
+Sketches[/Sketches/]-. use .->UseAttachmentsScreen(AttachmentsScreen)  
+Sketches[/Sketches/]-. use .->UseConfirmScreen(ConfirmScreen)  
+Sketches[/Sketches/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+:::
+## PlannerPlans
+  
+:::mermaid  
+graph LR  
+PlannerPlans[/PlannerPlans/]-. use .->UseExportScreen(ExportScreen)  
+PlannerPlans[/PlannerPlans/]-. use .->UseExportPopUpsScreen(ExportPopUpsScreen)  
+PlannerPlans[/PlannerPlans/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+PlannerPlans[/PlannerPlans/]-. clear .->ClearExportScreen(ExportScreen)  
+:::
 ## Indexes
   
 :::mermaid  
@@ -1930,26 +2042,23 @@ Photos[/Photos/]-. use .->UseConfirmScreen(ConfirmScreen)
 Photos[/Photos/]-. use .->UseExportScreen(ExportScreen)  
 Photos[/Photos/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 :::
-## EmailRecipients
+## OneNoteBooks
   
 :::mermaid  
 graph LR  
-CollectExportScreen(ExportScreen)-- collect -->EmailRecipients[/EmailRecipients/]  
-EmailRecipients[/EmailRecipients/]-. use .->UseWelcomeScreen(WelcomeScreen)  
-EmailRecipients[/EmailRecipients/]-. use .->UseEmailScreen(EmailScreen)  
-EmailRecipients[/EmailRecipients/]-. use .->UseConfirmScreen(ConfirmScreen)  
-EmailRecipients[/EmailRecipients/]-. use .->UseExportScreen(ExportScreen)  
-EmailRecipients[/EmailRecipients/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-EmailRecipients[/EmailRecipients/]-. clear .->ClearHomeScreen(HomeScreen)  
-EmailRecipients[/EmailRecipients/]-. clear .->ClearExportScreen(ExportScreen)  
+OneNoteBooks[/OneNoteBooks/]-. use .->UseExportScreen(ExportScreen)  
+OneNoteBooks[/OneNoteBooks/]-. use .->UseExportPopUpsScreen(ExportPopUpsScreen)  
+OneNoteBooks[/OneNoteBooks/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+OneNoteBooks[/OneNoteBooks/]-. clear .->ClearExportScreen(ExportScreen)  
 :::
-## MeetingDurations
+## MeetingTimes
   
 :::mermaid  
 graph LR  
-MeetingDurations[/MeetingDurations/]-. use .->UseFollowUpTimesScreen(FollowUpTimesScreen)  
-MeetingDurations[/MeetingDurations/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-MeetingDurations[/MeetingDurations/]-. clear .->ClearFollowUpTimesScreen(FollowUpTimesScreen)  
+MeetingTimes[/MeetingTimes/]-. use .->UseWelcomeScreen(WelcomeScreen)  
+MeetingTimes[/MeetingTimes/]-. use .->UseFollowUpTimesScreen(FollowUpTimesScreen)  
+MeetingTimes[/MeetingTimes/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
+MeetingTimes[/MeetingTimes/]-. clear .->ClearFollowUpTimesScreen(FollowUpTimesScreen)  
 :::
 ## FollowUpMeetingAttendees
   
@@ -1962,73 +2071,6 @@ FollowUpMeetingAttendees[/FollowUpMeetingAttendees/]-. use .->UseFollowUpTimesSc
 FollowUpMeetingAttendees[/FollowUpMeetingAttendees/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 FollowUpMeetingAttendees[/FollowUpMeetingAttendees/]-. clear .->ClearFollowUpScreen(FollowUpScreen)  
 :::
-## PlannerBuckets
-  
-:::mermaid  
-graph LR  
-PlannerBuckets[/PlannerBuckets/]-. use .->UseExportPopUpsScreen(ExportPopUpsScreen)  
-PlannerBuckets[/PlannerBuckets/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-PlannerBuckets[/PlannerBuckets/]-. clear .->ClearExportScreen(ExportScreen)  
-PlannerBuckets[/PlannerBuckets/]-. clear .->ClearExportPopUpsScreen(ExportPopUpsScreen)  
-:::
-## Templates
-  
-:::mermaid  
-graph LR  
-Templates[/Templates/]-. use .->UseConfirmScreen(ConfirmScreen)  
-Templates[/Templates/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-Templates[/Templates/]-. clear .->ClearWelcomeScreen(WelcomeScreen)  
-:::
-## MeetingAttendees
-  
-:::mermaid  
-graph LR  
-MeetingAttendees[/MeetingAttendees/]-. use .->UseWelcomeScreen(WelcomeScreen)  
-MeetingAttendees[/MeetingAttendees/]-. use .->UseHomeScreen(HomeScreen)  
-MeetingAttendees[/MeetingAttendees/]-. use .->UseConfirmScreen(ConfirmScreen)  
-MeetingAttendees[/MeetingAttendees/]-. use .->UseFollowUpScreen(FollowUpScreen)  
-MeetingAttendees[/MeetingAttendees/]-. use .->UseFollowUpTimesScreen(FollowUpTimesScreen)  
-MeetingAttendees[/MeetingAttendees/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
-MeetingAttendees[/MeetingAttendees/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-MeetingAttendees[/MeetingAttendees/]-. clear .->ClearHomePopUpsScreen(HomePopUpsScreen)  
-:::
-## OneNoteBooks
-  
-:::mermaid  
-graph LR  
-OneNoteBooks[/OneNoteBooks/]-. use .->UseExportScreen(ExportScreen)  
-OneNoteBooks[/OneNoteBooks/]-. use .->UseExportPopUpsScreen(ExportPopUpsScreen)  
-OneNoteBooks[/OneNoteBooks/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-OneNoteBooks[/OneNoteBooks/]-. clear .->ClearExportScreen(ExportScreen)  
-:::
-## Sketches
-  
-:::mermaid  
-graph LR  
-CollectSketchScreen(Sketch Screen)-- collect -->Sketches[/Sketches/]  
-Sketches[/Sketches/]-. use .->UseWelcomeScreen(WelcomeScreen)  
-Sketches[/Sketches/]-. use .->UseHomeScreen(HomeScreen)  
-Sketches[/Sketches/]-. use .->UseAttachmentsScreen(AttachmentsScreen)  
-Sketches[/Sketches/]-. use .->UseConfirmScreen(ConfirmScreen)  
-Sketches[/Sketches/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## MeetingAttendeesTemp
-  
-:::mermaid  
-graph LR  
-MeetingAttendeesTemp[/MeetingAttendeesTemp/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
-MeetingAttendeesTemp[/MeetingAttendeesTemp/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-MeetingAttendeesTemp[/MeetingAttendeesTemp/]-. clear .->ClearHomePopUpsScreen(HomePopUpsScreen)  
-:::
-## PlannerPlans
-  
-:::mermaid  
-graph LR  
-PlannerPlans[/PlannerPlans/]-. use .->UseExportScreen(ExportScreen)  
-PlannerPlans[/PlannerPlans/]-. use .->UseExportPopUpsScreen(ExportPopUpsScreen)  
-PlannerPlans[/PlannerPlans/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-PlannerPlans[/PlannerPlans/]-. clear .->ClearExportScreen(ExportScreen)  
-:::
 ## OneNoteSections
   
 :::mermaid  
@@ -2037,31 +2079,6 @@ OneNoteSections[/OneNoteSections/]-. use .->UseExportPopUpsScreen(ExportPopUpsSc
 OneNoteSections[/OneNoteSections/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
 OneNoteSections[/OneNoteSections/]-. clear .->ClearExportScreen(ExportScreen)  
 OneNoteSections[/OneNoteSections/]-. clear .->ClearExportPopUpsScreen(ExportPopUpsScreen)  
-:::
-## HoursList
-  
-:::mermaid  
-graph LR  
-HoursList[/HoursList/]-. use .->UseFollowUpTimesScreen(FollowUpTimesScreen)  
-HoursList[/HoursList/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-HoursList[/HoursList/]-. clear .->ClearFollowUpTimesScreen(FollowUpTimesScreen)  
-:::
-## TemplateData
-  
-:::mermaid  
-graph LR  
-TemplateData[/TemplateData/]-. use .->UseConfirmScreen(ConfirmScreen)  
-TemplateData[/TemplateData/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-TemplateData[/TemplateData/]-. clear .->ClearConfirmScreen(ConfirmScreen)  
-:::
-## MeetingTimes
-  
-:::mermaid  
-graph LR  
-MeetingTimes[/MeetingTimes/]-. use .->UseWelcomeScreen(WelcomeScreen)  
-MeetingTimes[/MeetingTimes/]-. use .->UseFollowUpTimesScreen(FollowUpTimesScreen)  
-MeetingTimes[/MeetingTimes/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-MeetingTimes[/MeetingTimes/]-. clear .->ClearFollowUpTimesScreen(FollowUpTimesScreen)  
 :::
 ## Tasks
   
@@ -2074,23 +2091,6 @@ Tasks[/Tasks/]-. use .->UseConfirmScreen(ConfirmScreen)
 Tasks[/Tasks/]-. use .->UseExportScreen(ExportScreen)  
 Tasks[/Tasks/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
 Tasks[/Tasks/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## EmailAttachments
-  
-:::mermaid  
-graph LR  
-CollectConfirmScreen(ConfirmScreen)-- collect -->EmailAttachments[/EmailAttachments/]  
-EmailAttachments[/EmailAttachments/]-. use .->UseWelcomeScreen(WelcomeScreen)  
-EmailAttachments[/EmailAttachments/]-. use .->UseConfirmScreen(ConfirmScreen)  
-EmailAttachments[/EmailAttachments/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-:::
-## MeetingAttendeeEmails
-  
-:::mermaid  
-graph LR  
-MeetingAttendeeEmails[/MeetingAttendeeEmails/]-. use .->UseHomePopUpsScreen(HomePopUpsScreen)  
-MeetingAttendeeEmails[/MeetingAttendeeEmails/]-. use .->UseCollectionsAndVariables(CollectionsAndVariables)  
-MeetingAttendeeEmails[/MeetingAttendeeEmails/]-. clear .->ClearHomePopUpsScreen(HomePopUpsScreen)  
 :::
 # Global Flows
   

@@ -51,7 +51,6 @@ def main(argv):
             value = line['value']
 
             for file in filenames:
-                print(file)
                 screen_content = get_screen_content(file)
 
                 arr = []
