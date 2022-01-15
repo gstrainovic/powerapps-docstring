@@ -49,5 +49,3 @@ ScreenFlow:
 # based on this, the prefix / suffix can be set here
 MermaidPrefix: ":::mermaid"
 MermaidSuffix: ":::"
-
-ReplaceFromCSV: false

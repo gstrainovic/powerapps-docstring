@@ -1,3 +1,4 @@
-screen,property,value
-9110_au_location-14,BorderColor,
-9110_au_location-14,BorderColor,test
+as,key,value
+AppLogo3,ImagePosition,
+AppLogo3,ImagePosition,=HelloWorld
+AppLogo3,Hello,=World
