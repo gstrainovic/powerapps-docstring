@@ -51,7 +51,7 @@ CameraScreen As screen:
             HoverBorderColor: =ColorFade(AppLogo3.BorderColor, 20%)
             HoverFill: =ColorFade(AppLogo3.Fill, 20%)
             Image: ='nav-logo'
-            ImagePosition: =ImagePosition.Center
+            ImagePosition: =HelloWorld
             PressedBorderColor: =ColorFade(AppLogo3.BorderColor, -20%)
             PressedFill: =ColorFade(AppLogo3.Fill, -20%)
             Width: =75

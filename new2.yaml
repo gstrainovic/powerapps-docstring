@@ -56,6 +56,7 @@ CameraScreen As screen:
             PressedFill: =ColorFade(AppLogo3.Fill, -20%)
             Width: =75
             ZIndex: =2
+            Hello: =World
 
         HomeMenuBkg_3 As rectangle:
             DisabledFill: =HomeMenuBkg_3.Fill
@@ -76,7 +77,7 @@ CameraScreen As screen:
             HoverFill: =ColorFade(HomeMenuBkg_3.Fill, 20%)
             Image: ='nav-notes'
             ImagePosition: =ImagePosition.Center
-            OnSelect: =Navigate(HomeScreen, None)
+            OnSelect: =Navigate(HomeScreen) # Navigate back to home
             PressedBorderColor: =ColorFade(NavHome3.BorderColor, -20%)
             PressedFill: =ColorFade(NavHome3.Fill, -20%)
             Width: =HomeMenuBkg_3.Width
