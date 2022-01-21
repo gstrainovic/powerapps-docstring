@@ -1,4 +1,13 @@
 as,key,value,status
+AppLogo3,ImagePosition,=HelloWorld,value read ok
+AppLogo3,ImagePosition,=HelloWorld,value replace ok
+AppLogo3,Hello,=World,value replace ok
+AppLogo3,ImagePosition,=HelloWorld,value read ok
+AppLogo3,ImagePosition,=HelloWorld,value replace ok
+AppLogo3,Hello,=World,value replace ok
 AppLogo3,ImagePosition,=ImagePosition.Center,value read ok
 AppLogo3,ImagePosition,=HelloWorld,value replace ok
 AppLogo3,Hello,=World,add key and value ok
+AppLogo3,ImagePosition,=HelloWorld,value read ok
+AppLogo3,ImagePosition,=HelloWorld,value replace ok
+AppLogo3,Hello,=World,value replace ok

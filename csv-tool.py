@@ -49,19 +49,19 @@ def main(argv):
 
         return ar
 
-    output_csv = open('output.csv', 'w', newline='')
+    output_csv = open('output.csv', 'a', newline='')
     csv_writer = csv.writer(output_csv, delimiter=',',
                             quotechar='|', quoting=csv.QUOTE_MINIMAL)
-    csv_writer.writerow(['as', 'key', 'value', 'status'])
+    # csv_writer.writerow(['as', 'key', 'value', 'status'])
 
-    with open('input.csv') as input_csv:
+    with open('input.csv', 'r') as input_csv:
         for line in csv.DictReader(input_csv):
             asScreen = line['as']
             key = line['key']
             value_from_csv = line['value']
 
             for filepath in filenames:
-                with open(filepath, "r", encoding='utf8') as file:
+                with open(filepath, encoding='utf8') as file:
                     screen_content = file.readlines()
 
                 find_result = finder(screen_content, asScreen, key)
@@ -79,7 +79,7 @@ def main(argv):
                         new_yaml = replaceOrAdd(
                             screen_content, asScreen, key, value_from_csv, 'replace')
 
-                        with open(r'new.yaml', 'w') as write_yaml:
+                        with open(filepath, 'w') as write_yaml:
                             write_yaml.writelines(new_yaml)
 
                         mytuple = asScreen, key, value_from_csv, 'value replace ok'
@@ -89,7 +89,7 @@ def main(argv):
                         new_yaml = replaceOrAdd(
                             screen_content, asScreen, key, value_from_csv, 'add')
 
-                        with open(r'new2.yaml', 'w') as write_yaml:
+                        with open(filepath, 'w') as write_yaml:
                             write_yaml.writelines(new_yaml)
 
                         mytuple = asScreen, key, value_from_csv, 'add key and value ok'
